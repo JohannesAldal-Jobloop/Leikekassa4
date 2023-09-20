@@ -23,8 +23,7 @@ public class KamerebevegelseFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        FinnMusRotasjon();   
     }
 
     private void FixedUpdate()
@@ -35,16 +34,30 @@ public class KamerebevegelseFPS : MonoBehaviour
     void BevegKameraMedMus()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-        rotasjonX += Input.GetAxis("Mouse Y") * musSensitivitet;
-        rotasjonY += Input.GetAxis("Mouse X") * -1 * musSensitivitet;
+        rotasjonX += Input.GetAxis("Mouse Y") * musSensitivitet * Time.deltaTime;
+        rotasjonY += Input.GetAxis("Mouse X") * -1 * musSensitivitet * Time.deltaTime;
         transform.localEulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
+
+        /*
+        if(musRotasjonX >= 90)
+        {
+            transform.localEulerAngles = new Vector3(90, musRotasjonX, 0);
+        }else if(musRotasjonY <= -90)
+        {
+            transform.localEulerAngles = new Vector3(90, musRotasjonY, 0);
+        }
+        */
     }
 
     void FinnMusRotasjon()
     {
-        musRotasjonX = transform.rotation.x;
-        musRotasjonY = transform.rotation.y;
-        musRotasjonZ = transform.rotation.z;
+
+        musRotasjonX = gameObject.transform.localEulerAngles.x;
+        musRotasjonY = gameObject.transform.localEulerAngles.y;
+        musRotasjonZ = gameObject.transform.localEulerAngles.z;
+
+        Debug.Log("X: " + musRotasjonX + "| Y: " + musRotasjonY + "| Z: " + musRotasjonZ);
     }
 }
