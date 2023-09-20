@@ -49,7 +49,6 @@ public class BevegelseFPS : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             playerFpsRB.AddForce(0, hoppeKraft, 0);
-            Debug.Log("Hopp!");
         }
     }
 }
