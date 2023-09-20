@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 2041254218}
   - component: {fileID: 2041254217}
   - component: {fileID: 2041254216}
+  - component: {fileID: 2041254221}
   m_Layer: 0
   m_Name: PlayerFPS
   m_TagString: Untagged
@@ -576,13 +577,28 @@ Transform:
   m_GameObject: {fileID: 2041254215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.24, z: 0}
+  m_LocalPosition: {x: 0, y: 1.24, z: 1.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041254221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041254215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2e7c048c51e7647a0441b853b672b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFpsGO: {fileID: 0}
+  playerFpsRB: {fileID: 0}
+  "g\xE5Fart": 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
