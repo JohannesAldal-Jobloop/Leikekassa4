@@ -10,11 +10,14 @@ public class BevegelseFPS : MonoBehaviour
     public float gåFart = 10;
     public float hoppeKraft = 10;
 
+    private float horisontalInput = 0f;
+    private float vertikalInput = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        playerFpsGO = GameObject.Find("PlayerFPS");
-        playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
+        //playerFpsGO = GameObject.Find("PlayerFPS");
+        //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -26,9 +29,16 @@ public class BevegelseFPS : MonoBehaviour
 
     void BevegWASD()
     {
+        horisontalInput = Input.GetAxis("Horizontal");
+        vertikalInput = Input.GetAxis("Vertical");
+
+        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFart * vertikalInput);
+        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFart * horisontalInput);
+
+        /*
         if (Input.GetKey(KeyCode.W))
         {
-            playerFpsRB.AddForce(gåFart, 0 , 0);
+            playerFpsRB.AddForce(gåFart, 0, 0);
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -42,6 +52,7 @@ public class BevegelseFPS : MonoBehaviour
         {
             playerFpsRB.AddForce(0, 0, -gåFart);
         }
+        */
     }
 
     void Hopping()

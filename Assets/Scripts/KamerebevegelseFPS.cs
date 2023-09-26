@@ -5,10 +5,13 @@ using UnityEngine;
 public class KamerebevegelseFPS : MonoBehaviour
 {
     public GameObject kamera;
+    public GameObject playerFPS;
 
     private float rotasjonX = 0f;
     private float rotasjonY = 0f;
     public float musSensitivitet = 10;
+    public float minRotasjon = -90;
+    public float maxRotasjon = 90;
     
     private float musRotasjonX;
     private float musRotasjonY;
@@ -18,6 +21,7 @@ public class KamerebevegelseFPS : MonoBehaviour
     void Start()
     {
         kamera = GameObject.Find("Main Camera");
+        playerFPS = GameObject.Find("PlayerFPS");
     }
 
     // Update is called once per frame
@@ -36,19 +40,21 @@ public class KamerebevegelseFPS : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        rotasjonX += Input.GetAxis("Mouse Y") * musSensitivitet * Time.deltaTime;
-        rotasjonY += Input.GetAxis("Mouse X") * -1 * musSensitivitet * Time.deltaTime;
-        transform.localEulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
+        rotasjonX += Input.GetAxis("Mouse Y") * -1 * musSensitivitet * Time.deltaTime;
+        rotasjonY += Input.GetAxis("Mouse X") * 1 * musSensitivitet * Time.deltaTime;
+
+        Debug.Log("X: " + rotasjonX + " | Y: " + rotasjonY);
 
         /*
-        if(musRotasjonX >= 90)
-        {
-            transform.localEulerAngles = new Vector3(90, musRotasjonX, 0);
-        }else if(musRotasjonY <= -90)
-        {
-            transform.localEulerAngles = new Vector3(90, musRotasjonY, 0);
-        }
-        */
+         * Kamera bruker .eulerAngles istedenfor .localEulerAngles fordi kamera er childen til playerFPS
+         * og .localEulerAngles endrer seg etter parent so då blir rotasjonen feil når parenten endrer seg.
+         */
+        kamera.transform.eulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
+        playerFPS.transform.localEulerAngles = new Vector3(0, rotasjonY, 0);
+
+
+        rotasjonX = Mathf.Clamp(rotasjonX, minRotasjon, maxRotasjon);
+
     }
 
     void FinnMusRotasjon()
@@ -58,6 +64,6 @@ public class KamerebevegelseFPS : MonoBehaviour
         musRotasjonY = gameObject.transform.localEulerAngles.y;
         musRotasjonZ = gameObject.transform.localEulerAngles.z;
 
-        Debug.Log("X: " + musRotasjonX + "| Y: " + musRotasjonY + "| Z: " + musRotasjonZ);
+        //Debug.Log("X: " + musRotasjonX + "| Y: " + musRotasjonY + "| Z: " + musRotasjonZ);
     }
 }
