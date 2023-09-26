@@ -11,7 +11,7 @@ public class BakkeSjekk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bakkeSjekkGO = GameObject.Find("BakkeSjekk");
+        //bakkeSjekkGO = GameObject.Find("BakkeSjekk");
     }
 
     // Update is called once per frame
@@ -22,23 +22,22 @@ public class BakkeSjekk : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Er borti noko.");
-        if (collision.gameObject.layer == 3 && !påBakken)
+        if(collision.gameObject.layer == 3 && !påBakken)
         {
             påBakken = true;
             Debug.Log("Er borti bakken.");
         }
+        
     }
 
     void OnCollisionExit(Collision collision)
     {
-        påBakken = false;
-        Debug.Log("Har forlatt bakken.");
-
         if (collision.gameObject.layer == 3 && påBakken)
         {
-            
+            påBakken = false;
+            Debug.Log("Har forlatt bakken.");
         }
+            
     }
 
 }

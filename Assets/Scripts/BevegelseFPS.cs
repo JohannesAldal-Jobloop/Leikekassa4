@@ -22,10 +22,10 @@ public class BevegelseFPS : MonoBehaviour
     void Start()
     {
         playerFpsGO = GameObject.Find("PlayerFPS");
-        bakkeSjekkGO = GameObject.Find("BakkeSjekk");
+        bakkeSjekkGO = GameObject.Find("PlayerFPS");
         //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
         gåFartFaktisk = gåFartOrginal;
-        bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
+        bakkeSjekk = playerFpsGO.GetComponent<BakkeSjekk>();
     }
 
     // Update is called once per frame
