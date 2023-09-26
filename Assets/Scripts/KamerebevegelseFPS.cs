@@ -43,8 +43,6 @@ public class KamerebevegelseFPS : MonoBehaviour
         rotasjonX += Input.GetAxis("Mouse Y") * -1 * musSensitivitet * Time.deltaTime;
         rotasjonY += Input.GetAxis("Mouse X") * 1 * musSensitivitet * Time.deltaTime;
 
-        Debug.Log("X: " + rotasjonX + " | Y: " + rotasjonY);
-
         /*
          * Kamera bruker .eulerAngles istedenfor .localEulerAngles fordi kamera er childen til playerFPS
          * og .localEulerAngles endrer seg etter parent so då blir rotasjonen feil når parenten endrer seg.
@@ -59,11 +57,8 @@ public class KamerebevegelseFPS : MonoBehaviour
 
     void FinnMusRotasjon()
     {
-
         musRotasjonX = gameObject.transform.localEulerAngles.x;
         musRotasjonY = gameObject.transform.localEulerAngles.y;
         musRotasjonZ = gameObject.transform.localEulerAngles.z;
-
-        //Debug.Log("X: " + musRotasjonX + "| Y: " + musRotasjonY + "| Z: " + musRotasjonZ);
     }
 }

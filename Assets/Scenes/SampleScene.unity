@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 59336214}
   - component: {fileID: 59336213}
   - component: {fileID: 59336212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 174715373}
   - component: {fileID: 174715372}
   - component: {fileID: 174715371}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,6 +333,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174715369}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &224715151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224715152}
+  - component: {fileID: 224715153}
+  - component: {fileID: 224715154}
+  m_Layer: 0
+  m_Name: BakkeSjekk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224715152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224715151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2137281452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &224715153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224715151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.67564476, y: 0.16156694, z: 0.6756448}
+  m_Center: {x: 0, y: 0.007535085, z: 0}
+--- !u!114 &224715154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224715151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49e4eb04d1dd2a4f98deda1f8d42474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bakkeSjekkGO: {fileID: 224715151}
+  "p\xE5Bakken": 1
 --- !u!1 &252136706
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +413,7 @@ GameObject:
   - component: {fileID: 252136710}
   - component: {fileID: 252136709}
   - component: {fileID: 252136708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +518,7 @@ GameObject:
   - component: {fileID: 485358483}
   - component: {fileID: 485358482}
   - component: {fileID: 485358481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +717,7 @@ GameObject:
   - component: {fileID: 919461900}
   - component: {fileID: 919461899}
   - component: {fileID: 919461898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bakke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +740,7 @@ MeshCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
@@ -887,7 +955,7 @@ GameObject:
   - component: {fileID: 1285107281}
   - component: {fileID: 1285107280}
   - component: {fileID: 1285107279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +1060,7 @@ GameObject:
   - component: {fileID: 1419558652}
   - component: {fileID: 1419558651}
   - component: {fileID: 1419558650}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1165,7 @@ GameObject:
   - component: {fileID: 1867282908}
   - component: {fileID: 1867282907}
   - component: {fileID: 1867282906}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1270,7 @@ GameObject:
   - component: {fileID: 1875258813}
   - component: {fileID: 1875258812}
   - component: {fileID: 1875258811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,11 +1394,12 @@ Transform:
   m_GameObject: {fileID: 2137281451}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 1, z: 1.8299999}
+  m_LocalPosition: {x: -0.95, y: 5.76, z: -6.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
+  - {fileID: 224715152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &2137281453
@@ -1363,7 +1432,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137281451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1446,9 +1515,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFpsGO: {fileID: 2137281451}
+  bakkeSjekkGO: {fileID: 0}
   playerFpsRB: {fileID: 2137281456}
-  "g\xE5Fart": 10
-  hoppeKraft: 10
+  "g\xE5FartOrginal": 10
+  "g\xE5FartFaktisk": 0
+  sidelengsReduksjons: 0.75
+  hoppeKraft: 30
 --- !u!114 &2137281458
 MonoBehaviour:
   m_ObjectHideFlags: 0

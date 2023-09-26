@@ -5,19 +5,27 @@ using UnityEngine;
 public class BevegelseFPS : MonoBehaviour
 {
     public GameObject playerFpsGO;
+    public GameObject bakkeSjekkGO;
     public Rigidbody playerFpsRB;
 
-    public float gåFart = 10;
+    public float gåFartOrginal = 10f;
+    public float gåFartFaktisk = 0;
+    public float sidelengsReduksjons = 0.5f;
     public float hoppeKraft = 10;
 
     private float horisontalInput = 0f;
     private float vertikalInput = 0f;
 
+    private BakkeSjekk bakkeSjekk;
+
     // Start is called before the first frame update
     void Start()
     {
-        //playerFpsGO = GameObject.Find("PlayerFPS");
+        playerFpsGO = GameObject.Find("PlayerFPS");
+        bakkeSjekkGO = GameObject.Find("BakkeSjekk");
         //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
+        gåFartFaktisk = gåFartOrginal;
+        bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
     }
 
     // Update is called once per frame
@@ -32,34 +40,43 @@ public class BevegelseFPS : MonoBehaviour
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
 
-        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFart * vertikalInput);
-        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFart * horisontalInput);
+        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * vertikalInput);
+        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * horisontalInput);
 
-        /*
-        if (Input.GetKey(KeyCode.W))
+        ReduserSidelengsFart();
+    }
+
+    void ReduserSidelengsFart()
+    {
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
-            playerFpsRB.AddForce(gåFart, 0, 0);
+            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
-            playerFpsRB.AddForce(0, 0, gåFart);
+            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
         }
-        else if (Input.GetKey(KeyCode.S)) 
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
-            playerFpsRB.AddForce(-gåFart, 0, 0);
+            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
         }
-        else if(Input.GetKey(KeyCode.D)) 
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
-            playerFpsRB.AddForce(0, 0, -gåFart);
+            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
         }
-        */
+        else
+        {
+            gåFartFaktisk = gåFartOrginal;
+        }
     }
 
     void Hopping()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && bakkeSjekk.påBakken == true)
         {
             playerFpsRB.AddForce(0, hoppeKraft, 0);
         }
     }
+
+
 }
