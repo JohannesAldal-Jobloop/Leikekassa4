@@ -30,8 +30,10 @@ public class BulletScript : MonoBehaviour
         transform.Translate(Vector3.forward * fart * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Kula Traf noko.");
         Destroy(gameObject);
     }
 }
