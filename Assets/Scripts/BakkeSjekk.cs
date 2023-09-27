@@ -25,7 +25,6 @@ public class BakkeSjekk : MonoBehaviour
         if(collision.gameObject.layer == 3 && !påBakken)
         {
             påBakken = true;
-            Debug.Log("Er borti bakken.");
         }
         
     }
@@ -35,7 +34,6 @@ public class BakkeSjekk : MonoBehaviour
         if (collision.gameObject.layer == 3 && påBakken)
         {
             påBakken = false;
-            Debug.Log("Har forlatt bakken.");
         }
             
     }

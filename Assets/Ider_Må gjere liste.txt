@@ -1,3 +1,4 @@
 1. Laga eit skript der eg kan bestemme kva som skal bevege seg me dkameraet.
 2. Lage animasjon til våpen.
 3. Lage Skytevåpen skript
+4. Lage ein funksjon som finner alle aktive våpen.
