@@ -537,13 +537,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312507010}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.84, y: 0, z: 0.92}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -30, y: -6.4, z: 1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652946404257}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &398655944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,6 +2079,7 @@ GameObject:
   - component: {fileID: 2076945412}
   - component: {fileID: 2076945411}
   - component: {fileID: 2076945410}
+  - component: {fileID: 2076945413}
   m_Layer: 0
   m_Name: Sverd1
   m_TagString: Untagged
@@ -2174,6 +2175,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076945408}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2076945413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076945408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fart: 10
+  maxRekevidde: 10
+  skade: 10
+  magasinKapasitet: 10
+  angrepHastigheit: 0.1
 --- !u!1 &2111371544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111371545}
   - component: {fileID: 2111371546}
+  - component: {fileID: 2111371547}
   m_Layer: 0
   m_Name: "V\xE5penHand"
   m_TagString: Untagged
@@ -2220,7 +2239,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6159fdbe52a7a84ab3c0cb57abb7517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1537910930}
+--- !u!114 &2111371547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111371544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aktivtSiktepunkt: {fileID: 0}
+  "aktivtV\xE5pen": {fileID: 0}
+  kuleSpawnpunkt: {fileID: 312507010}
+  kuleList:
+  - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
+  "v\xE5penList":
+  - {fileID: 2076945408}
+  - {fileID: 919132148741654811}
+  siktepunktList:
+  - {fileID: 1163937622}
 --- !u!1 &2137281451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,19 +2536,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132148741654811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
+  m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skytehastigheit: 0.1
-  aktivtSiktepunkt: {fileID: 0}
-  "aktivtV\xE5pen": {fileID: 0}
-  kuleSpawnpunkt: {fileID: 312507010}
-  kuleList:
-  - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
-  "v\xE5penList":
-  - {fileID: 919132148741654811}
-  siktepunktList:
-  - {fileID: 1163937622}
+  fart: 10
+  maxRekevidde: 10
+  skade: 10
+  magasinKapasitet: 10
+  angrepHastigheit: 0.1
 --- !u!33 &3260616447911776202
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2674,11 +2710,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4983946410960314375, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.369505
+      value: 1.295
       objectReference: {fileID: 0}
     - target: {fileID: 4983946410960314375, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.8874884
+      value: -1.76
       objectReference: {fileID: 0}
     - target: {fileID: 4983946410960314375, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
       propertyPath: m_LocalRotation.w

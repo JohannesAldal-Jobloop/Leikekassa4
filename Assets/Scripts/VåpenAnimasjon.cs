@@ -5,21 +5,23 @@ using UnityEngine;
 public class VåpenAnimasjon : MonoBehaviour
 {
     public Animator animator;
-    
-    
 
     private SkytevåpenScript skytevåpenScript;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        // Må endres til eit skript som finner aktivt våpen. Må kansje finne ein anna måte å gjere det på.
-        animator = skytevåpenScript. våpenList[1].GetComponent<Animator>();
+        skytevåpenScript = GameObject.Find("VåpenHand").GetComponent<SkytevåpenScript>();
+        animator = skytevåpenScript.våpenList[1].GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+       
+    }
+
+    private void FixedUpdate()
     {
         SjekkOmSikter();
     }
