@@ -40,8 +40,5 @@ public class VåpenAnimasjon : MonoBehaviour
             skytevåpenScript.aktivtSiktepunkt.SetActive(true);
         }
     }
-
-
-    // Må lage om til å kunne finne fleire våpen.
-    
+   
 }

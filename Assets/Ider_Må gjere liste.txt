@@ -1,3 +1,6 @@
 1. Laga eit skript der eg kan bestemme kva som skal bevege seg med kameraet.
 2. Lage animasjon til våpen.
-3. Bug: aktivKuleSpawnpunkt blir altid HANDPISTOL sin sjølv om AR1 er det aktive våpenet.
+4. endre BulletScript til å endre variabler til VåpenVariabler til aktivtVåpen.
+
+BUGS:
+3. Bug: Skytehastigheit variablen har ingen effekt på skytehastigheit.
