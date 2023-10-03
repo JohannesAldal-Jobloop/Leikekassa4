@@ -6,11 +6,12 @@ public class SkytevåpenScript : MonoBehaviour
 {
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
-    public GameObject kuleSpawnpunkt;
+    public GameObject aktivtKuleSpawnpunkt;
 
     public List<GameObject> kuleList = new List<GameObject>();
     public List<GameObject> våpenList = new List<GameObject>();
     public List<GameObject> siktepunktList = new List<GameObject>();
+    public List<GameObject> kuleSpawnpunktList = new List<GameObject>();
 
     public VåpenVariabler aktivVåpenVariabler;
 
@@ -20,6 +21,7 @@ public class SkytevåpenScript : MonoBehaviour
         FinnAktivtVåpen();
         FinnAktivtSiktepunkt();
         FinnAktivVåpenVariabler();
+        FinnAktivKulespawnpunkt();
     }
 
     // Update is called once per frame
@@ -27,8 +29,18 @@ public class SkytevåpenScript : MonoBehaviour
     {
         FinnAktivtVåpen();
         FinnAktivtSiktepunkt();
-        StartCoroutine("FullAutoSkyting");
+        FinnAktivKulespawnpunkt();
         FinnAktivVåpenVariabler();
+
+        if(aktivVåpenVariabler.skyteModus == 1)
+        {
+            StartCoroutine("FullAutoSkyting");
+        }else if(aktivVåpenVariabler.skyteModus == 2)
+        {
+            StartCoroutine("SemiAutoSkyting");
+        }
+        
+
     }
 
     void FinnAktivtVåpen()
@@ -53,17 +65,40 @@ public class SkytevåpenScript : MonoBehaviour
         }
     }
 
+    void FinnAktivKulespawnpunkt()
+    {
+        for (int i = 0; i < kuleSpawnpunktList.Count; i++)
+        {
+            if (kuleSpawnpunktList[i].activeInHierarchy == true)
+            {
+                aktivtKuleSpawnpunkt = kuleSpawnpunktList[i];
+            }
+        }
+    }
+
     void FinnAktivVåpenVariabler()
     {
         aktivVåpenVariabler = aktivtVåpen.GetComponent<VåpenVariabler>();
     }
 
+    
+
     IEnumerator FullAutoSkyting()
     {
-        if(Input.GetKey(KeyCode.Mouse0) && våpenList[1].activeSelf)
+        if(Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
         {
-            Debug.Log("AR1 skal skyte");
-            Instantiate(kuleList[0], kuleSpawnpunkt.transform);
+            Debug.Log("Full auto skyting");
+            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
+            yield return new WaitForSeconds(aktivVåpenVariabler.angrepHastigheit);
+        }
+    }
+
+    IEnumerator SemiAutoSkyting()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 2 && aktivtVåpen.activeSelf)
+        {
+            Debug.Log("Semi auto skyting");
+            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
             yield return new WaitForSeconds(aktivVåpenVariabler.angrepHastigheit);
         }
     }

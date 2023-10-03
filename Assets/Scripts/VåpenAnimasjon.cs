@@ -12,18 +12,19 @@ public class VåpenAnimasjon : MonoBehaviour
     void Start()
     {
         skytevåpenScript = GameObject.Find("VåpenHand").GetComponent<SkytevåpenScript>();
-        animator = skytevåpenScript.våpenList[1].GetComponent<Animator>();
+        animator = skytevåpenScript.aktivtVåpen.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        SjekkOmSikter();
+        animator = skytevåpenScript.aktivtVåpen.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
-        SjekkOmSikter();
+        
     }
 
     void SjekkOmSikter()
