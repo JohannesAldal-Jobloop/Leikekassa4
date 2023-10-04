@@ -22,7 +22,18 @@ public class BulletScript : MonoBehaviour
 
         BulletSpawn();
         FinnSpawnPosisjon();
-        transform.parent = null;
+        if (skytevåpenScript.aktivVåpenVariabler.skyteModus != 3)
+        {
+            transform.parent = null;
+        }
+        else
+        {
+            if(Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                transform.parent = null;
+            }
+        }
+        
     }
 
     // Update is called once per frame
@@ -39,7 +50,15 @@ public class BulletScript : MonoBehaviour
 
     void BulletSpawn()
     {
-        transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.fart * Time.deltaTime);
+        if(skytevåpenScript.aktivVåpenVariabler.kulaBrukt == 0)
+        {
+            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.fart * Time.deltaTime);
+        }
+        else if(skytevåpenScript.aktivVåpenVariabler.kulaBrukt == 1)
+        {
+            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.fart * Time.deltaTime);
+        }
+        
     }
 
     void BulletRestrictions()
