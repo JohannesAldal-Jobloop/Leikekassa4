@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SkytevåpenScript : MonoBehaviour
 {
+    private float nesteSkud = 0f;
+
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
     public GameObject aktivtKuleSpawnpunkt;
@@ -32,12 +34,17 @@ public class SkytevåpenScript : MonoBehaviour
         FinnAktivKulespawnpunkt();
         FinnAktivVåpenVariabler();
 
-        if(aktivVåpenVariabler.skyteModus == 1)
+        Debug.Log("Time.time: "+Time.time);
+        Debug.Log("nesteSkud: "+nesteSkud);
+
+        
+        if (aktivVåpenVariabler.skyteModus == 1)
         {
-            StartCoroutine("FullAutoSkyting");
-        }else if(aktivVåpenVariabler.skyteModus == 2)
+            StartCoroutine(FullAutoSkyting());
+        }
+        else if(aktivVåpenVariabler.skyteModus == 2)
         {
-            StartCoroutine("SemiAutoSkyting");
+            StartCoroutine(SemiAutoSkyting());
         }
         
 
@@ -81,11 +88,9 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler = aktivtVåpen.GetComponent<VåpenVariabler>();
     }
 
-    
-
     IEnumerator FullAutoSkyting()
     {
-        if(Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
+        if (Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
         {
             Debug.Log("Full auto skyting");
             Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
