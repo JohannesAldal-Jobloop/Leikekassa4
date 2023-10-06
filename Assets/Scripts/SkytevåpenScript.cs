@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SkytevåpenScript : MonoBehaviour
 {
+    public bool klarTilSkyte = true;
+
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
     public GameObject aktivtKuleSpawnpunkt;
@@ -32,12 +34,19 @@ public class SkytevåpenScript : MonoBehaviour
         FinnAktivKulespawnpunkt();
         FinnAktivVåpenVariabler();
 
-        if(aktivVåpenVariabler.skyteModus == 1)
+
+        if (aktivVåpenVariabler.skyteModus == 1)
         {
-            StartCoroutine("FullAutoSkyting");
-        }else if(aktivVåpenVariabler.skyteModus == 2)
+            StartCoroutine(FullAutoSkyting());
+            
+        }
+        else if(aktivVåpenVariabler.skyteModus == 2)
         {
-            StartCoroutine("SemiAutoSkyting");
+            StartCoroutine(SemiAutoSkyting());
+        }
+        else if(aktivVåpenVariabler.skyteModus == 3)
+        {
+            laserSkyting();
         }
         
 
@@ -81,11 +90,10 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler = aktivtVåpen.GetComponent<VåpenVariabler>();
     }
 
-    
-
     IEnumerator FullAutoSkyting()
     {
-        if(Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
+        
+        if (Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
         {
             Debug.Log("Full auto skyting");
             Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
@@ -100,6 +108,15 @@ public class SkytevåpenScript : MonoBehaviour
             Debug.Log("Semi auto skyting");
             Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
             yield return new WaitForSeconds(aktivVåpenVariabler.angrepHastigheit);
+        }
+    }
+
+    void laserSkyting()
+    {
+        if (Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 3 && aktivtVåpen.activeSelf)
+        {
+            Debug.Log("Laser auto skyting");
+            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
         }
     }
 }
