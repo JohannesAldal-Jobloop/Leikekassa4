@@ -6,7 +6,7 @@ public class BakkeSjekk : MonoBehaviour
 {
     public GameObject bakkeSjekkGO;
 
-    public bool påBakken = true;
+    public bool pï¿½Bakken = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +22,18 @@ public class BakkeSjekk : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == 3 && !påBakken)
+        if(collision.gameObject.layer == 3 && !pï¿½Bakken)
         {
-            påBakken = true;
+            pï¿½Bakken = true;
         }
         
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.layer == 3 && påBakken)
+        if (collision.gameObject.layer == 3 && pï¿½Bakken)
         {
-            påBakken = false;
+            pï¿½Bakken = false;
         }
             
     }
