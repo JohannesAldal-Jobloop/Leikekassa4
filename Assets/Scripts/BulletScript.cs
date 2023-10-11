@@ -103,9 +103,9 @@ public class BulletScript : MonoBehaviour
         {
             Debug.Log("Kula Traf noko.");
 
-            if(hitRB != null)
+            if (hitRB != null)
             {
-                hitRB.AddForce(Vector3.forward);
+                hitRB.AddForce(gameObject.transform.forward * skytevåpenScript.aktivVåpenVariabler.tilbakeslagKraft);
             }
 
             StartCoroutine(SlettKulaEtterVenting());

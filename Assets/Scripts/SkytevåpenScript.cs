@@ -116,7 +116,13 @@ public class SkytevåpenScript : MonoBehaviour
                 tarSkade.TaSkade(aktivVåpenVariabler.skade);
             }
 
-            Instantiate(aktivVåpenVariabler.treffEffekt, rayTreff.point, Quaternion.LookRotation(rayTreff.normal));
+            if(rayTreff.rigidbody != null)
+            {
+                rayTreff.rigidbody.AddForce(-rayTreff.normal * aktivVåpenVariabler.tilbakeslagKraft);
+            }
+
+            ParticleSystem treffEffekt = Instantiate(aktivVåpenVariabler.treffEffekt, rayTreff.point, Quaternion.LookRotation(rayTreff.normal));
+            Destroy(treffEffekt, 1f );
         }
 
     }
@@ -140,11 +146,19 @@ public class SkytevåpenScript : MonoBehaviour
 
     void SemiAutoSkyting()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
-            SpawnBullet();
+            if (prosjektilSkyting)
+            {
+                SpawnBullet();
+            }
+            else
+            {
+                RaycastShooting();
+            }
         }
+        
     }
 
     void laserSkyting()
@@ -152,7 +166,14 @@ public class SkytevåpenScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
-            SpawnBullet();
+            if (prosjektilSkyting)
+            {
+                SpawnBullet();
+            }
+            else
+            {
+                RaycastShooting();
+            }
         }
     }
 }

@@ -1,8 +1,7 @@
 2. Lage animasjon til våpen.
-3. lage ein Raycast skyting til våpen.
-4. Gjere det sån at skyddene dytter det det treffer.
 5. Lage fleire skadetyper.
-6. 
+6. Lage crouching
+7. 
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun

@@ -30,6 +30,7 @@ public class VåpenVariabler : MonoBehaviour
     public float skade = 10;
     public float magasinKapasitet = 10;
     public float angrepHastigheit = 0.1f;
+    public float tilbakeslagKraft = 30;
     public int skyteModus = 0;
     public int kulaBrukt = 0;
 
