@@ -98,11 +98,24 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Rigidbody hitRB =  other.GetComponent<Rigidbody>();
         if(other.tag != "Kula")
         {
             Debug.Log("Kula Traf noko.");
-            Destroy(gameObject);
+
+            if(hitRB != null)
+            {
+                hitRB.AddForce(Vector3.forward);
+            }
+
+            StartCoroutine(SlettKulaEtterVenting());
         }
         
+    }
+
+    IEnumerator SlettKulaEtterVenting()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
     }
 }

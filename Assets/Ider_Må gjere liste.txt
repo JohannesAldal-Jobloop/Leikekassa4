@@ -1,6 +1,8 @@
-1. Laga eit skript der eg kan bestemme kva som skal bevege seg med kameraet.
 2. Lage animasjon til våpen.
-4. endre BulletScript til å endre variabler til VåpenVariabler til aktivtVåpen.
+3. lage ein Raycast skyting til våpen.
+4. Gjere det sån at skyddene dytter det det treffer.
+5. Lage fleire skadetyper.
+6. 
 
 BUGS:
-3. Bug: Skytehastigheit variablen har ingen effekt på skytehastigheit.
+1. kulo LasterKula kjem feil veg ut ifrå LaserGun

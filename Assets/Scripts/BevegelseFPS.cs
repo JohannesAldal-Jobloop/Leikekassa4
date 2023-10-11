@@ -72,7 +72,7 @@ public class BevegelseFPS : MonoBehaviour
 
     void Hopping()
     {
-        if (Input.GetKey(KeyCode.Space) && bakkeSjekk.påBakken == true)
+        if (Input.GetKey(KeyCode.Space) && bakkeSjekk.paBakken == true)
         {
             playerFpsRB.AddForce(0, hoppeKraft, 0);
         }

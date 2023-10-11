@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SkytevåpenScript : MonoBehaviour
 {
+    private float nesteTidSkyte = 0;
+
     public bool klarTilSkyte = true;
 
     public GameObject aktivtSiktepunkt;
@@ -20,10 +22,7 @@ public class SkytevåpenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FinnAktivtVåpen();
-        FinnAktivtSiktepunkt();
-        FinnAktivVåpenVariabler();
-        FinnAktivKulespawnpunkt();
+        FinnAlleAktiveGameobjectForScript();
     }
 
     // Update is called once per frame
@@ -37,12 +36,11 @@ public class SkytevåpenScript : MonoBehaviour
 
         if (aktivVåpenVariabler.skyteModus == 1)
         {
-            StartCoroutine(FullAutoSkyting());
-            
+            FullAutoSkyting();
         }
         else if(aktivVåpenVariabler.skyteModus == 2)
         {
-            StartCoroutine(SemiAutoSkyting());
+            SemiAutoSkyting();
         }
         else if(aktivVåpenVariabler.skyteModus == 3)
         {
@@ -50,6 +48,14 @@ public class SkytevåpenScript : MonoBehaviour
         }
         
 
+    }
+
+    void FinnAlleAktiveGameobjectForScript()
+    {
+        FinnAktivtVåpen();
+        FinnAktivtSiktepunkt();
+        FinnAktivVåpenVariabler();
+        FinnAktivKulespawnpunkt();
     }
 
     void FinnAktivtVåpen()
@@ -90,33 +96,35 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler = aktivtVåpen.GetComponent<VåpenVariabler>();
     }
 
-    IEnumerator FullAutoSkyting()
+    void SpawnBullet()
     {
-        
-        if (Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 1 && aktivtVåpen.activeSelf)
+        Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
+    }
+
+    void FullAutoSkyting()
+    {
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
-            Debug.Log("Full auto skyting");
-            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
-            yield return new WaitForSeconds(aktivVåpenVariabler.angrepHastigheit);
+            nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
+            SpawnBullet();
         }
     }
 
-    IEnumerator SemiAutoSkyting()
+    void SemiAutoSkyting()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 2 && aktivtVåpen.activeSelf)
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
-            Debug.Log("Semi auto skyting");
-            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
-            yield return new WaitForSeconds(aktivVåpenVariabler.angrepHastigheit);
+            nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
+            SpawnBullet();
         }
     }
 
     void laserSkyting()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && aktivVåpenVariabler.skyteModus == 3 && aktivtVåpen.activeSelf)
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
-            Debug.Log("Laser auto skyting");
-            Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
+            nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
+            SpawnBullet();
         }
     }
 }
