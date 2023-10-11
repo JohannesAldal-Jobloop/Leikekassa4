@@ -6,11 +6,13 @@ public class SkytevåpenScript : MonoBehaviour
 {
     private float nesteTidSkyte = 0;
 
-    public bool klarTilSkyte = true;
+    public bool prosjektilSkyting = true;
 
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
     public GameObject aktivtKuleSpawnpunkt;
+
+    public Camera fpsKamera;
 
     public List<GameObject> kuleList = new List<GameObject>();
     public List<GameObject> våpenList = new List<GameObject>();
@@ -100,13 +102,39 @@ public class SkytevåpenScript : MonoBehaviour
     {
         Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
     }
+    void RaycastShooting()
+    {
+        RaycastHit rayTreff;
+        if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maxRekevidde))
+        {
+            Debug.Log(rayTreff.transform.name);
+
+            TarSkade tarSkade = rayTreff.transform.GetComponent<TarSkade>();
+
+            if(tarSkade != null)
+            {
+                tarSkade.TaSkade(aktivVåpenVariabler.skade);
+            }
+
+            Instantiate(aktivVåpenVariabler.treffEffekt, rayTreff.point, Quaternion.LookRotation(rayTreff.normal));
+        }
+
+    }
 
     void FullAutoSkyting()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
-            SpawnBullet();
+            if (prosjektilSkyting)
+            {
+                SpawnBullet();
+            }
+            else
+            {
+                RaycastShooting();
+            }
+            
         }
     }
 

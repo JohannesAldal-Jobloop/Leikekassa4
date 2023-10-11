@@ -17,7 +17,12 @@ public class VåpenVariabler : MonoBehaviour
      * skyteModus        = Korleis skytevåpene skyter:
      *      1: Full automatisk.
      *      2: Semi automatisk.
-     *      3: Burst;
+     *      3: Laser.
+     *      
+     * kulaBrukt         = Kva kula våpene bruker. 
+     *                     Denne variablen skal vere indexen til kula våpene bruker frå kuleList listo frå SkytevåpenSkriptet.
+     *                     
+     * treffEffekt       = Dette er kva partikkel effekt som blir brukt når våpenes hitbox/kuler treffer noko.
      */
 
     public float fart = 10;
@@ -27,4 +32,6 @@ public class VåpenVariabler : MonoBehaviour
     public float angrepHastigheit = 0.1f;
     public int skyteModus = 0;
     public int kulaBrukt = 0;
+
+    public ParticleSystem treffEffekt;
 }

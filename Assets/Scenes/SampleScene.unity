@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 252136710}
   - component: {fileID: 252136709}
   - component: {fileID: 252136708}
+  - component: {fileID: 252136711}
   m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -513,6 +514,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252136706}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &252136711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252136706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e12bda427f564c868cd01b100f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liv: 10
 --- !u!1 &312507010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,8 +1777,9 @@ GameObject:
   - component: {fileID: 1492939113}
   - component: {fileID: 1492939112}
   - component: {fileID: 1492939115}
+  - component: {fileID: 1492939116}
   m_Layer: 3
-  m_Name: Cube (9)
+  m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1883,6 +1898,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1492939116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492939110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e12bda427f564c868cd01b100f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liv: 100
 --- !u!95 &1537910930
 Animator:
   serializedVersion: 5
@@ -2643,10 +2671,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  klarTilSkyte: 1
+  prosjektilSkyting: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
+  fpsKamera: {fileID: 963194227}
   kuleList:
   - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
   - {fileID: 5778319868234242297, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
