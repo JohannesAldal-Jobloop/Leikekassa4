@@ -6,15 +6,20 @@ public class BevegelseFPS : MonoBehaviour
 {
     public GameObject playerFpsGO;
     public GameObject bakkeSjekkGO;
+    public GameObject bodyBottomHitboxGO;
+
     public Rigidbody playerFpsRB;
 
     public float gåFartOrginal = 10f;
     public float gåFartFaktisk = 0;
     public float sidelengsReduksjons = 0.5f;
     public float hoppeKraft = 10;
+    public float hukingDistanse = -1;
 
     private float horisontalInput = 0f;
     private float vertikalInput = 0f;
+
+    public bool huker = false;
 
     private BakkeSjekk bakkeSjekk;
 
@@ -33,6 +38,7 @@ public class BevegelseFPS : MonoBehaviour
     {
         BevegWASD();
         Hopping();
+        Huking();
     }
 
     void BevegWASD()
@@ -80,9 +86,18 @@ public class BevegelseFPS : MonoBehaviour
 
     void Huking()
     {
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.C) && !huker)
         {
+            bodyBottomHitboxGO.SetActive(false);
+            gameObject.transform.Translate(0, hukingDistanse, 0);
+            huker = true;
+        }
 
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            gameObject.transform.Translate(0, -hukingDistanse, 0);
+            bodyBottomHitboxGO.SetActive(true);
+            huker = false;
         }
     }
 }
