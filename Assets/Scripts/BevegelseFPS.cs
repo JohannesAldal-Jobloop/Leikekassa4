@@ -78,5 +78,11 @@ public class BevegelseFPS : MonoBehaviour
         }
     }
 
+    void Huking()
+    {
+        if (Input.GetKey(KeyCode.C))
+        {
 
+        }
+    }
 }
