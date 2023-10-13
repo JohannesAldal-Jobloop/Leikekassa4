@@ -1,7 +1,9 @@
-2. Lage animasjon til våpen.
+2. Lage animasjon til våpen: reload,  osv
 5. Lage fleire skadetyper.
-6. Lage crouching
-7. 
+6. laga finder
+7. Gjere det so all kulene til lasergever blir sletta når du slutter å skyta.
+8. 
+
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun

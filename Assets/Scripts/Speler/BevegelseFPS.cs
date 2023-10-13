@@ -6,7 +6,7 @@ public class BevegelseFPS : MonoBehaviour
 {
     public GameObject playerFpsGO;
     public GameObject bakkeSjekkGO;
-    public GameObject bodyBottomHitboxGO;
+    public GameObject bodyTopHitboxGO;
 
     public Rigidbody playerFpsRB;
 
@@ -19,6 +19,7 @@ public class BevegelseFPS : MonoBehaviour
     private float horisontalInput = 0f;
     private float vertikalInput = 0f;
 
+    public bool holdHuker = false;
     public bool huker = false;
 
     private BakkeSjekk bakkeSjekk;
@@ -86,18 +87,36 @@ public class BevegelseFPS : MonoBehaviour
 
     void Huking()
     {
-        if (Input.GetKey(KeyCode.C) && !huker)
+        if (!holdHuker)
         {
-            bodyBottomHitboxGO.SetActive(false);
-            gameObject.transform.Translate(0, hukingDistanse, 0);
-            huker = true;
+            //-----Virker ikkje-----
+            // Når du trykker på C so skal spelaren huke til du trykker på C ijen.
+            if(Input.GetKeyDown(KeyCode.C) && !huker)
+            {
+                Debug.Log("Huker");
+                bodyTopHitboxGO.SetActive(false);
+                huker = true;
+            }else if (Input.GetKeyDown(KeyCode.C) && huker)
+            {
+                bodyTopHitboxGO.SetActive(true);
+                huker = false;
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.C) && !huker)
+            {
+                bodyTopHitboxGO.SetActive(false);
+                huker = true;
+            }
+
+            if (Input.GetKeyUp(KeyCode.C) && huker)
+            {
+                bodyTopHitboxGO.SetActive(true);
+                huker = false;
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            gameObject.transform.Translate(0, -hukingDistanse, 0);
-            bodyBottomHitboxGO.SetActive(true);
-            huker = false;
-        }
+        
     }
 }

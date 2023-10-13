@@ -22,6 +22,8 @@ public class BulletScript : MonoBehaviour
 
         BulletSpawn();
         FinnSpawnPosisjon();
+        SettAktivVåpenVariabler();
+
         if (skytevåpenScript.aktivVåpenVariabler.skyteModus != 3)
         {
             transform.parent = null;
@@ -42,10 +44,6 @@ public class BulletScript : MonoBehaviour
         BulletSpawn();
         BulletRestrictions();
     }
-    /* Finn kva våpen som skyter.
-     * Juster Variabler som fart, skade etter kvart våpen.
-     * So skyt.
-     */
 
 
     void BulletSpawn()
@@ -96,6 +94,13 @@ public class BulletScript : MonoBehaviour
         spawnPositionZ = transform.position.z;
     }
 
+    void SettAktivVåpenVariabler()
+    {
+        fart = skytevåpenScript.aktivVåpenVariabler.fart;
+        maxRekevidde = skytevåpenScript.aktivVåpenVariabler.maxRekevidde;
+        skade = skytevåpenScript.aktivVåpenVariabler.skade;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Rigidbody hitRB =  other.GetComponent<Rigidbody>();
@@ -110,7 +115,13 @@ public class BulletScript : MonoBehaviour
 
             StartCoroutine(SlettKulaEtterVenting());
         }
-        
+
+        if (other.GetComponent<TarSkade>())
+        {
+            TarSkade tarSkade = other.GetComponent<TarSkade>();
+
+            tarSkade.TaSkade(skade);
+        }
     }
 
     IEnumerator SlettKulaEtterVenting()

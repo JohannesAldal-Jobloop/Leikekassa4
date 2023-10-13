@@ -7,6 +7,7 @@ public class SkytevåpenScript : MonoBehaviour
     private float nesteTidSkyte = 0;
 
     public bool prosjektilSkyting = true;
+    private bool reloader = false;
 
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
@@ -25,6 +26,7 @@ public class SkytevåpenScript : MonoBehaviour
     void Start()
     {
         FinnAlleAktiveGameobjectForScript();
+        aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
     }
 
     // Update is called once per frame
@@ -36,20 +38,24 @@ public class SkytevåpenScript : MonoBehaviour
         FinnAktivVåpenVariabler();
 
 
-        if (aktivVåpenVariabler.skyteModus == 1)
+        if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
         {
             FullAutoSkyting();
         }
-        else if(aktivVåpenVariabler.skyteModus == 2)
+        else if(aktivVåpenVariabler.skyteModus == 2 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
         {
             SemiAutoSkyting();
         }
-        else if(aktivVåpenVariabler.skyteModus == 3)
+        else if(aktivVåpenVariabler.skyteModus == 3 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
         {
             laserSkyting();
         }
-        
 
+        if (Input.GetKey(KeyCode.R))
+        {
+            StartCoroutine(Reload());
+        }
+        
     }
 
     void FinnAlleAktiveGameobjectForScript()
@@ -98,9 +104,18 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler = aktivtVåpen.GetComponent<VåpenVariabler>();
     }
 
+    IEnumerator Reload()
+    {
+        reloader = true;
+        yield return new WaitForSeconds(aktivVåpenVariabler.reloadFart);
+        aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
+        reloader = false;
+    }
+
     void SpawnBullet()
     {
         Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
+        aktivVåpenVariabler.magasinMengdeNo -= 1;
     }
     void RaycastShooting()
     {
@@ -124,7 +139,7 @@ public class SkytevåpenScript : MonoBehaviour
             ParticleSystem treffEffekt = Instantiate(aktivVåpenVariabler.treffEffekt, rayTreff.point, Quaternion.LookRotation(rayTreff.normal));
             Destroy(treffEffekt, 1f );
         }
-
+        aktivVåpenVariabler.magasinMengdeNo -= 1;
     }
 
     void FullAutoSkyting()
