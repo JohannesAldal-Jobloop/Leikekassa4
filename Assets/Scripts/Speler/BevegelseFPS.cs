@@ -27,8 +27,8 @@ public class BevegelseFPS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerFpsGO = GameObject.Find("PlayerFPS");
-        bakkeSjekkGO = GameObject.Find("PlayerFPS");
+        playerFpsGO = GameObject.Find("SpelerFPS");
+        bakkeSjekkGO = GameObject.Find("BakkeSjekk");
         //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
         gåFartFaktisk = gåFartOrginal;
         bakkeSjekk = playerFpsGO.GetComponent<BakkeSjekk>();

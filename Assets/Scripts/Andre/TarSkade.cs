@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class TarSkade : MonoBehaviour
 {
+    /* Lag ein liste som inneholder GameObjects med colliders.
+     * Dette blir hitboksene til det GameObjectet som dett skripte er koble til.
+     */
+
+    /* For at dette skripte skal virke:
+     * Collider.
+     */
+
     public float liv = 10;
+
+    public List<Collider> list = new List<Collider>();
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +41,10 @@ public class TarSkade : MonoBehaviour
     void SlettSegSjølv()
     {
         Destroy(gameObject);
+    }
+
+    void FinnAlleHitbokserTilChildren()
+    {
+
     }
 }

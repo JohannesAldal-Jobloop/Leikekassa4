@@ -21,7 +21,7 @@ public class KamerebevegelseFPS : MonoBehaviour
     void Start()
     {
         kamera = GameObject.Find("Main Camera");
-        playerFPS = GameObject.Find("PlayerFPS");
+        playerFPS = GameObject.Find("SpelerFPS");
     }
 
     // Update is called once per frame

@@ -329,6 +329,8 @@ GameObject:
   - component: {fileID: 3795552693067403668}
   - component: {fileID: 8131154021693002600}
   - component: {fileID: 6153241846329986066}
+  - component: {fileID: 3622978047628107101}
+  - component: {fileID: 2924325661085476793}
   m_Layer: 3
   m_Name: Fiende1
   m_TagString: Untagged
@@ -344,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119573733530298731}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.12, y: 7.63, z: 24.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -448,7 +450,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &6153241846329986066
 MonoBehaviour:
@@ -463,6 +465,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liv: 100
+--- !u!114 &3622978047628107101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119573733530298731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24a209411201274c8e80c5009779a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  spelerFPSTransform: {fileID: 0}
+  bakke:
+    serializedVersion: 2
+    m_Bits: 0
+  speler:
+    serializedVersion: 2
+    m_Bits: 0
+  "g\xE5Punkt": {x: 0, y: 0, z: 0}
+  "g\xE5PunktRekevidde": 0
+  "sj\xE5Rekevidde": 0
+  angrepsRekkevidde: 0
+--- !u!195 &2924325661085476793
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119573733530298731}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &2200146271277578066
 GameObject:
   m_ObjectHideFlags: 0
