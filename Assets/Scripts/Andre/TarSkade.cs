@@ -14,12 +14,13 @@ public class TarSkade : MonoBehaviour
 
     public float liv = 10;
 
-    public List<Collider> list = new List<Collider>();
+    public List<Collider> taSkadeCollidersList = new List<Collider>();
+    public List<Collider> gjerSkadeCollidersList = new List<Collider>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,8 +44,22 @@ public class TarSkade : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+    /*
+     * Skal finna alle colliders i alle children. 
+     * Virker ikkje no.
+     * Må fikse seinare.
+     * 
     void FinnAlleHitbokserTilChildren()
     {
-
+        for(int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            Debug.Log(gameObject.transform.GetChild(i));
+            if (gameObject.transform.GetChild(i).GetComponent<Collider>())
+            {
+                
+            }
+        }
     }
+    */
 }

@@ -982,6 +982,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 142135553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &153979144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153979145}
+  - component: {fileID: 153979146}
+  m_Layer: 0
+  m_Name: HovetTaSkadeHitboks
+  m_TagString: taSkadeHitboks
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &153979145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153979144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871556671257760378}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &153979146
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153979144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &171244910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1809,7 +1864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liv: 10
-  list: []
+  taSkadeCollidersList: []
+  gjerSkadeCollidersList: []
 --- !u!1001 &257321175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2581,6 +2637,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 382173282}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &393858866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393858867}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393858867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393858866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8307951316299867725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398655944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2832,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 399559062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &422603603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422603604}
+  - component: {fileID: 422603605}
+  m_Layer: 0
+  m_Name: venstreBeinTaskadeHitboks
+  m_TagString: taSkadeHitboks
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422603604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422603603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.03, y: -0.99, z: -1.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2562602876611364994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &422603605
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422603603}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.3107648
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.091998816, z: 0}
 --- !u!1 &435496417
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +3820,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 565493150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &572842127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572842128}
+  - component: {fileID: 572842129}
+  m_Layer: 0
+  m_Name: "H\xF8greArmTaSkadeHitboks"
+  m_TagString: taSkadeHitboks
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &572842128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572842127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0064558038, y: -0.28173393, z: 0.0009236646, w: 0.95947045}
+  m_LocalPosition: {x: 2.053, y: -0.089, z: -1.191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2548372355937972843}
+  m_LocalEulerAnglesHint: {x: -0.68, y: -32.73, z: 0.31}
+--- !u!136 &572842129
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572842127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.4190315
+  m_Direction: 1
+  m_Center: {x: -0.0000023480984, y: -0.8835367, z: -0.000000012315491}
 --- !u!1001 &580998319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7503,6 +7700,61 @@ Transform:
   - {fileID: 1492939111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1130775428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130775430}
+  - component: {fileID: 1130775429}
+  m_Layer: 0
+  m_Name: VenstreArmTaSkadeHitboks
+  m_TagString: taSkadeHitboks
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1130775429
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130775428}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.4190315
+  m_Direction: 1
+  m_Center: {x: -0.0000023480984, y: -0.8835367, z: -0.000000012315491}
+--- !u!4 &1130775430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130775428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.018830039, y: -0.99917424, z: -0.033411756, w: 0.0134212375}
+  m_LocalPosition: {x: 2.04519, y: -0.04479146, z: -1.177973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2440347111398905831}
+  m_LocalEulerAnglesHint: {x: -152.394, y: -137.3, z: 111.885}
 --- !u!1 &1137935866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,6 +8861,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294735156}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1329586547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329586548}
+  - component: {fileID: 1329586549}
+  m_Layer: 0
+  m_Name: "h\xF8greBeinTaskadeHitboks (1)"
+  m_TagString: taSkadeHitboks
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329586548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329586547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.036, y: -0.9899999, z: -1.276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8307951316299867725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1329586549
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329586547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.3107648
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.091998816, z: 0}
 --- !u!1 &1379607325
 GameObject:
   m_ObjectHideFlags: 0
@@ -9681,7 +9988,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liv: 100
-  list: []
+  taSkadeCollidersList: []
+  gjerSkadeCollidersList: []
 --- !u!1001 &1517516639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13773,6 +14081,7 @@ Transform:
   m_Children:
   - {fileID: 4976996584203858690}
   - {fileID: 6057183838528135289}
+  - {fileID: 153979145}
   m_Father: {fileID: 47567218016462608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2132994426281651453
@@ -13927,6 +14236,7 @@ Transform:
   m_Children:
   - {fileID: 1714572335845339735}
   - {fileID: 1238220347987218107}
+  - {fileID: 1130775430}
   m_Father: {fileID: 47567218016462608}
   m_LocalEulerAnglesHint: {x: 27.606, y: 308.043, z: 68.115}
 --- !u!1 &2449995755305481603
@@ -13992,6 +14302,7 @@ Transform:
   m_Children:
   - {fileID: 823302352558424542}
   - {fileID: 8286589583644664995}
+  - {fileID: 572842128}
   m_Father: {fileID: 47567218016462608}
   m_LocalEulerAnglesHint: {x: 15.677, y: 226.457, z: -65.379}
 --- !u!4 &2562602876611364994
@@ -14010,6 +14321,7 @@ Transform:
   - {fileID: 3352561392934006283}
   - {fileID: 492671230132054746}
   - {fileID: 6146797213986371913}
+  - {fileID: 422603604}
   m_Father: {fileID: 47567218016462608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2614338955658834621
@@ -14098,7 +14410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24a209411201274c8e80c5009779a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 3735358716043539068}
   spelerFPSTransform: {fileID: 1137935871}
   bakke:
     serializedVersion: 2
@@ -14739,7 +15051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liv: 100
-  list: []
+  taSkadeCollidersList: []
+  gjerSkadeCollidersList: []
 --- !u!23 &5672562211576370995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15614,6 +15927,8 @@ Transform:
   - {fileID: 6971428388067610856}
   - {fileID: 6860542681165545235}
   - {fileID: 8898299904337777129}
+  - {fileID: 393858867}
+  - {fileID: 1329586548}
   m_Father: {fileID: 47567218016462608}
   m_LocalEulerAnglesHint: {x: 0, y: 87.137, z: 0}
 --- !u!1 &8399029719981717040
@@ -15644,7 +15959,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47567218016462608}
-  - component: {fileID: 8432013998835739264}
   m_Layer: 0
   m_Name: Kropp (1)
   m_TagString: Untagged
@@ -15652,30 +15966,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8432013998835739264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432013998835739263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e24a209411201274c8e80c5009779a2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  spelerFPSTransform: {fileID: 1137935871}
-  bakke:
-    serializedVersion: 2
-    m_Bits: 0
-  speler:
-    serializedVersion: 2
-    m_Bits: 0
-  "g\xE5Punkt": {x: 0, y: 0, z: 0}
-  "g\xE5PunktRekevidde": 15
-  "sj\xE5Rekevidde": 30
-  angrepsRekkevidde: 10
 --- !u!33 &8549612669711087086
 MeshFilter:
   m_ObjectHideFlags: 0
