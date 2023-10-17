@@ -83,5 +83,4 @@ public class TarSkade : MonoBehaviour
             taSkadeCollidersList.Add(actors[i].GetComponent<Collider>());
         }
     }
-
 }

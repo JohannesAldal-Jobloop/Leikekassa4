@@ -20,6 +20,8 @@ public class SkytevåpenScript : MonoBehaviour
     public List<GameObject> siktepunktList = new List<GameObject>();
     public List<GameObject> kuleSpawnpunktList = new List<GameObject>();
 
+    public GameObject[] aktiveKuler;
+
     public VåpenVariabler aktivVåpenVariabler;
 
     // Start is called before the first frame update
@@ -190,5 +192,21 @@ public class SkytevåpenScript : MonoBehaviour
                 RaycastShooting();
             }
         }
+        else
+        {
+            FinnAktiveKuler();
+
+            for(int i = 0; i < aktiveKuler.Length; i++)
+            {
+                Destroy(aktiveKuler[i]);
+            }
+        }
+    }
+
+    void FinnAktiveKuler()
+    {
+        Debug.Log("Prøver å finne aktive kuler.");
+        aktiveKuler = GameObject.FindGameObjectsWithTag("Kula");
+        
     }
 }

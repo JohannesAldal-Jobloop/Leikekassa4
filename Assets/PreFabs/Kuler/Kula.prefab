@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4416452163614287104}
   - component: {fileID: 7270548590211276939}
   - component: {fileID: 2159545535365029762}
+  - component: {fileID: 8111705696060923354}
   m_Layer: 0
   m_Name: Kula
   m_TagString: Kula
@@ -121,7 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fart: 10
   maxRekevidde: 10
-  skade: 10
 --- !u!54 &2159545535365029762
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,3 +149,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8111705696060923354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155651461975442071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skade: 10

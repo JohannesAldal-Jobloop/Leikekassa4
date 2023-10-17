@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7856756652893377003}
   - component: {fileID: 144769844450562698}
   - component: {fileID: 5641901386649759174}
+  - component: {fileID: 736536865001864328}
   m_Layer: 0
   m_Name: LaserKula
-  m_TagString: Untagged
+  m_TagString: Kula
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fart: 10
   maxRekevidde: 10
-  skade: 10
 --- !u!54 &5641901386649759174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,3 +151,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &736536865001864328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778319868234242297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skade: 10

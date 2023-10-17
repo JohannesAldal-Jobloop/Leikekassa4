@@ -1,0 +1,8 @@
+Kva eg har:
+Lista med alle hitboks spelobjektene so eg kan få alt eg trenger frå dei.
+
+Kuleskripte virker med at den kjekker om det den treffer har skripte taSkade
+so kaller kula taSkade funksjonen.
+
+Fiks:
+Lage eit child taSkade skript soom sender skaden tatt til hoved skriptet.

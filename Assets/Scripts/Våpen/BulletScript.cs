@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     public float fart = 10;
     public float maxRekevidde = 10;
-    public float skade = 10;
+    
 
     private float spawnPositionX;
     private float spawnPositionY;
@@ -98,30 +98,6 @@ public class BulletScript : MonoBehaviour
     {
         fart = skytevåpenScript.aktivVåpenVariabler.fart;
         maxRekevidde = skytevåpenScript.aktivVåpenVariabler.maxRekevidde;
-        skade = skytevåpenScript.aktivVåpenVariabler.skade;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Rigidbody hitRB =  other.GetComponent<Rigidbody>();
-        if(other.tag != "Kula")
-        {
-            Debug.Log("Kula Traf noko.");
-
-            if (hitRB != null)
-            {
-                hitRB.AddForce(gameObject.transform.forward * skytevåpenScript.aktivVåpenVariabler.tilbakeslagKraft);
-            }
-
-            StartCoroutine(SlettKulaEtterVenting());
-        }
-
-        if (other.GetComponent<TarSkade>())
-        {
-            TarSkade tarSkade = other.GetComponent<TarSkade>();
-
-            tarSkade.TaSkade(skade);
-        }
     }
 
     IEnumerator SlettKulaEtterVenting()
