@@ -1,7 +1,7 @@
 2. Lage animasjon til våpen: reload,  osv
 5. Lage fleire skadetyper.
 6. laga finder.
-8. 
+8. Gjer son so speler kan ta skade og dø.
 
 
 BUGS:

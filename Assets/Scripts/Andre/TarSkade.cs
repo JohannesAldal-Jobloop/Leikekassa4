@@ -14,11 +14,13 @@ public class TarSkade : MonoBehaviour
 
     public float liv = 10;
 
-    public string searchTag;
+    private string searchTag = "taSkadeHitboks";
 
     public List<Collider> taSkadeCollidersList = new List<Collider>();
     public List<Collider> gjerSkadeCollidersList = new List<Collider>();
     public List<GameObject> actors = new List<GameObject> ();
+
+    private TarSkadeHitboks hitboks;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +42,7 @@ public class TarSkade : MonoBehaviour
     {
         liv -= skade;
 
-        if(liv <= 0)
+        if(liv <= 0 /*&& gameObject.layer != 3 Player*/)
         {
             SlettSegSjølv();
         }
@@ -81,6 +83,9 @@ public class TarSkade : MonoBehaviour
         for(int i = 0; i < actors.Count; i++)
         {
             taSkadeCollidersList.Add(actors[i].GetComponent<Collider>());
+            hitboks = actors[i].GetComponent<TarSkadeHitboks>();
+
+            hitboks.tarSkadeParent = gameObject.GetComponent<TarSkade>();
         }
     }
 }
