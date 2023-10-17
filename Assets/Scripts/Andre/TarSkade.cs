@@ -42,9 +42,17 @@ public class TarSkade : MonoBehaviour
     {
         liv -= skade;
 
-        if(liv <= 0 /*&& gameObject.layer != 3 Player*/)
+        if(liv <= 0)
         {
-            SlettSegSjølv();
+            if(gameObject.layer == 3)
+            {
+                Debug.Log("Speler Er død :(");
+            }
+            else
+            {
+                SlettSegSjølv();
+            }
+            
         }
     }
 

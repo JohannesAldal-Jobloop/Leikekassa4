@@ -205,8 +205,6 @@ public class SkytevåpenScript : MonoBehaviour
 
     void FinnAktiveKuler()
     {
-        Debug.Log("Prøver å finne aktive kuler.");
         aktiveKuler = GameObject.FindGameObjectsWithTag("Kula");
-        
     }
 }
