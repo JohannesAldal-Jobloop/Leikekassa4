@@ -7,7 +7,7 @@ public class SkytevåpenScript : MonoBehaviour
     private float nesteTidSkyte = 0;
 
     public bool prosjektilSkyting = true;
-    private bool reloader = false;
+    public bool reloader = false;
 
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;

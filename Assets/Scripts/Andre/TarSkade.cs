@@ -14,13 +14,20 @@ public class TarSkade : MonoBehaviour
 
     public float liv = 10;
 
+    public string searchTag;
+
     public List<Collider> taSkadeCollidersList = new List<Collider>();
     public List<Collider> gjerSkadeCollidersList = new List<Collider>();
+    public List<GameObject> actors = new List<GameObject> ();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (searchTag != null)
+        {
+            FindObjectwithTag(searchTag);
+            FinnTaSkadeHitbokser();
+        }
     }
 
     // Update is called once per frame
@@ -44,22 +51,37 @@ public class TarSkade : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-    /*
-     * Skal finna alle colliders i alle children. 
-     * Virker ikkje no.
-     * Må fikse seinare.
-     * 
-    void FinnAlleHitbokserTilChildren()
+    //*****Fann på nettet*****
+    void FindObjectwithTag(string _tag)
     {
-        for(int i = 0; i < gameObject.transform.childCount; i++)
+        actors.Clear();
+        Transform parent = transform;
+        GetChildObject(parent, _tag);
+    }
+
+    void GetChildObject(Transform parent, string _tag)
         {
-            Debug.Log(gameObject.transform.GetChild(i));
-            if (gameObject.transform.GetChild(i).GetComponent<Collider>())
+            for (int i = 0; i < parent.childCount; i++)
             {
-                
+                Transform child = parent.GetChild(i);
+                if (child.tag == _tag)
+                {
+                    actors.Add(child.gameObject);
+                }
+                if (child.childCount > 0)
+                {
+                    GetChildObject(child, _tag);
+                }
             }
         }
+    //************************
+
+    void FinnTaSkadeHitbokser()
+    {
+        for(int i = 0; i < actors.Count; i++)
+        {
+            taSkadeCollidersList.Add(actors[i].GetComponent<Collider>());
+        }
     }
-    */
+
 }

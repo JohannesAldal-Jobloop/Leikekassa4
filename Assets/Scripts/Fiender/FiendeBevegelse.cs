@@ -13,7 +13,7 @@ public class FiendeBevegelse : MonoBehaviour
 
     public Vector3 gÂPunkt;
 
-    private bool gÂPunktSett, spelerInanforSjÂRekkevidde, spelerInanforAngrepRekkevidde;
+    public bool gÂPunktSett, spelerInanforSjÂRekkevidde, spelerInanforAngrepRekkevidde;
     public float gÂPunktRekevidde, sjÂRekevidde, angrepsRekkevidde;
 
     // Start is called before the first frame update
@@ -26,25 +26,29 @@ public class FiendeBevegelse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BevegMotSpeler();
         spelerInanforSjÂRekkevidde = Physics.CheckSphere(transform.position, sjÂRekevidde, speler);
+        spelerInanforAngrepRekkevidde = Physics.CheckSphere(transform.position, angrepsRekkevidde, speler);
 
-        if(!spelerInanforSjÂRekkevidde)
+        if(!spelerInanforSjÂRekkevidde && !spelerInanforAngrepRekkevidde)
         {
             Patruljering();
-        }else if (spelerInanforSjÂRekkevidde)
+        }else if (spelerInanforSjÂRekkevidde && !spelerInanforAngrepRekkevidde)
         {
             BevegMotSpeler();
+        }else if(spelerInanforSjÂRekkevidde && spelerInanforAngrepRekkevidde)
+        {
+            AngripSpeler();
         }
     }
 
     void Patruljering()
     {
+        
         if (!gÂPunktSett)
         {
             FinnGÂPunkt();
         }
-        else
+        if (gÂPunktSett)
         {
             agent.SetDestination(gÂPunkt);
         }
@@ -64,11 +68,19 @@ public class FiendeBevegelse : MonoBehaviour
 
         gÂPunkt = new Vector3(transform.position.x + tilfeldigX, transform.position.y, transform.position.z + tilfeldigZ);
 
-
+        if(Physics.Raycast(gÂPunkt, -transform.up, 2f, bakke))
+        {
+            gÂPunktSett = true;
+        }
     }
 
     void BevegMotSpeler()
     {
         agent.SetDestination(spelerFPSTransform.position);
+    }
+
+    void AngripSpeler()
+    {
+
     }
 }
