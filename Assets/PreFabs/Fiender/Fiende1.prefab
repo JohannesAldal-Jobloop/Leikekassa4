@@ -990,9 +990,11 @@ MonoBehaviour:
   "g\xE5PunktSett": 0
   "spelerInanforSj\xE5Rekkevidde": 0
   spelerInanforAngrepRekkevidde: 0
+  harAngrepe: 0
   "g\xE5PunktRekevidde": 15
   "sj\xE5Rekevidde": 30
   angrepsRekkevidde: 10
+  angrepshastigheit: 0
 --- !u!195 &715248201613832149
 NavMeshAgent:
   m_ObjectHideFlags: 0

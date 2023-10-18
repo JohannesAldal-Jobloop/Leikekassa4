@@ -144,7 +144,7 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler.magasinMengdeNo -= 1;
     }
 
-    void FullAutoSkyting()
+    public void FullAutoSkyting()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
@@ -161,7 +161,7 @@ public class SkytevåpenScript : MonoBehaviour
         }
     }
 
-    void SemiAutoSkyting()
+    public void SemiAutoSkyting()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {
@@ -178,7 +178,7 @@ public class SkytevåpenScript : MonoBehaviour
         
     }
 
-    void laserSkyting()
+    public void laserSkyting()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
         {

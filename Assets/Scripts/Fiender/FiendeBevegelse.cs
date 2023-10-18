@@ -14,7 +14,13 @@ public class FiendeBevegelse : MonoBehaviour
     public Vector3 gåPunkt;
 
     public bool gåPunktSett, spelerInanforSjåRekkevidde, spelerInanforAngrepRekkevidde;
+    public bool harAngrepe;
     public float gåPunktRekevidde, sjåRekevidde, angrepsRekkevidde;
+    public float angrepshastigheit;
+
+    public SkytevåpenScript skytevåpenScript;
+
+    public GameObject skadeHitboks;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +38,14 @@ public class FiendeBevegelse : MonoBehaviour
         if(!spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
         {
             Patruljering();
-        }else if (spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
+            skadeHitboks.SetActive(false);
+        }
+        else if (spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
         {
             BevegMotSpeler();
-        }else if(spelerInanforSjåRekkevidde && spelerInanforAngrepRekkevidde)
+            skadeHitboks.SetActive(false);
+        }
+        else if(spelerInanforSjåRekkevidde && spelerInanforAngrepRekkevidde)
         {
             AngripSpeler();
         }
@@ -81,6 +91,24 @@ public class FiendeBevegelse : MonoBehaviour
 
     void AngripSpeler()
     {
+        agent.SetDestination(transform.position);
+        transform.LookAt(spelerFPSTransform);
 
+        skytevåpenScript.FullAutoSkyting();
+
+
+        if (!harAngrepe)
+        {
+            skadeHitboks.SetActive(true);
+
+            harAngrepe = true;
+            Invoke(nameof(ResetAngrep), angrepshastigheit);
+        }
+    }
+
+    private void ResetAngrep()
+    {
+        harAngrepe = false;
+        skadeHitboks.SetActive(false);
     }
 }
