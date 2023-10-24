@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class SpelerDødSkript : MonoBehaviour
 {
+    public int aktivtSpelarSpawnpointIndex = 0;
+
     public bool respawner = false;
 
-    public Vector3 spelarSpawnpoint;
-    public Transform spelarSpawnpointTest;
+    private Vector3 aktivtSpelarSpawnpointRotasjon;
+
+    public Transform aktivSpelarSpawnpointTransform;
+
+    public List<Transform> spelarSpawnpointer = new List<Transform>();
 
     public GameObject spelarKropp;
     public GameObject spelerVåpenarm;
@@ -30,6 +35,9 @@ public class SpelerDødSkript : MonoBehaviour
         {
             GjømKropp();
         }
+
+        FinnAktivSpelerSpawnpointRotasjon();
+        FinnAktivSpelerSpawnpointtransform();
     }
 
     void GjømKropp()
@@ -53,8 +61,8 @@ public class SpelerDødSkript : MonoBehaviour
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
 
-        transform.eulerAngles = new Vector3( spelarSpawnpointTest.rotation.x, spelarSpawnpointTest.rotation.y, spelarSpawnpointTest.rotation.z);
-        transform.position = spelarSpawnpointTest.position;
+        transform.eulerAngles = aktivtSpelarSpawnpointRotasjon;
+        transform.position = aktivSpelarSpawnpointTransform.position;
 
         yield return new WaitForSeconds(.01f);
 
@@ -68,5 +76,21 @@ public class SpelerDødSkript : MonoBehaviour
     public void Respawn()
     {
         StartCoroutine(RespawnCourutine());
+    }
+
+    void FinnAktivSpelerSpawnpointtransform()
+    {
+        aktivSpelarSpawnpointTransform = spelarSpawnpointer[aktivtSpelarSpawnpointIndex];
+    }
+
+    void FinnAktivSpelerSpawnpointRotasjon()
+    {
+        aktivtSpelarSpawnpointRotasjon = new Vector3(
+
+            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.x,
+            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.y,
+            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.z
+
+            );
     }
 }

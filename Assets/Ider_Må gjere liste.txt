@@ -3,6 +3,7 @@
 6. laga finder.
 7. Lage skyteangrep til fiender.
 8. Gjer son so speler kan ta skade og dø.
+9. Spelar blir spawna på eit spawnpoint frå ei liste.
 
 
 BUGS:
