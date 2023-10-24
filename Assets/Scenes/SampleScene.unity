@@ -1633,6 +1633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204945908}
+  - component: {fileID: 204945909}
   m_Layer: 3
   m_Name: SpelarSpawnpoint2
   m_TagString: Untagged
@@ -1655,6 +1656,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1993673747}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &204945909
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204945907}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &231128098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6800,6 +6822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 834590002}
+  - component: {fileID: 834590003}
   m_Layer: 3
   m_Name: SpelarSpawnpoint4
   m_TagString: Untagged
@@ -6822,6 +6845,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1993673747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &834590003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834590001}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &836312668
 GameObject:
   m_ObjectHideFlags: 0
@@ -12920,6 +12964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759065273}
+  - component: {fileID: 1759065274}
   m_Layer: 3
   m_Name: SpelarSpawnpoint1
   m_TagString: Untagged
@@ -12942,6 +12987,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1993673747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1759065274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759065272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1760266002
 GameObject:
   m_ObjectHideFlags: 0
@@ -14635,6 +14701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982961466}
+  - component: {fileID: 1982961467}
   m_Layer: 3
   m_Name: SpelarSpawnpoint3
   m_TagString: Untagged
@@ -14657,6 +14724,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1993673747}
   m_LocalEulerAnglesHint: {x: 0, y: 105.956, z: 0}
+--- !u!65 &1982961467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982961465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1993673746
 GameObject:
   m_ObjectHideFlags: 0

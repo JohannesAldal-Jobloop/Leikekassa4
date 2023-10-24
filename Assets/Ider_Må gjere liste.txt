@@ -3,7 +3,7 @@
 6. laga finder.
 7. Lage skyteangrep til fiender.
 8. Gjer son so speler kan ta skade og dø.
-9. Spelar blir spawna på eit spawnpoint frå ei liste.
+9. Legge ein prefab til player spawnpoint som skal ha ein hitboks/eit script som lar du gå til dei so spawner du der nestegong spelaren dør.
 
 
 BUGS:
