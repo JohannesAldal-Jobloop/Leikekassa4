@@ -41,21 +41,25 @@ public class SpelerDødSkript : MonoBehaviour
         spelerVåpenarm.SetActive(true);
     }
 
-    public IEnumerator Respawn()
+    public IEnumerator RespawnCourutine()
     {
         Time.timeScale = 1.0f;
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
 
-        transform.position = spelarSpawnpoint;
+        //transform.position = spelarSpawnpoint;
+        transform.position = spelarSpawnpointTest.position;
+        
 
         yield return new WaitForSeconds(.01f);
+
+        transform.eulerAngles = spelarSpawnpointTest.eulerAngles;
 
         VisKropp();
     }
 
-    public void Respawn2()
+    public void Respawn()
     {
-        StartCoroutine(Respawn());
+        StartCoroutine(RespawnCourutine());
     }
 }

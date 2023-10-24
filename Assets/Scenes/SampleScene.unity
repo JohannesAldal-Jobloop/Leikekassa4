@@ -7123,7 +7123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1137935874}
         m_TargetAssemblyTypeName: "SpelerD\xF8dSkript, Assembly-CSharp"
-        m_MethodName: Respawn2
+        m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9155,6 +9155,7 @@ Transform:
   - {fileID: 1867282905}
   - {fileID: 899686217}
   - {fileID: 1492939111}
+  - {fileID: 1993673747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137935866
@@ -9325,7 +9326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spelarSpawnpoint: {x: 28.49872, y: 3.56, z: -43.724747}
-  spelarSpawnpointTest: {fileID: 0}
+  spelarSpawnpointTest: {fileID: 1759065273}
   spelarKropp: {fileID: 197784991}
   "spelerV\xE5penarm": {fileID: 2111371544}
 --- !u!1 &1139453778
@@ -12841,6 +12842,37 @@ Transform:
   - {fileID: 2289547}
   m_Father: {fileID: 197784992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1759065272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759065273}
+  m_Layer: 3
+  m_Name: SpelarSpawnpoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759065273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759065272}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.3541549, z: -0, w: 0.9351868}
+  m_LocalPosition: {x: 28.49872, y: 3.56, z: -43.724747}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993673747}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760266002
 GameObject:
   m_ObjectHideFlags: 0
@@ -14525,6 +14557,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1972898696}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1993673746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993673747}
+  m_Layer: 0
+  m_Name: SpelerSpawnpoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1993673747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993673746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1759065273}
+  m_Father: {fileID: 1115867531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2008512799
 PrefabInstance:
   m_ObjectHideFlags: 0
