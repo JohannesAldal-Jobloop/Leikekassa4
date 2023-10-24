@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpelerUISkript : MonoBehaviour
 {
-    public GameObject dødUISkjerm;
+    public GameObject er_død_UI;
+    public GameObject i_Live_UI;
 
     public TarSkade tarSkadeSpeler;
 
@@ -17,18 +18,23 @@ public class SpelerUISkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SjekkOmSpelerErIlive();
+        OpptaterSpelerUI();
     }
 
-    void SjekkOmSpelerErIlive()
+    void OpptaterSpelerUI()
     {
-        if(tarSkadeSpeler.liv <= 0)
-        {
-            dødUISkjerm.SetActive(true);
+        if(!tarSkadeSpeler.erDød) 
+        { 
+            er_død_UI.SetActive(false);
+            i_Live_UI.SetActive(true);
         }
         else
         {
-            dødUISkjerm.SetActive(true);
+            er_død_UI.SetActive(true);
+            i_Live_UI.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
