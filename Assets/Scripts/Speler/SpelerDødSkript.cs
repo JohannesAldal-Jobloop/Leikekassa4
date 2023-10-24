@@ -16,6 +16,7 @@ public class SpelerDødSkript : MonoBehaviour
     void Start()
     {
         spelerTarSkadeSkript = GetComponent<TarSkade>();
+        VisKropp();
     }
 
     // Update is called once per frame
@@ -35,18 +36,26 @@ public class SpelerDødSkript : MonoBehaviour
 
     void VisKropp()
     {
+        Debug.Log("Vis Kropp");
         spelarKropp.SetActive(true);
         spelerVåpenarm.SetActive(true);
     }
 
-    public void Respawn()
+    public IEnumerator Respawn()
     {
         Time.timeScale = 1.0f;
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
 
         transform.position = spelarSpawnpoint;
-        
+
+        yield return new WaitForSeconds(.01f);
+
         VisKropp();
+    }
+
+    public void Respawn2()
+    {
+        StartCoroutine(Respawn());
     }
 }

@@ -7,5 +7,5 @@
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
-2. Bakkesjekk skripte er ikkje perfekt.
+2. Bakkesjekk skripte virker ikkje.
 3. 

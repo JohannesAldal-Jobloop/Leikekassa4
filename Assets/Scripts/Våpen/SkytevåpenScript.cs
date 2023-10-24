@@ -34,11 +34,7 @@ public class SkytevåpenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FinnAktivtVåpen();
-        FinnAktivtSiktepunkt();
-        FinnAktivKulespawnpunkt();
-        FinnAktivVåpenVariabler();
-
+        FinnAlleAktiveGameobjectForScript();
 
         if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
         {
@@ -124,7 +120,7 @@ public class SkytevåpenScript : MonoBehaviour
         RaycastHit rayTreff;
         if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maxRekevidde))
         {
-            Debug.Log(rayTreff.transform.name);
+            //Debug.Log(rayTreff.transform.name);
 
             TarSkade tarSkade = rayTreff.transform.GetComponent<TarSkade>();
 
