@@ -23,12 +23,15 @@ public class SkytevåpenScript : MonoBehaviour
     public GameObject[] aktiveKuler;
 
     public VåpenVariabler aktivVåpenVariabler;
+    private SpelarSpawning spelarSpawning;
 
     // Start is called before the first frame update
     void Start()
     {
         FinnAlleAktiveGameobjectForScript();
         aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
+
+        spelarSpawning = GameObject.Find("SpelSjef").GetComponent<SpelarSpawning>();
     }
 
     // Update is called once per frame
@@ -36,23 +39,28 @@ public class SkytevåpenScript : MonoBehaviour
     {
         FinnAlleAktiveGameobjectForScript();
 
-        if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+        if (spelarSpawning.respawner == false)
         {
-            FullAutoSkyting();
-        }
-        else if(aktivVåpenVariabler.skyteModus == 2 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
-        {
-            SemiAutoSkyting();
-        }
-        else if(aktivVåpenVariabler.skyteModus == 3 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
-        {
-            laserSkyting();
+            if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                FullAutoSkyting();
+            }
+            else if (aktivVåpenVariabler.skyteModus == 2 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                SemiAutoSkyting();
+            }
+            else if (aktivVåpenVariabler.skyteModus == 3 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                laserSkyting();
+            }
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                StartCoroutine(Reload());
+            }
         }
 
-        if (Input.GetKey(KeyCode.R))
-        {
-            StartCoroutine(Reload());
-        }
+        
         
     }
 

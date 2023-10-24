@@ -2698,6 +2698,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 312612209}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &335703667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335703668}
+  - component: {fileID: 335703669}
+  m_Layer: 3
+  m_Name: SpelarSpawnpoint2
+  m_TagString: SpelarSpawnpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335703668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335703667}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.94523907, z: -0, w: -0.32637885}
+  m_LocalPosition: {x: -35, y: 3.56, z: 33.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993673747}
+  m_LocalEulerAnglesHint: {x: 0, y: -218.098, z: 0}
+--- !u!65 &335703669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335703667}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &361961053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3845,6 +3898,7 @@ GameObject:
   - component: {fileID: 510307992}
   - component: {fileID: 510307993}
   - component: {fileID: 510307994}
+  - component: {fileID: 510307995}
   m_Layer: 0
   m_Name: SpelSjef
   m_TagString: Untagged
@@ -3909,6 +3963,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipGO: {fileID: 2111371544}
+--- !u!114 &510307995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510307990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6edd26a2d5f8646b3c6927fccda051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aktivtSpelarSpawnpointIndex: 0
+  respawner: 0
+  aktivSpelarSpawnpointTransform: {fileID: 1759065273}
+  spelarSpawnpointer:
+  - {fileID: 1759065273}
+  - {fileID: 335703668}
+  - {fileID: 1408849180}
+  - {fileID: 849322106}
 --- !u!1001 &513223397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6866,6 +6940,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836312668}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &849322105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849322106}
+  - component: {fileID: 849322107}
+  m_Layer: 3
+  m_Name: SpelarSpawnpoint4
+  m_TagString: SpelarSpawnpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849322106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849322105}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.94523907, z: -0, w: -0.32637885}
+  m_LocalPosition: {x: -1.42, y: 5.11, z: -6.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993673747}
+  m_LocalEulerAnglesHint: {x: 0, y: -218.098, z: 0}
+--- !u!65 &849322107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849322105}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &852484846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7121,8 +7248,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1137935874}
-        m_TargetAssemblyTypeName: "SpelerD\xF8dSkript, Assembly-CSharp"
+      - m_Target: {fileID: 510307995}
+        m_TargetAssemblyTypeName: SpelarSpawning, Assembly-CSharp
         m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
@@ -8514,7 +8641,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038342064}
-  - component: {fileID: 1038342065}
   m_Layer: 0
   m_Name: "V\xE5penhandFiende"
   m_TagString: Untagged
@@ -8539,35 +8665,6 @@ Transform:
   - {fileID: 1719434743}
   m_Father: {fileID: 2375623310123534458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1038342065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038342063}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prosjektilSkyting: 0
-  reloader: 0
-  aktivtSiktepunkt: {fileID: 0}
-  "aktivtV\xE5pen": {fileID: 0}
-  aktivtKuleSpawnpunkt: {fileID: 0}
-  fpsKamera: {fileID: 963194227}
-  kuleList:
-  - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
-  - {fileID: 5778319868234242297, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
-  "v\xE5penList":
-  - {fileID: 1107745487}
-  siktepunktList:
-  - {fileID: 1163937622}
-  kuleSpawnpunktList:
-  - {fileID: 1076361135}
-  aktiveKuler: []
-  "aktivV\xE5penVariabler": {fileID: 0}
 --- !u!1001 &1039324746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9198,7 +9295,6 @@ MonoBehaviour:
   maxRotasjon: 90
   kamera: {fileID: 963194225}
   playerFPS: {fileID: 1137935866}
-  "spelerD\xF8dSkript": {fileID: 1137935874}
 --- !u!114 &1137935868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9272,7 +9368,7 @@ Transform:
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3541549, z: -0, w: 0.9351868}
-  m_LocalPosition: {x: 28.49872, y: 3.56, z: -43.724747}
+  m_LocalPosition: {x: -23.9, y: 3.56, z: 13.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9326,9 +9422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b6ba7819c8aab42b2304fc717a8b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawner: 0
-  spelarSpawnpoint: {x: 28.49872, y: 3.56, z: -43.724747}
-  spelarSpawnpointTest: {fileID: 1759065273}
   spelarKropp: {fileID: 197784991}
   "spelerV\xE5penarm": {fileID: 2111371544}
 --- !u!1 &1139453778
@@ -10677,6 +10770,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381965121}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1408849179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408849180}
+  - component: {fileID: 1408849181}
+  m_Layer: 3
+  m_Name: SpelarSpawnpoint3
+  m_TagString: SpelarSpawnpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1408849180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408849179}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.94523907, z: -0, w: -0.32637885}
+  m_LocalPosition: {x: 2.3, y: 5.11, z: -9.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993673747}
+  m_LocalEulerAnglesHint: {x: 0, y: -218.098, z: 0}
+--- !u!65 &1408849181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408849179}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1419558648
 GameObject:
   m_ObjectHideFlags: 0
@@ -12301,6 +12447,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1610758449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1616552841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616552842}
+  m_Layer: 0
+  m_Name: POS.Y = 3.56
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1616552842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616552841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993673747}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619735527
 GameObject:
   m_ObjectHideFlags: 0
@@ -12853,9 +13030,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759065273}
+  - component: {fileID: 1759065274}
   m_Layer: 3
   m_Name: SpelarSpawnpoint1
-  m_TagString: Untagged
+  m_TagString: SpelarSpawnpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12875,6 +13053,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1993673747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1759065274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759065272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1760266002
 GameObject:
   m_ObjectHideFlags: 0
@@ -14588,7 +14787,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1616552842}
   - {fileID: 1759065273}
+  - {fileID: 335703668}
+  - {fileID: 1408849180}
+  - {fileID: 849322106}
   m_Father: {fileID: 1115867531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2008512799
@@ -18278,7 +18481,7 @@ MonoBehaviour:
   "sj\xE5Rekevidde": 30
   angrepsRekkevidde: 10
   angrepshastigheit: 1
-  "skytev\xE5penScript": {fileID: 1038342065}
+  "skytev\xE5penScript": {fileID: 0}
   skadeHitboks: {fileID: 1719434740}
 --- !u!114 &8525728730853088778
 MonoBehaviour:

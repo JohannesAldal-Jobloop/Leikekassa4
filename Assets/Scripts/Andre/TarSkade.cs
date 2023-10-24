@@ -120,4 +120,9 @@ public class TarSkade : MonoBehaviour
             erDød = false;
         }
     }
+
+    public void ResetLiv()
+    {
+        liv = maksLiv;
+    }
 }

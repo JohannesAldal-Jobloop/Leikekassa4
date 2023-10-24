@@ -8,4 +8,4 @@
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
 2. Bakkesjekk skripte virker ikkje.
-3. 
+3. SpelarSpawning virker ikkje etter å ha splitta op i eige skript.

@@ -23,7 +23,7 @@ public class BevegelseFPS : MonoBehaviour
     public bool huker = false;
 
     private BakkeSjekk bakkeSjekk;
-    private SpelerDødSkript spelerDødSkript;
+    private SpelarSpawning spelerSpawning;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +33,13 @@ public class BevegelseFPS : MonoBehaviour
         //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
         gåFartFaktisk = gåFartOrginal;
         bakkeSjekk = playerFpsGO.GetComponent<BakkeSjekk>();
-        spelerDødSkript = GetComponent<SpelerDødSkript>();
+        spelerSpawning = GameObject.Find("SpelSjef").GetComponent<SpelarSpawning>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (spelerDødSkript.respawner == false)
+        if (spelerSpawning.respawner == false)
         {
             BevegWASD();
             Hopping();

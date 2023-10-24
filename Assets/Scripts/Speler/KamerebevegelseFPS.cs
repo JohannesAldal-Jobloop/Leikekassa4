@@ -18,13 +18,14 @@ public class KamerebevegelseFPS : MonoBehaviour
     public GameObject kamera;
     public GameObject playerFPS;
 
-    public SpelerDødSkript spelerDødSkript;
+    private SpelarSpawning spelarSpawning;
 
     // Start is called before the first frame update
     void Start()
     {
         kamera = GameObject.Find("Main Camera");
         playerFPS = GameObject.Find("SpelerFPS");
+        spelarSpawning = GameObject.Find("SpelSjef").GetComponent<SpelarSpawning>();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class KamerebevegelseFPS : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (spelerDødSkript.respawner == false)
+        if (spelarSpawning.respawner == false)
         {
             BevegKameraMedMus();
         }

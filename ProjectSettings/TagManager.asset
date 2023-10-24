@@ -8,6 +8,7 @@ TagManager:
   - Kula
   - taSkadeHitboks
   - gjerSkadeHitboks
+  - SpelarSpawnpoint
   layers:
   - Default
   - TransparentFX
