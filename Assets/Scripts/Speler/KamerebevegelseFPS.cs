@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class KamerebevegelseFPS : MonoBehaviour
 {
-    public GameObject kamera;
-    public GameObject playerFPS;
 
     private float rotasjonX = 0f;
     private float rotasjonY = 0f;
@@ -16,6 +14,11 @@ public class KamerebevegelseFPS : MonoBehaviour
     private float musRotasjonX;
     private float musRotasjonY;
     private float musRotasjonZ;
+
+    public GameObject kamera;
+    public GameObject playerFPS;
+
+    public SpelerDødSkript spelerDødSkript;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,19 @@ public class KamerebevegelseFPS : MonoBehaviour
 
     private void FixedUpdate()
     {
-        BevegKameraMedMus();
+
+        if (spelerDødSkript.respawner == false)
+        {
+            BevegKameraMedMus();
+        }
+        else
+        {
+            rotasjonX = 0;
+            rotasjonY = 0;
+
+            kamera.transform.eulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
+            playerFPS.transform.localEulerAngles = new Vector3(0, rotasjonY, 0);
+        }
     }
 
     void BevegKameraMedMus()

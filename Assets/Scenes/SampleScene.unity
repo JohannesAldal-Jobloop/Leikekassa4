@@ -9193,11 +9193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de7eee894bdc1d4bb2a4bcdc557d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kamera: {fileID: 963194225}
-  playerFPS: {fileID: 1137935866}
   musSensitivitet: 30
   minRotasjon: -90
   maxRotasjon: 90
+  kamera: {fileID: 963194225}
+  playerFPS: {fileID: 1137935866}
+  "spelerD\xF8dSkript": {fileID: 1137935874}
 --- !u!114 &1137935868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9325,6 +9326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b6ba7819c8aab42b2304fc717a8b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawner: 0
   spelarSpawnpoint: {x: 28.49872, y: 3.56, z: -43.724747}
   spelarSpawnpointTest: {fileID: 1759065273}
   spelarKropp: {fileID: 197784991}

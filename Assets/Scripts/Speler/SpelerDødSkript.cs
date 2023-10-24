@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpelerDødSkript : MonoBehaviour
 {
+    public bool respawner = false;
+
     public Vector3 spelarSpawnpoint;
     public Transform spelarSpawnpointTest;
 
@@ -17,6 +19,8 @@ public class SpelerDødSkript : MonoBehaviour
     {
         spelerTarSkadeSkript = GetComponent<TarSkade>();
         VisKropp();
+
+        StartCoroutine(RespawnCourutine());
     }
 
     // Update is called once per frame
@@ -43,19 +47,22 @@ public class SpelerDødSkript : MonoBehaviour
 
     public IEnumerator RespawnCourutine()
     {
+        respawner = true;
+
         Time.timeScale = 1.0f;
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
 
-        //transform.position = spelarSpawnpoint;
+        transform.eulerAngles = new Vector3( spelarSpawnpointTest.rotation.x, spelarSpawnpointTest.rotation.y, spelarSpawnpointTest.rotation.z);
         transform.position = spelarSpawnpointTest.position;
-        
 
         yield return new WaitForSeconds(.01f);
 
-        transform.eulerAngles = spelarSpawnpointTest.eulerAngles;
-
         VisKropp();
+
+
+        yield return new WaitForSeconds(1);
+        respawner = false;
     }
 
     public void Respawn()

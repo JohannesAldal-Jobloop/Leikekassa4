@@ -27,6 +27,9 @@ public class SpelerUISkript : MonoBehaviour
         { 
             er_død_UI.SetActive(false);
             i_Live_UI.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
