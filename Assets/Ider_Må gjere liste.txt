@@ -3,9 +3,10 @@
 6. laga finder.
 7. Lage skyteangrep til fiender.
 8. Gjer son so speler kan ta skade og dø.
+9. Legge ein prefab til player spawnpoint som skal ha ein hitboks/eit script som lar du gå til dei so spawner du der nestegong spelaren dør.
 
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
-2. Bakkesjekk skripte er ikkje perfekt.
+2. Bakkesjekk skripte virker ikkje.
 3. 

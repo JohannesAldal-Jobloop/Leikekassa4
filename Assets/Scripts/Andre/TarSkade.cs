@@ -12,9 +12,14 @@ public class TarSkade : MonoBehaviour
      * Collider.
      */
 
+    public float maksLiv = 10;
     public float liv = 10;
 
     private string searchTag = "taSkadeHitboks";
+
+    public bool erDød = false;
+
+    public GameObject gameOverScreen;
 
     public List<Collider> taSkadeCollidersList = new List<Collider>();
     public List<Collider> gjerSkadeCollidersList = new List<Collider>();
@@ -35,7 +40,7 @@ public class TarSkade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        SkjekkOmHarLiv();
     }
 
     public void TaSkade(float skade)
@@ -44,15 +49,22 @@ public class TarSkade : MonoBehaviour
 
         if(liv <= 0)
         {
+            erDød = true;
+
             if(gameObject.layer == 3)
             {
                 Debug.Log("Speler Er død :(");
+                Time.timeScale = 0;
             }
             else
             {
                 SlettSegSjølv();
             }
-            
+
+        }
+        else
+        {
+            erDød = false;
         }
     }
 
@@ -94,6 +106,18 @@ public class TarSkade : MonoBehaviour
             hitboks = actors[i].GetComponent<TarSkadeHitboks>();
 
             hitboks.tarSkadeParent = gameObject.GetComponent<TarSkade>();
+        }
+    }
+
+    void SkjekkOmHarLiv()
+    {
+        if(liv <= 0)
+        {
+            erDød = true;
+        }
+        else
+        {
+            erDød = false;
         }
     }
 }
