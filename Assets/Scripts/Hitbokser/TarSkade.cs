@@ -19,7 +19,7 @@ public class TarSkade : MonoBehaviour
 
     public bool erDød = false;
 
-    public GameObject gameOverScreen;
+   // public GameObject gameOverScreen;
 
     public List<Collider> taSkadeCollidersList = new List<Collider>();
     public List<Collider> gjerSkadeCollidersList = new List<Collider>();

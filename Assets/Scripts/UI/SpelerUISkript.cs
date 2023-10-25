@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpelerUISkript : MonoBehaviour
 {
     public GameObject er_død_UI;
     public GameObject i_Live_UI;
+
+    public Slider livBarGO;
 
     public TarSkade tarSkadeSpeler;
 
@@ -23,6 +26,8 @@ public class SpelerUISkript : MonoBehaviour
 
     void OpptaterSpelerUI()
     {
+        LivBarUpdate();
+
         if(!tarSkadeSpeler.erDød) 
         { 
             er_død_UI.SetActive(false);
@@ -39,5 +44,12 @@ public class SpelerUISkript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+    void LivBarUpdate()
+    {
+
+        livBarGO.maxValue = tarSkadeSpeler.maksLiv;
+        livBarGO.value = tarSkadeSpeler.liv;
     }
 }

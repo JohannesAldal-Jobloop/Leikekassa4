@@ -36,8 +36,7 @@ public class SpelerDødSkript : MonoBehaviour
             GjømKropp();
         }
 
-        FinnAktivSpelerSpawnpointRotasjon();
-        FinnAktivSpelerSpawnpointtransform();
+        
     }
 
     void GjømKropp()
@@ -61,11 +60,12 @@ public class SpelerDødSkript : MonoBehaviour
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
 
-        transform.eulerAngles = aktivtSpelarSpawnpointRotasjon;
+        
         transform.position = aktivSpelarSpawnpointTransform.position;
 
         yield return new WaitForSeconds(.01f);
 
+        transform.eulerAngles = new Vector3(0f, -41f, 0f);
         VisKropp();
 
 
@@ -75,6 +75,9 @@ public class SpelerDødSkript : MonoBehaviour
 
     public void Respawn()
     {
+        FinnAktivSpelerSpawnpointRotasjon();
+        FinnAktivSpelerSpawnpointtransform();
+
         StartCoroutine(RespawnCourutine());
     }
 

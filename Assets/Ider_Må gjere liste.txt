@@ -2,11 +2,14 @@
 5. Lage fleire skadetyper.
 6. laga finder.
 7. Lage skyteangrep til fiender.
-8. Gjer son so speler kan ta skade og dø.
-9. Legge ein prefab til player spawnpoint som skal ha ein hitboks/eit script som lar du gå til dei so spawner du der nestegong spelaren dør.
+8. Laga drepsone.
+9. lage området som skader over tid.
+10.
 
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
 2. Bakkesjekk skripte virker ikkje.
-3. 
+3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig iforhold til spwanpunktet
+4. Drepsone gjer det so a t spelaren detter ijønow bekken.
+5. 
