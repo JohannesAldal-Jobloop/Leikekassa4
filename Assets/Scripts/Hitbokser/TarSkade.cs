@@ -114,6 +114,7 @@ public class TarSkade : MonoBehaviour
         if(liv <= 0)
         {
             erDød = true;
+            Time.timeScale = 0;
         }
         else
         {

@@ -4,12 +4,13 @@
 7. Lage skyteangrep til fiender.
 8. Laga drepsone.
 9. lage området som skader over tid.
-10.
+10. Huking kan bli gjort på ein Mykje bedre måte.
+11. Endra springafuksjon so springinga stopper når du stør stille.
 
 
 BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
-2. Bakkesjekk skripte virker ikkje.
-3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig iforhold til spwanpunktet
-4. Drepsone gjer det so a t spelaren detter ijønow bekken.
+2. Bakkesjekk skripte virker ikkje riktig.
+3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
+4. Springing greier ikkje å endre på gåFartFaktisk.
 5. 

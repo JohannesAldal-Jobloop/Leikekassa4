@@ -6,11 +6,15 @@ public class BevegelseFPS : MonoBehaviour
 {
     public GameObject playerFpsGO;
     public GameObject bakkeSjekkGO;
-    public GameObject bodyTopHitboxGO;
+    public GameObject spelarKroppGO;
 
     public Rigidbody playerFpsRB;
 
+    public CapsuleCollider bodyHitbox;
+
     public float gåFartOrginal = 10f;
+    public float gåFartMaks;
+    public float springeFartModifier = 1.5f;
     public float gåFartFaktisk = 0;
     public float sidelengsReduksjons = 0.5f;
     public float hoppeKraft = 10;
@@ -20,7 +24,9 @@ public class BevegelseFPS : MonoBehaviour
     private float vertikalInput = 0f;
 
     public bool holdHuker = false;
+    public bool holdSpringer = false;
     public bool huker = false;
+    public bool springer = false;
 
     private BakkeSjekk bakkeSjekk;
     private SpelerDødSkript spelerDødSkript;
@@ -28,11 +34,12 @@ public class BevegelseFPS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gåFartMaks = gåFartOrginal;
         playerFpsGO = GameObject.Find("SpelerFPS");
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
-        //playerFpsRB = playerFpsGO.GetComponent<Rigidbody>();
+        bodyHitbox = playerFpsGO.GetComponent<CapsuleCollider>();
         gåFartFaktisk = gåFartOrginal;
-        bakkeSjekk = playerFpsGO.GetComponent<BakkeSjekk>();
+        bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
         spelerDødSkript = GetComponent<SpelerDødSkript>();
     }
 
@@ -41,9 +48,10 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (spelerDødSkript.respawner == false)
         {
-            BevegWASD();
             Hopping();
             Huking();
+            Springing();
+            BevegWASD();
         }
     }
 
@@ -62,23 +70,27 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
-            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
+            gåFartFaktisk = gåFartMaks * sidelengsReduksjons;
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
-            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
+            gåFartFaktisk = gåFartMaks * sidelengsReduksjons;
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
-            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
+            gåFartFaktisk = gåFartMaks * sidelengsReduksjons;
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
-            gåFartFaktisk = gåFartOrginal * sidelengsReduksjons;
+            gåFartFaktisk = gåFartMaks * sidelengsReduksjons;
+        }
+        else if(!springer)
+        {
+            gåFartFaktisk = gåFartOrginal;
         }
         else
         {
-            gåFartFaktisk = gåFartOrginal;
+            gåFartFaktisk = gåFartMaks;
         }
     }
 
@@ -94,16 +106,23 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (!holdHuker)
         {
-            //-----Virker ikkje-----
-            // Når du trykker på C so skal spelaren huke til du trykker på C ijen.
             if(Input.GetKeyDown(KeyCode.C) && !huker)
             {
                 Debug.Log("Huker");
-                bodyTopHitboxGO.SetActive(false);
+                spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
+                bakkeSjekkGO.transform.Translate(0, -hukingDistanse, 0);
+                bodyHitbox.center = new Vector3(-0.00544756651f, -0.136718869f, 1.15092519e-10f);
+                bodyHitbox.height = 2.854548f;
+
                 huker = true;
             }else if (Input.GetKeyDown(KeyCode.C) && huker)
             {
-                bodyTopHitboxGO.SetActive(true);
+                spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
+                bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
+
+                bodyHitbox.center = new Vector3(-0.00544756651f, -0.657192826f, -6.46199205e-11f);
+                bodyHitbox.height = 3.884056f;
+
                 huker = false;
             }
         }
@@ -111,17 +130,46 @@ public class BevegelseFPS : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.C) && !huker)
             {
-                bodyTopHitboxGO.SetActive(false);
+                spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
+                bakkeSjekkGO.transform.Translate(0, -hukingDistanse, 0);
+
+                bodyHitbox.center = new Vector3(-0.00544756651f, -0.136718869f, 1.15092519e-10f);
+                bodyHitbox.height = 2.854548f;
+
                 huker = true;
             }
 
             if (Input.GetKeyUp(KeyCode.C) && huker)
             {
-                bodyTopHitboxGO.SetActive(true);
+                spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
+                bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
+
+                bodyHitbox.center = new Vector3(-0.00544756651f, -0.657192826f, -6.46199205e-11f);
+                bodyHitbox.height = 3.884056f;
+
                 huker = false;
             }
         }
 
+        
+    }
+
+    void Springing()
+    {
+        if(!holdHuker)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false)
+            {
+                gåFartMaks *= springeFartModifier;
+                gåFartFaktisk = gåFartMaks;
+                springer = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true)
+            {
+                gåFartMaks = gåFartOrginal;
+                springer = false;
+            }
+        }
         
     }
 }

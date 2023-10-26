@@ -6,12 +6,12 @@ public class BakkeSjekk : MonoBehaviour
 {
     public GameObject bakkeSjekkGO;
 
-    public bool paBakken = true;
+    public bool paBakken = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //bakkeSjekkGO = GameObject.Find("BakkeSjekk");
+        bakkeSjekkGO = GameObject.Find("BakkeSjekk");
     }
 
     // Update is called once per frame
@@ -20,22 +20,20 @@ public class BakkeSjekk : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.layer == 3 && !paBakken)
+        if (other.gameObject.layer == 9 && !paBakken)
         {
             paBakken = true;
         }
-        
     }
 
-    void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.layer == 3 && paBakken)
+        if (other.gameObject.layer == 9 && paBakken)
         {
             paBakken = false;
         }
-            
     }
 
 }
