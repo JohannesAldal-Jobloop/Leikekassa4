@@ -8,7 +8,7 @@ public class GjerSkade : MonoBehaviour
 
     private SkytevåpenScript skytevåpenScript;
     private TarSkade tarSkade;
-    private TarSkadeHitboks tarskadeHitboks;
+    public TarSkadeHitboks tarskadeHitboks;
 
     // Start is called before the first frame update
     void Start()

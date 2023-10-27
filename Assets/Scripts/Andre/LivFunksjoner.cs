@@ -91,7 +91,7 @@ public class LivFunksjoner : MonoBehaviour
         }
     }
 
-    void FÂOverSkjold(float mengdeSkjold)
+    public void FÂOverSkjold(float mengdeSkjold)
     {
         overSkjoldMengde += mengdeSkjold;
     }
