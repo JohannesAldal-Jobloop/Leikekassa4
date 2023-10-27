@@ -10859,6 +10859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skade: 10
+  tarskadeHitboks: {fileID: 0}
 --- !u!135 &1260261521
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13936,6 +13937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skade: 10
+  tarskadeHitboks: {fileID: 0}
 --- !u!65 &1719434742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16528,7 +16530,7 @@ Transform:
   m_GameObject: {fileID: 2074774874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.68, y: 3.0772088, z: -22.11}
+  m_LocalPosition: {x: 4.68, y: 2.58, z: -22.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16547,6 +16549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   giOverSkjoldMengde: 10
+  livFunksjoner: {fileID: 0}
 --- !u!1 &2076945408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3978213428115122863, guid: 6639eed4121a92442b42c34134784017,
