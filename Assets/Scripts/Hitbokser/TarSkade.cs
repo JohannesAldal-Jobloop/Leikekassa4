@@ -50,7 +50,14 @@ public class TarSkade : MonoBehaviour
     {
         livFunksjoner.tidGåttUtenSkade = 0;
 
-        liv -= skade;
+        if(livFunksjoner.overSkjoldMengde > 0)
+        {
+            livFunksjoner.overSkjoldMengde -= skade;
+        }
+        else
+        {
+            liv -= skade;
+        }
 
         if(liv <= 0)
         {

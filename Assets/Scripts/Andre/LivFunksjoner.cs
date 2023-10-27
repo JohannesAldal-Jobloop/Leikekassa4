@@ -13,7 +13,12 @@ public class LivFunksjoner : MonoBehaviour
     public float tidGÂttUtenSkade = 0f;
     //***************************************
 
+    //***** Variabler til OverSkjold()*****
     public bool harOverSkjold;
+    public float overSkjoldMaks = 100;
+    public float overSkjoldMengde;
+    //***************************************
+
     public bool erForgifta;
 
     private TarSkade tarSkade;
@@ -23,13 +28,16 @@ public class LivFunksjoner : MonoBehaviour
     {
         tarSkade = GetComponent<TarSkade>();
         StartCoroutine(TidUtenSkade());
+
+        if (harOverSkjold)
+        {
+            StartMedOverSkjold();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
         if (livRegenererer)
         {
             if (tidGÂttUtenSkade == tidUtanSkadeMÂl)
@@ -39,11 +47,6 @@ public class LivFunksjoner : MonoBehaviour
                     StartCoroutine(Regenerering());
                 }
             }
-        }
-
-        if(harOverSkjold)
-        {
-            OverSkjold();
         }
 
         if(erForgifta)
@@ -88,9 +91,13 @@ public class LivFunksjoner : MonoBehaviour
         }
     }
 
-    void OverSkjold()
+    void FÂOverSkjold(float mengdeSkjold)
     {
-
+        overSkjoldMengde += mengdeSkjold;
+    }
+    void StartMedOverSkjold()
+    {
+        overSkjoldMengde = overSkjoldMaks;
     }
 
     void Forgifta()
