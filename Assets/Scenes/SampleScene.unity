@@ -9651,8 +9651,8 @@ GameObject:
   - component: {fileID: 1137935872}
   - component: {fileID: 1137935873}
   - component: {fileID: 1137935874}
-  - component: {fileID: 1137935875}
   - component: {fileID: 1137935876}
+  - component: {fileID: 1137935875}
   m_Layer: 3
   m_Name: SpelerFPS
   m_TagString: Player
@@ -9841,11 +9841,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebebaa1a3d31cf4ea6e6c0c766127b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LivRegenererer: 1
-  LivRegenerererFart: 1
-  LivRegenerererMengde: 5
-  HarOverSkjold: 0
-  ErForgifta: 0
+  livRegenererer: 1
+  livRegenerererFart: 0.01
+  livRegenerererMengde: 5
+  "tidUtanSkadeM\xE5l": 10
+  "tidG\xE5ttUtenSkade": 0
+  harOverSkjold: 0
+  erForgifta: 0
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0

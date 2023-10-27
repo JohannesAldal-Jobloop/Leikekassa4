@@ -35,8 +35,6 @@ public class SpelerDødSkript : MonoBehaviour
         {
             GjømKropp();
         }
-
-        
     }
 
     void GjømKropp()
@@ -47,7 +45,6 @@ public class SpelerDødSkript : MonoBehaviour
 
     void VisKropp()
     {
-        Debug.Log("Vis Kropp");
         spelarKropp.SetActive(true);
         spelerVåpenarm.SetActive(true);
     }

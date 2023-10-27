@@ -26,10 +26,13 @@ public class TarSkade : MonoBehaviour
     public List<GameObject> actors = new List<GameObject> ();
 
     private TarSkadeHitboks hitboks;
+    private LivFunksjoner livFunksjoner;
 
     // Start is called before the first frame update
     void Start()
     {
+        livFunksjoner = GetComponent<LivFunksjoner>();
+
         if (searchTag != null)
         {
             FindObjectwithTag(searchTag);
@@ -45,6 +48,8 @@ public class TarSkade : MonoBehaviour
 
     public void TaSkade(float skade)
     {
+        livFunksjoner.tidGåttUtenSkade = 0;
+
         liv -= skade;
 
         if(liv <= 0)

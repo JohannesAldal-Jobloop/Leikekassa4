@@ -33,7 +33,7 @@ public class SkadeOverTidSone : MonoBehaviour
             intervalFerdig = false;
 
             yield return new WaitForSeconds(interval);
-            hitboks.tarSkadeParent.liv -= skadePerInterval;
+            hitboks.tarSkadeParent.TaSkade(skadePerInterval);
 
             intervalFerdig = true;
         }
@@ -44,7 +44,7 @@ public class SkadeOverTidSone : MonoBehaviour
             intervalFerdig = false;
 
             yield return new WaitForSeconds(interval);
-            hitboks.tarSkadeParent.liv -= skadePerInterval;
+            hitboks.tarSkadeParent.TaSkade(skadePerInterval);
 
             intervalFerdig = true;
         }

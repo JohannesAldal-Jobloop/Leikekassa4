@@ -5,36 +5,48 @@ using UnityEngine;
 public class LivFunksjoner : MonoBehaviour
 {
     //***** Variabler til Regenerering()*****
-    public bool LivRegenererer;
-    public float LivRegenerererFart;
-    public float LivRegenerererMengde;
+    public bool livRegenererer;
+    private bool livIntervallFerdig = true;
+    public float livRegenerererFart;
+    public float livRegenerererMengde;
+    public float tidUtanSkadeMål = 12f;
+    public float tidGåttUtenSkade = 0f;
     //***************************************
 
-    public bool HarOverSkjold;
-    public bool ErForgifta;
+    public bool harOverSkjold;
+    public bool erForgifta;
 
-    public TarSkade tarSkade;
+    private TarSkade tarSkade;
 
     // Start is called before the first frame update
     void Start()
     {
-        tarSkade = gameObject.GetComponent<TarSkade>();
+        tarSkade = GetComponent<TarSkade>();
+        StartCoroutine(TidUtenSkade());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LivRegenererer)
+        
+
+        if (livRegenererer)
         {
-            StartCoroutine(Regenerering());
+            if (tidGåttUtenSkade == tidUtanSkadeMål)
+            {
+                if (livIntervallFerdig)
+                {
+                    StartCoroutine(Regenerering());
+                }
+            }
         }
 
-        if(HarOverSkjold)
+        if(harOverSkjold)
         {
             OverSkjold();
         }
 
-        if(ErForgifta)
+        if(erForgifta)
         {
             Forgifta();
         }
@@ -42,14 +54,37 @@ public class LivFunksjoner : MonoBehaviour
 
     IEnumerator Regenerering()
     {
+
         if(tarSkade.liv < tarSkade.maksLiv)
         {
-            Debug.Log("Regenererer liv");
-            if((tarSkade.liv + LivRegenerererMengde) <= tarSkade.maksLiv)
+            livIntervallFerdig = false;
+
+            if((tarSkade.liv + livRegenerererMengde) <= tarSkade.maksLiv)
             {
-                tarSkade.liv += LivRegenerererMengde;
+                tarSkade.liv += livRegenerererMengde;
             }
-            yield return new WaitForSeconds(LivRegenerererFart);
+            else
+            {
+                tarSkade.liv = tarSkade.maksLiv;
+            }
+            yield return new WaitForSeconds(livRegenerererFart);
+
+            livIntervallFerdig = true;
+        }
+    }
+    public IEnumerator TidUtenSkade()
+    {
+        tidGåttUtenSkade = 0;
+
+        while(tidGåttUtenSkade != tidUtanSkadeMål)
+        {
+            tidGåttUtenSkade++;
+            yield return new WaitForSeconds(1);
+        }
+
+        if(tidGåttUtenSkade == tidUtanSkadeMål)
+        {
+            StartCoroutine(TidUtenSkade());
         }
     }
 
