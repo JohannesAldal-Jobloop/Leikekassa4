@@ -9865,10 +9865,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5447169
+  m_Radius: 0.71314377
   m_Height: 3.8840563
   m_Direction: 1
-  m_Center: {x: -0.0054475665, y: -0.6571928, z: -6.461992e-11}
+  m_Center: {x: -0.00544757, y: -0.6571928, z: 0.09602309}
 --- !u!114 &1137935876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16441,8 +16441,9 @@ GameObject:
   - component: {fileID: 2074774878}
   - component: {fileID: 2074774877}
   - component: {fileID: 2074774876}
-  - component: {fileID: 2074774875}
   - component: {fileID: 2074774879}
+  - component: {fileID: 2074774880}
+  - component: {fileID: 2074774881}
   m_Layer: 0
   m_Name: OverSkjoldBall
   m_TagString: Untagged
@@ -16450,27 +16451,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &2074774875
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074774874}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2074774876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16548,8 +16528,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca259e475ffd0d4ab6466fc82df409a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eingang: 0
+  overTid: 0
   giOverSkjoldMengde: 10
+  giOverSkjoldOverTidFart: 1
   livFunksjoner: {fileID: 0}
+--- !u!54 &2074774880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074774874}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &2074774881
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074774874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2076945408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3978213428115122863, guid: 6639eed4121a92442b42c34134784017,

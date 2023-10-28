@@ -1,44 +1,93 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GiOverSkjold : MonoBehaviour
 {
     private bool harSattOverSkjold = false;
+    public bool eingang = false;
+    public bool overTid = false;
 
     public float giOverSkjoldMengde = 10;
+    public float giOverSkjoldOverTidInterval = 1;
+
+    private CapsuleCollider colliderOnGO;
 
     public LivFunksjoner livFunksjoner;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        colliderOnGO = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        OpptaterStatus();
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    //********** Gi OverSkjold Ein gang so sletter seg sj√∏lv **********
+    private void OnCollisionEnter(Collision collision)
     {
-        if(!harSattOverSkjold)
+        Debug.Log(collision.gameObject.name);
+
+        if (!harSattOverSkjold && eingang)
         {
-            harSattOverSkjold=true;
+            livFunksjoner = collision.gameObject.GetComponent<LivFunksjoner>();
 
-            livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
-
-            if (livFunksjoner.harOverSkjold)
+            if (livFunksjoner.harOverSkjold != null)
             {
-                livFunksjoner.FÂOverSkjold(giOverSkjoldMengde);
+                GiOverSkjoldEinGang();
             }
-            else
+        }
+    }
+    void GiOverSkjoldEinGang()
+    {
+        livFunksjoner.FaOverSkjold(giOverSkjoldMengde);
+        harSattOverSkjold = true;
+        Destroy(gameObject);
+    }
+    //*****************************************************************
+
+
+    //********** Gir OverSkjold over tid **********
+    private void OnTriggerStay(Collider other)
+    {
+        livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
+
+        if (livFunksjoner.harOverSkjold != null)
+        {
+            if (!harSattOverSkjold && overTid && (livFunksjoner.overSkjoldMengde <= livFunksjoner.overSkjoldMaks))
             {
-                Debug.Log("har ikkje oversjold");
+                    StartCoroutine(GiOverSkjoldOverTid());
             }
         }
         
+    }
+
+    IEnumerator GiOverSkjoldOverTid()
+    {
+        livFunksjoner.FaOverSkjold(giOverSkjoldMengde);
+        harSattOverSkjold = true;
+        yield return new WaitForSeconds(giOverSkjoldOverTidInterval);
+        harSattOverSkjold = false;
+    }
+    //*********************************************
+
+    void OpptaterStatus()
+    {
+        if (eingang)
+        {
+            //overTid = false;
+            colliderOnGO.isTrigger = false;
+        }
+        if (overTid)
+        {
+            //eingang = false;
+            colliderOnGO.isTrigger = true;
+        }
     }
 }

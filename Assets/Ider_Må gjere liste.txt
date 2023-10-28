@@ -5,7 +5,6 @@
 10. Huking kan bli gjort på ein Mykje bedre måte.
 11. Endra springafuksjon so springinga stopper når du står stille.
 12. Lage ein liv pickup so regenererer liv.
-13. Lage OverSkjold funksjon.
 14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. For å lage hierarchy meir ryddeg på play.
 
 

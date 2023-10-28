@@ -63,7 +63,7 @@ public class SpelerUISkript : MonoBehaviour
 
     void OverSkjoldUpdate()
     {
-        if(livFunksjonerSpeler.harOverSkjold)
+        if(livFunksjonerSpeler.overSkjoldMengde > 0)
         {
             overSkjoldBarGO.SetActive(true);
             overSkjoldBarSlider.maxValue = livFunksjonerSpeler.overSkjoldMaks;
