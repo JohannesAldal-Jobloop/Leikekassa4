@@ -26,7 +26,7 @@ public class SkadeOverTidSone : MonoBehaviour
 
     IEnumerator SkadOverTid()
     {
-        if (hitboks)
+        if (hitboks != null)
         {
             Debug.Log("hitboks");
 
@@ -37,7 +37,7 @@ public class SkadeOverTidSone : MonoBehaviour
 
             intervalFerdig = true;
         }
-        else if (tarSkade)
+        else if (tarSkade != null)
         {
             Debug.Log("tarSkade");
 

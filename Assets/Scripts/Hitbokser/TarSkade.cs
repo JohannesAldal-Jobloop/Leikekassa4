@@ -26,7 +26,7 @@ public class TarSkade : MonoBehaviour
     public List<GameObject> actors = new List<GameObject> ();
 
     private TarSkadeHitboks hitboks;
-    private LivFunksjoner livFunksjoner;
+    public LivFunksjoner livFunksjoner;
 
     // Start is called before the first frame update
     void Start()

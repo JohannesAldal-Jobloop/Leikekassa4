@@ -12,9 +12,9 @@ public class GiOverSkjold : MonoBehaviour
     public float giOverSkjoldMengde = 10;
     public float giOverSkjoldOverTidInterval = 1;
 
-    private CapsuleCollider colliderOnGO;
+    private CapsuleCollider colliderOnGO = null;
 
-    public LivFunksjoner livFunksjoner;
+    public LivFunksjoner livFunksjoner = null;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +57,7 @@ public class GiOverSkjold : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
-
+        Debug.Log(other.name);
         if (livFunksjoner.harOverSkjold != null)
         {
             if (!harSattOverSkjold && overTid && (livFunksjoner.overSkjoldMengde <= livFunksjoner.overSkjoldMaks))

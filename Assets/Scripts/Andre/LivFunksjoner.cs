@@ -7,10 +7,12 @@ public class LivFunksjoner : MonoBehaviour
     //***** Variabler til Regenerering()*****
     public bool livRegenererer;
     private bool livIntervallFerdig = true;
+    private bool livRegenerererStarta = false;
     public float livRegenerererFart;
     public float livRegenerererMengde;
     public float tidUtanSkadeMål = 12f;
     public float tidGåttUtenSkade = 0f;
+    private float tidGåttUtenSkadeInterval = 0;
     //***************************************
 
     //***** Variabler til OverSkjold()*****
@@ -27,7 +29,7 @@ public class LivFunksjoner : MonoBehaviour
     void Start()
     {
         tarSkade = GetComponent<TarSkade>();
-        StartCoroutine(TidUtenSkade());
+        TidUtenSkade();
 
         if (harOverSkjold)
         {
@@ -38,9 +40,11 @@ public class LivFunksjoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TidUtenSkade();
+
         if (livRegenererer)
         {
-            if (tidGåttUtenSkade == tidUtanSkadeMål)
+            if (tidGåttUtenSkade == tidUtanSkadeMål && tarSkade.liv < tarSkade.maksLiv && !livRegenerererStarta)
             {
                 if (livIntervallFerdig)
                 {
@@ -57,8 +61,11 @@ public class LivFunksjoner : MonoBehaviour
 
     IEnumerator Regenerering()
     {
+        Debug.Log("Regenering starta");
+        livRegenerererStarta = true;
 
-        if(tarSkade.liv < tarSkade.maksLiv)
+
+        if (tarSkade.liv < tarSkade.maksLiv)
         {
             livIntervallFerdig = false;
 
@@ -73,21 +80,16 @@ public class LivFunksjoner : MonoBehaviour
             yield return new WaitForSeconds(livRegenerererFart);
 
             livIntervallFerdig = true;
+            livRegenerererStarta = false;
         }
     }
-    public IEnumerator TidUtenSkade()
+    public void TidUtenSkade()
     {
-        tidGåttUtenSkade = 0;
-
-        while(tidGåttUtenSkade != tidUtanSkadeMål)
+        if(tidGåttUtenSkade != tidUtanSkadeMål && Time.time >= tidGåttUtenSkadeInterval)
         {
+            
             tidGåttUtenSkade++;
-            yield return new WaitForSeconds(1);
-        }
-
-        if(tidGåttUtenSkade == tidUtanSkadeMål)
-        {
-            StartCoroutine(TidUtenSkade());
+            tidGåttUtenSkadeInterval = Time.time + 1f / 1;
         }
     }
 

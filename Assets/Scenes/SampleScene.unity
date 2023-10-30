@@ -326,6 +326,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6664658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6808179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.674748
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.22277
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40269865906625258, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694664101285744069, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: eingang
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694664101285744069, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: overTid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694664101285744069, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: giOverSkjoldOverTidInterval
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804067271651218413, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: m_Name
+      value: OverSkjoldBall (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d6b521d1f5ef34c4b81834942b8fb69b, type: 3}
 --- !u!1 &21789625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2387,7 @@ MonoBehaviour:
   taSkadeCollidersList: []
   gjerSkadeCollidersList: []
   actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!1001 &257321175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9515,6 +9599,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098071173}
   m_CullTransparentMesh: 1
+--- !u!1 &1104433313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1347921637569184486, guid: 1547b20a5bd6fb846ab7ef9d622814d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5966617729250753981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104433317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104433313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eingang: 0
+  overTid: 1
+  gjerSkadeMengde: 3
+  gjerLSkadeOverTidInterval: 0.01
+  tarSkade: {fileID: 0}
+--- !u!136 &1104433318
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104433313}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 30
+  m_Height: 30
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.723855, z: 0}
 --- !u!1 &1107745487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9822,6 +9952,7 @@ MonoBehaviour:
   taSkadeCollidersList: []
   gjerSkadeCollidersList: []
   actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!114 &1137935874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10837,8 +10968,8 @@ GameObject:
   - component: {fileID: 1260261524}
   - component: {fileID: 1260261523}
   - component: {fileID: 1260261522}
-  - component: {fileID: 1260261521}
   - component: {fileID: 1260261520}
+  - component: {fileID: 1260261526}
   m_Layer: 0
   m_Name: bomba
   m_TagString: Untagged
@@ -10858,29 +10989,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skade: 10
-  tarskadeHitboks: {fileID: 0}
---- !u!135 &1260261521
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260261519}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  eingang: 1
+  overTid: 0
+  gjerSkadeMengde: 30
+  gjerLSkadeOverTidInterval: 1
+  tarSkade: {fileID: 0}
 --- !u!23 &1260261522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10946,6 +11059,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1260261526
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260261519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1261211117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12668,6 +12804,7 @@ MonoBehaviour:
   taSkadeCollidersList: []
   gjerSkadeCollidersList: []
   actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!1001 &1517516639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13936,8 +14073,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skade: 10
-  tarskadeHitboks: {fileID: 0}
+  eingang: 0
+  overTid: 0
+  gjerSkadeMengde: 10
+  gjerLSkadeOverTidInterval: 1
+  tarSkade: {fileID: 0}
 --- !u!65 &1719434742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18492,6 +18632,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5694664101285744069, guid: d6b521d1f5ef34c4b81834942b8fb69b,
+        type: 3}
+      propertyPath: eingang
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8804067271651218413, guid: d6b521d1f5ef34c4b81834942b8fb69b,
         type: 3}
       propertyPath: m_Name
@@ -18812,6 +18957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 602890733860294367, guid: 1547b20a5bd6fb846ab7ef9d622814d2,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602890733860294367, guid: 1547b20a5bd6fb846ab7ef9d622814d2,
+        type: 3}
       propertyPath: skadePerInterval
       value: 0.5
       objectReference: {fileID: 0}
@@ -18870,10 +19020,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7680303822385401060, guid: 1547b20a5bd6fb846ab7ef9d622814d2, type: 3}
+    - {fileID: 602890733860294367, guid: 1547b20a5bd6fb846ab7ef9d622814d2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1347921637569184486, guid: 1547b20a5bd6fb846ab7ef9d622814d2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1104433317}
+    - targetCorrespondingSourceObject: {fileID: 1347921637569184486, guid: 1547b20a5bd6fb846ab7ef9d622814d2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1104433318}
   m_SourcePrefab: {fileID: 100100000, guid: 1547b20a5bd6fb846ab7ef9d622814d2, type: 3}
 --- !u!4 &6025115461143797688
 Transform:
@@ -19523,6 +19683,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4297646559253343397, guid: 895488311f7b20c4593fde5efd2704ee,
+        type: 3}
+      propertyPath: eingang
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4323630269289465959, guid: 895488311f7b20c4593fde5efd2704ee,
         type: 3}
       propertyPath: m_Name
@@ -20115,6 +20280,7 @@ MonoBehaviour:
   taSkadeCollidersList: []
   gjerSkadeCollidersList: []
   actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!65 &8525728730853088779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20386,8 +20552,9 @@ SceneRoots:
   - {fileID: 1010520385}
   - {fileID: 1137935871}
   - {fileID: 677482602}
-  - {fileID: 1260261524}
   - {fileID: 5119688341635589197}
   - {fileID: 7443297184267373642}
   - {fileID: 2375623310123534458}
   - {fileID: 5966617729250753981}
+  - {fileID: 1260261524}
+  - {fileID: 6808179}
