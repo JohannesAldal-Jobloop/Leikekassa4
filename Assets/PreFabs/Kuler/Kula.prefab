@@ -161,4 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skade: 10
+  eingang: 1
+  overTid: 0
+  gjerSkadeMengde: 10
+  gjerLSkadeOverTidInterval: 1
+  tarSkade: {fileID: 0}

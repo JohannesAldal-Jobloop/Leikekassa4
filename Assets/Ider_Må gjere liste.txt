@@ -11,4 +11,5 @@ BUGS:
 1. kulo LasterKula kjem feil veg ut ifrå LaserGun
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
-4. 
+4. Gift oppbyggning går aldri ned.
+5. 
