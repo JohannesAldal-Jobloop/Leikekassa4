@@ -10,6 +10,7 @@ public class TurretSkript : MonoBehaviour
 
     public GameObject kuleSpawnPunkt;
     public GameObject spelarGO;
+    public GameObject kulaTest;
     public List<GameObject> kuler = new List<GameObject>();   
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class TurretSkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(kuler[0], kuleSpawnPunkt.transform);
+        Instantiate(kulaTest, kuleSpawnPunkt.transform);
         SjåPåSpelar();
 
         if (Time.time >= tidTilNesteSkudd)

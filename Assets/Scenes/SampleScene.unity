@@ -8732,6 +8732,8 @@ MonoBehaviour:
   skytehastigheit: 0.5
   kuleSpawnPunkt: {fileID: 1482650970}
   spelarGO: {fileID: 1137935866}
+  kulaTest: {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897,
+    type: 3}
   kuler:
   - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
 --- !u!135 &949029792
