@@ -11,6 +11,8 @@ public class SpelerUISkript : MonoBehaviour
     public Slider livBarGO;
     public GameObject overSkjoldBarGO;
     public Slider overSkjoldBarSlider;
+    public GameObject giftBarGO;
+    public Slider giftBar;
 
     public GameObject spelarGO;
 
@@ -36,6 +38,7 @@ public class SpelerUISkript : MonoBehaviour
     {
         LivBarUpdate();
         OverSkjoldUpdate();
+        GiftBarUptdate();
 
         if (!tarSkadeSpeler.erDød) 
         { 
@@ -79,5 +82,21 @@ public class SpelerUISkript : MonoBehaviour
         {
             overSkjoldBarGO.SetActive(false);
         }
+    }
+
+    void GiftBarUptdate()
+    {
+        if(livFunksjonerSpeler.giftOppbygging > 0)
+        {
+            giftBarGO.SetActive(true);
+        }
+        else
+        {
+            giftBarGO.SetActive(false);
+        }
+
+        giftBar.maxValue = livFunksjonerSpeler.giftResistanse;
+        giftBar.value = livFunksjonerSpeler.giftOppbygging;
+
     }
 }

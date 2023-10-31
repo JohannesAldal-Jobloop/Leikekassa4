@@ -8,6 +8,7 @@ TagManager:
   - Kula
   - taSkadeHitboks
   - gjerSkadeHitboks
+  - Sump
   layers:
   - Default
   - TransparentFX

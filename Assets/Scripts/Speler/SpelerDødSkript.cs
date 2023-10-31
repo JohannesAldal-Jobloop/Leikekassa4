@@ -25,7 +25,7 @@ public class SpelerDødSkript : MonoBehaviour
         spelerTarSkadeSkript = GetComponent<TarSkade>();
         VisKropp();
 
-        StartCoroutine(RespawnCourutine());
+        Respawn();
     }
 
     // Update is called once per frame
@@ -56,7 +56,7 @@ public class SpelerDødSkript : MonoBehaviour
         Time.timeScale = 1.0f;
 
         spelerTarSkadeSkript.liv = spelerTarSkadeSkript.maksLiv;
-
+        spelerTarSkadeSkript.livFunksjoner.StartMedOverSkjold();
         
         transform.position = aktivSpelarSpawnpointTransform.position;
 

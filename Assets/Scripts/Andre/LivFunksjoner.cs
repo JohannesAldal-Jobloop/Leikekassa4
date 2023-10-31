@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LivFunksjoner : MonoBehaviour
 {
@@ -22,7 +23,17 @@ public class LivFunksjoner : MonoBehaviour
     public float overSkjoldMengde;
     //***************************************
 
-    public bool erForgifta;
+    //***** Variabler til Forgifta() *****
+    public bool erForgifta = false;
+    private bool giftOppbyggingReduksjonIntervalFerdig = true;
+    public bool erBortidSomp = false;
+    public int giftResistanse = 100;
+    public int giftOppbygging = 0;
+    public float giftSkade = 5;
+    public float giftInterval = 0.01f;
+    public int giftReduksjonMengde;
+    public float giftReduksjonFart;
+    //************************************
 
     private TarSkade tarSkade;
 
@@ -31,6 +42,7 @@ public class LivFunksjoner : MonoBehaviour
     {
         tarSkade = GetComponent<TarSkade>();
         TidUtenSkade();
+        StartCoroutine(FjernGiftOppbyggingOverTid());
 
         if (startMedOverSkjold)
         {
@@ -47,47 +59,51 @@ public class LivFunksjoner : MonoBehaviour
         {
             if (tidGåttUtenSkade == tidUtanSkadeMål && tarSkade.liv < tarSkade.maksLiv && !livRegenerererStarta)
             {
-                if (livIntervallFerdig)
-                {
-                    StartCoroutine(Regenerering());
-                }
+                StartCoroutine(Regenerering());
             }
         }
 
-        if(erForgifta)
+        if (giftOppbygging == giftResistanse)
         {
-            Forgifta();
+            StartCoroutine(Forgifta());
         }
     }
 
     IEnumerator Regenerering()
     {
         livRegenerererStarta = true;
+        Debug.Log("Regenerering starta");
 
-
-        if (tarSkade.liv < tarSkade.maksLiv)
+        while(tarSkade.liv != tarSkade.maksLiv)
         {
-            livIntervallFerdig = false;
-
-            if((tarSkade.liv + livRegenerererMengde) <= tarSkade.maksLiv)
+            if (tarSkade.liv < tarSkade.maksLiv)
             {
-                tarSkade.liv += livRegenerererMengde;
+                livIntervallFerdig = false;
+
+                if ((tarSkade.liv + livRegenerererMengde) <= tarSkade.maksLiv)
+                {
+                    tarSkade.liv += livRegenerererMengde;
+                }
+                else
+                {
+                    tarSkade.liv = tarSkade.maksLiv;
+                }
+                yield return new WaitForSeconds(livRegenerererFart);
+
+                livIntervallFerdig = true;
+
             }
             else
             {
-                tarSkade.liv = tarSkade.maksLiv;
+                livRegenerererStarta = false;
             }
-            yield return new WaitForSeconds(livRegenerererFart);
-
-            livIntervallFerdig = true;
-            livRegenerererStarta = false;
+            
         }
     }
     public void TidUtenSkade()
     {
         if(tidGåttUtenSkade != tidUtanSkadeMål && Time.time >= tidGåttUtenSkadeInterval)
         {
-            
             tidGåttUtenSkade++;
             tidGåttUtenSkadeInterval = Time.time + 1f / 1;
         }
@@ -104,13 +120,54 @@ public class LivFunksjoner : MonoBehaviour
             overSkjoldMengde = overSkjoldMaks;
         }
     }
-    void StartMedOverSkjold()
+    public void StartMedOverSkjold()
     {
         overSkjoldMengde = overSkjoldMaks;
     }
 
-    void Forgifta()
+    IEnumerator Forgifta()
     {
+        erForgifta = true;
 
+        giftOppbygging = giftResistanse;
+
+        for (int i = 0; i < giftResistanse; i++)
+        {
+            tarSkade.TaSkade(giftSkade);
+            giftOppbygging--;
+
+            yield return new WaitForSeconds(giftInterval);
+        }
+
+        erForgifta = false;
+    }
+
+    public IEnumerator FjernGiftOppbyggingOverTid()
+    {
+        while(!erBortidSomp && !erForgifta && giftOppbygging > 0)
+        {
+            giftOppbygging -= giftReduksjonMengde;
+
+            Debug.Log("Reduserer oppbygning");
+
+            yield return new WaitForSeconds(giftReduksjonFart);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Sump")
+        {
+            erBortidSomp = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Sump")
+        {
+            erBortidSomp = false;
+            StartCoroutine(FjernGiftOppbyggingOverTid());
+        }
     }
 }

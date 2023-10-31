@@ -80,17 +80,4 @@ public class GiLiv : MonoBehaviour
     }
     //*********************************************
 
-    void OpptaterStatus()
-    {
-        if (eingang)
-        {
-            //overTid = false;
-            colliderOnGO.isTrigger = false;
-        }
-        if (overTid)
-        {
-            //eingang = false;
-            colliderOnGO.isTrigger = true;
-        }
-    }
 }
