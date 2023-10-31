@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca259e475ffd0d4ab6466fc82df409a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eingang: 0
+  eingang: 1
   overTid: 0
   giOverSkjoldMengde: 10
   giOverSkjoldOverTidInterval: 1
@@ -145,7 +145,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2

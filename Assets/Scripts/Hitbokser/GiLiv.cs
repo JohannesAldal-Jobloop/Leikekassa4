@@ -24,23 +24,28 @@ public class GiLiv : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OpptaterStatus();
+
     }
 
 
     //********** Gi liv ein gang so sletter seg sjølv **********
     private void OnCollisionEnter(Collision collision)
     {
-        if (!harGittLiv && eingang)
-        {
-            tarSkade = collision.gameObject.GetComponent<TarSkade>();
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        tarSkade = other.gameObject.GetComponent<TarSkade>();
 
+        if (!harGittLiv && eingang && tarSkade.liv < tarSkade.maksLiv)
+        {
             if (tarSkade != null)
             {
                 GiLivEinGang();
             }
         }
     }
+
     void GiLivEinGang()
     {
         tarSkade.liv += giLivMengde;

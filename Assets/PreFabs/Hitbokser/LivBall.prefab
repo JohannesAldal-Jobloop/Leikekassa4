@@ -128,7 +128,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46916afd1e66d2489faec2db9898208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eingang: 0
+  eingang: 1
   overTid: 0
   giLivMengde: 10
   giLivOverTidInterval: 1

@@ -16,7 +16,8 @@ public class LivFunksjoner : MonoBehaviour
     //***************************************
 
     //***** Variabler til OverSkjold()*****
-    public bool harOverSkjold;
+    public bool startMedOverSkjold = false;
+    public bool kanFÂOverSkjold = false;
     public float overSkjoldMaks = 100;
     public float overSkjoldMengde;
     //***************************************
@@ -31,7 +32,7 @@ public class LivFunksjoner : MonoBehaviour
         tarSkade = GetComponent<TarSkade>();
         TidUtenSkade();
 
-        if (harOverSkjold)
+        if (startMedOverSkjold)
         {
             StartMedOverSkjold();
         }
@@ -61,7 +62,6 @@ public class LivFunksjoner : MonoBehaviour
 
     IEnumerator Regenerering()
     {
-        Debug.Log("Regenering starta");
         livRegenerererStarta = true;
 
 

@@ -56,16 +56,16 @@ public class GjerSkade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OpptaterStatus();
+        
     }
 
 
     //********** Gjer skade ein gang so sletter seg sjølv **********
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         if (!harGittSkade && eingang)
         {
-            tarSkade = collision.gameObject.GetComponent<TarSkade>();
+            tarSkade = other.gameObject.GetComponent<TarSkade>();
 
             if (tarSkade != null)
             {
@@ -73,6 +73,7 @@ public class GjerSkade : MonoBehaviour
             }
         }
     }
+
     void GjerSkadeEinGang()
     {
         tarSkade.TaSkade(gjerSkadeMengde);

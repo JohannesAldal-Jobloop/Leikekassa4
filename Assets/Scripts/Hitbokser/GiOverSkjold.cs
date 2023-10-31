@@ -25,25 +25,24 @@ public class GiOverSkjold : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OpptaterStatus();
+        
     }
 
 
     //********** Gi OverSkjold Ein gang so sletter seg sjølv **********
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision.gameObject.name);
-
         if (!harSattOverSkjold && eingang)
         {
-            livFunksjoner = collision.gameObject.GetComponent<LivFunksjoner>();
+            livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
 
-            if (livFunksjoner.harOverSkjold != null)
+            if (livFunksjoner != null && livFunksjoner.kanFåOverSkjold && livFunksjoner.overSkjoldMengde < livFunksjoner.overSkjoldMaks)
             {
                 GiOverSkjoldEinGang();
             }
         }
     }
+
     void GiOverSkjoldEinGang()
     {
         livFunksjoner.FaOverSkjold(giOverSkjoldMengde);
@@ -57,8 +56,8 @@ public class GiOverSkjold : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
-        Debug.Log(other.name);
-        if (livFunksjoner.harOverSkjold != null)
+
+        if (livFunksjoner != null && livFunksjoner.kanFåOverSkjold)
         {
             if (!harSattOverSkjold && overTid && (livFunksjoner.overSkjoldMengde <= livFunksjoner.overSkjoldMaks))
             {
