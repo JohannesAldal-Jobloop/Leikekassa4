@@ -8732,10 +8732,12 @@ MonoBehaviour:
   skytehastigheit: 0.5
   kuleSpawnPunkt: {fileID: 1482650970}
   spelarGO: {fileID: 1137935866}
-  kulaTest: {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897,
+  kulaTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
+    type: 3}
+  spawnTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
     type: 3}
   kuler:
-  - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
+  - {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
 --- !u!135 &949029792
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19853,6 +19855,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarSkadeParent: {fileID: 8525728730853088778}
+--- !u!1001 &6475268775917926568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Kula1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
 --- !u!1001 &6507393554802446685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21272,3 +21342,4 @@ SceneRoots:
   - {fileID: 677482602}
   - {fileID: 2375623310123534458}
   - {fileID: 969156893}
+  - {fileID: 6475268775917926568}
