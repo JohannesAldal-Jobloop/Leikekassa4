@@ -66,22 +66,22 @@ public class BulletScript : MonoBehaviour
          * Viss det er sant so sletter skuddet seg sjølv.
          */
 
-        if (transform.transform.position.x > (spawnPositionX + skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        if (transform.transform.position.x > (spawnPositionX + skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
-        }else if(transform.transform.position.y > (spawnPositionY + skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        }else if(transform.transform.position.y > (spawnPositionY + skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
-        }else if(transform.transform.position.z > (spawnPositionZ + skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        }else if(transform.transform.position.z > (spawnPositionZ + skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
-        }else if(transform.transform.position.x < (spawnPositionX - skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        }else if(transform.transform.position.x < (spawnPositionX - skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
-        }else if(transform.transform.position.y < (spawnPositionY - skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        }else if(transform.transform.position.y < (spawnPositionY - skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
-        }else if(transform.transform.position.z < (spawnPositionZ - skytevåpenScript.aktivVåpenVariabler.maxRekevidde))
+        }else if(transform.transform.position.z < (spawnPositionZ - skytevåpenScript.aktivVåpenVariabler.maksRekkevidde))
         {
             Destroy(gameObject);
         }
@@ -97,7 +97,7 @@ public class BulletScript : MonoBehaviour
     void SettAktivVåpenVariabler()
     {
         fart = skytevåpenScript.aktivVåpenVariabler.fart;
-        maxRekevidde = skytevåpenScript.aktivVåpenVariabler.maxRekevidde;
+        maxRekevidde = skytevåpenScript.aktivVåpenVariabler.maksRekkevidde;
     }
 
     IEnumerator SlettKulaEtterVenting()

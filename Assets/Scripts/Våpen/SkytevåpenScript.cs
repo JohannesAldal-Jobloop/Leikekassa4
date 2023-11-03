@@ -118,7 +118,7 @@ public class SkytevåpenScript : MonoBehaviour
     void RaycastShooting()
     {
         RaycastHit rayTreff;
-        if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maxRekevidde))
+        if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maksRekkevidde))
         {
             //Debug.Log(rayTreff.transform.name);
 
@@ -201,6 +201,6 @@ public class SkytevåpenScript : MonoBehaviour
 
     void FinnAktiveKuler()
     {
-        aktiveKuler = GameObject.FindGameObjectsWithTag("Kula");
+        aktiveKuler = GameObject.FindGameObjectsWithTag("KulaFiende");
     }
 }

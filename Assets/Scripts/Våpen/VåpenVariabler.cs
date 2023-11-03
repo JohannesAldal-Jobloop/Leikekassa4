@@ -31,7 +31,7 @@ public class VåpenVariabler : MonoBehaviour
      */
 
     public float fart = 10;
-    public float maxRekevidde = 10;
+    public float maksRekkevidde = 10;
     public float angrepHastigheit = 0.1f;
     public float skade = 10;
     public float tilbakeslagKraft = 30;

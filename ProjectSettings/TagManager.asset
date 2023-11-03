@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
-  - Kula
   - taSkadeHitboks
   - gjerSkadeHitboks
   - Sump
+  - KulaFiende
+  - KulaSpelar
   layers:
   - Default
   - TransparentFX

@@ -5,14 +5,25 @@ using UnityEngine;
 
 public class TurretSkript : MonoBehaviour
 {
+    public float skadePÂTurret = 10;
+    public float tilbakeslagKraftPÂTurret = 10;
+
     public float skytehastigheit;
     private float tidtilnesteskudd;
+    public float maksRekkevidde;
+
+    public int kulebrukt = 0;;
 
     public GameObject kuleSpawnPunkt;
     public GameObject spelarGO;
     public GameObject kulaTest;
     public GameObject spawnTest;
-    public List<GameObject> kuler = new List<GameObject>();   
+
+    public GameObject[] aktiveKuler;
+
+    public List<GameObject> kuler = new List<GameObject>();
+
+    private KuleSkript kuleSkript;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +35,15 @@ public class TurretSkript : MonoBehaviour
     void Update()
     {
         Spawntest();
-        //SjÂPÂSpelar();
-        //Skyt();
+        SjÂPÂSpelar();
+
         if (Time.time >= tidtilnesteskudd)
         {
             tidtilnesteskudd = Time.time + 1f / skytehastigheit;
 
             Skyt();
+
+            Debug.Log("Skyte() aktivert");
         }
     }
 
@@ -41,7 +54,10 @@ public class TurretSkript : MonoBehaviour
 
     void Skyt()
     {
-        Instantiate(kuler[0], kuleSpawnPunkt.transform);
+        Instantiate(kuler[kulebrukt], kuleSpawnPunkt.transform);
+        FinnAktiveKuler();
+        SettVÂpenvariablerTilKulene();
+        Debug.Log("Skal ha skytt ei kula");
     }
 
     void Spawntest()
@@ -50,5 +66,27 @@ public class TurretSkript : MonoBehaviour
         {
             Instantiate(kulaTest, kuleSpawnPunkt.transform);
         }
+    }
+
+    void FinnAktiveKuler()
+    {
+        aktiveKuler = GameObject.FindGameObjectsWithTag("KulaFiende");
+    }
+
+    void SettVÂpenvariablerTilKulene()
+    {
+        kuleSkript = kuler[kulebrukt].GetComponent<KuleSkript>();
+
+        kuleSkript.skade = skadePÂTurret;
+        kuleSkript.tilbakeslagKraft = tilbakeslagKraftPÂTurret;
+
+        //KuleSkript kuleSkript;
+
+        //for (int i = 0; i < aktiveKuler.Length; i++)
+        //{
+        //    kuleSkript =  aktiveKuler[i].GetComponent<KuleSkript>();
+
+        //    kuleSkript.FinnVÂpenVariabler("HodeTurret");
+        //}
     }
 }

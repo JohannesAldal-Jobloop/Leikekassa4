@@ -8694,8 +8694,9 @@ GameObject:
   - component: {fileID: 949029793}
   - component: {fileID: 949029792}
   - component: {fileID: 949029791}
+  - component: {fileID: 949029795}
   m_Layer: 0
-  m_Name: Hode
+  m_Name: HodeTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8730,12 +8731,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skytehastigheit: 0.5
+  maksRekkevidde: 0
   kuleSpawnPunkt: {fileID: 1482650970}
   spelarGO: {fileID: 1137935866}
   kulaTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
     type: 3}
   spawnTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
     type: 3}
+  aktiveKuler: []
   kuler:
   - {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
 --- !u!135 &949029792
@@ -8809,6 +8812,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949029789}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &949029795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949029789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fart: 10
+  maksRekkevidde: 10
+  angrepHastigheit: 0.1
+  skade: 10
+  tilbakeslagKraft: 30
+  reloadFart: 1
+  skyteModus: 0
+  kulaBrukt: 0
+  magasinKapasitet: 10
+  magasinMengdeNo: 0
+  treffEffekt: {fileID: 0}
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -10087,7 +10113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fart: 10
-  maxRekevidde: 10
+  maksRekkevidde: 10
   angrepHastigheit: 15
   skade: 10
   tilbakeslagKraft: 30
@@ -18072,7 +18098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fart: 10
-  maxRekevidde: 10
+  maksRekkevidde: 10
   angrepHastigheit: 15
   skade: 10
   tilbakeslagKraft: 30
@@ -18561,7 +18587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fart: 30
-  maxRekevidde: 20
+  maksRekkevidde: 10
   angrepHastigheit: 100
   skade: 10
   tilbakeslagKraft: 30
@@ -20267,7 +20293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fart: 10
-  maxRekevidde: 10
+  maksRekkevidde: 10
   angrepHastigheit: 7
   skade: 10
   tilbakeslagKraft: 100
