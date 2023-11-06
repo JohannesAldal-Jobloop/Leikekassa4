@@ -2969,7 +2969,7 @@ Transform:
   m_GameObject: {fileID: 312507010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -30, y: -6.4, z: 1.2}
+  m_LocalPosition: {x: -27.77, y: 0, z: 0.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8725,12 +8725,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949029789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 133705d763127664f8eb633c9d5e1f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kulebrukt: 0
   hovetRotasjonsfart: 0
   kuleSpawnPunkt: {fileID: 1482650970}
   spelarGO: {fileID: 1137935866}
@@ -8831,13 +8830,15 @@ MonoBehaviour:
   tilbakeslagKraft: 18
   reloadFart: 1
   skyteModus: 0
-  kulaBrukt: 0
+  kulaBrukt: 1
   magasinKapasitet: 10
   magasinMengdeNo: 0
   kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
-  kulaPreFab: []
+  kulaSkript:
+  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -10128,7 +10129,7 @@ MonoBehaviour:
   kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
-  kulaPreFab: []
+  kulaSkript: []
 --- !u!95 &1107745490
 Animator:
   serializedVersion: 5
@@ -11425,8 +11426,8 @@ Transform:
   m_GameObject: {fileID: 1244189658}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0.7071068, z: 0.000000053385083, w: -0.000000053385083}
-  m_LocalPosition: {x: -3.69, y: 2.45, z: -0.78}
-  m_LocalScale: {x: 0.54367524, y: 0.5436752, z: 0.06701729}
+  m_LocalPosition: {x: -0, y: 0, z: -1.134}
+  m_LocalScale: {x: 1, y: 0.5, z: -0.12}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434437131044764952}
@@ -13929,7 +13930,7 @@ Transform:
   m_GameObject: {fileID: 1605279004}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.6, y: -6.2, z: 4.5}
+  m_LocalPosition: {x: 8.87, y: 0.22, z: 4.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18115,7 +18116,9 @@ MonoBehaviour:
   kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
-  kulaPreFab: []
+  kulaSkript:
+  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
 --- !u!136 &967340883054818603
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18320,7 +18323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1799592483318012568
 Transform:
   m_ObjectHideFlags: 0
@@ -18606,7 +18609,9 @@ MonoBehaviour:
   kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
-  kulaPreFab: []
+  kulaSkript:
+  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
 --- !u!95 &2614338955658834623
 Animator:
   serializedVersion: 5
@@ -20192,7 +20197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &6835072283808054150
 GameObject:
   m_ObjectHideFlags: 0
@@ -20314,7 +20319,9 @@ MonoBehaviour:
   kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
-  kulaPreFab: []
+  kulaSkript:
+  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
 --- !u!95 &7006410006929372076
 Animator:
   serializedVersion: 5
@@ -21192,6 +21199,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111371545}
     m_Modifications:
+    - target: {fileID: 1310067742081074907, guid: 6639eed4121a92442b42c34134784017,
+        type: 3}
+      propertyPath: kulaSkript.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310067742081074907, guid: 6639eed4121a92442b42c34134784017,
+        type: 3}
+      propertyPath: kulaSkript.Array.data[0]
+      value: 
+      objectReference: {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae,
+        type: 3}
+    - target: {fileID: 1310067742081074907, guid: 6639eed4121a92442b42c34134784017,
+        type: 3}
+      propertyPath: kulaSkript.Array.data[1]
+      value: 
+      objectReference: {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8,
+        type: 3}
     - target: {fileID: 3978213428115122863, guid: 6639eed4121a92442b42c34134784017,
         type: 3}
       propertyPath: m_Name

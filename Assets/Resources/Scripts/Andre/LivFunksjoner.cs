@@ -53,20 +53,24 @@ public class LivFunksjoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TidUtenSkade();
-
-        if (livRegenererer)
+        if(tarSkade.erDød == false)
         {
-            if (tidGåttUtenSkade == tidUtanSkadeMål && tarSkade.liv < tarSkade.maksLiv && !livRegenerererStarta)
+            TidUtenSkade();
+
+            if (livRegenererer)
             {
-                StartCoroutine(Regenerering());
+                if (tidGåttUtenSkade == tidUtanSkadeMål && tarSkade.liv < tarSkade.maksLiv && !livRegenerererStarta)
+                {
+                    StartCoroutine(Regenerering());
+                }
+            }
+
+            if (giftOppbygging == giftResistanse)
+            {
+                StartCoroutine(Forgifta());
             }
         }
-
-        if (giftOppbygging == giftResistanse)
-        {
-            StartCoroutine(Forgifta());
-        }
+        
     }
 
     IEnumerator Regenerering()
@@ -74,31 +78,29 @@ public class LivFunksjoner : MonoBehaviour
         livRegenerererStarta = true;
         Debug.Log("Regenerering starta");
 
-        while(tarSkade.liv != tarSkade.maksLiv)
+        while(tarSkade.liv != tarSkade.maksLiv && tidGåttUtenSkade == tidUtanSkadeMål)
         {
-            if (tarSkade.liv < tarSkade.maksLiv)
-            {
-                livIntervallFerdig = false;
-
-                if ((tarSkade.liv + livRegenerererMengde) <= tarSkade.maksLiv)
-                {
-                    tarSkade.liv += livRegenerererMengde;
-                }
-                else
-                {
-                    tarSkade.liv = tarSkade.maksLiv;
-                }
-                yield return new WaitForSeconds(livRegenerererFart);
-
-                livIntervallFerdig = true;
-
-            }
-            else
+            if(tidGåttUtenSkade != tidUtanSkadeMål)
             {
                 livRegenerererStarta = false;
             }
-            
+
+            livIntervallFerdig = false;
+
+            if ((tarSkade.liv + livRegenerererMengde) <= tarSkade.maksLiv)
+            {
+                tarSkade.liv += livRegenerererMengde;
+            }
+            else
+            {
+                tarSkade.liv = tarSkade.maksLiv;
+            }
+            yield return new WaitForSeconds(livRegenerererFart);
+
+            livIntervallFerdig = true;
         }
+
+        livRegenerererStarta = false;
     }
     public void TidUtenSkade()
     {

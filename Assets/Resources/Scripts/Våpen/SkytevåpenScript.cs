@@ -112,8 +112,16 @@ public class SkytevåpenScript : MonoBehaviour
 
     void SpawnBullet()
     {
-        Instantiate(kuleList[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
-        aktivVåpenVariabler.magasinMengdeNo -= 1;
+            KuleSkript clone = Instantiate(aktivVåpenVariabler.kulaSkript[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
+
+            clone.skade = aktivVåpenVariabler.skade;
+            clone.fart = aktivVåpenVariabler.fart;
+            clone.tilbakeslagKraft = aktivVåpenVariabler.tilbakeslagKraft;
+            clone.maksRekkevidde = aktivVåpenVariabler.maksRekkevidde;
+            clone.skyteModus = aktivVåpenVariabler.skyteModus;
+
+            FinnAktiveKuler();
+        
     }
     void RaycastShooting()
     {

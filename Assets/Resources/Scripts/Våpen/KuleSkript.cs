@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class KuleSkript : MonoBehaviour
 {
+    // TRENGER IKKJE GjerSkade SKRIPTET FOR Å GJERE SKADE
+
     public float fart = 1;
     public float skade = 10;
     public float tilbakeslagKraft = 30;
     public float maksRekkevidde = 10;
+    public int skyteModus = 0;
 
     private float spawnPositionX;
     private float spawnPositionY;
@@ -18,7 +21,10 @@ public class KuleSkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.parent = null;
+        if(skyteModus != 3)
+        {
+            transform.parent = null;
+        }
 
         FinnSpawnPosisjon();
         BevegFramover();

@@ -52,17 +52,20 @@ public class VåpenVariabler : MonoBehaviour
     public ParticleSystem treffEffekt;
 
     public KuleSkript[] kulaSkript;
-    public Object[] kulaPreFab;
 
-    void Start()
-    {
-        kulaPreFab = Resources.LoadAll("Assets/PreFabs/Kuler");
-        Debug.Log("Prøvde å finne alle kuler");
-    }
 
-    void Awake()
-    {
-        kulaPreFab = Resources.LoadAll("Assets/PreFabs/Kuler");
-        Debug.Log("Prøvde å finne alle kuler");
-    }
+    // ----------Prøvde å finne alle kulene frå Kuler mappa. Virker ikkje----------
+    //public Object[] kulaPreFab;
+
+    //void Start()
+    //{
+    //    kulaPreFab = Resources.LoadAll("Kuler");
+    //    Debug.Log("Prøvde å finne alle kuler");
+    //}
+
+    //void Awake()
+    //{
+    //    kulaPreFab = Resources.LoadAll("Kuler");
+    //    Debug.Log("Prøvde å finne alle kuler");
+    //}
 }
