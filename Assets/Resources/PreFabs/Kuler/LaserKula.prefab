@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2997965343053468802}
   - component: {fileID: 4821316148331033433}
   - component: {fileID: 7856756652893377003}
-  - component: {fileID: 144769844450562698}
   - component: {fileID: 5641901386649759174}
-  - component: {fileID: 736536865001864328}
+  - component: {fileID: -2446752667615308009}
   m_Layer: 0
   m_Name: LaserKula
   m_TagString: Kula
@@ -110,20 +109,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &144769844450562698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778319868234242297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e3401020fae7648b0ccb8d651d10dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fart: 10
-  maxRekevidde: 10
 --- !u!54 &5641901386649759174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &736536865001864328
+--- !u!114 &-2446752667615308009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +145,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5778319868234242297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988a48e0a3009d74c9840ce3bfa72fff, type: 3}
+  m_Script: {fileID: 11500000, guid: 54a52272a40d3584ca1ca9224437e73f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fart: 1
   skade: 10
+  tilbakeslagKraft: 30
+  maksRekkevidde: 10
+  tarSkade: {fileID: 0}

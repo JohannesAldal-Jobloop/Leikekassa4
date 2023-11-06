@@ -7,12 +7,12 @@ public class KuleSkript : MonoBehaviour
     public float fart = 1;
     public float skade = 10;
     public float tilbakeslagKraft = 30;
+    public float maksRekkevidde = 10;
 
     private float spawnPositionX;
     private float spawnPositionY;
     private float spawnPositionZ;
 
-    public VåpenVariabler våpenVariabler;
     public TarSkade tarSkade;
 
     // Start is called before the first frame update
@@ -44,27 +44,27 @@ public class KuleSkript : MonoBehaviour
          * Viss det er sant so sletter skuddet seg sjølv.
          */
 
-        if (transform.transform.position.x > (spawnPositionX + våpenVariabler.maksRekkevidde))
+        if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.y > (spawnPositionY + våpenVariabler.maksRekkevidde))
+        else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.z > (spawnPositionZ + våpenVariabler.maksRekkevidde))
+        else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.x < (spawnPositionX - våpenVariabler.maksRekkevidde))
+        else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.y < (spawnPositionY - våpenVariabler.maksRekkevidde))
+        else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.z < (spawnPositionZ - våpenVariabler.maksRekkevidde))
+        else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
         {
             Destroy(gameObject);
         }
@@ -77,16 +77,13 @@ public class KuleSkript : MonoBehaviour
         spawnPositionZ = transform.position.z;
     }
 
-    public void FinnVåpenVariabler(string GOMedVåpenvariablerNavn)
-    {
-        våpenVariabler = GameObject.Find(GOMedVåpenvariablerNavn).GetComponent<VåpenVariabler>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        tarSkade = other.GetComponent<TarSkade>();
+
         if (tarSkade != null)
         {
-            tarSkade.TaSkade(våpenVariabler.skade);
+            tarSkade.TaSkade(skade);
             Debug.Log("Kula1 traff:" + other.name);
             Destroy(gameObject);
         }

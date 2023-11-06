@@ -5,14 +5,8 @@ using UnityEngine;
 
 public class TurretSkript : MonoBehaviour
 {
-    public float skadePåTurret = 10;
-    public float tilbakeslagKraftPåTurret = 10;
-
-    public float skytehastigheit;
     private float tidtilnesteskudd;
-    public float maksRekkevidde;
-
-    public int kulebrukt = 0;;
+    public float hovetRotasjonsfart;
 
     public GameObject kuleSpawnPunkt;
     public GameObject spelarGO;
@@ -23,12 +17,13 @@ public class TurretSkript : MonoBehaviour
 
     public List<GameObject> kuler = new List<GameObject>();
 
-    private KuleSkript kuleSkript;
+    public VåpenVariabler våpenVariabler;
 
     // Start is called before the first frame update
     void Start()
     {
         Instantiate(kulaTest, kuleSpawnPunkt.transform);
+        våpenVariabler = GetComponent<VåpenVariabler>();
     }
 
     // Update is called once per frame
@@ -39,7 +34,7 @@ public class TurretSkript : MonoBehaviour
 
         if (Time.time >= tidtilnesteskudd)
         {
-            tidtilnesteskudd = Time.time + 1f / skytehastigheit;
+            tidtilnesteskudd = Time.time + 1f / våpenVariabler.angrepHastigheit;
 
             Skyt();
 
@@ -54,10 +49,14 @@ public class TurretSkript : MonoBehaviour
 
     void Skyt()
     {
-        Instantiate(kuler[kulebrukt], kuleSpawnPunkt.transform);
+        KuleSkript clone = Instantiate(våpenVariabler.kulaSkript[våpenVariabler.kulaBrukt], kuleSpawnPunkt.transform, false);
+        
+        clone.skade = våpenVariabler.skade;
+        clone.fart = våpenVariabler.fart;
+        clone.tilbakeslagKraft = våpenVariabler.tilbakeslagKraft;
+        clone.maksRekkevidde = våpenVariabler.maksRekkevidde;
+
         FinnAktiveKuler();
-        SettVåpenvariablerTilKulene();
-        Debug.Log("Skal ha skytt ei kula");
     }
 
     void Spawntest()
@@ -71,22 +70,5 @@ public class TurretSkript : MonoBehaviour
     void FinnAktiveKuler()
     {
         aktiveKuler = GameObject.FindGameObjectsWithTag("KulaFiende");
-    }
-
-    void SettVåpenvariablerTilKulene()
-    {
-        kuleSkript = kuler[kulebrukt].GetComponent<KuleSkript>();
-
-        kuleSkript.skade = skadePåTurret;
-        kuleSkript.tilbakeslagKraft = tilbakeslagKraftPåTurret;
-
-        //KuleSkript kuleSkript;
-
-        //for (int i = 0; i < aktiveKuler.Length; i++)
-        //{
-        //    kuleSkript =  aktiveKuler[i].GetComponent<KuleSkript>();
-
-        //    kuleSkript.FinnVåpenVariabler("HodeTurret");
-        //}
     }
 }

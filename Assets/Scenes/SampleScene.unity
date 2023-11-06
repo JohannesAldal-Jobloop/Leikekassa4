@@ -8730,8 +8730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133705d763127664f8eb633c9d5e1f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skytehastigheit: 0.5
-  maksRekkevidde: 0
+  kulebrukt: 0
+  hovetRotasjonsfart: 0
   kuleSpawnPunkt: {fileID: 1482650970}
   spelarGO: {fileID: 1137935866}
   kulaTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
@@ -8739,8 +8739,8 @@ MonoBehaviour:
   spawnTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
     type: 3}
   aktiveKuler: []
-  kuler:
-  - {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  kuler: []
+  "v\xE5penVariabler": {fileID: 0}
 --- !u!135 &949029792
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8824,17 +8824,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 10
-  maksRekkevidde: 10
-  angrepHastigheit: 0.1
-  skade: 10
-  tilbakeslagKraft: 30
+  fart: 50
+  maksRekkevidde: 50
+  angrepHastigheit: 10
+  skade: 4
+  tilbakeslagKraft: 18
   reloadFart: 1
   skyteModus: 0
   kulaBrukt: 0
   magasinKapasitet: 10
   magasinMengdeNo: 0
-  treffEffekt: {fileID: 0}
+  kuleBrukt: 0
+  treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
+    type: 3}
+  kulaPreFab: []
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -10122,8 +10125,10 @@ MonoBehaviour:
   kulaBrukt: 0
   magasinKapasitet: 10
   magasinMengdeNo: 0
+  kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
+  kulaPreFab: []
 --- !u!95 &1107745490
 Animator:
   serializedVersion: 5
@@ -17533,7 +17538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prosjektilSkyting: 0
+  prosjektilSkyting: 1
   reloader: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
@@ -18107,8 +18112,10 @@ MonoBehaviour:
   kulaBrukt: 0
   magasinKapasitet: 10
   magasinMengdeNo: 0
+  kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
+  kulaPreFab: []
 --- !u!136 &967340883054818603
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18596,8 +18603,10 @@ MonoBehaviour:
   kulaBrukt: 1
   magasinKapasitet: 100
   magasinMengdeNo: 0
+  kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
+  kulaPreFab: []
 --- !u!95 &2614338955658834623
 Animator:
   serializedVersion: 5
@@ -20302,8 +20311,10 @@ MonoBehaviour:
   kulaBrukt: 0
   magasinKapasitet: 10
   magasinMengdeNo: 0
+  kuleBrukt: 0
   treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
     type: 3}
+  kulaPreFab: []
 --- !u!95 &7006410006929372076
 Animator:
   serializedVersion: 5

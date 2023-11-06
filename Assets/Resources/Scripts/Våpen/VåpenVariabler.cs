@@ -22,12 +22,19 @@ public class VåpenVariabler : MonoBehaviour
      *      3: Laser.
      *      
      * kulaBrukt         = Kva kula våpene bruker. 
-     *                     Denne variablen skal vere indexen til kula våpene bruker frå kuleList listo frå SkytevåpenSkriptet.
+     *                     Denne variablen skal vere indexen til kula våpene 
+     *                     bruker frå kuleList listo frå SkytevåpenSkriptet.
      * magasinKapasitet  = Kor mange kuler magasinet har plass til.
      * magasinMengdeNo   = Kor mange kuler som er i magasinet nett no.
+     * kulebrukt         = Kva index av kulePreFab arrayet som blir brukt.
+     *                     (Kva kula som blir brukt av våpenet)
      * 
      * ----------ANDRE----------            
-     * treffEffekt       = Dette er kva partikkel effekt som blir brukt når våpenes hitbox/kuler treffer noko.
+     * treffEffekt       = Dette er kva partikkel effekt som blir brukt når våpenes
+     *                     hitbox/kuler treffer noko.
+     *                     
+     * ----------Skript----------
+     * kulePreFab        = Dette er eit array med alle prefab kulene.
      */
 
     public float fart = 10;
@@ -40,6 +47,22 @@ public class VåpenVariabler : MonoBehaviour
     public int kulaBrukt = 0;
     public int magasinKapasitet = 10;
     public int magasinMengdeNo = 0;
+    public int kuleBrukt = 0;
 
     public ParticleSystem treffEffekt;
+
+    public KuleSkript[] kulaSkript;
+    public Object[] kulaPreFab;
+
+    void Start()
+    {
+        kulaPreFab = Resources.LoadAll("Assets/PreFabs/Kuler");
+        Debug.Log("Prøvde å finne alle kuler");
+    }
+
+    void Awake()
+    {
+        kulaPreFab = Resources.LoadAll("Assets/PreFabs/Kuler");
+        Debug.Log("Prøvde å finne alle kuler");
+    }
 }
