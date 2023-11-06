@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SjåAngrepRekkevidde : MonoBehaviour
 {
-    public float sjåRekkevidde = 20;
+   [SerializeField] public float sjåRekkevidde = 20;
     public float angrepRekkevidde = 10;
 
     public bool serLayerTarget;

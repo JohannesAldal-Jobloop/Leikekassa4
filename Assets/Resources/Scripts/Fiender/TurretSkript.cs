@@ -17,28 +17,31 @@ public class TurretSkript : MonoBehaviour
 
     public List<GameObject> kuler = new List<GameObject>();
 
-    public VåpenVariabler våpenVariabler;
+    private VåpenVariabler våpenVariabler;
+    private SjåAngrepRekkevidde rekkevidder;
 
     // Start is called before the first frame update
     void Start()
     {
         Instantiate(kulaTest, kuleSpawnPunkt.transform);
         våpenVariabler = GetComponent<VåpenVariabler>();
+        rekkevidder = GetComponent<SjåAngrepRekkevidde>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Spawntest();
-        SjåPåSpelar();
 
-        if (Time.time >= tidtilnesteskudd)
+        if (rekkevidder.serLayerTarget)
         {
-            tidtilnesteskudd = Time.time + 1f / våpenVariabler.angrepHastigheit;
+            SjåPåSpelar();
+        }
+        
 
-            Skyt();
-
-            Debug.Log("Skyte() aktivert");
+        if (rekkevidder.angripLayerTarget)
+        {
+            TurretSkyting();
         }
     }
 
@@ -70,5 +73,17 @@ public class TurretSkript : MonoBehaviour
     void FinnAktiveKuler()
     {
         aktiveKuler = GameObject.FindGameObjectsWithTag("KulaFiende");
+    }
+
+    void TurretSkyting()
+    {
+        if (Time.time >= tidtilnesteskudd)
+        {
+            tidtilnesteskudd = Time.time + 1f / våpenVariabler.angrepHastigheit;
+
+            Skyt();
+
+            Debug.Log("Skyte() aktivert");
+        }
     }
 }
