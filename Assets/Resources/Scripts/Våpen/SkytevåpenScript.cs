@@ -13,14 +13,16 @@ public class SkytevåpenScript : MonoBehaviour
     public GameObject aktivtVåpen;
     public GameObject aktivtKuleSpawnpunkt;
 
+    public GameObject[] aktiveKuler;
+
     public Camera fpsKamera;
+
+    private int rayIgnorerLayer = 0 << 6;
 
     public List<GameObject> kuleList = new List<GameObject>();
     public List<GameObject> våpenList = new List<GameObject>();
     public List<GameObject> siktepunktList = new List<GameObject>();
     public List<GameObject> kuleSpawnpunktList = new List<GameObject>();
-
-    public GameObject[] aktiveKuler;
 
     public VåpenVariabler aktivVåpenVariabler;
 
@@ -125,11 +127,11 @@ public class SkytevåpenScript : MonoBehaviour
     }
     void RaycastShooting()
     {
-        RaycastHit rayTreff;
-        if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maksRekkevidde))
-        {
-            //Debug.Log(rayTreff.transform.name);
+        rayIgnorerLayer = ~rayIgnorerLayer;
 
+        RaycastHit rayTreff;
+        if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maksRekkevidde, rayIgnorerLayer))
+        {
             TarSkade tarSkade = rayTreff.transform.GetComponent<TarSkade>();
 
             if(tarSkade != null)

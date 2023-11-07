@@ -31,6 +31,8 @@ public class TarSkade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        liv = maksLiv;
+
         livFunksjoner = GetComponent<LivFunksjoner>();
 
         if (searchTag != null)
@@ -48,9 +50,7 @@ public class TarSkade : MonoBehaviour
 
     public void TaSkade(float skade)
     {
-        
-
-        if(livFunksjoner.overSkjoldMengde > 0)
+        if(livFunksjoner != null && livFunksjoner.overSkjoldMengde > 0)
         {
             livFunksjoner.overSkjoldMengde -= skade;
         }
@@ -58,26 +58,6 @@ public class TarSkade : MonoBehaviour
         {
             liv -= skade;
             livFunksjoner.tidGåttUtenSkade = 0;
-        }
-
-        if(liv <= 0)
-        {
-            erDød = true;
-
-            if(gameObject.layer == 3)
-            {
-                Debug.Log("Speler Er død :(");
-                Time.timeScale = 0;
-            }
-            else
-            {
-                SlettSegSjølv();
-            }
-
-        }
-        else
-        {
-            erDød = false;
         }
     }
 
@@ -124,10 +104,20 @@ public class TarSkade : MonoBehaviour
 
     void SkjekkOmHarLiv()
     {
-        if(liv <= 0)
+        if (liv <= 0)
         {
             erDød = true;
-            Time.timeScale = 0;
+
+            if (gameObject.layer == 3)
+            {
+                Debug.Log("Speler Er død :(");
+                Time.timeScale = 0;
+            }
+            else
+            {
+                SlettSegSjølv();
+            }
+
         }
         else
         {

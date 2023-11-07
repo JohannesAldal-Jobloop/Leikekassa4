@@ -52,9 +52,6 @@ public class KamerebevegelseFPS : MonoBehaviour
 
     void BevegKameraMedMus()
     {
-        rotasjonX = 0;
-        rotasjonY = 0;
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -66,7 +63,7 @@ public class KamerebevegelseFPS : MonoBehaviour
          * og .localEulerAngles endrer seg etter parent so då blir rotasjonen feil når parenten endrer seg.
          */
         kamera.transform.eulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
-        playerFPS.transform.localEulerAngles = new Vector3(0, spelerDødSkript.aktivSpelarSpawnpointTransform.rotation.y, 0);
+        playerFPS.transform.localEulerAngles = new Vector3(0, rotasjonY, 0);
 
 
         rotasjonX = Mathf.Clamp(rotasjonX, minRotasjon, maxRotasjon);

@@ -848,6 +848,7 @@ GameObject:
   - component: {fileID: 86627160}
   - component: {fileID: 86627159}
   - component: {fileID: 86627158}
+  - component: {fileID: 86627161}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -944,6 +945,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86627156}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &86627161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86627156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b43c62c044cc44bfd64ef242c42ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tarSkadeParent: {fileID: 0}
 --- !u!1001 &103658176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8693,6 +8707,7 @@ GameObject:
   - component: {fileID: 949029794}
   - component: {fileID: 949029793}
   - component: {fileID: 949029792}
+  - component: {fileID: 949029795}
   m_Layer: 0
   m_Name: HodeTurret
   m_TagString: Untagged
@@ -8787,6 +8802,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949029789}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &949029795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949029789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b43c62c044cc44bfd64ef242c42ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tarSkadeParent: {fileID: 0}
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9122,6 +9150,7 @@ GameObject:
   - component: {fileID: 969156894}
   - component: {fileID: 969156898}
   - component: {fileID: 969156897}
+  - component: {fileID: 969156899}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -9258,8 +9287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82e42dd77d59ce43b23eba7af37cb45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "sj\xE5Rekkevidde": 0
-  angrepRekkevidde: 0
+  "sj\xE5Rekkevidde": 65
+  angrepRekkevidde: 20
   serLayerTarget: 0
   angripLayerTarget: 0
   layerTarget:
@@ -9272,7 +9301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969156889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 133705d763127664f8eb633c9d5e1f81, type: 3}
   m_Name: 
@@ -9339,6 +9368,25 @@ MonoBehaviour:
   angrepshastigheit: 0
   "skytev\xE5penScript": {fileID: 0}
   skadeHitboks: {fileID: 0}
+--- !u!114 &969156899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e12bda427f564c868cd01b100f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maksLiv: 100
+  liv: 10
+  "erD\xF8d": 0
+  taSkadeCollidersList: []
+  gjerSkadeCollidersList: []
+  actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!1001 &978742403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9652,6 +9700,7 @@ MonoBehaviour:
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
+  aktiveKuler: []
   fpsKamera: {fileID: 963194227}
   kuleList:
   - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
@@ -9662,7 +9711,6 @@ MonoBehaviour:
   - {fileID: 1163937622}
   kuleSpawnpunktList:
   - {fileID: 1076361135}
-  aktiveKuler: []
   "aktivV\xE5penVariabler": {fileID: 0}
 --- !u!1001 &1039324746
 PrefabInstance:
@@ -15720,6 +15768,7 @@ GameObject:
   - component: {fileID: 1867282908}
   - component: {fileID: 1867282907}
   - component: {fileID: 1867282906}
+  - component: {fileID: 1867282909}
   m_Layer: 9
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -15813,6 +15862,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867282904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1867282909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867282904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e12bda427f564c868cd01b100f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maksLiv: 10
+  liv: 10
+  "erD\xF8d": 0
+  taSkadeCollidersList: []
+  gjerSkadeCollidersList: []
+  actors: []
+  livFunksjoner: {fileID: 0}
 --- !u!1 &1871367555
 GameObject:
   m_ObjectHideFlags: 0
@@ -15931,7 +15999,7 @@ GameObject:
   - component: {fileID: 1875258813}
   - component: {fileID: 1875258812}
   - component: {fileID: 1875258811}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17614,11 +17682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prosjektilSkyting: 1
+  prosjektilSkyting: 0
   reloader: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
+  aktiveKuler: []
   fpsKamera: {fileID: 963194227}
   kuleList:
   - {fileID: 4155651461975442071, guid: 1f9267be803ef654f9a16c774395f897, type: 3}
@@ -17634,7 +17703,6 @@ MonoBehaviour:
   - {fileID: 312507010}
   - {fileID: 1605279004}
   - {fileID: 1244189658}
-  aktiveKuler: []
   "aktivV\xE5penVariabler": {fileID: 0}
 --- !u!1001 &2139034031
 PrefabInstance:
@@ -18165,7 +18233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &919132148741654812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20272,7 +20340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6835072283808054150
 GameObject:
   m_ObjectHideFlags: 0
