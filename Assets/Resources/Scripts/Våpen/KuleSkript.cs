@@ -118,7 +118,6 @@ public class KuleSkript : MonoBehaviour
         if (tarSkade != null && other.tag != "Kula")
         {
             tarSkade.TaSkade(skade);
-            Debug.Log("Kula1 traff:" + other.name);
             Destroy(gameObject);
         }
         else if(other.tag != "Kula")

@@ -9258,8 +9258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82e42dd77d59ce43b23eba7af37cb45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "sj\xE5Rekkevidde": 65
-  angrepRekkevidde: 30
+  "sj\xE5Rekkevidde": 0
+  angrepRekkevidde: 0
   serLayerTarget: 0
   angripLayerTarget: 0
   layerTarget:
@@ -10471,7 +10471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b6ba7819c8aab42b2304fc717a8b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aktivtSpelarSpawnpointIndex: 5
+  aktivtSpelarSpawnpointIndex: 1
   respawner: 0
   aktivSpelarSpawnpointTransform: {fileID: 1759065273}
   spelarSpawnpointer:

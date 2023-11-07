@@ -3,7 +3,6 @@ TING Å GJERE:
 2. Lage animasjon til våpen: reload,  osv
 5. Lage fleire skadetyper.
 6. laga finder.
-7. Lage skyteangrep til fiender.
 10. Huking kan bli gjort på ein Mykje bedre måte.
 11. Endra springafuksjon so springinga stopper når du står stille.
 14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. For å lage hierarchy meir ryddeg på play.
@@ -15,7 +14,7 @@ TING Å GJERE:
 
 
 BUGS:
-1. kulo LasterKula kjem feil veg ut ifrå LaserGun
+1. kulo LaserKula kjem feil veg ut når skytt.
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
 4. Gift oppbyggning går aldri ned.

@@ -8,7 +8,7 @@ public class SpelerDødSkript : MonoBehaviour
 
     public bool respawner = false;
 
-    private Vector3 aktivtSpelarSpawnpointRotasjon;
+    private Quaternion aktivtSpelarSpawnpointRotasjon;
 
     public Transform aktivSpelarSpawnpointTransform;
 
@@ -59,10 +59,9 @@ public class SpelerDødSkript : MonoBehaviour
         spelerTarSkadeSkript.livFunksjoner.StartMedOverSkjold();
         
         transform.position = aktivSpelarSpawnpointTransform.position;
+        transform.rotation = aktivSpelarSpawnpointTransform.rotation;
 
         yield return new WaitForSeconds(.01f);
-
-        transform.eulerAngles = new Vector3(0f, -41f, 0f);
         VisKropp();
 
 
@@ -85,12 +84,12 @@ public class SpelerDødSkript : MonoBehaviour
 
     void FinnAktivSpelerSpawnpointRotasjon()
     {
-        aktivtSpelarSpawnpointRotasjon = new Vector3(
+        aktivtSpelarSpawnpointRotasjon = new Quaternion(
 
             spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.x,
             spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.y,
-            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.z
-
+            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.z,
+            spelarSpawnpointer[aktivtSpelarSpawnpointIndex].rotation.w
             );
     }
 }
