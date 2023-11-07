@@ -9230,7 +9230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 1000
+  kuleFart: 5000
   maksRekkevidde: 50
   angrepHastigheit: 10
   skade: 4
@@ -9259,7 +9259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "sj\xE5Rekkevidde": 65
-  angrepRekkevidde: 50
+  angrepRekkevidde: 30
   serLayerTarget: 0
   angripLayerTarget: 0
   layerTarget:
@@ -10190,7 +10190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 10
+  kuleFart: 10
   maksRekkevidde: 10
   angrepHastigheit: 15
   skade: 10
@@ -18178,7 +18178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 10
+  kuleFart: 10
   maksRekkevidde: 10
   angrepHastigheit: 15
   skade: 10
@@ -18671,7 +18671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 30
+  kuleFart: 10
   maksRekkevidde: 10
   angrepHastigheit: 100
   skade: 10
@@ -20381,7 +20381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 10
+  kuleFart: 10
   maksRekkevidde: 10
   angrepHastigheit: 7
   skade: 10

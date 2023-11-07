@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7822641639575202306}
   m_Layer: 6
   m_Name: Kula1
-  m_TagString: Untagged
+  m_TagString: Kula
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

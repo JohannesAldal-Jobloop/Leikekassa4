@@ -55,7 +55,7 @@ public class KuleSkript : MonoBehaviour
         //gameObject.transform.Translate(Vector3.forward * fart * Time.deltaTime);
 
         //sinRB.AddForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
-        sinRB.AddForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
+        sinRB.AddRelativeForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
     }
 
     void BulletRestriksjoner()
@@ -115,15 +115,15 @@ public class KuleSkript : MonoBehaviour
     {
         tarSkade = other.GetComponent<TarSkade>();
 
-        if (tarSkade != null)
+        if (tarSkade != null && other.tag != "Kula")
         {
             tarSkade.TaSkade(skade);
             Debug.Log("Kula1 traff:" + other.name);
             Destroy(gameObject);
         }
-        else
+        else if(other.tag != "Kula")
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

@@ -47,12 +47,11 @@ public class FiendeBevegelse : MonoBehaviour
         if (sjåRekkeviddeSkript.serLayerTarget && !sjåRekkeviddeSkript.angripLayerTarget)
         {
             BevegMotSpeler();
-            //skadeHitboks.SetActive(false);
         }
-        //else if(sjåRekkeviddeSkript.serLayerTarget && sjåRekkeviddeSkript.angripLayerTarget)
-        //{
-        //    AngripSpeler();
-        //}
+        else if (sjåRekkeviddeSkript.serLayerTarget && sjåRekkeviddeSkript.angripLayerTarget)
+        {
+            AngripSpeler();
+        }
     }
 
     void Patruljering()
@@ -90,32 +89,12 @@ public class FiendeBevegelse : MonoBehaviour
 
     void BevegMotSpeler()
     {
-        if (sjåRekkeviddeSkript.serLayerTarget)
-        {
-
-        }
-
-
         agent.SetDestination(spelerFPSTransform.position);
     }
 
     void AngripSpeler()
     {
-
-
-        //agent.SetDestination(transform.position);
-        //transform.LookAt(spelerFPSTransform);
-
-        //skytevåpenScript.FullAutoSkyting();
-
-
-        //if (!harAngrepe)
-        //{
-        //    skadeHitboks.SetActive(true);
-
-        //    harAngrepe = true;
-        //    Invoke(nameof(ResetAngrep), angrepshastigheit);
-        //}
+        agent.SetDestination(transform.position);
     }
 
     private void ResetAngrep()

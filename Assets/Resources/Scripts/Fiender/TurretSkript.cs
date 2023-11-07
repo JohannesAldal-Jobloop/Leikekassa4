@@ -59,6 +59,8 @@ public class TurretSkript : MonoBehaviour
         clone.maksRekkevidde = våpenVariabler.maksRekkevidde;
         clone.ophavPosisjon = ophavV3;
 
+        clone.transform.localScale = new Vector3(0.3f, 0.3f, 1.6f);
+
         FinnAktiveKuler();
     }
 

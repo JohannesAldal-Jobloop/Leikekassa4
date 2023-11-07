@@ -10,7 +10,8 @@ TING Å GJERE:
 16. Gjere det so at speler ikkje kan gå inn og ut ifrå 
 	gjeOverSkjold/Liv hitboks for å få det raskare.
 17. Lage om BulletRestriksjoner() til å bruke Physics.CheckSphere.
-18. 
+18. Lage eit generelt skyteskript til speler og fiender.
+19. 
 
 
 BUGS:
