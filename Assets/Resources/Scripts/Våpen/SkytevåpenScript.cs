@@ -115,7 +115,7 @@ public class SkytevåpenScript : MonoBehaviour
             KuleSkript clone = Instantiate(aktivVåpenVariabler.kulaSkript[aktivVåpenVariabler.kulaBrukt], aktivtKuleSpawnpunkt.transform);
 
             clone.skade = aktivVåpenVariabler.skade;
-            clone.fart = aktivVåpenVariabler.fart;
+            clone.fart = aktivVåpenVariabler.kuleFart;
             clone.tilbakeslagKraft = aktivVåpenVariabler.tilbakeslagKraft;
             clone.maksRekkevidde = aktivVåpenVariabler.maksRekkevidde;
             clone.skyteModus = aktivVåpenVariabler.skyteModus;

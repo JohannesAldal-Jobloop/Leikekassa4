@@ -50,11 +50,11 @@ public class BulletScript : MonoBehaviour
     {
         if(skytevåpenScript.aktivVåpenVariabler.kulaBrukt == 0)
         {
-            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.fart * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.kuleFart * Time.deltaTime);
         }
         else if(skytevåpenScript.aktivVåpenVariabler.kulaBrukt == 1)
         {
-            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.fart * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.forward * skytevåpenScript.aktivVåpenVariabler.kuleFart * Time.deltaTime);
         }
         
     }
@@ -96,7 +96,7 @@ public class BulletScript : MonoBehaviour
 
     void SettAktivVåpenVariabler()
     {
-        fart = skytevåpenScript.aktivVåpenVariabler.fart;
+        fart = skytevåpenScript.aktivVåpenVariabler.kuleFart;
         maxRekevidde = skytevåpenScript.aktivVåpenVariabler.maksRekkevidde;
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class VåpenVariabler : MonoBehaviour
 {
     /* ----------FLOAT----------
-     * fart              = Hastigheit på kuler.
+     * kuleFart              = Hastigheit på kuler.
      * maxRekevidde      = Rekevidda til våpenet.
      * angrepHastigheit  = Kor raskt det skal ta mellom angrepene.
      * 
@@ -37,7 +37,7 @@ public class VåpenVariabler : MonoBehaviour
      * kulePreFab        = Dette er eit array med alle prefab kulene.
      */
 
-    public float fart = 10;
+    public float kuleFart = 10;
     public float maksRekkevidde = 10;
     public float angrepHastigheit = 0.1f;
     public float skade = 10;

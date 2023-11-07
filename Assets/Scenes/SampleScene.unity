@@ -5962,7 +5962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677482601}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.650006, y: 0, z: -24.976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5980,7 +5980,7 @@ Transform:
   - {fileID: 1760266003}
   - {fileID: 1262990723}
   - {fileID: 798305865}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1115867531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685152419
 GameObject:
@@ -7324,7 +7324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &798305865
 Transform:
   m_ObjectHideFlags: 0
@@ -9120,6 +9120,8 @@ GameObject:
   - component: {fileID: 969156896}
   - component: {fileID: 969156895}
   - component: {fileID: 969156894}
+  - component: {fileID: 969156898}
+  - component: {fileID: 969156897}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -9228,7 +9230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fart: 50
+  fart: 1000
   maksRekkevidde: 50
   angrepHastigheit: 10
   skade: 4
@@ -9280,9 +9282,63 @@ MonoBehaviour:
   spelarGO: {fileID: 1137935866}
   turretHeadGO: {fileID: 949029789}
   aktiveKuler: []
+  ophavV3: {x: 21.222399, y: 1, z: -34.58674}
   kuler:
   - {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
   - {fileID: 5778319868234242297, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
+--- !u!195 &969156897
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5000001
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &969156898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24a209411201274c8e80c5009779a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  spelerFPSTransform: {fileID: 0}
+  bakke:
+    serializedVersion: 2
+    m_Bits: 512
+  speler:
+    serializedVersion: 2
+    m_Bits: 8
+  "g\xE5Punkt": {x: 0, y: 0, z: 0}
+  "g\xE5PunktSett": 0
+  "spelerInanforSj\xE5Rekkevidde": 0
+  spelerInanforAngrepRekkevidde: 0
+  harAngrepe: 0
+  "g\xE5PunktRekevidde": 0
+  "sj\xE5Rekevidde": 0
+  angrepsRekkevidde: 0
+  angrepshastigheit: 0
+  "skytev\xE5penScript": {fileID: 0}
+  skadeHitboks: {fileID: 0}
 --- !u!1001 &978742403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10217,6 +10273,7 @@ Transform:
   - {fileID: 669894832}
   - {fileID: 1942911764}
   - {fileID: 1102018184}
+  - {fileID: 677482602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116138284
@@ -13087,7 +13144,7 @@ Transform:
   m_GameObject: {fileID: 1482650970}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.0039979, z: -0.00000007450577}
+  m_LocalPosition: {x: 0, y: 3.52, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16250,7 +16307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900242867
 Transform:
   m_ObjectHideFlags: 0
@@ -21418,7 +21475,6 @@ SceneRoots:
   - {fileID: 1799100812}
   - {fileID: 1010520385}
   - {fileID: 1137935871}
-  - {fileID: 677482602}
   - {fileID: 2375623310123534458}
   - {fileID: 969156893}
   - {fileID: 6475268775917926568}

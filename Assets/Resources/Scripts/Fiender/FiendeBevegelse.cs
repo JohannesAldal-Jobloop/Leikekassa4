@@ -22,11 +22,14 @@ public class FiendeBevegelse : MonoBehaviour
 
     public GameObject skadeHitboks;
 
+    private SjåAngrepRekkevidde sjåRekkeviddeSkript;
+
     // Start is called before the first frame update
     void Start()
     {
         spelerFPSTransform = GameObject.Find("SpelerFPS").transform;
         agent = GetComponent<NavMeshAgent>();
+        sjåRekkeviddeSkript = GetComponent<SjåAngrepRekkevidde>();
     }
 
     // Update is called once per frame
@@ -35,20 +38,21 @@ public class FiendeBevegelse : MonoBehaviour
         spelerInanforSjåRekkevidde = Physics.CheckSphere(transform.position, sjåRekevidde, speler);
         spelerInanforAngrepRekkevidde = Physics.CheckSphere(transform.position, angrepsRekkevidde, speler);
 
-        if(!spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
-        {
-            Patruljering();
-            skadeHitboks.SetActive(false);
-        }
-        else if (spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
+        //if(!spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
+        //{
+        //    Patruljering();
+        //    skadeHitboks.SetActive(false);
+        //}
+        //else
+        if (sjåRekkeviddeSkript.serLayerTarget && !sjåRekkeviddeSkript.angripLayerTarget)
         {
             BevegMotSpeler();
-            skadeHitboks.SetActive(false);
+            //skadeHitboks.SetActive(false);
         }
-        else if(spelerInanforSjåRekkevidde && spelerInanforAngrepRekkevidde)
-        {
-            AngripSpeler();
-        }
+        //else if(sjåRekkeviddeSkript.serLayerTarget && sjåRekkeviddeSkript.angripLayerTarget)
+        //{
+        //    AngripSpeler();
+        //}
     }
 
     void Patruljering()
@@ -86,24 +90,32 @@ public class FiendeBevegelse : MonoBehaviour
 
     void BevegMotSpeler()
     {
+        if (sjåRekkeviddeSkript.serLayerTarget)
+        {
+
+        }
+
+
         agent.SetDestination(spelerFPSTransform.position);
     }
 
     void AngripSpeler()
     {
-        agent.SetDestination(transform.position);
-        transform.LookAt(spelerFPSTransform);
-
-        skytevåpenScript.FullAutoSkyting();
 
 
-        if (!harAngrepe)
-        {
-            skadeHitboks.SetActive(true);
+        //agent.SetDestination(transform.position);
+        //transform.LookAt(spelerFPSTransform);
 
-            harAngrepe = true;
-            Invoke(nameof(ResetAngrep), angrepshastigheit);
-        }
+        //skytevåpenScript.FullAutoSkyting();
+
+
+        //if (!harAngrepe)
+        //{
+        //    skadeHitboks.SetActive(true);
+
+        //    harAngrepe = true;
+        //    Invoke(nameof(ResetAngrep), angrepshastigheit);
+        //}
     }
 
     private void ResetAngrep()

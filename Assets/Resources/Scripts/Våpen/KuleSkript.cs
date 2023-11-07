@@ -19,6 +19,8 @@ public class KuleSkript : MonoBehaviour
 
     [SerializeField] private bool erInnanforMaksRekkevidde = true;
 
+    [SerializeField] private Rigidbody sinRB;
+
     public Vector3 ophavPosisjon;
 
     private LayerMask kuleLayer = 6;
@@ -28,7 +30,9 @@ public class KuleSkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(skyteModus != 3)
+        sinRB = gameObject.GetComponent<Rigidbody>();
+
+        if (skyteModus != 3)
         {
             transform.parent = null;
         }
@@ -36,6 +40,7 @@ public class KuleSkript : MonoBehaviour
         FinnSpawnPosisjon();
         BevegFramover();
         BulletRestriksjoner();
+        
     }
 
     // Update is called once per frame
@@ -47,7 +52,10 @@ public class KuleSkript : MonoBehaviour
 
     void BevegFramover()
     {
-        gameObject.transform.Translate(Vector3.forward * fart * Time.deltaTime);
+        //gameObject.transform.Translate(Vector3.forward * fart * Time.deltaTime);
+
+        //sinRB.AddForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
+        sinRB.AddForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
     }
 
     void BulletRestriksjoner()
@@ -57,34 +65,40 @@ public class KuleSkript : MonoBehaviour
          * Viss det er sant so sletter skuddet seg sjølv.
          */
 
-        erInnanforMaksRekkevidde = Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer);
+        
 
-        if (!erInnanforMaksRekkevidde)
+        if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
         {
             Destroy(gameObject);
         }
 
-        //if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
+
+
+        //---------- Virker ikkje----------
+        //erInnanforMaksRekkevidde = Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer);
+        //Debug.Log(Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer));
+
+        //if (!erInnanforMaksRekkevidde)
         //{
         //    Destroy(gameObject);
         //}
@@ -109,7 +123,7 @@ public class KuleSkript : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

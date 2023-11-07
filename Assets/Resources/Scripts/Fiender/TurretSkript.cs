@@ -54,7 +54,7 @@ public class TurretSkript : MonoBehaviour
         KuleSkript clone = Instantiate(våpenVariabler.kulaSkript[våpenVariabler.kulaBrukt], kuleSpawnPunkt.transform, false);
         
         clone.skade = våpenVariabler.skade;
-        clone.fart = våpenVariabler.fart;
+        clone.fart = våpenVariabler.kuleFart;
         clone.tilbakeslagKraft = våpenVariabler.tilbakeslagKraft;
         clone.maksRekkevidde = våpenVariabler.maksRekkevidde;
         clone.ophavPosisjon = ophavV3;
@@ -74,8 +74,6 @@ public class TurretSkript : MonoBehaviour
             tidtilnesteskudd = Time.time + 1f / våpenVariabler.angrepHastigheit;
 
             Skyt();
-
-            Debug.Log("Skyte() aktivert");
         }
     }
 }
