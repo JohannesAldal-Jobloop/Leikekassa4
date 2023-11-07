@@ -10,10 +10,11 @@ public class TurretSkript : MonoBehaviour
 
     public GameObject kuleSpawnPunkt;
     public GameObject spelarGO;
-    public GameObject kulaTest;
-    public GameObject spawnTest;
+    public GameObject turretHeadGO;
 
     public GameObject[] aktiveKuler;
+
+    public Vector3 ophavV3;
 
     public List<GameObject> kuler = new List<GameObject>();
 
@@ -23,7 +24,6 @@ public class TurretSkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(kulaTest, kuleSpawnPunkt.transform);
         våpenVariabler = GetComponent<VåpenVariabler>();
         rekkevidder = GetComponent<SjåAngrepRekkevidde>();
     }
@@ -31,7 +31,6 @@ public class TurretSkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Spawntest();
 
         if (rekkevidder.serLayerTarget)
         {
@@ -47,7 +46,7 @@ public class TurretSkript : MonoBehaviour
 
     void SjåPåSpelar()
     {
-        gameObject.transform.LookAt(spelarGO.transform);
+        turretHeadGO.transform.LookAt(spelarGO.transform);
     }
 
     void Skyt()
@@ -58,16 +57,9 @@ public class TurretSkript : MonoBehaviour
         clone.fart = våpenVariabler.fart;
         clone.tilbakeslagKraft = våpenVariabler.tilbakeslagKraft;
         clone.maksRekkevidde = våpenVariabler.maksRekkevidde;
+        clone.ophavPosisjon = ophavV3;
 
         FinnAktiveKuler();
-    }
-
-    void Spawntest()
-    {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            Instantiate(kulaTest, kuleSpawnPunkt.transform);
-        }
     }
 
     void FinnAktiveKuler()

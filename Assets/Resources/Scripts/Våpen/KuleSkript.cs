@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class KuleSkript : MonoBehaviour
 {
-    // TRENGER IKKJE GjerSkade SKRIPTET FOR Å GJERE SKADE
+    // TRENGER IKKJE GjerSkade SKRIPTET FOR Å GJERE SKADE TIL TarSkade SKRIPTET.
 
     public float fart = 1;
     public float skade = 10;
@@ -14,7 +15,13 @@ public class KuleSkript : MonoBehaviour
 
     private float spawnPositionX;
     private float spawnPositionY;
-    private float spawnPositionZ;
+    [SerializeField] private float spawnPositionZ;
+
+    [SerializeField] private bool erInnanforMaksRekkevidde = true;
+
+    public Vector3 ophavPosisjon;
+
+    private LayerMask kuleLayer = 6;
 
     public TarSkade tarSkade;
 
@@ -28,7 +35,7 @@ public class KuleSkript : MonoBehaviour
 
         FinnSpawnPosisjon();
         BevegFramover();
-
+        BulletRestriksjoner();
     }
 
     // Update is called once per frame
@@ -50,30 +57,37 @@ public class KuleSkript : MonoBehaviour
          * Viss det er sant so sletter skuddet seg sjølv.
          */
 
-        if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
+        erInnanforMaksRekkevidde = Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer);
+
+        if (!erInnanforMaksRekkevidde)
         {
             Destroy(gameObject);
         }
-        else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
+
+        //if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     void FinnSpawnPosisjon()

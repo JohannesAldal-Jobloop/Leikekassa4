@@ -10,6 +10,7 @@ TagManager:
   - Sump
   - KulaFiende
   - KulaSpelar
+  - Kula
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Speler
   - Water
   - UI
-  - 
+  - Kuler
   - 
   - Lighting
   - Ground

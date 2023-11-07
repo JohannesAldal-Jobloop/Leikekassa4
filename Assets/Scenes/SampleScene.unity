@@ -7324,7 +7324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &798305865
 Transform:
   m_ObjectHideFlags: 0
@@ -8693,9 +8693,6 @@ GameObject:
   - component: {fileID: 949029794}
   - component: {fileID: 949029793}
   - component: {fileID: 949029792}
-  - component: {fileID: 949029791}
-  - component: {fileID: 949029795}
-  - component: {fileID: 949029796}
   m_Layer: 0
   m_Name: HodeTurret
   m_TagString: Untagged
@@ -8719,27 +8716,6 @@ Transform:
   - {fileID: 86627157}
   m_Father: {fileID: 969156893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &949029791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949029789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133705d763127664f8eb633c9d5e1f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hovetRotasjonsfart: 0
-  kuleSpawnPunkt: {fileID: 1482650970}
-  spelarGO: {fileID: 1137935866}
-  kulaTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
-    type: 3}
-  spawnTest: {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae,
-    type: 3}
-  aktiveKuler: []
-  kuler: []
 --- !u!135 &949029792
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8811,53 +8787,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949029789}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &949029795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949029789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fart: 50
-  maksRekkevidde: 50
-  angrepHastigheit: 10
-  skade: 4
-  tilbakeslagKraft: 18
-  reloadFart: 1
-  skyteModus: 0
-  kulaBrukt: 1
-  magasinKapasitet: 10
-  magasinMengdeNo: 0
-  kuleBrukt: 0
-  treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
-    type: 3}
-  kulaSkript:
-  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
-  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
---- !u!114 &949029796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949029789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82e42dd77d59ce43b23eba7af37cb45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "sj\xE5Rekkevidde": 20
-  angrepRekkevidde: 10
-  serLayerTarget: 0
-  angripLayerTarget: 0
-  layerTarget:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9188,6 +9117,9 @@ GameObject:
   - component: {fileID: 969156892}
   - component: {fileID: 969156891}
   - component: {fileID: 969156890}
+  - component: {fileID: 969156896}
+  - component: {fileID: 969156895}
+  - component: {fileID: 969156894}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -9284,6 +9216,73 @@ Transform:
   - {fileID: 949029790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969156894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fart: 50
+  maksRekkevidde: 50
+  angrepHastigheit: 10
+  skade: 4
+  tilbakeslagKraft: 18
+  reloadFart: 1
+  skyteModus: 0
+  kulaBrukt: 0
+  magasinKapasitet: 10
+  magasinMengdeNo: 0
+  kuleBrukt: 0
+  treffEffekt: {fileID: 198000012368742472, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
+    type: 3}
+  kulaSkript:
+  - {fileID: 9141753965576359992, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: -2446752667615308009, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
+--- !u!114 &969156895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82e42dd77d59ce43b23eba7af37cb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "sj\xE5Rekkevidde": 65
+  angrepRekkevidde: 50
+  serLayerTarget: 0
+  angripLayerTarget: 0
+  layerTarget:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &969156896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969156889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133705d763127664f8eb633c9d5e1f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hovetRotasjonsfart: 0
+  kuleSpawnPunkt: {fileID: 1482650970}
+  spelarGO: {fileID: 1137935866}
+  turretHeadGO: {fileID: 949029789}
+  aktiveKuler: []
+  kuler:
+  - {fileID: 8104096919644791283, guid: c242eb781dde9a44ba145f6ef1b922ae, type: 3}
+  - {fileID: 5778319868234242297, guid: 67482c35e3e3cc64ca8dd5b6cf3121a8, type: 3}
 --- !u!1001 &978742403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10415,7 +10414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b6ba7819c8aab42b2304fc717a8b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aktivtSpelarSpawnpointIndex: 0
+  aktivtSpelarSpawnpointIndex: 5
   respawner: 0
   aktivSpelarSpawnpointTransform: {fileID: 1759065273}
   spelarSpawnpointer:
@@ -19935,7 +19934,7 @@ PrefabInstance:
     - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
         type: 3}

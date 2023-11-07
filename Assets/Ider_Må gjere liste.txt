@@ -7,7 +7,10 @@ TING Å GJERE:
 10. Huking kan bli gjort på ein Mykje bedre måte.
 11. Endra springafuksjon so springinga stopper når du står stille.
 14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. For å lage hierarchy meir ryddeg på play.
-16. Lage sjå og angreps Rekkevidde til Turetten.
+16. Gjere det so at speler ikkje kan gå inn og ut ifrå 
+	gjeOverSkjold/Liv hitboks for å få det raskare.
+17. Lage om BulletRestriksjoner() til å bruke Physics.CheckSphere.
+18. 
 
 
 BUGS:
