@@ -156,7 +156,7 @@ public class BevegelseFPS : MonoBehaviour
 
     void Springing()
     {
-        if(!holdHuker)
+        if(!holdSpringer)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false)
             {
@@ -169,7 +169,30 @@ public class BevegelseFPS : MonoBehaviour
                 gåFartMaks = gåFartOrginal;
                 springer = false;
             }
+
+            //if (playerFpsRB.velocity == new Vector3(0, 0, 0))
+            //{
+            //    springer = false;
+            //    gåFartMaks = gåFartOrginal;
+            //    gåFartFaktisk = gåFartMaks;
+            //}
         }
+        else
+        {
+            if (Input.GetKey(KeyCode.LeftShift) && springer == false)
+            {
+                gåFartMaks *= springeFartModifier;
+                gåFartFaktisk = gåFartMaks;
+                springer = true;
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftShift) && springer == true)
+            {
+                gåFartMaks = gåFartOrginal;
+                springer = false;
+            }
+        }
+        
+
         
     }
 }

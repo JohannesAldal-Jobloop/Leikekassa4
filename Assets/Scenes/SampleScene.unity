@@ -10427,7 +10427,7 @@ MonoBehaviour:
   hoppeKraft: 100
   hukingDistanse: -1
   holdHuker: 0
-  holdSpringer: 1
+  holdSpringer: 0
   huker: 0
   springer: 0
 --- !u!54 &1137935870

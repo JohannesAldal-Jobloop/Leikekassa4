@@ -17,5 +17,4 @@ BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
-4. Gift oppbyggning går aldri ned.
 6. 
