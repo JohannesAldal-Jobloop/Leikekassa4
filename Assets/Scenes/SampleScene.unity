@@ -10574,15 +10574,16 @@ MonoBehaviour:
   startMedOverSkjold: 1
   "kanF\xE5OverSkjold": 1
   overSkjoldMaks: 100
-  overSkjoldMengde: 10
+  overSkjoldMengde: 0
   erForgifta: 0
   erBortidSomp: 0
+  redusererGiftoppbygging: 0
   giftResistanse: 100
   giftOppbygging: 0
   giftSkade: 1
   giftInterval: 0.5
-  giftReduksjonMengde: 0
-  giftReduksjonFart: 0
+  giftReduksjonMengde: 1
+  giftReduksjonFart: 1
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0

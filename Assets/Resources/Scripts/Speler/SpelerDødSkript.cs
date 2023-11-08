@@ -18,11 +18,14 @@ public class SpelerDødSkript : MonoBehaviour
     public GameObject spelerVåpenarm;
 
     private TarSkade spelerTarSkadeSkript;
+    private LivFunksjoner livFunksjoner;
 
     // Start is called before the first frame update
     void Start()
     {
         spelerTarSkadeSkript = GetComponent<TarSkade>();
+        livFunksjoner = GetComponent<LivFunksjoner>();
+
         VisKropp();
 
         Respawn();
@@ -61,6 +64,8 @@ public class SpelerDødSkript : MonoBehaviour
         transform.position = aktivSpelarSpawnpointTransform.position;
         transform.rotation = aktivSpelarSpawnpointTransform.rotation;
 
+        
+
         yield return new WaitForSeconds(.01f);
         VisKropp();
 
@@ -73,6 +78,10 @@ public class SpelerDødSkript : MonoBehaviour
     {
         FinnAktivSpelerSpawnpointRotasjon();
         FinnAktivSpelerSpawnpointtransform();
+
+        livFunksjoner.giftOppbygging = 0;
+        livFunksjoner.tidGåttUtenSkade = 0;
+
 
         StartCoroutine(RespawnCourutine());
     }

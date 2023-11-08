@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,8 +26,8 @@ public class LivFunksjoner : MonoBehaviour
 
     //***** Variabler til Forgifta() *****
     public bool erForgifta = false;
-    private bool giftOppbyggingReduksjonIntervalFerdig = true;
     public bool erBortidSomp = false;
+    public bool redusererGiftoppbygging = false;
     public int giftResistanse = 100;
     public int giftOppbygging = 0;
     public float giftSkade = 5;
@@ -42,7 +43,7 @@ public class LivFunksjoner : MonoBehaviour
     {
         tarSkade = GetComponent<TarSkade>();
         TidUtenSkade();
-        StartCoroutine(FjernGiftOppbyggingOverTid());
+        giftOppbygging = 0;
 
         if (startMedOverSkjold)
         {
@@ -67,7 +68,25 @@ public class LivFunksjoner : MonoBehaviour
 
             if (giftOppbygging == giftResistanse)
             {
+                StopCoroutine("FjernGiftOppbyggingOverTid");
+                redusererGiftoppbygging = false;
+
                 StartCoroutine(Forgifta());
+            }
+
+            if (!erBortidSomp && !redusererGiftoppbygging && !erForgifta && giftOppbygging != 0)
+            {
+                StartCoroutine(FjernGiftOppbyggingOverTid());
+                
+            }
+            else
+            {
+                StopCoroutine("FjernGiftOppbyggingOverTid");
+            }
+
+            if(giftOppbygging < 0)
+            {
+                giftOppbygging = 0;
             }
         }
         
@@ -144,16 +163,18 @@ public class LivFunksjoner : MonoBehaviour
         erForgifta = false;
     }
 
-    public IEnumerator FjernGiftOppbyggingOverTid()
+    IEnumerator FjernGiftOppbyggingOverTid()
     {
-        while(!erBortidSomp && !erForgifta && giftOppbygging > 0)
+        redusererGiftoppbygging = true;
+
+        while(giftOppbygging > 0 && !erBortidSomp)
         {
             giftOppbygging -= giftReduksjonMengde;
 
-            Debug.Log("Reduserer oppbygning");
-
             yield return new WaitForSeconds(giftReduksjonFart);
         }
+        
+        redusererGiftoppbygging = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -161,15 +182,16 @@ public class LivFunksjoner : MonoBehaviour
         if(other.tag == "Sump")
         {
             erBortidSomp = true;
+            StopCoroutine("FjernGiftOppbyggingOverTid");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Sump")
+        if(other.tag == "Sump" && !erForgifta)
         {
             erBortidSomp = false;
-            StartCoroutine(FjernGiftOppbyggingOverTid());
+            
         }
     }
 }
