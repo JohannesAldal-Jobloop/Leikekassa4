@@ -52,9 +52,6 @@ public class KuleSkript : MonoBehaviour
 
     void BevegFramover()
     {
-        //gameObject.transform.Translate(Vector3.forward * fart * Time.deltaTime);
-
-        //sinRB.AddForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
         sinRB.AddRelativeForce(Vector3.forward * fart * Time.deltaTime, ForceMode.Force);
     }
 
@@ -67,41 +64,41 @@ public class KuleSkript : MonoBehaviour
 
         
 
-        if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
-        else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
-        {
-            Destroy(gameObject);
-        }
+        //if (transform.transform.position.x > (spawnPositionX + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.y > (spawnPositionY + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.z > (spawnPositionZ + maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.x < (spawnPositionX - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.y < (spawnPositionY - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else if (transform.transform.position.z < (spawnPositionZ - maksRekkevidde))
+        //{
+        //    Destroy(gameObject);
+        //}
 
 
 
         //---------- Virker ikkje----------
-        //erInnanforMaksRekkevidde = Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer);
-        //Debug.Log(Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer));
+        erInnanforMaksRekkevidde = Physics.CheckSphere(ophavPosisjon, maksRekkevidde*2, kuleLayer);
+        Debug.Log(Physics.CheckSphere(ophavPosisjon, maksRekkevidde, kuleLayer));
 
-        //if (!erInnanforMaksRekkevidde)
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (!erInnanforMaksRekkevidde)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FinnSpawnPosisjon()

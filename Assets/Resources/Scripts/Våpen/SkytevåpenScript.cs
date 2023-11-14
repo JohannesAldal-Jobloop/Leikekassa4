@@ -122,6 +122,8 @@ public class SkytevåpenScript : MonoBehaviour
             clone.maksRekkevidde = aktivVåpenVariabler.maksRekkevidde;
             clone.skyteModus = aktivVåpenVariabler.skyteModus;
 
+        aktivVåpenVariabler.magasinMengdeNo--;
+
             FinnAktiveKuler();
         
     }
@@ -147,7 +149,7 @@ public class SkytevåpenScript : MonoBehaviour
             ParticleSystem treffEffekt = Instantiate(aktivVåpenVariabler.treffEffekt, rayTreff.point, Quaternion.LookRotation(rayTreff.normal));
             Destroy(treffEffekt, 1f );
         }
-        aktivVåpenVariabler.magasinMengdeNo -= 1;
+        aktivVåpenVariabler.magasinMengdeNo--;
     }
 
     public void FullAutoSkyting()

@@ -32,7 +32,7 @@ public class GiOverSkjold : MonoBehaviour
     //********** Gi OverSkjold Ein gang so sletter seg sjølv **********
     private void OnTriggerEnter(Collider other)
     {
-        if (!harSattOverSkjold && eingang)
+        if (!harSattOverSkjold && eingang && !overTid)
         {
             livFunksjoner = other.gameObject.GetComponent<LivFunksjoner>();
 
@@ -59,7 +59,7 @@ public class GiOverSkjold : MonoBehaviour
 
         if (livFunksjoner != null && livFunksjoner.kanFåOverSkjold)
         {
-            if (!harSattOverSkjold && overTid && (livFunksjoner.overSkjoldMengde <= livFunksjoner.overSkjoldMaks))
+            if (!harSattOverSkjold && overTid && !eingang && (livFunksjoner.overSkjoldMengde <= livFunksjoner.overSkjoldMaks))
             {
                     StartCoroutine(GiOverSkjoldOverTid());
             }

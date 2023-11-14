@@ -4,17 +4,19 @@ TING Å GJERE:
 5. Lage fleire skadetyper.
 6. laga finder.
 10. Huking kan bli gjort på ein Mykje bedre måte.
-11. Endra springafuksjon so springinga stopper når du står stille.
-14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. For å lage hierarchy meir ryddeg på play.
-16. Gjere det so at speler ikkje kan gå inn og ut ifrå 
-	gjeOverSkjold/Liv hitboks for å få det raskare.
+14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. 
+	For å lage hierarchy meir ryddeg på play.
 17. Lage om BulletRestriksjoner() til å bruke Physics.CheckSphere.
 18. Lage eit generelt skyteskript til speler og fiender.
-19. 
+19. Omjer speler springing so speler går gradvis opp i fart.
+20. Lage eit skript til å kunne interacte med ting.
+21. Få ekstra rekkevidde når speøer sikter.
+22. 
 
 
 BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
-6. 
+6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
+7. 

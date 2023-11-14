@@ -12,21 +12,32 @@ public class BevegelseFPS : MonoBehaviour
 
     public CapsuleCollider bodyHitbox;
 
+    //---------- Variabler til WASD bevegelse ----------
+    private float horisontalInput = 0f;
+    private float vertikalInput = 0f;
+
     public float gåFartOrginal = 10f;
     public float gåFartMaks;
     public float springeFartModifier = 1.5f;
     public float gåFartFaktisk = 0;
-    public float sidelengsReduksjons = 0.5f;
+    private float sidelengsReduksjons = 0.5f;
+    private float tidGåttUtenAkselerasjonInterval;
+    public float akselerasjonsFart = 1;
+
+    public bool holdSpringer = false;
+    public bool springer = false;
+    //--------------------------------------------------
+
+    //---------- Variabler til Hopping ----------
     public float hoppeKraft = 10;
+    //-------------------------------------------
+
+    //---------- Variabler til Huking ----------
     public float hukingDistanse = -1;
 
-    private float horisontalInput = 0f;
-    private float vertikalInput = 0f;
-
     public bool holdHuker = false;
-    public bool holdSpringer = false;
     public bool huker = false;
-    public bool springer = false;
+    //-------------------------------------------
 
     private BakkeSjekk bakkeSjekk;
     private SpelerDødSkript spelerDødSkript;
@@ -50,6 +61,7 @@ public class BevegelseFPS : MonoBehaviour
         {
             Hopping();
             Huking();
+            StopSpringingNårStårStille();
             Springing();
             BevegWASD();
         }
@@ -170,12 +182,7 @@ public class BevegelseFPS : MonoBehaviour
                 springer = false;
             }
 
-            //if (playerFpsRB.velocity == new Vector3(0, 0, 0))
-            //{
-            //    springer = false;
-            //    gåFartMaks = gåFartOrginal;
-            //    gåFartFaktisk = gåFartMaks;
-            //}
+            
         }
         else
         {
@@ -194,5 +201,15 @@ public class BevegelseFPS : MonoBehaviour
         
 
         
+    }
+
+    void StopSpringingNårStårStille()
+    {
+        if (!holdSpringer && playerFpsRB.velocity.x <= 0f && playerFpsRB.velocity.z <= 0f)
+        {
+            springer = false;
+            gåFartMaks = gåFartOrginal;
+            gåFartFaktisk = gåFartMaks;
+        }
     }
 }
