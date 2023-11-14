@@ -53,6 +53,11 @@ public class VåpenVariabler : MonoBehaviour
 
     public KuleSkript[] kulaSkript;
 
+    private void Awake()
+    {
+        magasinMengdeNo = magasinKapasitet;
+    }
+
 
     // ----------Prøvde å finne alle kulene frå Kuler mappa. Virker ikkje----------
     //public Object[] kulaPreFab;
