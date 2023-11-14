@@ -31,11 +31,13 @@ public class VåpenAnimasjon : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse1))
         {
+            skytevåpenScript.sikter = true;
             animator.SetBool("Sikter", true);
             skytevåpenScript.aktivtSiktepunkt.SetActive(false);
         }
         else
         {
+            skytevåpenScript.sikter = false;
             animator.SetBool("Sikter", false);
             skytevåpenScript.aktivtSiktepunkt.SetActive(true);
         }

@@ -10,9 +10,10 @@ TING Å GJERE:
 18. Lage eit generelt skyteskript til speler og fiender.
 19. Omjer speler springing so speler går gradvis opp i fart.
 20. Lage eit skript til å kunne interacte med ting.
-21. Få ekstra rekkevidde når speøer sikter.
+21. Få ekstra rekkevidde når speler sikter.
 22. Lage pausekjerm.
-23. 
+23. Laga Kode input.
+24. 
 
 
 BUGS:

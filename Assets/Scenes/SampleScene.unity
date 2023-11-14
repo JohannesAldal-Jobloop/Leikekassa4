@@ -4734,42 +4734,42 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5501871
+      value: 0.553
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.077
+      value: 1.272
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.550535
+      value: -9.452
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.6830127
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.6830127
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2588191
+      value: 0.18301274
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.18301274
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c81708ce9f0461a4a800ab7929a9c03b,
         type: 3}
@@ -5007,6 +5007,7 @@ GameObject:
   - component: {fileID: 510307992}
   - component: {fileID: 510307993}
   - component: {fileID: 510307994}
+  - component: {fileID: 510307995}
   m_Layer: 0
   m_Name: SpelSjef
   m_TagString: Untagged
@@ -5078,6 +5079,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipGO: {fileID: 2111371544}
+--- !u!114 &510307995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510307990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f136690305fbff0499b781a6c1aca62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &513223397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6979,6 +6992,7 @@ Transform:
   - {fileID: 986197300}
   - {fileID: 1995616361}
   - {fileID: 1361532581}
+  - {fileID: 1154302242}
   m_Father: {fileID: 1115867531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685152419
@@ -8660,6 +8674,89 @@ Transform:
   - {fileID: 435496418}
   m_Father: {fileID: 677482602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &799143276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799143277}
+  - component: {fileID: 799143280}
+  - component: {fileID: 799143279}
+  m_Layer: 0
+  m_Name: fargeKnapp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &799143277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799143276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1154302242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &799143279
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799143276}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 05c8778079d81c74983bd12283ea2d2f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &799143280
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799143276}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &829510153
 GameObject:
   m_ObjectHideFlags: 0
@@ -10672,6 +10769,7 @@ MonoBehaviour:
   skade: 4
   tilbakeslagKraft: 18
   reloadFart: 1
+  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 0
   kulaBrukt: 0
   magasinKapasitet: 10
@@ -11193,6 +11291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prosjektilSkyting: 0
   reloader: 0
+  sikter: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
@@ -11477,6 +11576,7 @@ MonoBehaviour:
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
+  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 1
   kulaBrukt: 0
   magasinKapasitet: 40
@@ -12043,6 +12143,7 @@ MonoBehaviour:
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
+  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 1
   kulaBrukt: 0
   magasinKapasitet: 10
@@ -12177,6 +12278,7 @@ GameObject:
   - component: {fileID: 1137935876}
   - component: {fileID: 1137935875}
   - component: {fileID: 1137935877}
+  - component: {fileID: 1137935878}
   m_Layer: 3
   m_Name: SpelerFPS
   m_TagString: Player
@@ -12398,6 +12500,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fpsKamera: {fileID: 963194225}
   "skytev\xE5penScript": {fileID: 2111371547}
+--- !u!114 &1137935878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137935866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043508c9e1d53a74a9be4fe0b410efcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maksRekkevidde: 10
+  fpsKamera: {fileID: 963194225}
+  knapp: {fileID: 1154302246}
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
@@ -12610,6 +12727,129 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147920634}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1154302241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154302242}
+  - component: {fileID: 1154302245}
+  - component: {fileID: 1154302244}
+  - component: {fileID: 1154302243}
+  - component: {fileID: 1154302246}
+  m_Layer: 0
+  m_Name: knapp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1154302242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154302241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0811, y: 2, z: -10.501}
+  m_LocalScale: {x: -0.20124756, y: 0.9, z: 0.8}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 799143277}
+  m_Father: {fileID: 677482602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1154302243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154302241}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1154302244
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154302241}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2c2863476d82e8d429cece1b58cd1644, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1154302245
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154302241}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1154302246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154302241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63700643216b8d44c9d314a1e270ce1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "lengdeP\xE5Trykk": 0.1
+  avMatrialet: {fileID: 2100000, guid: 05c8778079d81c74983bd12283ea2d2f, type: 2}
+  "p\xE5Matrialet": {fileID: 2100000, guid: f1f4d7ecc2cc653438327092b858d83d, type: 2}
+  handlingSkript: {fileID: 510307995}
 --- !u!1 &1163937622
 GameObject:
   m_ObjectHideFlags: 0
@@ -20646,6 +20886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prosjektilSkyting: 0
   reloader: 0
+  sikter: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
@@ -21625,6 +21866,7 @@ MonoBehaviour:
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
+  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 3
   kulaBrukt: 1
   magasinKapasitet: 100
@@ -23302,6 +23544,7 @@ MonoBehaviour:
   skade: 10
   tilbakeslagKraft: 100
   reloadFart: 1
+  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 2
   kulaBrukt: 0
   magasinKapasitet: 10

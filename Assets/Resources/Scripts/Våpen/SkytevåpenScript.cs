@@ -8,6 +8,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public bool prosjektilSkyting = true;
     public bool reloader = false;
+    public bool sikter = false;
 
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
@@ -55,7 +56,10 @@ public class SkytevåpenScript : MonoBehaviour
         {
             StartCoroutine(Reload());
         }
-        
+
+        OkMaksRekkeviddeVedSikting();
+
+
     }
 
     void FinnAlleAktiveGameobjectForScript()
@@ -214,5 +218,13 @@ public class SkytevåpenScript : MonoBehaviour
     void FinnAktiveKuler()
     {
         aktiveKuler = GameObject.FindGameObjectsWithTag("KulaFiende");
+    }
+
+    void OkMaksRekkeviddeVedSikting()
+    {
+        if (sikter)
+        {
+            aktivVåpenVariabler.maksRekkevidde *= aktivVåpenVariabler.sikteRekkeviddeØkning;
+        }
     }
 }
