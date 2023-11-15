@@ -27,6 +27,13 @@ public class InteractFunksjoner : MonoBehaviour
 
     public void ÅpnDør(GameObject dør)
     {
-        Destroy(dør);
+        if(dør.activeInHierarchy)
+        {
+            dør.SetActive(false);
+        }
+        else
+        {
+            dør.SetActive(true);
+        }
     }
 }

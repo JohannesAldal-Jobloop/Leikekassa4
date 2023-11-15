@@ -7,18 +7,20 @@ public class knapp : MonoBehaviour
 {
     public float lengdePåTrykk = 0.1f;
 
-    private GameObject fargeKnapp;
+    public GameObject fargeKnapp;
     public GameObject dårTilÅpneDør;
 
     public Material avMatrialet;
     public Material påMatrialet;
+
+    private Renderer fargeKnappRendrerer;
 
     public InteractFunksjoner handlingSkript;
 
     // Start is called before the first frame update
     void Start()
     {
-        fargeKnapp = GameObject.Find("fargeKnapp");
+        fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -29,13 +31,15 @@ public class knapp : MonoBehaviour
 
     public IEnumerator GjerHandling()
     {
-        // Endre farge til fargeKnapp til påMatrialet.
+        fargeKnappRendrerer.material.SetColor("_Color", Color.green);
+        
         // Gjer ein funksjon frå handlingsSkript.
 
         handlingSkript.ÅpnDør(dårTilÅpneDør);
 
         yield return new WaitForSeconds(lengdePåTrykk);
-        // Ta fargen tilbake til avMatrialet.
+
+        fargeKnappRendrerer.material.SetColor("_Color", Color.red);
         // avslutt det den gjer frå handlingsSkript.
     }
 }
