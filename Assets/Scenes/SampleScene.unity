@@ -14771,6 +14771,11 @@ PrefabInstance:
       objectReference: {fileID: 510307995}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
+      propertyPath: "lengdeP\xE5Trykk"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
       propertyPath: "d\xE5rTil\xC5pneD\xF8r"
       value: 
       objectReference: {fileID: 1902619686}
@@ -14878,16 +14883,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: knapp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: -0.20124757
-      objectReference: {fileID: 0}
-    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
