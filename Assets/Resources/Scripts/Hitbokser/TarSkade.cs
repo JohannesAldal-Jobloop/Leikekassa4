@@ -50,14 +50,23 @@ public class TarSkade : MonoBehaviour
 
     public void TaSkade(float skade)
     {
-        if(livFunksjoner != null && livFunksjoner.overSkjoldMengde > 0)
+        if(livFunksjoner != null)
         {
-            livFunksjoner.overSkjoldMengde -= skade;
+            if(livFunksjoner.overSkjoldMengde > 0)
+            {
+                livFunksjoner.overSkjoldMengde -= skade;
+            }
+            else
+            {
+                liv -= skade;
+
+                livFunksjoner.tidGåttUtenSkade = 0;
+            }
+            
         }
         else
         {
             liv -= skade;
-            livFunksjoner.tidGåttUtenSkade = 0;
         }
     }
 
