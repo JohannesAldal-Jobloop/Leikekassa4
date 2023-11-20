@@ -13,7 +13,10 @@ TING Å GJERE:
 21. Få ekstra rekkevidde når speler sikter.
 22. Lage pausekjerm.
 23. Laga Kode input.
-24. 
+24. Lage tereng med terengtools.
+26. Fleire hopp i lufta.
+27. Endra Reduksjon av WASD sån so at når spelaren står still det blir redusert i alle rettninger mens viss spelaren har fart so kjer ikkje det.
+28. 
 
 
 BUGS:
@@ -21,5 +24,4 @@ BUGS:
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
-7. TurretSkript skyter ikkje. 
-8.
+9. 

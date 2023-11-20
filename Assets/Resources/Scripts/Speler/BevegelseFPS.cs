@@ -20,12 +20,15 @@ public class BevegelseFPS : MonoBehaviour
     public float gåFartMaks;
     public float springeFartModifier = 1.5f;
     public float gåFartFaktisk = 0;
-    private float sidelengsReduksjons = 0.5f;
+    private float sidelengsReduksjons = 0.75f;
     private float tidGåttUtenAkselerasjonInterval;
-    public float akselerasjonsFart = 1;
+
+    public float akselerasjonsFart = 1f;
+    public float bevegelseReduksjonILufte = 0.5f;
 
     public bool holdSpringer = false;
     public bool springer = false;
+    public bool redusertBevegelse = false;
     //--------------------------------------------------
 
     //---------- Variabler til Hopping ----------
@@ -72,8 +75,23 @@ public class BevegelseFPS : MonoBehaviour
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
 
+        if (!bakkeSjekk.paBakken && !redusertBevegelse)
+        {
+            if(playerFpsRB.velocity.z <= 0)
+            {
+
+            }
+            akselerasjonsFart = bevegelseReduksjonILufte;
+            redusertBevegelse = true;
+        }
+        else
+        {
+            akselerasjonsFart = 1;
+            redusertBevegelse = false;
+        }
+
         playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * vertikalInput);
-        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * horisontalInput);
+        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * akselerasjonsFart));
 
         ReduserSidelengsFart();
     }
@@ -110,7 +128,7 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && bakkeSjekk.paBakken == true)
         {
-            playerFpsRB.AddForce(0, hoppeKraft, 0);
+            playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
         }
     }
 

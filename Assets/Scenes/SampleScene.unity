@@ -5200,6 +5200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "er_d\xF8d_UI": {fileID: 1167207050}
   i_Live_UI: {fileID: 1721013297}
+  pauseKjermUI: {fileID: 63021031}
   livBarGO: {fileID: 391305872}
   overSkjoldBarGO: {fileID: 1234805725}
   overSkjoldBarSlider: {fileID: 0}
@@ -5208,6 +5209,7 @@ MonoBehaviour:
   spelarGO: {fileID: 0}
   tarSkadeSpeler: {fileID: 1137935873}
   livFunksjonerSpeler: {fileID: 0}
+  pausSpel: {fileID: 0}
 --- !u!114 &510307994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5247,7 +5249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   erPausa: 0
-  pauseKjermUI: {fileID: 63021031}
 --- !u!1001 &513223397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7409,8 +7410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49e4eb04d1dd2a4f98deda1f8d42474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bakkeSjekkGO: {fileID: 0}
+  bakkeSjekkGO: {fileID: 689031248}
   paBakken: 0
+  redusertBevegelse: 0
 --- !u!65 &689031251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7430,7 +7432,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.1, z: 0.6}
+  m_Size: {x: 0.5, y: 0.3, z: 0.6}
   m_Center: {x: 0.0028691555, y: 0, z: 0.09790041}
 --- !u!1001 &692683779
 PrefabInstance:
@@ -7769,7 +7771,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -886, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11163,7 +11165,7 @@ Transform:
   m_GameObject: {fileID: 969156889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.222399, y: 1, z: -34.58674}
+  m_LocalPosition: {x: -864.7776, y: 1, z: -34.58674}
   m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11656,7 +11658,7 @@ Transform:
   m_GameObject: {fileID: 1010520382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -886, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12617,7 +12619,7 @@ Transform:
   m_GameObject: {fileID: 1115867530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -886, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12852,9 +12854,10 @@ MonoBehaviour:
   springeFartModifier: 1.5
   "g\xE5FartFaktisk": 0
   akselerasjonsFart: 1
+  bevegelseReduksjonILufte: 0.1
   holdSpringer: 0
   springer: 0
-  hoppeKraft: 100
+  hoppeKraft: 2000
   hukingDistanse: -1
   holdHuker: 0
   huker: 0
@@ -12866,7 +12869,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 60
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -12894,7 +12897,7 @@ Transform:
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.87982243, z: -0, w: 0.4753026}
-  m_LocalPosition: {x: 19.942186, y: 3.56, z: -50.9508}
+  m_LocalPosition: {x: -866.0578, y: 3.56, z: -50.9508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22803,7 +22806,7 @@ Transform:
   m_GameObject: {fileID: 7020504039419217873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.12, y: 6.97, z: 34.31}
+  m_LocalPosition: {x: -861.88, y: 6.97, z: 34.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24117,7 +24120,7 @@ PrefabInstance:
     - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -886
       objectReference: {fileID: 0}
     - target: {fileID: 4005370954813833355, guid: c242eb781dde9a44ba145f6ef1b922ae,
         type: 3}
@@ -25675,9 +25678,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 510307991}
+  - {fileID: 1799100812}
   - {fileID: 705507995}
   - {fileID: 1115867531}
-  - {fileID: 1799100812}
   - {fileID: 1010520385}
   - {fileID: 1137935871}
   - {fileID: 2375623310123534458}

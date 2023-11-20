@@ -6,7 +6,7 @@ public class PausSpel : MonoBehaviour
 {
     public bool erPausa = false;
 
-    public GameObject pauseKjermUI;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +29,11 @@ public class PausSpel : MonoBehaviour
         if(!erPausa)
         { 
             erPausa = true; 
-            pauseKjermUI.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
             erPausa = false;
-            pauseKjermUI.SetActive(false);
             Time.timeScale = 1;
         }
         

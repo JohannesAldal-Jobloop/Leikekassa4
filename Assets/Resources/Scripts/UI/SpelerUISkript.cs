@@ -7,7 +7,8 @@ public class SpelerUISkript : MonoBehaviour
 {
     public GameObject er_død_UI;
     public GameObject i_Live_UI;
-    
+    public GameObject pauseKjermUI;
+
     public Slider livBarGO;
     public GameObject overSkjoldBarGO;
     public Slider overSkjoldBarSlider;
@@ -18,6 +19,7 @@ public class SpelerUISkript : MonoBehaviour
 
     public TarSkade tarSkadeSpeler;
     public LivFunksjoner livFunksjonerSpeler;
+    public PausSpel pausSpel;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class SpelerUISkript : MonoBehaviour
         tarSkadeSpeler = spelarGO.GetComponent<TarSkade>();
         livFunksjonerSpeler = spelarGO.GetComponent <LivFunksjoner>();
         overSkjoldBarSlider = overSkjoldBarGO.GetComponent<Slider>();
+        pausSpel = GetComponent<PausSpel>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,15 @@ public class SpelerUISkript : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+
+        if (pausSpel.erPausa)
+        {
+            pauseKjermUI.SetActive(true);
+        }
+        else
+        {
+            pauseKjermUI.SetActive(false);
         }
     }
 
