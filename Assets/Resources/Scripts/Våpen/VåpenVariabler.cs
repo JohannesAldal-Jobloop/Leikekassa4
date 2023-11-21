@@ -6,7 +6,8 @@ public class VåpenVariabler : MonoBehaviour
 {
     /* ----------FLOAT----------
      * kuleFart              = Hastigheit på kuler.
-     * maxRekevidde      = Rekevidda til våpenet.
+     * maksRekevidde      = Rekevidda til våpenet.
+     * sikteRekkeviddeØkning = maksRekevidde ganges med dette når du sikter.
      * angrepHastigheit  = Kor raskt det skal ta mellom angrepene.
      * 
      * skade             = Skade våpene gjer:
@@ -39,11 +40,12 @@ public class VåpenVariabler : MonoBehaviour
 
     public float kuleFart = 10;
     public float maksRekkevidde = 10;
+    public float maksRekkeviddeOrginal = 10;
+    public float sikteRekkeviddeØkning = 1.5f;
     public float angrepHastigheit = 0.1f;
     public float skade = 10;
     public float tilbakeslagKraft = 30;
     public float reloadFart = 1;
-    public float sikteRekkeviddeØkning = 1.5f;
     public int skyteModus = 0;
     public int kulaBrukt = 0;
     public int magasinKapasitet = 10;
@@ -57,6 +59,7 @@ public class VåpenVariabler : MonoBehaviour
     private void Awake()
     {
         magasinMengdeNo = magasinKapasitet;
+        maksRekkevidde = maksRekkeviddeOrginal;
     }
 
 

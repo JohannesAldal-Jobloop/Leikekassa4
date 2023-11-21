@@ -9,6 +9,7 @@ public class SkytevåpenScript : MonoBehaviour
     public bool prosjektilSkyting = true;
     public bool reloader = false;
     public bool sikter = false;
+    public bool sikterOktRekkevidde = false;
 
     public GameObject aktivtSiktepunkt;
     public GameObject aktivtVåpen;
@@ -222,9 +223,16 @@ public class SkytevåpenScript : MonoBehaviour
 
     void OkMaksRekkeviddeVedSikting()
     {
-        if (sikter)
+        if (sikter && !sikterOktRekkevidde)
         {
             aktivVåpenVariabler.maksRekkevidde *= aktivVåpenVariabler.sikteRekkeviddeØkning;
+            sikterOktRekkevidde = true;
+        }
+        else if(!sikter)
+        {
+
+            sikterOktRekkevidde = false;
+            aktivVåpenVariabler.maksRekkevidde = aktivVåpenVariabler.maksRekkeviddeOrginal;
         }
     }
 }

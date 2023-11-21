@@ -11395,11 +11395,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kuleFart: 5000
   maksRekkevidde: 50
+  maksRekkeviddeOrginal: 10
+  "sikteRekkevidde\xD8kning": 1.5
   angrepHastigheit: 10
   skade: 4
   tilbakeslagKraft: 18
   reloadFart: 1
-  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 0
   kulaBrukt: 0
   magasinKapasitet: 10
@@ -11922,6 +11923,7 @@ MonoBehaviour:
   prosjektilSkyting: 0
   reloader: 0
   sikter: 0
+  sikterOktRekkevidde: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
@@ -12201,12 +12203,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kuleFart: 10
-  maksRekkevidde: 30
+  maksRekkevidde: 0
+  maksRekkeviddeOrginal: 30
+  "sikteRekkevidde\xD8kning": 1.5
   angrepHastigheit: 15
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
-  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 1
   kulaBrukt: 0
   magasinKapasitet: 40
@@ -12769,11 +12772,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kuleFart: 10
   maksRekkevidde: 10
+  maksRekkeviddeOrginal: 10
+  "sikteRekkevidde\xD8kning": 1.5
   angrepHastigheit: 15
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
-  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 1
   kulaBrukt: 0
   magasinKapasitet: 10
@@ -13068,11 +13072,13 @@ MonoBehaviour:
   fartModifierHorisontal: 1
   bakkeFartModifier: 1
   springeFartModifier: 1.5
-  luftFartModifier: 0.1
+  luftFartModifier: 0.2
   holdSpringer: 0
   springer: 0
   redusertBevegelse: 0
-  hoppeKraft: 2000
+  hoppeKraft: 15000
+  hoppILuftaMaks: 2
+  hoppILufta: 0
   hukingDistanse: -1
   holdHuker: 0
   huker: 0
@@ -22139,6 +22145,7 @@ MonoBehaviour:
   prosjektilSkyting: 0
   reloader: 0
   sikter: 0
+  sikterOktRekkevidde: 0
   aktivtSiktepunkt: {fileID: 0}
   "aktivtV\xE5pen": {fileID: 0}
   aktivtKuleSpawnpunkt: {fileID: 0}
@@ -23219,11 +23226,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kuleFart: 10
   maksRekkevidde: 10
+  maksRekkeviddeOrginal: 10
+  "sikteRekkevidde\xD8kning": 1.5
   angrepHastigheit: 100
   skade: 10
   tilbakeslagKraft: 30
   reloadFart: 1
-  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 3
   kulaBrukt: 1
   magasinKapasitet: 100
@@ -24897,11 +24905,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kuleFart: 10
   maksRekkevidde: 10
+  maksRekkeviddeOrginal: 10
+  "sikteRekkevidde\xD8kning": 2
   angrepHastigheit: 7
   skade: 10
   tilbakeslagKraft: 100
   reloadFart: 1
-  "sikteRekkevidde\xD8kning": 1.5
   skyteModus: 2
   kulaBrukt: 0
   magasinKapasitet: 10

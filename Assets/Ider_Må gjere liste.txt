@@ -11,11 +11,8 @@ TING Å GJERE:
 19. Omjer speler springing so speler går gradvis opp i fart.
 20. Lage eit skript til å kunne interacte med ting.
 21. Få ekstra rekkevidde når speler sikter.
-22. Lage pausekjerm.
 23. Laga Kode input.
 24. Lage tereng med terengtools.
-26. Fleire hopp i lufta.
-27. Endra Reduksjon av WASD ved hopp sån so at når spelaren står still det blir redusert i alle rettninger mens viss spelaren har fart so kjer ikkje det.
 28. 
 
 

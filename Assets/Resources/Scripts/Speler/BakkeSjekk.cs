@@ -8,10 +8,13 @@ public class BakkeSjekk : MonoBehaviour
 
     public bool paBakken = false;
 
+    private BevegelseFPS bevegelseFPS;
+
     // Start is called before the first frame update
     void Start()
     {
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
+        bevegelseFPS = GameObject.Find("SpelerFPS").GetComponent<BevegelseFPS>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class BakkeSjekk : MonoBehaviour
         if (other.gameObject.layer == 9 && !paBakken)
         {
             paBakken = true;
+            bevegelseFPS.hoppILufta = bevegelseFPS.hoppILuftaMaks;
         }
     }
 

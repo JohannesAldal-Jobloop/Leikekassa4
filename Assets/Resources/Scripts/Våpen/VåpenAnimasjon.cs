@@ -22,11 +22,6 @@ public class VåpenAnimasjon : MonoBehaviour
         animator = skytevåpenScript.aktivtVåpen.GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     void SjekkOmSikter()
     {
         if (Input.GetKey(KeyCode.Mouse1))
@@ -38,6 +33,7 @@ public class VåpenAnimasjon : MonoBehaviour
         else
         {
             skytevåpenScript.sikter = false;
+            skytevåpenScript.sikterOktRekkevidde = false;
             animator.SetBool("Sikter", false);
             skytevåpenScript.aktivtSiktepunkt.SetActive(true);
         }

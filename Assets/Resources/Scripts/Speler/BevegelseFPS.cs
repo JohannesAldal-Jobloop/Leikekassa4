@@ -36,6 +36,8 @@ public class BevegelseFPS : MonoBehaviour
 
     //---------- Variabler til Hopping ----------
     public float hoppeKraft = 10;
+    public int hoppILuftaMaks = 0;
+    public int hoppILufta = 0;
     //-------------------------------------------
 
     //---------- Variabler til Huking ----------
@@ -51,6 +53,7 @@ public class BevegelseFPS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hoppILufta = hoppILuftaMaks;
         gåFartMaks = gåFartOrginal;
         playerFpsGO = GameObject.Find("SpelerFPS");
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
@@ -139,9 +142,14 @@ public class BevegelseFPS : MonoBehaviour
 
     void Hopping()
     {
-        if (Input.GetKey(KeyCode.Space) && bakkeSjekk.paBakken == true)
+        if (Input.GetKeyDown(KeyCode.Space) && bakkeSjekk.paBakken)
         {
             playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
+        } 
+        else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
+        {
+            playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
+            hoppILufta--;
         }
     }
 
