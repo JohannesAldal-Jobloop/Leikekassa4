@@ -1,11 +1,15 @@
 using OpenCover.Framework.Model;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class knapp : MonoBehaviour
 {
     public float lengdePåTrykk = 0.1f;
+    public float interactRekkevidde = 5;
+
+    private int rayIgnorerLayer1 = 9;
 
     public GameObject fargeKnapp;
     public GameObject dårTilÅpneDør;
@@ -27,20 +31,30 @@ public class knapp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        handlingSkript.KjekkOmBlirTrykktIE(ApnDor().ToString());
     }
 
-    public IEnumerator GjerHandling()
+    public IEnumerator ApnDor()
     {
         fargeKnappRendrerer.material.SetColor("_Color", påFarge);
-        
+
         // Gjer ein funksjon frå handlingsSkript.
 
-        handlingSkript.ÅpnDør(dårTilÅpneDør);
+        if (dårTilÅpneDør.activeInHierarchy)
+        {
+            dårTilÅpneDør.SetActive(false);
+        }
+        else
+        {
+            dårTilÅpneDør.SetActive(true);
+        }
 
         yield return new WaitForSeconds(lengdePåTrykk);
 
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         // avslutt det den gjer frå handlingsSkript.
     }
+
+
+    
 }

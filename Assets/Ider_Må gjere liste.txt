@@ -10,7 +10,6 @@ TING Å GJERE:
 18. Lage eit generelt skyteskript til speler og fiender.
 19. Omjer speler springing so speler går gradvis opp i fart.
 20. Lage eit skript til å kunne interacte med ting.
-21. Få ekstra rekkevidde når speler sikter.
 23. Laga Kode input.
 24. Lage tereng med terengtools.
 28. 
@@ -21,4 +20,5 @@ BUGS:
 2. Bakkesjekk skripte virker ikkje riktig.
 3. Spawnpunkt setter ikkje rotasjonen til spelaren riktig i forhold til spwanpunktet
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
-9. 
+9. KjekkOmBlirTrykktIE funksjonen virker ikkje frå eit anna skript men virka i samme skript.
+10.

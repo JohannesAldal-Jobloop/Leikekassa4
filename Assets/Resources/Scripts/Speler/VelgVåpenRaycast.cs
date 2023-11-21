@@ -30,7 +30,6 @@ public class VelgVåpenRaycast : MonoBehaviour
             RaycastHit rayTreff;
             if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, maksRekkevidde, rayIgnorerLayer1))
             {
-                Debug.Log(rayTreff.transform.name);
                 GameObject våpen = GameObject.Find(rayTreff.transform.name);
 
                 for (int i = 0; i < skytevåpenScript.våpenList.Count; i++)
