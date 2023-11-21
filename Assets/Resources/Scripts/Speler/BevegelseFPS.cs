@@ -18,13 +18,16 @@ public class BevegelseFPS : MonoBehaviour
 
     public float gåFartOrginal = 10f;
     public float gåFartMaks;
-    public float springeFartModifier = 1.5f;
+    
     public float gåFartFaktisk = 0;
     private float sidelengsReduksjons = 0.75f;
     private float tidGåttUtenAkselerasjonInterval;
 
-    public float akselerasjonsFart = 1f;
-    public float bevegelseReduksjonILufte = 0.5f;
+    public float fartModifierVertikal = 1f;
+    public float fartModifierHorisontal = 1f;
+    public float bakkeFartModifier = 1f;
+    public float springeFartModifier = 1.5f;
+    public float luftFartModifier = 0.5f;
 
     public bool holdSpringer = false;
     public bool springer = false;
@@ -77,21 +80,31 @@ public class BevegelseFPS : MonoBehaviour
 
         if (!bakkeSjekk.paBakken && !redusertBevegelse)
         {
-            if(playerFpsRB.velocity.z <= 0)
+            if(horisontalInput == 0 && vertikalInput == 0)
             {
-
+                fartModifierVertikal = luftFartModifier;
+                fartModifierHorisontal = luftFartModifier;
+                redusertBevegelse = true;
             }
-            akselerasjonsFart = bevegelseReduksjonILufte;
-            redusertBevegelse = true;
+            else if(vertikalInput != 0)
+            {
+                fartModifierHorisontal = bakkeFartModifier;
+                fartModifierVertikal = bakkeFartModifier;
+                redusertBevegelse = true;
+            }
+            
         }
-        else
+        else if(bakkeSjekk.paBakken)
         {
-            akselerasjonsFart = 1;
+            fartModifierHorisontal = bakkeFartModifier;
+            fartModifierVertikal = bakkeFartModifier;
             redusertBevegelse = false;
+
+            
         }
 
-        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * vertikalInput);
-        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * akselerasjonsFart));
+        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
+        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
 
         ReduserSidelengsFart();
     }
@@ -188,13 +201,13 @@ public class BevegelseFPS : MonoBehaviour
     {
         if(!holdSpringer)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true)
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
@@ -204,13 +217,13 @@ public class BevegelseFPS : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.LeftShift) && springer == false)
+            if (Input.GetKey(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyUp(KeyCode.LeftShift) && springer == true)
+            else if (Input.GetKeyUp(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;

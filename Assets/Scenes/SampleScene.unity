@@ -7392,7 +7392,7 @@ Transform:
   m_GameObject: {fileID: 689031248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.223, z: 0}
+  m_LocalPosition: {x: 0, y: -2.195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7412,7 +7412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bakkeSjekkGO: {fileID: 689031248}
   paBakken: 0
-  redusertBevegelse: 0
 --- !u!65 &689031251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12851,12 +12850,14 @@ MonoBehaviour:
   bodyHitbox: {fileID: 1137935875}
   "g\xE5FartOrginal": 10
   "g\xE5FartMaks": 0
-  springeFartModifier: 1.5
   "g\xE5FartFaktisk": 0
-  akselerasjonsFart: 1
-  bevegelseReduksjonILufte: 0.1
+  fartModifier: 1
+  bakkeFartModifier: 1
+  springeFartModifier: 1.5
+  luftFartModifier: 0.1
   holdSpringer: 0
   springer: 0
+  redusertBevegelse: 0
   hoppeKraft: 2000
   hukingDistanse: -1
   holdHuker: 0
