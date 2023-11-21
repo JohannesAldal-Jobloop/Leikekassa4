@@ -88,7 +88,7 @@ public class BevegelseFPS : MonoBehaviour
             }
             else if(vertikalInput != 0)
             {
-                fartModifierHorisontal = bakkeFartModifier;
+                fartModifierHorisontal = luftFartModifier;
                 fartModifierVertikal = bakkeFartModifier;
                 redusertBevegelse = true;
             }
