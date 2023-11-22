@@ -25,7 +25,6 @@ public class knapp : MonoBehaviour
 
     public GameObject fargeKnapp;
     public GameObject dårTilÅpneDør;
-    public GameObject knappHitboksGO;
 
     public Color avFarge;
     public Color påFarge;
@@ -43,7 +42,6 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
-        knappHitboks = knappHitboksGO.GetComponent<KnappHitboks>();
 
     
     }
@@ -52,9 +50,6 @@ public class knapp : MonoBehaviour
     void Update()
     {
         VelgRiktigFunksjonsArray();
-
-        //handlingSkript.KjekkOmBlirTrykktIE("ApnDor", gameObject.name, knappHitboks.spelerInnanforHitboks);
-        //handlingSkript.KjekkOmBlirTrykktFunk("EndreFarge", gameObject.name, funksjonVentetid);
     }
 
     public IEnumerator ApnDor()

@@ -27,12 +27,14 @@ public class SkytevåpenScript : MonoBehaviour
     public List<GameObject> kuleSpawnpunktList = new List<GameObject>();
 
     public VåpenVariabler aktivVåpenVariabler;
+    private SpelerDødSkript spelerDødSkript;
 
     // Start is called before the first frame update
     void Start()
     {
         FinnAlleAktiveGameobjectForScript();
         aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
+        spelerDødSkript = GameObject.Find("SpelerFPS").GetComponent<SpelerDødSkript>();
     }
 
     // Update is called once per frame
@@ -40,25 +42,29 @@ public class SkytevåpenScript : MonoBehaviour
     {
         FinnAlleAktiveGameobjectForScript();
 
-        if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+        if (!spelerDødSkript.respawner)
         {
-            FullAutoSkyting();
-        }
-        else if(aktivVåpenVariabler.skyteModus == 2 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
-        {
-            SemiAutoSkyting();
-        }
-        else if(aktivVåpenVariabler.skyteModus == 3 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
-        {
-            laserSkyting();
-        }
+            if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                FullAutoSkyting();
+            }
+            else if (aktivVåpenVariabler.skyteModus == 2 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                SemiAutoSkyting();
+            }
+            else if (aktivVåpenVariabler.skyteModus == 3 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
+            {
+                laserSkyting();
+            }
 
-        if (Input.GetKey(KeyCode.R))
-        {
-            StartCoroutine(Reload());
-        }
+            if (Input.GetKey(KeyCode.R))
+            {
+                StartCoroutine(Reload());
+            }
 
-        OkMaksRekkeviddeVedSikting();
+            OkMaksRekkeviddeVedSikting();
+        }
+        
 
 
     }

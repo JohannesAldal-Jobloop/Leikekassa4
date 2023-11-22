@@ -119,7 +119,6 @@ public class TarSkade : MonoBehaviour
 
             if (gameObject.layer == 3)
             {
-                Debug.Log("Speler Er død :(");
                 Time.timeScale = 0;
             }
             else
