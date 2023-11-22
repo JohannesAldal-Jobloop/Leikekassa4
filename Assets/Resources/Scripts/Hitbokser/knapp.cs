@@ -8,8 +8,11 @@ public class knapp : MonoBehaviour
 {
     public float lengdePåTrykk = 0.1f;
     public float interactRekkevidde = 5;
+    public float funksjonVentetid = 0;
 
     private int rayIgnorerLayer1 = 9;
+
+    private bool erPå = false;
 
     public GameObject fargeKnapp;
     public GameObject dårTilÅpneDør;
@@ -21,8 +24,7 @@ public class knapp : MonoBehaviour
 
     public InteractFunksjoner handlingSkript;
 
-    public delegate void TestDelegate();
-    public TestDelegate funkParameter;
+    //private delegate interactDeligate;
 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +33,17 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
 
-        funkParameter = EndreFarge;
+        //interactDeligate = handlingSkript.interactFunksjon;
+
+        //funkParameter = EndreFarge;
     
     }
 
     // Update is called once per frame
     void Update()
     {
-        handlingSkript.KjekkOmBlirTrykktIE(ApnDor(), gameObject.name);
-        //handlingSkript.KjekkOmBlirTrykktFunk(funkParameter, gameObject.name)
+        //handlingSkript.KjekkOmBlirTrykktIE(ApnDor(), gameObject.name);
+        handlingSkript.KjekkOmBlirTrykktFunk("EndreFarge", gameObject.name, funksjonVentetid);
     }
 
     public IEnumerator ApnDor()
@@ -64,9 +68,18 @@ public class knapp : MonoBehaviour
         // avslutt det den gjer frå handlingsSkript.
     }
 
-    void EndreFarge()
+    public void EndreFarge()
     {
-
+        if (erPå)
+        {
+            fargeKnappRendrerer.material.SetColor("_Color", avFarge);
+            erPå = false;
+        }
+        else
+        {
+            fargeKnappRendrerer.material.SetColor("_Color", påFarge);
+            erPå = true;
+        }
     }
 
 }

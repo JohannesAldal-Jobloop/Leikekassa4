@@ -9,7 +9,7 @@ public class InteractFunksjoner : MonoBehaviour
 
     private int rayIgnorerLayer1 = 9;
 
-    private string corotineKombinertString;
+    private string funksjonKombinertString;
 
     public GameObject fpsKamera;
 
@@ -17,6 +17,7 @@ public class InteractFunksjoner : MonoBehaviour
 
 
     public delegate void TestDelegate();
+    public TestDelegate interactFunksjon;
 
     // Start is called before the first frame update
     void Start()
@@ -31,17 +32,17 @@ public class InteractFunksjoner : MonoBehaviour
     }
 
     // Denne funksjonen tar ein IEnumerator og ein string.
-    // kjøyrer IEnumeratoren viss den får ein raycast hit frå speleren sitt kamera som treffer GameObjectet som har goName navn.
+    // kjøyrer IEnumeratoren viss den får ein raycast hit
+    // frå speleren sitt kamera som treffer GameObjectet som har goName navn.
 
     public void KjekkOmBlirTrykktIE(IEnumerator coroutine, string goName)
     {
-        RaycastHit rayTreff;
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
+            RaycastHit rayTreff;
             if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
             {
-                Debug.Log(rayTreff.transform.name);
-
                 if (rayTreff.transform.name == goName)
                 {
                     knappSkript = rayTreff.transform.GetComponent<knapp>();
@@ -52,19 +53,25 @@ public class InteractFunksjoner : MonoBehaviour
         }
     }
 
-    // Denne funksjonen tar ein funksjon og kjøyrer den viss den får ein raycast hit frå speleren sitt kamera.
-    public void KjekkOmBlirTrykktFunk(TestDelegate funksjon , string goName)
+    // Denne funksjonen tar ein funksjon og ein string.
+    // kjøyrer IEnumeratoren viss den får ein raycast hit
+    // frå speleren sitt kamera som treffer eit GameObjectet som har goName navn.
+    public void KjekkOmBlirTrykktFunk(string funksjon, string goName, float ventetid)
     {
-        RaycastHit rayTreff;
-        if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log(rayTreff.transform.name);
-
-            if (rayTreff.transform.name == goName)
+            RaycastHit rayTreff;
+            if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
             {
-                knappSkript = rayTreff.transform.GetComponent<knapp>();
+                Debug.Log(rayTreff.transform.name);
 
-                funksjon();
+                if (rayTreff.transform.name == goName)
+                {
+                    knappSkript = rayTreff.transform.GetComponent<knapp>();
+
+
+                    knappSkript.Invoke(funksjon, ventetid);
+                }
             }
         }
     }

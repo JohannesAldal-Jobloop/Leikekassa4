@@ -12,7 +12,9 @@ TING Å GJERE:
 20. Lage eit skript til å kunne interacte med ting.
 23. Laga Kode input.
 24. Lage tereng med terengtools.
-28. 
+28. Lage ein sjekk som skjekker distansen frå botten på speler til bakken med Raycast.
+	For at bakkesjekk skal kunne resetes viss den ikkje er riktig.
+29. 
 
 
 BUGS:
