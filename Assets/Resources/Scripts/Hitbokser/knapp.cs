@@ -6,23 +6,34 @@ using UnityEngine;
 
 public class knapp : MonoBehaviour
 {
+    // FOR Å VIRKE MÅ KVAR KNAPP HA EIT FORSJELIG NAVN GLOBALT!!
+
     public float lengdePåTrykk = 0.1f;
     public float interactRekkevidde = 5;
     public float funksjonVentetid = 0;
 
     private int rayIgnorerLayer1 = 9;
 
-    private bool erPå = false;
+    public int funksjonerBlirBruktIndex = 0;
+
+    public bool brukeIEnumerator = false;
+    [SerializeField] private string[] funksjoner;
+    [SerializeField] private string[] IEnumeratorer;
+
+    public bool erPå = false;
+    
 
     public GameObject fargeKnapp;
     public GameObject dårTilÅpneDør;
+    public GameObject knappHitboksGO;
 
     public Color avFarge;
     public Color påFarge;
 
     private Renderer fargeKnappRendrerer;
 
-    public InteractFunksjoner handlingSkript;
+    private InteractFunksjoner handlingSkript;
+    private KnappHitboks knappHitboks;
 
     //private delegate interactDeligate;
 
@@ -32,24 +43,24 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
+        knappHitboks = knappHitboksGO.GetComponent<KnappHitboks>();
 
-        //interactDeligate = handlingSkript.interactFunksjon;
-
-        //funkParameter = EndreFarge;
     
     }
 
     // Update is called once per frame
     void Update()
     {
-        //handlingSkript.KjekkOmBlirTrykktIE(ApnDor(), gameObject.name);
-        handlingSkript.KjekkOmBlirTrykktFunk("EndreFarge", gameObject.name, funksjonVentetid);
+        VelgRiktigFunksjonsArray();
+
+        //handlingSkript.KjekkOmBlirTrykktIE("ApnDor", gameObject.name, knappHitboks.spelerInnanforHitboks);
+        //handlingSkript.KjekkOmBlirTrykktFunk("EndreFarge", gameObject.name, funksjonVentetid);
     }
 
     public IEnumerator ApnDor()
     {
         Debug.Log("ÅpnDør");
-        fargeKnappRendrerer.material.SetColor("_Color", påFarge);
+        EndreFarge();
 
         // Gjer ein funksjon frå handlingsSkript.
 
@@ -64,12 +75,13 @@ public class knapp : MonoBehaviour
 
         yield return new WaitForSeconds(lengdePåTrykk);
 
-        fargeKnappRendrerer.material.SetColor("_Color", avFarge);
+        EndreFarge();
         // avslutt det den gjer frå handlingsSkript.
     }
 
     public void EndreFarge()
     {
+        Debug.Log("endrer farge");
         if (erPå)
         {
             fargeKnappRendrerer.material.SetColor("_Color", avFarge);
@@ -79,6 +91,18 @@ public class knapp : MonoBehaviour
         {
             fargeKnappRendrerer.material.SetColor("_Color", påFarge);
             erPå = true;
+        }
+    }
+
+    void VelgRiktigFunksjonsArray()
+    {
+        if (brukeIEnumerator)
+        {
+            handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
+        }
+        else
+        {
+            handlingSkript.KjekkOmBlirTrykktFunk(funksjoner[funksjonerBlirBruktIndex], gameObject.name, funksjonVentetid);
         }
     }
 

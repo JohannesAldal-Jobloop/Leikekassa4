@@ -43,7 +43,7 @@ public class KamerebevegelseFPS : MonoBehaviour
         else
         {
             rotasjonX = 0;
-            rotasjonY = 0;
+            rotasjonY = spelerDødSkript.spawnRotasjonY;
 
             //kamera.transform.eulerAngles = new Vector3(rotasjonX, rotasjonY, 0);
             //playerFPS.transform.localEulerAngles = new Vector3(0, rotasjonY, 0);

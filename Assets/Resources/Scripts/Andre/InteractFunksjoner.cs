@@ -28,16 +28,16 @@ public class InteractFunksjoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Denne funksjonen tar ein IEnumerator og ein string.
     // kjøyrer IEnumeratoren viss den får ein raycast hit
     // frå speleren sitt kamera som treffer GameObjectet som har goName navn.
 
-    public void KjekkOmBlirTrykktIE(IEnumerator coroutine, string goName)
+    public void KjekkOmBlirTrykktIE(string coroutine, string goName)
     {
-        
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit rayTreff;

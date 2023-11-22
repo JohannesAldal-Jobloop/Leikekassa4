@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4452654991314150826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,7 +113,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0811, y: 2, z: -10.501}
-  m_LocalScale: {x: -0.20124757, y: 0.9, z: 0.8000001}
+  m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4473345701761102887}
@@ -202,9 +202,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63700643216b8d44c9d314a1e270ce1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "lengdeP\xE5Trykk": 1
+  "lengdeP\xE5Trykk": 0.1
+  interactRekkevidde: 5
+  funksjonVentetid: 0
+  funksjonerBlirBruktIndex: 0
+  brukeIEnumerator: 1
+  funksjoner:
+  - EndreFarge
+  IEnumeratorer:
+  - ApnDor
+  "erP\xE5": 0
   fargeKnapp: {fileID: 4452654991314150826}
   "d\xE5rTil\xC5pneD\xF8r": {fileID: 0}
+  knappHitboksGO: {fileID: 0}
   avFarge: {r: 1, g: 0, b: 0, a: 0}
   "p\xE5Farge": {r: 0.14631534, g: 1, b: 0, a: 0}
-  handlingSkript: {fileID: 0}

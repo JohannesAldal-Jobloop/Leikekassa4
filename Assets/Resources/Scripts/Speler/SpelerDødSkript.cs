@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpelerDødSkript : MonoBehaviour
 {
+    public float spawnRotasjonY;
+
     public int aktivtSpelarSpawnpointIndex = 0;
 
     public bool respawner = false;
@@ -14,6 +16,7 @@ public class SpelerDødSkript : MonoBehaviour
 
     public List<Transform> spelarSpawnpointer = new List<Transform>();
 
+    private GameObject spelerGO;
     public GameObject spelarKropp;
     public GameObject spelerVåpenarm;
 
@@ -25,6 +28,7 @@ public class SpelerDødSkript : MonoBehaviour
     {
         spelerTarSkadeSkript = GetComponent<TarSkade>();
         livFunksjoner = GetComponent<LivFunksjoner>();
+        spelerGO = GameObject.Find("SpelerFPS");
 
         VisKropp();
 
@@ -55,6 +59,7 @@ public class SpelerDødSkript : MonoBehaviour
     public IEnumerator RespawnCourutine()
     {
         respawner = true;
+        spawnRotasjonY = spelerGO.transform.localEulerAngles.y;
 
         Time.timeScale = 1.0f;
 
@@ -64,7 +69,7 @@ public class SpelerDødSkript : MonoBehaviour
         transform.position = aktivSpelarSpawnpointTransform.position;
         transform.rotation = aktivSpelarSpawnpointTransform.rotation;
 
-        
+        spawnRotasjonY = spelerGO.transform.localEulerAngles.y;
 
         yield return new WaitForSeconds(.01f);
         VisKropp();
