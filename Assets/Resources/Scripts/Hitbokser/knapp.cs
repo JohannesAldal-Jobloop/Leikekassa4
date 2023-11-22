@@ -12,7 +12,8 @@ public class knapp : MonoBehaviour
     private int rayIgnorerLayer1 = 9;
 
     public GameObject fargeKnapp;
-    public GameObject dårTilÅpneDør;
+    public GameObject dørTilÅpneDør;
+    public GameObject fpsKamera;
 
     public Color avFarge;
     public Color påFarge;
@@ -26,27 +27,31 @@ public class knapp : MonoBehaviour
     {
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
+        fpsKamera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        handlingSkript.KjekkOmBlirTrykktIE(ApnDor().ToString());
+        KjekkOmBlirTrykktIE(ApnDor());
     }
 
     public IEnumerator ApnDor()
     {
+        Debug.Log("Åner dør");
+
         fargeKnappRendrerer.material.SetColor("_Color", påFarge);
 
         // Gjer ein funksjon frå handlingsSkript.
+        Debug.Log(dørTilÅpneDør.activeInHierarchy);
 
-        if (dårTilÅpneDør.activeInHierarchy)
+        if (dørTilÅpneDør.activeInHierarchy)
         {
-            dårTilÅpneDør.SetActive(false);
+            dørTilÅpneDør.SetActive(false);
         }
         else
         {
-            dårTilÅpneDør.SetActive(true);
+            dørTilÅpneDør.SetActive(true);
         }
 
         yield return new WaitForSeconds(lengdePåTrykk);
@@ -55,6 +60,21 @@ public class knapp : MonoBehaviour
         // avslutt det den gjer frå handlingsSkript.
     }
 
+    public void KjekkOmBlirTrykktIE(IEnumerator coroutine)
+    {
+        if (Physics.CheckSphere(transform.position, interactRekkevidde, 3))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Interact");
+                RaycastHit rayTreff;
+                if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
+                {
+                    StartCoroutine(coroutine);
+                }
+            }
 
-    
+        }
+    }
+
 }

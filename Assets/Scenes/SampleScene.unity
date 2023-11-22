@@ -13046,6 +13046,7 @@ MonoBehaviour:
   musSensitivitet: 30
   minRotasjon: -90
   maxRotasjon: 90
+  spawnRotasjon: {x: 0, y: 0, z: 0}
   kamera: {fileID: 963194225}
   playerFPS: {fileID: 1137935866}
   "spelerD\xF8dSkript": {fileID: 1137935874}
@@ -13184,6 +13185,7 @@ MonoBehaviour:
   - {fileID: 1211456202}
   spelarKropp: {fileID: 197784991}
   "spelerV\xE5penarm": {fileID: 2111371544}
+  spelerGO: {fileID: 0}
 --- !u!136 &1137935875
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15156,7 +15158,7 @@ PrefabInstance:
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: "lengdeP\xE5Trykk"
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -15258,6 +15260,11 @@ PrefabInstance:
       propertyPath: handlingSkript
       value: 
       objectReference: {fileID: 510307995}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "lengdeP\xE5Trykk"
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: "d\xE5rTil\xC5pneD\xF8r"

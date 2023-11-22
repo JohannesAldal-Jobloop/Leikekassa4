@@ -19,7 +19,7 @@ public class InteractFunksjoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Denne funksjonen tar ein IEnumerator og kjøyrer den viss den får ein raycast hit frå speleren sitt kamera.
@@ -30,6 +30,7 @@ public class InteractFunksjoner : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("Interact");
                 if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
                 {
                     StartCoroutine(coroutine);

@@ -16,15 +16,18 @@ public class SpelerDødSkript : MonoBehaviour
 
     public GameObject spelarKropp;
     public GameObject spelerVåpenarm;
+    public GameObject spelerGO;
 
     private TarSkade spelerTarSkadeSkript;
     private LivFunksjoner livFunksjoner;
+    private KamerebevegelseFPS kamerebevegelseFPS;
 
     // Start is called before the first frame update
     void Start()
     {
         spelerTarSkadeSkript = GetComponent<TarSkade>();
         livFunksjoner = GetComponent<LivFunksjoner>();
+        kamerebevegelseFPS = spelerGO.GetComponent<KamerebevegelseFPS>();
 
         VisKropp();
 
@@ -55,6 +58,7 @@ public class SpelerDødSkript : MonoBehaviour
     public IEnumerator RespawnCourutine()
     {
         respawner = true;
+        kamerebevegelseFPS.harSettSpawnTotasjonY = false;
 
         Time.timeScale = 1.0f;
 
@@ -66,11 +70,15 @@ public class SpelerDødSkript : MonoBehaviour
 
         
 
+        
+
         yield return new WaitForSeconds(.01f);
         VisKropp();
+        kamerebevegelseFPS.spawnRotasjonY = spelerGO.transform.localEulerAngles.y;
+        Debug.Log(kamerebevegelseFPS.spawnRotasjonY);
 
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
         respawner = false;
     }
 

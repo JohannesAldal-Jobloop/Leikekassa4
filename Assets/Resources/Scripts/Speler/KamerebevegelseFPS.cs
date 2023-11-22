@@ -10,10 +10,13 @@ public class KamerebevegelseFPS : MonoBehaviour
     public float musSensitivitet = 10;
     public float minRotasjon = -90;
     public float maxRotasjon = 90;
-    
+    public float spawnRotasjonY;
+
     private float musRotasjonX;
     private float musRotasjonY;
     private float musRotasjonZ;
+
+    public bool harSettSpawnTotasjonY = false;
 
     public GameObject kamera;
     public GameObject playerFPS;
@@ -38,6 +41,12 @@ public class KamerebevegelseFPS : MonoBehaviour
 
         if (spelerDødSkript.respawner == false)
         {
+            //if (!harSettSpawnTotasjonY)
+            //{
+            //    rotasjonY = spawnRotasjonY;
+            //    harSettSpawnTotasjonY = true;
+            //}
+
             BevegKameraMedMus();
         }
         else
@@ -58,6 +67,8 @@ public class KamerebevegelseFPS : MonoBehaviour
         rotasjonX += Input.GetAxis("Mouse Y") * -1 * musSensitivitet * Time.deltaTime;
         rotasjonY += Input.GetAxis("Mouse X") * 1 * musSensitivitet * Time.deltaTime;
 
+        Debug.Log("RotasjonX: " + rotasjonX + ", RotasjonY: " + rotasjonY);
+
         /*
          * Kamera bruker .eulerAngles istedenfor .localEulerAngles fordi kamera er childen til playerFPS
          * og .localEulerAngles endrer seg etter parent so då blir rotasjonen feil når parenten endrer seg.
@@ -76,4 +87,5 @@ public class KamerebevegelseFPS : MonoBehaviour
         musRotasjonY = gameObject.transform.localEulerAngles.y;
         musRotasjonZ = gameObject.transform.localEulerAngles.z;
     }
+
 }
