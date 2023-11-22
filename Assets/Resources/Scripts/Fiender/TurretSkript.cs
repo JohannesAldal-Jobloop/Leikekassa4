@@ -51,7 +51,6 @@ public class TurretSkript : MonoBehaviour
 
     void Skyt()
     {
-        Debug.Log("Turret Skyter");
         KuleSkript clone = Instantiate(våpenVariabler.kulaSkript[våpenVariabler.kulaBrukt], kuleSpawnPunkt.transform, false);
         
         clone.skade = våpenVariabler.skade;

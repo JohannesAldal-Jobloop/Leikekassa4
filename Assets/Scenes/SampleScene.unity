@@ -15156,7 +15156,7 @@ PrefabInstance:
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: "lengdeP\xE5Trykk"
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -15258,6 +15258,11 @@ PrefabInstance:
       propertyPath: handlingSkript
       value: 
       objectReference: {fileID: 510307995}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "lengdeP\xE5Trykk"
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: "d\xE5rTil\xC5pneD\xF8r"
@@ -25152,6 +25157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: knapp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
