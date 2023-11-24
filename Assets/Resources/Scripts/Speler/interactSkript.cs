@@ -26,7 +26,6 @@ public class interactSkript : MonoBehaviour
             RaycastHit rayTreff;
             if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde))
             {
-                Debug.Log(rayTreff.transform.name);
                 if (rayTreff.transform.GetComponent<knapp>())
                 {
                     knappSkript = rayTreff.transform.GetComponent<knapp>();

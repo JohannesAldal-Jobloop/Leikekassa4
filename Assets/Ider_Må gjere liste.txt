@@ -9,17 +9,13 @@ TING Å GJERE:
 17. Lage om BulletRestriksjoner() til å bruke Physics.CheckSphere.
 18. Lage eit generelt skyteskript til speler og fiender.
 19. Omjer speler springing so speler går gradvis opp i fart.
-20. Lage eit skript til å kunne interacte med ting.
-23. Laga Kode input.
 24. Lage tereng med terengtools.
 28. Lage ein sjekk som skjekker distansen frå botten på speler til bakken med Raycast.
 	For at bakkesjekk skal kunne resetes viss den ikkje er riktig.
-31. Få kodelås til å gjere noko ved riktig og feil kode.
 33. 
 
 
 BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
-10. KnappHitboks virker ikkje viss den overlapper med andre knapper.
 11. 
