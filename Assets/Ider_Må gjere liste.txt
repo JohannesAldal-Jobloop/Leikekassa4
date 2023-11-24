@@ -14,9 +14,8 @@ TING Å GJERE:
 24. Lage tereng med terengtools.
 28. Lage ein sjekk som skjekker distansen frå botten på speler til bakken med Raycast.
 	For at bakkesjekk skal kunne resetes viss den ikkje er riktig.
-29. Gjere begge funksjonene i InteractFunksjoner skripte til ein.
-30. Må lage det synleg kortid du kan prøve å skrive riktig kode inn.
-31. 
+31. Få kodelås til å gjere noko ved riktig og feil kode.
+32. 
 
 
 BUGS:

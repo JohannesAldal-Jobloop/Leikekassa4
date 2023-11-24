@@ -23843,8 +23843,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   riktigKode: 1111
   inputaKode: 
-  korLengeRiktig: 2
+  korLengeRiktig: 23456
   KorLengeFeil: 1
+  "tingSomSkal\xC5pnesGO": {fileID: 503378173}
   baseFarge: {r: 0, g: 0, b: 0, a: 0}
   feilFarge: {r: 1, g: 0, b: 0, a: 0}
   riktigFarge: {r: 0.43576503, g: 1, b: 0, a: 0}

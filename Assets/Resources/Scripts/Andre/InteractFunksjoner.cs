@@ -52,27 +52,4 @@ public class InteractFunksjoner : MonoBehaviour
             }
         }
     }
-
-    // Denne funksjonen tar ein funksjon og ein string.
-    // kjøyrer IEnumeratoren viss den får ein raycast hit
-    // frå speleren sitt kamera som treffer eit GameObjectet som har goName navn.
-    public void KjekkOmBlirTrykktFunk(string funksjon, string goName, float ventetid)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit rayTreff;
-            if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
-            {
-                Debug.Log(rayTreff.transform.name);
-
-                if (rayTreff.transform.name == goName)
-                {
-                    knappSkript = rayTreff.transform.GetComponent<knapp>();
-
-
-                    knappSkript.Invoke(funksjon, ventetid);
-                }
-            }
-        }
-    }
 }

@@ -10,6 +10,8 @@ public class KodelåsSkript : MonoBehaviour
     public float korLengeRiktig = 1;
     public float KorLengeFeil = 1;
 
+    public GameObject tingSomSkalÅpnesGO;
+
     public Color baseFarge;
     public Color feilFarge;
     public Color riktigFarge;
@@ -27,11 +29,11 @@ public class KodelåsSkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inputaKode.Length == riktigKode.Length)
+        if(inputaKode.Length == riktigKode.Length && !erRiktig)
         {
             StartCoroutine(KjekkOmKodeErRiktig());
         }
-        else
+        else if(inputaKode == "")
         {
             gameObjectRenderer.material.color = baseFarge;
         }
@@ -43,16 +45,20 @@ public class KodelåsSkript : MonoBehaviour
         {
             erRiktig = true;
             gameObjectRenderer.material.color = riktigFarge;
+            tingSomSkalÅpnesGO.SetActive(!erRiktig);
 
             yield return new WaitForSeconds(korLengeRiktig);
-            erRiktig = false;
 
+            erRiktig = false;
+            tingSomSkalÅpnesGO.SetActive(!erRiktig);
             inputaKode = "";
 
         }else
         {
             erRiktig = false;
             gameObjectRenderer.material.color = feilFarge;
+
+            tingSomSkalÅpnesGO.SetActive(!erRiktig);
 
             yield return new WaitForSeconds(KorLengeFeil);
 
