@@ -17,8 +17,9 @@ public class knapp : MonoBehaviour
     public bool brukeIEnumerator = false;
     public bool erPå = false;
 
-    [SerializeField] private string[] funksjoner;
     [SerializeField] private string[] IEnumeratorer;
+    //enum funksjoner { ApnDor, EndreFarge, Kodelås }
+    //[SerializeField] funksjoner funksjonSomBrukes;
 
     private InteractFunksjoner handlingSkript;
     //--------------------------------------
@@ -48,16 +49,17 @@ public class knapp : MonoBehaviour
 
     //----------------------------------------
 
-
-    //private delegate interactDeligate;
-
     // Start is called before the first frame update
     void Start()
     {
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
-        kodelåsSkript = kodelåsGO.GetComponent<KodelåsSkript>();
+
+        if(kodelåsGO != null)
+        {
+            kodelåsSkript = kodelåsGO.GetComponent<KodelåsSkript>();
+        }
     }
 
     // Update is called once per frame
@@ -68,23 +70,17 @@ public class knapp : MonoBehaviour
 
     void VelgRiktigFunksjonsArray()
     {
+        handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
         if (brukeIEnumerator)
         {
-            handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
-        }
-        else
-        {
-            handlingSkript.KjekkOmBlirTrykktFunk(funksjoner[funksjonerBlirBruktIndex], gameObject.name, funksjonVentetid);
+            
         }
     }
 
     //-------------------- Interact funksjoner til Knapper --------------------
     public IEnumerator ApnDor()
     {
-        Debug.Log("ÅpnDør");
         EndreFarge();
-
-        // Gjer ein funksjon frå handlingsSkript.
 
         if (dårTilÅpneDør.activeInHierarchy)
         {
@@ -98,12 +94,10 @@ public class knapp : MonoBehaviour
         yield return new WaitForSeconds(lengdePåTrykk);
 
         EndreFarge();
-        // avslutt det den gjer frå handlingsSkript.
     }
 
     public void EndreFarge()
     {
-        Debug.Log("endrer farge");
         if (erPå)
         {
             fargeKnappRendrerer.material.SetColor("_Color", avFarge);
@@ -116,9 +110,17 @@ public class knapp : MonoBehaviour
         }
     }
 
-    void Kodelås()
+    public IEnumerator Kodelås()
     {
-        kodelåsSkript.inputaKode += knappVerdi;
+        if (!kodelåsSkript.erRiktig || kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
+        {
+            kodelåsSkript.inputaKode += knappVerdi;
+        }
+
+        EndreFarge();
+        yield return new WaitForSeconds(lengdePåTrykk);
+        EndreFarge();
+
     }
     //-------------------------------------------------------------------------
 }
