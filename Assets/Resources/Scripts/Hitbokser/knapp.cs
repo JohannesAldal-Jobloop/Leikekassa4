@@ -12,14 +12,12 @@ public class knapp : MonoBehaviour
     public float lengdePåTrykk = 0.1f;
     public float funksjonVentetid = 0;
 
-    public int funksjonerBlirBruktIndex = 0;
+    private bool erPå = false;
 
-    public bool brukeIEnumerator = false;
-    public bool erPå = false;
-
-    [SerializeField] private string[] IEnumeratorer;
-    //enum funksjoner { ApnDor, EndreFarge, Kodelås }
-    //[SerializeField] funksjoner funksjonSomBrukes;
+    // Må ha alle IEnumeratorene sine navn inni {} til funksjoner
+    // for at dei skal kunne velges i inspektoren.
+    enum funksjoner { ApnDor, EndreFarge, Kodelås }
+    [SerializeField] funksjoner funksjonSomBrukes;
 
     private InteractFunksjoner handlingSkript;
     //--------------------------------------
@@ -70,11 +68,7 @@ public class knapp : MonoBehaviour
 
     void VelgRiktigFunksjonsArray()
     {
-        handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
-        if (brukeIEnumerator)
-        {
-            
-        }
+        handlingSkript.KjekkOmBlirTrykktIE(funksjonSomBrukes.ToString(), gameObject.name);
     }
 
     //-------------------- Interact funksjoner til Knapper --------------------

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -461,6 +461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: brukeIEnumerator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -4726,6 +4731,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
       propertyPath: funksjoner.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -6757,6 +6767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
       propertyPath: funksjoner.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -7377,6 +7392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: brukeIEnumerator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -9091,6 +9111,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
       propertyPath: funksjoner.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -9844,6 +9869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
       propertyPath: funksjoner.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -10364,6 +10394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: brukeIEnumerator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -13212,6 +13247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: brukeIEnumerator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
@@ -19219,6 +19259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: brukeIEnumerator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
