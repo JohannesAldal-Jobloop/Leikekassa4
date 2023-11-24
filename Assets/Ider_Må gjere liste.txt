@@ -15,7 +15,7 @@ TING Å GJERE:
 28. Lage ein sjekk som skjekker distansen frå botten på speler til bakken med Raycast.
 	For at bakkesjekk skal kunne resetes viss den ikkje er riktig.
 31. Få kodelås til å gjere noko ved riktig og feil kode.
-32. 
+33. 
 
 
 BUGS:

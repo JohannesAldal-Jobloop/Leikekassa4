@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class knapp : MonoBehaviour
 {
-    // FOR ≈ VIRKE M≈ KVAR KNAPP HA EIT FORSJELIG NAVN GLOBALT!!
-
     //---------- Globale Varabler ----------
     public float lengdePÂTrykk = 0.1f;
     public float funksjonVentetid = 0;
@@ -63,12 +61,17 @@ public class knapp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VelgRiktigFunksjonsArray();
+        //VelgRiktigFunksjonsArray();
     }
 
-    void VelgRiktigFunksjonsArray()
+    public void VelgRiktigFunksjonsArray()
     {
-        handlingSkript.KjekkOmBlirTrykktIE(funksjonSomBrukes.ToString(), gameObject.name);
+        //KjekkOmBlirTrykktIE(funksjonSomBrukes.ToString(), gameObject.name);
+    }
+
+    public void BlirTrykktStartIE()
+    {
+        StartCoroutine(funksjonSomBrukes.ToString());
     }
 
     //-------------------- Interact funksjoner til Knapper --------------------

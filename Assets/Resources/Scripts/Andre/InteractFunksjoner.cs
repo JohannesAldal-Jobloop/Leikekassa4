@@ -9,8 +9,6 @@ public class InteractFunksjoner : MonoBehaviour
 
     private int rayIgnorerLayer1 = 9;
 
-    private string funksjonKombinertString;
-
     public GameObject fpsKamera;
 
     private knapp knappSkript;
@@ -35,21 +33,21 @@ public class InteractFunksjoner : MonoBehaviour
     // kjøyrer IEnumeratoren viss den får ein raycast hit
     // frå speleren sitt kamera som treffer GameObjectet som har goName navn.
 
-    public void KjekkOmBlirTrykktIE(string coroutine, string goName)
-    {
+    //public void KjekkOmBlirTrykktIE(string coroutine, string goName)
+    //{
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit rayTreff;
-            if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
-            {
-                if (rayTreff.transform.name == goName)
-                {
-                    knappSkript = rayTreff.transform.GetComponent<knapp>();
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        RaycastHit rayTreff;
+    //        if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde, rayIgnorerLayer1))
+    //        {
+    //            //if (rayTreff.transform.name == goName)
+    //            //{
+    //                knappSkript = rayTreff.transform.GetComponent<knapp>();
 
-                    knappSkript.StartCoroutine(coroutine);
-                }
-            }
-        }
-    }
+    //                knappSkript.StartCoroutine(coroutine);
+    //            //}
+    //        }
+    //    }
+    //}
 }

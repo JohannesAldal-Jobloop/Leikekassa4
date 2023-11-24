@@ -11,6 +11,7 @@ public class KodelåsSkript : MonoBehaviour
     public float KorLengeFeil = 1;
 
     public GameObject tingSomSkalÅpnesGO;
+    public GameObject riktigViser;
 
     public Color baseFarge;
     public Color feilFarge;
@@ -18,12 +19,12 @@ public class KodelåsSkript : MonoBehaviour
 
     [HideInInspector] public bool erRiktig = false;
 
-    private Renderer gameObjectRenderer;
+    private Renderer riktigViserRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObjectRenderer = GetComponent<Renderer>();
+        riktigViserRenderer = riktigViser.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class KodelåsSkript : MonoBehaviour
         }
         else if(inputaKode == "")
         {
-            gameObjectRenderer.material.color = baseFarge;
+            riktigViserRenderer.material.color = baseFarge;
         }
     }
 
@@ -44,7 +45,7 @@ public class KodelåsSkript : MonoBehaviour
         if(inputaKode == riktigKode)
         {
             erRiktig = true;
-            gameObjectRenderer.material.color = riktigFarge;
+            riktigViserRenderer.material.color = riktigFarge;
             tingSomSkalÅpnesGO.SetActive(!erRiktig);
 
             yield return new WaitForSeconds(korLengeRiktig);
@@ -56,7 +57,7 @@ public class KodelåsSkript : MonoBehaviour
         }else
         {
             erRiktig = false;
-            gameObjectRenderer.material.color = feilFarge;
+            riktigViserRenderer.material.color = feilFarge;
 
             tingSomSkalÅpnesGO.SetActive(!erRiktig);
 

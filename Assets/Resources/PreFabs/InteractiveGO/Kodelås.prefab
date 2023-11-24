@@ -1,0 +1,1828 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1011468497423401903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8107342642987853956}
+  - component: {fileID: 2796675244166693084}
+  - component: {fileID: 6398829597958805704}
+  - component: {fileID: 3768036566093127359}
+  m_Layer: 9
+  m_Name: RiktigViser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8107342642987853956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011468497423401903}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.64998245, y: 0.37368977, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.16401508, z: 0.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1834179503794722135}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2796675244166693084
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011468497423401903}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6398829597958805704
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011468497423401903}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3768036566093127359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011468497423401903}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5762774820156370245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8745620910686526035}
+  m_Layer: 9
+  m_Name: Knapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8745620910686526035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762774820156370245}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 530737102296050137}
+  - {fileID: 8115878859887706206}
+  - {fileID: 8849219911827949937}
+  - {fileID: 5662378959766568730}
+  - {fileID: 974027484241708121}
+  - {fileID: 3245267416022525342}
+  - {fileID: 3547085161947947028}
+  - {fileID: 7650188610335021123}
+  - {fileID: 1910854559582237394}
+  - {fileID: 7353038989301386445}
+  m_Father: {fileID: 1834179503794722135}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5861874588961817649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834179503794722135}
+  - component: {fileID: 7838297509711130475}
+  - component: {fileID: 7918125449629246434}
+  - component: {fileID: 3270705843291476242}
+  - component: {fileID: 5268782231523290612}
+  m_Layer: 9
+  m_Name: "Kodel\xE5s"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &1834179503794722135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861874588961817649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.48, y: 7.6167, z: -66.5947}
+  m_LocalScale: {x: 1, y: 13.711909, z: 8}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8107342642987853956}
+  - {fileID: 8745620910686526035}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7838297509711130475
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861874588961817649}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7918125449629246434
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861874588961817649}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 244ed30c8117e074dbba358b649e3119, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3270705843291476242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861874588961817649}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5268782231523290612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861874588961817649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6aec70c8cc3ed42820b09e3f5cd0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riktigKode: 1111
+  inputaKode: 
+  korLengeRiktig: Infinity
+  KorLengeFeil: 1
+  "tingSomSkal\xC5pnesGO": {fileID: 0}
+  riktigViser: {fileID: 1011468497423401903}
+  baseFarge: {r: 0, g: 0, b: 0, a: 0}
+  feilFarge: {r: 1, g: 0, b: 0, a: 0}
+  riktigFarge: {r: 0.43576503, g: 1, b: 0, a: 0}
+  erRiktig: 0
+--- !u!1001 &1251535995276225480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.038309727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.30316162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &5662378959766568730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251535995276225480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2667301329559641507
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15539047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.31433773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &8849219911827949937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2667301329559641507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3417090962704323724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15539047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012838364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &8115878859887706206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3417090962704323724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3882235853955124369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp8"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2156738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012838364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &7650188610335021123 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3882235853955124369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4161793288915769375
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.39882123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012838364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &7353038989301386445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4161793288915769375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4993980626065450496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2156738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.31433773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &1910854559582237394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4993980626065450496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5930930804022841483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.038309727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012838364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &974027484241708121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5930930804022841483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6383597830266436875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerArray.Array.data[0]
+      value: EndreFarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15539047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.30316162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &530737102296050137 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6383597830266436875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7994823768301286598
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2156738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.30316162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &3547085161947947028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7994823768301286598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8269479144067821900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8745620910686526035}
+    m_Modifications:
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: avFarge.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: knappVerdi
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "kodel\xE5sGO"
+      value: 
+      objectReference: {fileID: 5861874588961817649}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.b"
+      value: 0.9277954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.g"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: "p\xE5Farge.r"
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: brukeIEnumerator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonSomBrukes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjoner.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: funksjonerBlirBruktIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: IEnumeratorer.Array.data[1]
+      value: "Kodel\xE5s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_Name
+      value: "Kodel\xE5sKnapp6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14585859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60066605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.038309727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.31433773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb, type: 3}
+--- !u!4 &3245267416022525342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6902495347281876178, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8269479144067821900}
+  m_PrefabAsset: {fileID: 0}
