@@ -8,31 +8,46 @@ public class knapp : MonoBehaviour
 {
     // FOR Å VIRKE MÅ KVAR KNAPP HA EIT FORSJELIG NAVN GLOBALT!!
 
+    //---------- Globale Varabler ----------
     public float lengdePåTrykk = 0.1f;
-    public float interactRekkevidde = 5;
     public float funksjonVentetid = 0;
-
-    private int rayIgnorerLayer1 = 9;
 
     public int funksjonerBlirBruktIndex = 0;
 
     public bool brukeIEnumerator = false;
+    public bool erPå = false;
+
     [SerializeField] private string[] funksjoner;
     [SerializeField] private string[] IEnumeratorer;
 
-    public bool erPå = false;
-    
+    private InteractFunksjoner handlingSkript;
+    //--------------------------------------
 
-    public GameObject fargeKnapp;
+    //---------- Variabler til ApnDor() ----------
     public GameObject dårTilÅpneDør;
+    //--------------------------------------------
+
+    //---------- Variabler til EndreFarge() ----------
+    public GameObject fargeKnapp;
 
     public Color avFarge;
     public Color påFarge;
 
     private Renderer fargeKnappRendrerer;
+    //------------------------------------------------
 
-    private InteractFunksjoner handlingSkript;
-    private KnappHitboks knappHitboks;
+    //---------- Varabler til Kodelås() ----------
+    public string knappVerdi;
+
+    public GameObject kodelåsGO;
+
+    private KodelåsSkript kodelåsSkript;
+    //--------------------------------------------
+
+    //---------- Varabler til _____() ----------
+
+    //----------------------------------------
+
 
     //private delegate interactDeligate;
 
@@ -42,8 +57,7 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
-
-    
+        kodelåsSkript = kodelåsGO.GetComponent<KodelåsSkript>();
     }
 
     // Update is called once per frame
@@ -52,6 +66,19 @@ public class knapp : MonoBehaviour
         VelgRiktigFunksjonsArray();
     }
 
+    void VelgRiktigFunksjonsArray()
+    {
+        if (brukeIEnumerator)
+        {
+            handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
+        }
+        else
+        {
+            handlingSkript.KjekkOmBlirTrykktFunk(funksjoner[funksjonerBlirBruktIndex], gameObject.name, funksjonVentetid);
+        }
+    }
+
+    //-------------------- Interact funksjoner til Knapper --------------------
     public IEnumerator ApnDor()
     {
         Debug.Log("ÅpnDør");
@@ -89,16 +116,9 @@ public class knapp : MonoBehaviour
         }
     }
 
-    void VelgRiktigFunksjonsArray()
+    void Kodelås()
     {
-        if (brukeIEnumerator)
-        {
-            handlingSkript.KjekkOmBlirTrykktIE(IEnumeratorer[funksjonerBlirBruktIndex], gameObject.name);
-        }
-        else
-        {
-            handlingSkript.KjekkOmBlirTrykktFunk(funksjoner[funksjonerBlirBruktIndex], gameObject.name, funksjonVentetid);
-        }
+        kodelåsSkript.inputaKode += knappVerdi;
     }
-
+    //-------------------------------------------------------------------------
 }
