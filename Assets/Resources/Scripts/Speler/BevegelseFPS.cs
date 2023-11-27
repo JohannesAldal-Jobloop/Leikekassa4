@@ -18,8 +18,10 @@ public class BevegelseFPS : MonoBehaviour
 
     public float gåFartOrginal = 10f;
     public float gåFartMaks;
-    
+    public float gåFartVelocetiMaks;
     public float gåFartFaktisk = 0;
+    private float addForceVerdi;
+
     private float sidelengsReduksjons = 0.75f;
     private float tidGåttUtenAkselerasjonInterval;
 
@@ -28,6 +30,11 @@ public class BevegelseFPS : MonoBehaviour
     public float bakkeFartModifier = 1f;
     public float springeFartModifier = 1.5f;
     public float luftFartModifier = 0.5f;
+
+    private Vector3 velocityAll;
+    private float velocityX;
+    private float velocityY;
+    private float velocityZ;
 
     public bool holdSpringer = false;
     public bool springer = false;
@@ -68,10 +75,14 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (spelerDødSkript.respawner == false)
         {
+            FinnVelocityTilSpeler();
             Hopping();
             Huking();
             Springing();
-            BevegWASD();
+            //BevegWASD();
+            BevegWASDManuel();
+
+            
         }
     }
 
@@ -79,7 +90,6 @@ public class BevegelseFPS : MonoBehaviour
     {
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
-        Debug.Log(vertikalInput);
 
         if (!bakkeSjekk.paBakken && !redusertBevegelse)
         {
@@ -109,10 +119,78 @@ public class BevegelseFPS : MonoBehaviour
         //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
         //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
 
-        playerFpsRB.AddRelativeForce(0,0,vertikalInput * gåFartFaktisk);
-        playerFpsRB.AddRelativeForce(horisontalInput * gåFartFaktisk,0,0);
+        addForceVerdi = 1 * Time.deltaTime * gåFartFaktisk;
+
+        playerFpsRB.AddRelativeForce(0, 0, 1 * (vertikalInput * fartModifierVertikal), ForceMode.VelocityChange);
+        playerFpsRB.AddRelativeForce(1 * (horisontalInput * fartModifierHorisontal), 0, 0, ForceMode.VelocityChange);
+
+        //if (playerFpsRB.velocity.x >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(gåFartVelocetiMaks, velocityY, velocityZ);
+        //}
+        //else if (playerFpsRB.velocity.y >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(velocityX, gåFartVelocetiMaks, velocityZ);
+        //}
+        //else if (playerFpsRB.velocity.z >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(velocityX, velocityY, gåFartVelocetiMaks);
+        //}
+
 
         ReduserSidelengsFart();
+    }
+
+    void BevegWASDManuel()
+    {
+        gåFartFaktisk = gåFartMaks;
+        addForceVerdi = 1 * Time.deltaTime * gåFartFaktisk;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            //if((velocityAll + new Vector3(0, 0, addForceVerdi)) < new Vector3(gåFartVelocetiMaks, gåFartVelocetiMaks, gåFartVelocetiMaks))
+            //{
+                
+            //}
+            playerFpsRB.AddRelativeForce(0,0, addForceVerdi, ForceMode.VelocityChange);
+
+            //playerFpsRB.velocity = new Vector3(1, 0, 0) * Time.deltaTime * gåFartFaktisk; 
+
+        }
+        else if(Input.GetKey(KeyCode.A)) 
+        {
+            playerFpsRB.AddRelativeForce(-addForceVerdi, 0, 0, ForceMode.VelocityChange);
+
+            //playerFpsRB.velocity = new Vector3(0, 0, 1) * Time.deltaTime * gåFartFaktisk;
+
+        }else if(Input.GetKey(KeyCode.S))
+        {
+            playerFpsRB.AddRelativeForce(0, 0, -addForceVerdi, ForceMode.VelocityChange);
+
+            //playerFpsRB.velocity = new Vector3(-1, 0, 0) * Time.deltaTime * gåFartFaktisk;
+
+        }
+        else if(Input.GetKey(KeyCode.D))
+        {
+            //playerFpsRB.AddRelativeForce(Vector3.right);
+            playerFpsRB.AddRelativeForce(addForceVerdi, 0, 0, ForceMode.VelocityChange);
+
+            //playerFpsRB.velocity = new Vector3(0, 0, -1) * Time.deltaTime * gåFartFaktisk;
+
+        }
+
+        //if (playerFpsRB.velocity.x >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(gåFartVelocetiMaks, velocityY, velocityZ);
+        //}
+        //else if (playerFpsRB.velocity.y >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(velocityX, gåFartVelocetiMaks, velocityZ);
+        //}
+        //else if (playerFpsRB.velocity.z >= gåFartVelocetiMaks)
+        //{
+        //    playerFpsRB.velocity = new Vector3(velocityX, velocityY, gåFartVelocetiMaks);
+        //}
     }
 
     void ReduserSidelengsFart()
@@ -242,5 +320,13 @@ public class BevegelseFPS : MonoBehaviour
             }
         }
         
+    }
+
+    void FinnVelocityTilSpeler()
+    {
+        velocityAll = playerFpsRB.velocity;
+        velocityX = playerFpsRB.velocity.x;
+        velocityY = playerFpsRB.velocity.y;
+        velocityZ = playerFpsRB.velocity.z;
     }
 }
