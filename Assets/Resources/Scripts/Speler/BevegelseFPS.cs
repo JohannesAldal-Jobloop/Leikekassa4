@@ -80,6 +80,7 @@ public class BevegelseFPS : MonoBehaviour
     {
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
+        Debug.Log(vertikalInput);
 
         if (!bakkeSjekk.paBakken && !redusertBevegelse)
         {
@@ -144,6 +145,7 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && bakkeSjekk.paBakken)
         {
+            hoppILufta = hoppILuftaMaks;
             playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
         } 
         else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
@@ -209,13 +211,13 @@ public class BevegelseFPS : MonoBehaviour
     {
         if(!holdSpringer)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false /*&& vertikalInput > 0*/)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true /*|| vertikalInput <= 0*/)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
