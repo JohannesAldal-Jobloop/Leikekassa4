@@ -146,10 +146,14 @@ public class SkytevåpenScript : MonoBehaviour
         if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maksRekkevidde, rayIgnorerLayer))
         {
             TarSkade tarSkade = rayTreff.transform.GetComponent<TarSkade>();
+            TarSkadeHitboks tarSkadeHitboks = rayTreff.transform.GetComponent<TarSkadeHitboks>();
 
             if(tarSkade != null)
             {
                 tarSkade.TaSkade(aktivVåpenVariabler.skade);
+            }else if(tarSkadeHitboks != null)
+            {
+                tarSkadeHitboks.RedirektSkadeTilTarSkadeParent(aktivVåpenVariabler.skade);
             }
 
             if(rayTreff.rigidbody != null)

@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 86627161}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: taSkadeHitboks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5b43c62c044cc44bfd64ef242c42ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tarSkadeParent: {fileID: 0}
+  tarSkadeParent: {fileID: 969156899}
 --- !u!1 &98569901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ PrefabInstance:
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 76.214
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
@@ -1370,6 +1370,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 7.0624733
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -2.031238
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11456,7 +11466,7 @@ GameObject:
   - component: {fileID: 949029795}
   m_Layer: 0
   m_Name: HodeTurret
-  m_TagString: Untagged
+  m_TagString: taSkadeHitboks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11560,7 +11570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5b43c62c044cc44bfd64ef242c42ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tarSkadeParent: {fileID: 0}
+  tarSkadeParent: {fileID: 969156899}
 --- !u!1 &951033887
 GameObject:
   m_ObjectHideFlags: 0
@@ -12919,7 +12929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kuleFart: 10
+  kuleFart: 5000
   maksRekkevidde: 0
   maksRekkeviddeOrginal: 30
   "sikteRekkevidde\xD8kning": 1.5
@@ -15642,7 +15652,7 @@ PrefabInstance:
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -151.18
+      value: -131.00137
       objectReference: {fileID: 0}
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
@@ -15678,6 +15688,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 8.491796
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -2.745903
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18525,6 +18545,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5031622296024430671, guid: 506bfb2de1d5e864bbaf6b97747f51df,
     type: 3}
   m_PrefabInstance: {fileID: 1560944460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1567438860
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1973617460}
+    m_Modifications:
+    - target: {fileID: 2974850774807483089, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Name
+      value: drepsone (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 104.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 95.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -109.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.821384
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 803a122cbd01b7f4c9c496ff1c9ab31b, type: 3}
+--- !u!4 &1567438861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567438860}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1596052293
 GameObject:
@@ -22373,7 +22482,7 @@ Transform:
   m_GameObject: {fileID: 1973617459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.68, y: -107.18, z: 117.87}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.9774556, y: 3.9774556, z: 3.9774556}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22381,6 +22490,7 @@ Transform:
   - {fileID: 1205687028}
   - {fileID: 1163964817}
   - {fileID: 2020946942}
+  - {fileID: 1567438861}
   m_Father: {fileID: 1115867531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993673746
@@ -23501,7 +23611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prosjektilSkyting: 0
+  prosjektilSkyting: 1
   reloader: 0
   sikter: 0
   sikterOktRekkevidde: 0
@@ -23656,7 +23766,7 @@ PrefabInstance:
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108
+      value: 132
       objectReference: {fileID: 0}
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
@@ -23666,7 +23776,7 @@ PrefabInstance:
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39
+      value: -18.821384
       objectReference: {fileID: 0}
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
@@ -23702,6 +23812,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.5673275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -3.7836714
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24583,7 +24708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kuleFart: 10
+  kuleFart: 5000
   maksRekkevidde: 10
   maksRekkeviddeOrginal: 10
   "sikteRekkevidde\xD8kning": 1.5
@@ -25783,7 +25908,7 @@ PrefabInstance:
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.178616
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3168738994125944223, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
         type: 3}
@@ -25819,6 +25944,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 12.155665
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021233598353239492, guid: 803a122cbd01b7f4c9c496ff1c9ab31b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -4.577836
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26350,7 +26490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443d3c0e37cb246419422557b7921aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kuleFart: 10
+  kuleFart: 5000
   maksRekkevidde: 10
   maksRekkeviddeOrginal: 10
   "sikteRekkevidde\xD8kning": 2

@@ -25,7 +25,7 @@ public class KuleSkript : MonoBehaviour
 
     private LayerMask kuleLayer = 6;
 
-    public TarSkade tarSkade;
+    public 
 
     // Start is called before the first frame update
     void Start()
@@ -109,14 +109,22 @@ public class KuleSkript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        TarSkade tarSkade;
+        TarSkadeHitboks tarSkadeHitboks;
+
         tarSkade = other.GetComponent<TarSkade>();
+        tarSkadeHitboks = other.GetComponent<TarSkadeHitboks>();
 
         if (tarSkade != null && other.tag != "Kula")
         {
             tarSkade.TaSkade(skade);
             Destroy(gameObject);
+        } else if (tarSkadeHitboks != null && other.tag != "Kula")
+        {
+            tarSkadeHitboks.RedirektSkadeTilTarSkadeParent(skade);
+            Destroy(gameObject);
         }
-        else if(other.tag != "Kula")
+        else if (other.tag != "Kula")
         {
             Destroy(gameObject);
         }
