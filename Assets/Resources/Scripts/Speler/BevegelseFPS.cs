@@ -106,8 +106,11 @@ public class BevegelseFPS : MonoBehaviour
             
         }
 
-        playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
-        playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
+        //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
+        //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
+
+        playerFpsRB.AddRelativeForce(0,0,vertikalInput * gåFartFaktisk);
+        playerFpsRB.AddRelativeForce(horisontalInput * gåFartFaktisk,0,0);
 
         ReduserSidelengsFart();
     }

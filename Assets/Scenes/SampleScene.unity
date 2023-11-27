@@ -13795,7 +13795,7 @@ MonoBehaviour:
   spelarKroppGO: {fileID: 197784991}
   playerFpsRB: {fileID: 1137935870}
   bodyHitbox: {fileID: 1137935875}
-  "g\xE5FartOrginal": 10
+  "g\xE5FartOrginal": 1
   "g\xE5FartMaks": 0
   "g\xE5FartFaktisk": 0
   fartModifierVertikal: 1

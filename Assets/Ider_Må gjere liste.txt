@@ -12,13 +12,19 @@ TING Å GJERE:
 24. Lage tereng med terengtools.
 28. Lage ein sjekk som skjekker distansen frå botten på speler til bakken med Raycast.
 	For at bakkesjekk skal kunne resetes viss den ikkje er riktig.
-33. Hindra speler i å hoppe opp vegger: Hindre Bakkesjekk i å opptatere seg.
 34. Få kodelås til å vise kva kvar knapp er verdt.
+	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodelås den fonten.
 35. 
 
 
 BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
-11. Kan hende fiende bevegelse virker ikkje.
-15. 
+11. Kan hende fiende bevegelse virker ikkje. <-- På grunn av eg tok inn eit terreng og eg må bake navmeshen før den vill virka.
+16. Speler bevegelse må fikses opp siden eg bytta til AddForce. 
+	Kva eg må gjere:
+		o	Gjere skifting av retting raskere.
+		o	Finne ein god fart.
+		o	Hindre at farten økes for alltid.
+		o	Hindre at farten økes for raskt.
+17. 
