@@ -21,5 +21,4 @@ BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
 11. Kan hende fiende bevegelse virker ikkje.
-12. Speler springing varer ikkje lenge nokk.
 15. 

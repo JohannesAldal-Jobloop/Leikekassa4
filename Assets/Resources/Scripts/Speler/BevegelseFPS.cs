@@ -70,7 +70,6 @@ public class BevegelseFPS : MonoBehaviour
         {
             Hopping();
             Huking();
-            StopSpringingNårStårStille();
             Springing();
             BevegWASD();
         }
@@ -211,13 +210,13 @@ public class BevegelseFPS : MonoBehaviour
     {
         if(!holdSpringer)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false /*&& vertikalInput > 0*/)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true /*|| vertikalInput <= 0*/)
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
@@ -240,17 +239,5 @@ public class BevegelseFPS : MonoBehaviour
             }
         }
         
-
-        
-    }
-
-    void StopSpringingNårStårStille()
-    {
-        if (!holdSpringer && playerFpsRB.velocity.x <= 0f && playerFpsRB.velocity.z <= 0f)
-        {
-            springer = false;
-            gåFartMaks = gåFartOrginal;
-            gåFartFaktisk = gåFartMaks;
-        }
     }
 }
