@@ -5475,6 +5475,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 504780445}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508670787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508670788}
+  m_Layer: 3
+  m_Name: RaycastKjekk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508670788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508670787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689031249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509972273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7946,7 +7977,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -2.195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 508670788}
   m_Father: {fileID: 197784992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &689031250
@@ -7961,8 +7993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49e4eb04d1dd2a4f98deda1f8d42474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bakkeSjekkGO: {fileID: 689031248}
+  maksRekkevidde: 0.4
   paBakken: 0
+  bakkeSjekkGO: {fileID: 689031248}
+  raycastOrigin: {fileID: 508670787}
 --- !u!65 &689031251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12077,8 +12111,8 @@ MonoBehaviour:
   spelerInanforAngrepRekkevidde: 0
   harAngrepe: 0
   "g\xE5PunktRekevidde": 0
-  "sj\xE5Rekevidde": 0
-  angrepsRekkevidde: 0
+  "sj\xE5Rekevidde": 50
+  angrepsRekkevidde: 20
   angrepshastigheit: 0
   "skytev\xE5penScript": {fileID: 0}
   skadeHitboks: {fileID: 0}
@@ -13890,9 +13924,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.71314377
-  m_Height: 3.8840563
+  m_Height: 3.9274588
   m_Direction: 1
-  m_Center: {x: -0.00544757, y: -0.6571928, z: 0.09602309}
+  m_Center: {x: -0.0054475707, y: -0.67889404, z: 0.09602308}
 --- !u!114 &1137935876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19067,7 +19101,7 @@ Transform:
   m_GameObject: {fileID: 1652729595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -100.4, y: 5.5, z: 0}
+  m_LocalPosition: {x: -98.66, y: 5.5, z: 0}
   m_LocalScale: {x: 22, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

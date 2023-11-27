@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BakkeSjekk : MonoBehaviour
 {
-    public GameObject bakkeSjekkGO;
+    public float maksRekkevidde = 0.1f;
 
     public bool paBakken = false;
+
+    public GameObject bakkeSjekkGO;
+    public GameObject raycastOrigin;
 
     private BevegelseFPS bevegelseFPS;
 
@@ -20,7 +23,7 @@ public class BakkeSjekk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        KjekkOmErOverBakke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +40,22 @@ public class BakkeSjekk : MonoBehaviour
         if (other.gameObject.layer == 9 && paBakken)
         {
             paBakken = false;
+        }
+    }
+
+    void KjekkOmErOverBakke()
+    {
+        RaycastHit rayTreff;
+        if (Physics.Raycast(raycastOrigin.transform.position, -raycastOrigin.transform.up, out rayTreff, maksRekkevidde))
+        {
+            paBakken = true;
+            Debug.Log("Raycast treffer bakken.");
+
+        }
+        else
+        {
+            paBakken = false;
+            Debug.Log("Raycast treffer ikkje bakken.");
         }
     }
 
