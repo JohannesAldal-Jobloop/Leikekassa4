@@ -13790,12 +13790,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2e7c048c51e7647a0441b853b672b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tyngdekraft: 150
   playerFpsGO: {fileID: 1137935866}
   bakkeSjekkGO: {fileID: 0}
   spelarKroppGO: {fileID: 197784991}
   playerFpsRB: {fileID: 1137935870}
   bodyHitbox: {fileID: 1137935875}
-  "g\xE5FartOrginal": 100
+  "g\xE5FartOrginal": 60
   "g\xE5FartMaks": 0
   "g\xE5FartVelocetiMaks": 4
   "g\xE5FartFaktisk": 0
@@ -13807,7 +13808,7 @@ MonoBehaviour:
   holdSpringer: 0
   springer: 0
   redusertBevegelse: 0
-  hoppeKraft: 15000
+  hoppeKraft: 1000
   hoppILuftaMaks: 2
   hoppILufta: 0
   hukingDistanse: -1
@@ -13822,7 +13823,7 @@ Rigidbody:
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 4
   m_Mass: 60
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -13848,15 +13849,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.87982243, z: -0, w: 0.4753026}
-  m_LocalPosition: {x: -866.0578, y: 3.56, z: -50.9508}
+  m_LocalRotation: {x: -0, y: -0.9963996, z: -0, w: 0.084782034}
+  m_LocalPosition: {x: -866.25793, y: 3.56, z: -50.819553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   - {fileID: 197784992}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -123.242, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -170.273, z: 0}
 --- !u!114 &1137935872
 MonoBehaviour:
   m_ObjectHideFlags: 0

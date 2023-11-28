@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BevegelseFPS : MonoBehaviour
 {
+    public float tyngdekraft = 1f;
+
     public GameObject playerFpsGO;
     public GameObject bakkeSjekkGO;
     public GameObject spelarKroppGO;
@@ -60,27 +62,35 @@ public class BevegelseFPS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hoppILufta = hoppILuftaMaks;
-        gåFartMaks = gåFartOrginal;
+        
         playerFpsGO = GameObject.Find("SpelerFPS");
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
         bodyHitbox = playerFpsGO.GetComponent<CapsuleCollider>();
-        gåFartFaktisk = gåFartOrginal;
+        
         bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
         spelerDødSkript = GetComponent<SpelerDødSkript>();
+
+        hoppeKraft *= tyngdekraft;
+        gåFartOrginal *= tyngdekraft;
+
+        gåFartFaktisk = gåFartOrginal;
+        hoppILufta = hoppILuftaMaks;
+        gåFartMaks = gåFartOrginal;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Physics.gravity = new Vector3(0, -tyngdekraft, 0);
+        
+
         if (spelerDødSkript.respawner == false)
         {
             FinnVelocityTilSpeler();
             Hopping();
             Huking();
             Springing();
-            //BevegWASD();
-            BevegWASDManuel();
+            BevegWASD();
 
             
         }
@@ -97,12 +107,14 @@ public class BevegelseFPS : MonoBehaviour
             {
                 fartModifierVertikal = luftFartModifier;
                 fartModifierHorisontal = luftFartModifier;
+                Debug.Log("redusertBevegelse fart");
                 redusertBevegelse = true;
             }
             else if(vertikalInput != 0)
             {
                 fartModifierHorisontal = luftFartModifier;
                 fartModifierVertikal = bakkeFartModifier;
+                Debug.Log("redusertBevegelse fart2");
                 redusertBevegelse = true;
             }
             
@@ -119,78 +131,9 @@ public class BevegelseFPS : MonoBehaviour
         //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
         //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
 
-        addForceVerdi = 1 * Time.deltaTime * gåFartFaktisk;
-
-        playerFpsRB.AddRelativeForce(0, 0, 1 * (vertikalInput * fartModifierVertikal), ForceMode.VelocityChange);
-        playerFpsRB.AddRelativeForce(1 * (horisontalInput * fartModifierHorisontal), 0, 0, ForceMode.VelocityChange);
-
-        //if (playerFpsRB.velocity.x >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(gåFartVelocetiMaks, velocityY, velocityZ);
-        //}
-        //else if (playerFpsRB.velocity.y >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(velocityX, gåFartVelocetiMaks, velocityZ);
-        //}
-        //else if (playerFpsRB.velocity.z >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(velocityX, velocityY, gåFartVelocetiMaks);
-        //}
-
+        playerFpsRB.AddRelativeForce(horisontalInput * Time.deltaTime * gåFartFaktisk, 0, vertikalInput * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
 
         ReduserSidelengsFart();
-    }
-
-    void BevegWASDManuel()
-    {
-        gåFartFaktisk = gåFartMaks;
-        addForceVerdi = 1 * Time.deltaTime * gåFartFaktisk;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            //if((velocityAll + new Vector3(0, 0, addForceVerdi)) < new Vector3(gåFartVelocetiMaks, gåFartVelocetiMaks, gåFartVelocetiMaks))
-            //{
-                
-            //}
-            playerFpsRB.AddRelativeForce(0,0, addForceVerdi, ForceMode.VelocityChange);
-
-            //playerFpsRB.velocity = new Vector3(1, 0, 0) * Time.deltaTime * gåFartFaktisk; 
-
-        }
-        else if(Input.GetKey(KeyCode.A)) 
-        {
-            playerFpsRB.AddRelativeForce(-addForceVerdi, 0, 0, ForceMode.VelocityChange);
-
-            //playerFpsRB.velocity = new Vector3(0, 0, 1) * Time.deltaTime * gåFartFaktisk;
-
-        }else if(Input.GetKey(KeyCode.S))
-        {
-            playerFpsRB.AddRelativeForce(0, 0, -addForceVerdi, ForceMode.VelocityChange);
-
-            //playerFpsRB.velocity = new Vector3(-1, 0, 0) * Time.deltaTime * gåFartFaktisk;
-
-        }
-        else if(Input.GetKey(KeyCode.D))
-        {
-            //playerFpsRB.AddRelativeForce(Vector3.right);
-            playerFpsRB.AddRelativeForce(addForceVerdi, 0, 0, ForceMode.VelocityChange);
-
-            //playerFpsRB.velocity = new Vector3(0, 0, -1) * Time.deltaTime * gåFartFaktisk;
-
-        }
-
-        //if (playerFpsRB.velocity.x >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(gåFartVelocetiMaks, velocityY, velocityZ);
-        //}
-        //else if (playerFpsRB.velocity.y >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(velocityX, gåFartVelocetiMaks, velocityZ);
-        //}
-        //else if (playerFpsRB.velocity.z >= gåFartVelocetiMaks)
-        //{
-        //    playerFpsRB.velocity = new Vector3(velocityX, velocityY, gåFartVelocetiMaks);
-        //}
     }
 
     void ReduserSidelengsFart()
