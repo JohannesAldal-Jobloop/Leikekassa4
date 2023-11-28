@@ -13790,7 +13790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2e7c048c51e7647a0441b853b672b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tyngdekraft: 150
+  tyngdekraft: 100
   playerFpsGO: {fileID: 1137935866}
   bakkeSjekkGO: {fileID: 0}
   spelarKroppGO: {fileID: 197784991}
@@ -23613,7 +23613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40629cfaffcefaa41a0115a31f65e52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prosjektilSkyting: 1
+  prosjektilSkyting: 0
   reloader: 0
   sikter: 0
   sikterOktRekkevidde: 0

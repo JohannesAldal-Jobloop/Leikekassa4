@@ -24,7 +24,7 @@ public class BevegelseFPS : MonoBehaviour
     public float gåFartFaktisk = 0;
     private float addForceVerdi;
 
-    private float sidelengsReduksjons = 0.75f;
+    private float sidelengsReduksjons = 0.8f;
     private float tidGåttUtenAkselerasjonInterval;
 
     public float fartModifierVertikal = 1f;
@@ -131,7 +131,7 @@ public class BevegelseFPS : MonoBehaviour
         //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
         //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
 
-        playerFpsRB.AddRelativeForce(horisontalInput * Time.deltaTime * gåFartFaktisk, 0, vertikalInput * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
+        playerFpsRB.AddRelativeForce((horisontalInput * fartModifierHorisontal) * Time.deltaTime * gåFartFaktisk, 0, (vertikalInput * fartModifierVertikal) * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
 
         ReduserSidelengsFart();
     }

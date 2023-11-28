@@ -25,6 +25,12 @@ public class HovedMenySkript : MonoBehaviour
         SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
     }
 
+    public void AvsluttSpel()
+    {
+        Debug.Log("Avsluttter spel...");
+        Application.Quit();
+    }
+
     public void SkiftTilInstillinger()
     {
         hovedSkjerm.SetActive(false);

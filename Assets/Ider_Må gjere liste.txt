@@ -15,9 +15,8 @@ TING Å GJERE:
 34. Få kodelås til å vise kva kvar knapp er verdt.
 	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodelås den fonten.
 35. Lage Hovedmeny:
-		o	Avslutt knapp
-		o	Start knapp
-		o	
+		o	Tilbake knapp som går tilbake til forje kjerm.
+36. 
 
 
 BUGS:
