@@ -111,39 +111,9 @@ public class BevegelseFPS : MonoBehaviour
 
         spelerKontroller.Move(velocity * Time.deltaTime);
 
-        //if (!bakkeSjekk.paBakken && !redusertBevegelse)
-        //{
-        //    if(horisontalInput == 0 && vertikalInput == 0)
-        //    {
-        //        fartModifierVertikal = luftFartModifier;
-        //        fartModifierHorisontal = luftFartModifier;
-        //        Debug.Log("redusertBevegelse fart");
-        //        redusertBevegelse = true;
-        //    }
-        //    else if(vertikalInput != 0)
-        //    {
-        //        fartModifierHorisontal = luftFartModifier;
-        //        fartModifierVertikal = luftFartModifier;
-        //        Debug.Log("redusertBevegelse fart2");
-        //        redusertBevegelse = true;
-        //    }
-            
-        //}
-        //else if(bakkeSjekk.paBakken)
-        //{
-        //    fartModifierHorisontal = bakkeFartModifier;
-        //    fartModifierVertikal = bakkeFartModifier;
-        //    redusertBevegelse = false;
-
-            
-        //}
-
-        //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
-        //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
-
-        //playerFpsRB.AddRelativeForce((horisontalInput * fartModifierHorisontal) * Time.deltaTime * gåFartFaktisk, 0, (vertikalInput * fartModifierVertikal) * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
-
         ReduserSidelengsFart();
+
+
     }
 
     void ReduserSidelengsFart()
@@ -182,13 +152,15 @@ public class BevegelseFPS : MonoBehaviour
             Debug.Log("hopper");
             hoppeKraftFaktisk = hoppeKraftOrginal;
             hoppILufta = hoppILuftaMaks;
-            playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
+            velocity.y = hoppeKraftFaktisk * Time.deltaTime;
+            //playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
         } 
         else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
         {
             Debug.Log("hopper i lofta");
             hoppeKraftFaktisk *= hoppIluftaKraftReduksjon;
-            playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
+            velocity.y = hoppeKraftFaktisk * Time.deltaTime;
+            //playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
             hoppILufta--;
             hoppeKraftFaktisk = hoppeKraftOrginal;
         }

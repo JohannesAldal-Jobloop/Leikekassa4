@@ -31,7 +31,7 @@ public class BakkeSjekk : MonoBehaviour
         if (other.gameObject.layer == 9 && !paBakken)
         {
             paBakken = true;
-           // bevegelseFPS.hoppILufta = bevegelseFPS.hoppILuftaMaks;
+            bevegelseFPS.hoppILufta = bevegelseFPS.hoppILuftaMaks;
         }
     }
 
@@ -49,7 +49,7 @@ public class BakkeSjekk : MonoBehaviour
         if (Physics.Raycast(raycastOrigin.transform.position, -raycastOrigin.transform.up, out rayTreff, maksRekkevidde))
         {
             paBakken = true;
-            bevegelseFPS.velocity.y = -2;
+            bevegelseFPS.velocity.y = 0;
         }         
         else
         {

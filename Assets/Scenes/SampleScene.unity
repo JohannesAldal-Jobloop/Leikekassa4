@@ -13809,7 +13809,7 @@ MonoBehaviour:
   holdSpringer: 0
   springer: 0
   redusertBevegelse: 0
-  hoppeKraftOrginal: 15000
+  hoppeKraftOrginal: 500
   hoppeKraftFaktisk: 10
   hoppIluftaKraftReduksjon: 0.5
   hoppILuftaMaks: 2
