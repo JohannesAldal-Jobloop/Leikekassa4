@@ -26,22 +26,22 @@ public class BakkeSjekk : MonoBehaviour
         KjekkOmErOverBakke();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.layer == 9 && !paBakken)
-    //    {
-    //        paBakken = true;
-    //        bevegelseFPS.hoppILufta = bevegelseFPS.hoppILuftaMaks;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 9 && !paBakken)
+        {
+            paBakken = true;
+           // bevegelseFPS.hoppILufta = bevegelseFPS.hoppILuftaMaks;
+        }
+    }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.layer == 9 && paBakken)
-    //    {
-    //        paBakken = false;
-    //    }
-    //}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 9 && paBakken)
+        {
+            paBakken = false;
+        }
+    }
 
     void KjekkOmErOverBakke()
     {
@@ -49,12 +49,11 @@ public class BakkeSjekk : MonoBehaviour
         if (Physics.Raycast(raycastOrigin.transform.position, -raycastOrigin.transform.up, out rayTreff, maksRekkevidde))
         {
             paBakken = true;
-            bevegelseFPS.playerFpsRB.drag = 5;
-        }
+            bevegelseFPS.velocity.y = -2;
+        }         
         else
         {
             paBakken = false;
-            bevegelseFPS.playerFpsRB.drag = 0;
         }
     }
 

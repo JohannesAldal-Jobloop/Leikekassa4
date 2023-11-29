@@ -13,6 +13,11 @@ public class BevegelseFPS : MonoBehaviour
     public CapsuleCollider bodyHitbox;
 
     //---------- Variabler til WASD bevegelse ----------
+    private CharacterController spelerKontroller;
+    [HideInInspector] public Vector3 velocity;
+
+    public float tyngdekraft = -1f;
+
     private float horisontalInput = 0f;
     private float vertikalInput = 0f;
 
@@ -64,6 +69,7 @@ public class BevegelseFPS : MonoBehaviour
         playerFpsGO = GameObject.Find("SpelerFPS");
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
         bodyHitbox = playerFpsGO.GetComponent<CapsuleCollider>();
+        spelerKontroller = GetComponent<CharacterController>();
         
         bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
         spelerDødSkript = GetComponent<SpelerDødSkript>();
@@ -97,37 +103,45 @@ public class BevegelseFPS : MonoBehaviour
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
 
-        if (!bakkeSjekk.paBakken && !redusertBevegelse)
-        {
-            if(horisontalInput == 0 && vertikalInput == 0)
-            {
-                fartModifierVertikal = luftFartModifier;
-                fartModifierHorisontal = luftFartModifier;
-                Debug.Log("redusertBevegelse fart");
-                redusertBevegelse = true;
-            }
-            else if(vertikalInput != 0)
-            {
-                fartModifierHorisontal = luftFartModifier;
-                fartModifierVertikal = luftFartModifier;
-                Debug.Log("redusertBevegelse fart2");
-                redusertBevegelse = true;
-            }
+        Vector3 bevegelse = transform.right * horisontalInput + transform.forward * vertikalInput;
+
+        spelerKontroller.Move(bevegelse * gåFartFaktisk * Time.deltaTime);
+
+        velocity.y += tyngdekraft * Time.deltaTime;
+
+        spelerKontroller.Move(velocity * Time.deltaTime);
+
+        //if (!bakkeSjekk.paBakken && !redusertBevegelse)
+        //{
+        //    if(horisontalInput == 0 && vertikalInput == 0)
+        //    {
+        //        fartModifierVertikal = luftFartModifier;
+        //        fartModifierHorisontal = luftFartModifier;
+        //        Debug.Log("redusertBevegelse fart");
+        //        redusertBevegelse = true;
+        //    }
+        //    else if(vertikalInput != 0)
+        //    {
+        //        fartModifierHorisontal = luftFartModifier;
+        //        fartModifierVertikal = luftFartModifier;
+        //        Debug.Log("redusertBevegelse fart2");
+        //        redusertBevegelse = true;
+        //    }
             
-        }
-        else if(bakkeSjekk.paBakken)
-        {
-            fartModifierHorisontal = bakkeFartModifier;
-            fartModifierVertikal = bakkeFartModifier;
-            redusertBevegelse = false;
+        //}
+        //else if(bakkeSjekk.paBakken)
+        //{
+        //    fartModifierHorisontal = bakkeFartModifier;
+        //    fartModifierVertikal = bakkeFartModifier;
+        //    redusertBevegelse = false;
 
             
-        }
+        //}
 
         //playerFpsGO.transform.Translate(Vector3.forward * Time.deltaTime * gåFartFaktisk * (vertikalInput * fartModifierVertikal));
         //playerFpsGO.transform.Translate(Vector3.right * Time.deltaTime * gåFartFaktisk * (horisontalInput * fartModifierHorisontal));
 
-        playerFpsRB.AddRelativeForce((horisontalInput * fartModifierHorisontal) * Time.deltaTime * gåFartFaktisk, 0, (vertikalInput * fartModifierVertikal) * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
+        //playerFpsRB.AddRelativeForce((horisontalInput * fartModifierHorisontal) * Time.deltaTime * gåFartFaktisk, 0, (vertikalInput * fartModifierVertikal) * Time.deltaTime * gåFartFaktisk, ForceMode.Impulse);
 
         ReduserSidelengsFart();
     }
@@ -165,16 +179,16 @@ public class BevegelseFPS : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) && bakkeSjekk.paBakken)
         {
-            hoppeKraftFaktisk = hoppeKraftOrginal;
             Debug.Log("hopper");
+            hoppeKraftFaktisk = hoppeKraftOrginal;
             hoppILufta = hoppILuftaMaks;
-            playerFpsRB.AddForce(0, hoppeKraftFaktisk, 0, ForceMode.Force);
+            playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
         } 
         else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
         {
             Debug.Log("hopper i lofta");
             hoppeKraftFaktisk *= hoppIluftaKraftReduksjon;
-            playerFpsRB.AddForce(0, hoppeKraftFaktisk, 0, ForceMode.Force);
+            playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
             hoppILufta--;
             hoppeKraftFaktisk = hoppeKraftOrginal;
         }

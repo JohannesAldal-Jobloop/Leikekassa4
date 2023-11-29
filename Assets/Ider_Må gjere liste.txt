@@ -16,13 +16,16 @@ TING Å GJERE:
 		o	Tilbake knapp som går tilbake til forje kjerm.
 36. Gjere at instillingane virker.
 37. Endre alle æøå.
-38. 
+38. Lage rekyl til våpen.
+39. Endre skyting til å føles bra ut:
+		o	Animasjon
+		o	
+40. 
 
 
 BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
-11. Kan hende fiende bevegelse virker ikkje. <-- På grunn av eg tok inn eit terreng og eg må bake navmeshen før den vill virka.
-17. Sidelengs reduksjon føles for kraftig.
 18. Fiende bevegelse Patrulering virker ikkje.
-19. 
+20. Speler blir dytta halveks under bakken av tyngdekraften.
+21. 

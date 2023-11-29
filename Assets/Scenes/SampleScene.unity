@@ -8026,7 +8026,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.3, z: 0.4429566}
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
   m_Center: {x: 0.0028691532, y: 0, z: 0.12302558}
 --- !u!1001 &692683779
 PrefabInstance:
@@ -13744,13 +13744,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1137935871}
   - component: {fileID: 1137935870}
+  - component: {fileID: 1137935879}
   - component: {fileID: 1137935869}
   - component: {fileID: 1137935867}
   - component: {fileID: 1137935872}
   - component: {fileID: 1137935873}
   - component: {fileID: 1137935874}
   - component: {fileID: 1137935876}
-  - component: {fileID: 1137935875}
   - component: {fileID: 1137935877}
   - component: {fileID: 1137935878}
   m_Layer: 3
@@ -13794,8 +13794,10 @@ MonoBehaviour:
   bakkeSjekkGO: {fileID: 0}
   spelarKroppGO: {fileID: 197784991}
   playerFpsRB: {fileID: 1137935870}
-  bodyHitbox: {fileID: 1137935875}
-  "g\xE5FartOrginal": 5000
+  bodyHitbox: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  tyngdekraft: -9.81
+  "g\xE5FartOrginal": 12
   "g\xE5FartMaks": 0
   "g\xE5FartVelocetiMaks": 4
   "g\xE5FartFaktisk": 0
@@ -13823,7 +13825,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137935866}
   serializedVersion: 4
-  m_Mass: 60
+  m_Mass: 10
   m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13917,29 +13919,6 @@ MonoBehaviour:
   - {fileID: 1211456202}
   spelarKropp: {fileID: 197784991}
   "spelerV\xE5penarm": {fileID: 2111371544}
---- !u!136 &1137935875
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137935866}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.71314377
-  m_Height: 3.9274588
-  m_Direction: 1
-  m_Center: {x: -0.0054475707, y: -0.67889404, z: 0.09602308}
 --- !u!114 &1137935876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13998,6 +13977,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactRekkevidde: 5
   fpsKamera: {fileID: 0}
+--- !u!143 &1137935879
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137935866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 3.927459
+  m_Radius: 0.7131438
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: -0.0054475707, y: -0.67889404, z: 0.09602308}
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
