@@ -32,16 +32,16 @@ public class TurretSkript : MonoBehaviour
     void Update()
     {
 
-        if (rekkevidder.serLayerTarget)
-        {
-            SjåPåSpelar();
-        }
+        //if (rekkevidder.serLayerTarget)
+        //{
+        //    SjåPåSpelar();
+        //}
         
 
-        if (rekkevidder.angripLayerTarget)
-        {
-            TurretSkyting();
-        }
+        //if (rekkevidder.angripLayerTarget)
+        //{
+        //    TurretSkyting();
+        //}
     }
 
     void SjåPåSpelar()
@@ -56,7 +56,7 @@ public class TurretSkript : MonoBehaviour
         clone.skade = våpenVariabler.skade;
         clone.fart = våpenVariabler.kuleFart;
         clone.tilbakeslagKraft = våpenVariabler.tilbakeslagKraft;
-        clone.maksRekkevidde = våpenVariabler.maksRekkevidde;
+        clone.maksRekkevidde = rekkevidder.angrepRekkevidde;
         clone.ophavPosisjon = ophavV3;
 
         clone.transform.localScale = new Vector3(0.3f, 0.3f, 1.6f);

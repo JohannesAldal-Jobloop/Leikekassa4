@@ -29,9 +29,5 @@ public class DrepSone : MonoBehaviour
         {
             tarSkade.liv = 0;
         }
-        else
-        {
-            Debug.Log("Ingen skadeskript.");
-        }
     }
 }

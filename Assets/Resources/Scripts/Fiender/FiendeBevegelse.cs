@@ -35,16 +35,15 @@ public class FiendeBevegelse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spelerInanforSjåRekkevidde = Physics.CheckSphere(transform.position, sjåRekevidde, speler);
-        spelerInanforAngrepRekkevidde = Physics.CheckSphere(transform.position, angrepsRekkevidde, speler);
+    //    spelerInanforSjåRekkevidde = Physics.CheckSphere(transform.position, sjåRekevidde, speler);
+    //    spelerInanforAngrepRekkevidde = Physics.CheckSphere(transform.position, angrepsRekkevidde, speler);
 
-        //if(!spelerInanforSjåRekkevidde && !spelerInanforAngrepRekkevidde)
-        //{
-        //    Patruljering();
-        //    skadeHitboks.SetActive(false);
-        //}
-        //else
-        if (sjåRekkeviddeSkript.serLayerTarget && !sjåRekkeviddeSkript.angripLayerTarget)
+
+        if (!sjåRekkeviddeSkript.serLayerTarget && !sjåRekkeviddeSkript.angripLayerTarget)
+        {
+            Patruljering();
+        }
+        else if (sjåRekkeviddeSkript.serLayerTarget && !sjåRekkeviddeSkript.angripLayerTarget)
         {
             BevegMotSpeler();
         }
