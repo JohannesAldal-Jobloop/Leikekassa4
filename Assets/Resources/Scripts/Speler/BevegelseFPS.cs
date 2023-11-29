@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BevegelseFPS : MonoBehaviour
 {
-    public float tyngdekraft = 1f;
-
     public GameObject playerFpsGO;
     public GameObject bakkeSjekkGO;
     public GameObject spelarKroppGO;
@@ -22,10 +20,8 @@ public class BevegelseFPS : MonoBehaviour
     public float gåFartMaks;
     public float gåFartVelocetiMaks;
     public float gåFartFaktisk = 0;
-    private float addForceVerdi;
 
     private float sidelengsReduksjons = 0.8f;
-    private float tidGåttUtenAkselerasjonInterval;
 
     public float fartModifierVertikal = 1f;
     public float fartModifierHorisontal = 1f;
@@ -44,7 +40,9 @@ public class BevegelseFPS : MonoBehaviour
     //--------------------------------------------------
 
     //---------- Variabler til Hopping ----------
-    public float hoppeKraft = 10;
+    public float hoppeKraftOrginal = 10;
+    public float hoppeKraftFaktisk = 10;
+    public float hoppIluftaKraftReduksjon = 0.5f;
     public int hoppILuftaMaks = 0;
     public int hoppILufta = 0;
     //-------------------------------------------
@@ -70,9 +68,7 @@ public class BevegelseFPS : MonoBehaviour
         bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
         spelerDødSkript = GetComponent<SpelerDødSkript>();
 
-        hoppeKraft *= tyngdekraft;
-        gåFartOrginal *= tyngdekraft;
-
+        hoppeKraftFaktisk = hoppeKraftOrginal;
         gåFartFaktisk = gåFartOrginal;
         hoppILufta = hoppILuftaMaks;
         gåFartMaks = gåFartOrginal;
@@ -81,7 +77,7 @@ public class BevegelseFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics.gravity = new Vector3(0, -tyngdekraft, 0);
+        //Physics.gravity = new Vector3(0, -tyngdekraft, 0);
         
 
         if (spelerDødSkript.respawner == false)
@@ -113,7 +109,7 @@ public class BevegelseFPS : MonoBehaviour
             else if(vertikalInput != 0)
             {
                 fartModifierHorisontal = luftFartModifier;
-                fartModifierVertikal = bakkeFartModifier;
+                fartModifierVertikal = luftFartModifier;
                 Debug.Log("redusertBevegelse fart2");
                 redusertBevegelse = true;
             }
@@ -166,15 +162,21 @@ public class BevegelseFPS : MonoBehaviour
 
     void Hopping()
     {
+        
         if (Input.GetKeyDown(KeyCode.Space) && bakkeSjekk.paBakken)
         {
+            hoppeKraftFaktisk = hoppeKraftOrginal;
+            Debug.Log("hopper");
             hoppILufta = hoppILuftaMaks;
-            playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
+            playerFpsRB.AddForce(0, hoppeKraftFaktisk, 0, ForceMode.Force);
         } 
         else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
         {
-            playerFpsRB.AddForce(0, hoppeKraft, 0, ForceMode.Force);
+            Debug.Log("hopper i lofta");
+            hoppeKraftFaktisk *= hoppIluftaKraftReduksjon;
+            playerFpsRB.AddForce(0, hoppeKraftFaktisk, 0, ForceMode.Force);
             hoppILufta--;
+            hoppeKraftFaktisk = hoppeKraftOrginal;
         }
     }
 

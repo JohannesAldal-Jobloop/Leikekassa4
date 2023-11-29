@@ -13790,13 +13790,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2e7c048c51e7647a0441b853b672b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tyngdekraft: 100
   playerFpsGO: {fileID: 1137935866}
   bakkeSjekkGO: {fileID: 0}
   spelarKroppGO: {fileID: 197784991}
   playerFpsRB: {fileID: 1137935870}
   bodyHitbox: {fileID: 1137935875}
-  "g\xE5FartOrginal": 60
+  "g\xE5FartOrginal": 5000
   "g\xE5FartMaks": 0
   "g\xE5FartVelocetiMaks": 4
   "g\xE5FartFaktisk": 0
@@ -13804,11 +13803,13 @@ MonoBehaviour:
   fartModifierHorisontal: 1
   bakkeFartModifier: 1
   springeFartModifier: 1.5
-  luftFartModifier: 0.2
+  luftFartModifier: 0
   holdSpringer: 0
   springer: 0
   redusertBevegelse: 0
-  hoppeKraft: 1000
+  hoppeKraftOrginal: 15000
+  hoppeKraftFaktisk: 10
+  hoppIluftaKraftReduksjon: 0.5
   hoppILuftaMaks: 2
   hoppILufta: 0
   hukingDistanse: -1

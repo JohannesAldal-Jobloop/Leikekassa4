@@ -49,10 +49,12 @@ public class BakkeSjekk : MonoBehaviour
         if (Physics.Raycast(raycastOrigin.transform.position, -raycastOrigin.transform.up, out rayTreff, maksRekkevidde))
         {
             paBakken = true;
+            bevegelseFPS.playerFpsRB.drag = 5;
         }
         else
         {
             paBakken = false;
+            bevegelseFPS.playerFpsRB.drag = 0;
         }
     }
 
