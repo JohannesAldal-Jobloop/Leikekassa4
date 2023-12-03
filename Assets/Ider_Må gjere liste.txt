@@ -19,6 +19,7 @@ TING Å GJERE:
 38. Lage rekyl til våpen.
 39. Endre skyting til å føles bra ut:
 		o	Animasjon
+		o	Rekyl
 		o	
 40. 
 
