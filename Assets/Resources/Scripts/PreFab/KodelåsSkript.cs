@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KodelåsSkript : MonoBehaviour
@@ -17,6 +18,8 @@ public class KodelåsSkript : MonoBehaviour
     public Color feilFarge;
     public Color riktigFarge;
 
+    public TextMeshPro riktigViserTekst;
+
     [HideInInspector] public bool erRiktig = false;
 
     private Renderer riktigViserRenderer;
@@ -25,11 +28,18 @@ public class KodelåsSkript : MonoBehaviour
     void Start()
     {
         riktigViserRenderer = riktigViser.GetComponent<Renderer>();
+        riktigViserTekst.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(riktigViserTekst.text.Length = riktigKode.Length)
+        {
+
+        }
+
+
         if(inputaKode.Length == riktigKode.Length && !erRiktig)
         {
             StartCoroutine(KjekkOmKodeErRiktig());
@@ -53,8 +63,10 @@ public class KodelåsSkript : MonoBehaviour
             erRiktig = false;
             tingSomSkalÅpnesGO.SetActive(!erRiktig);
             inputaKode = "";
+            riktigViserTekst.text = "";
 
-        }else
+        }
+        else
         {
             erRiktig = false;
             riktigViserRenderer.material.color = feilFarge;
@@ -64,6 +76,7 @@ public class KodelåsSkript : MonoBehaviour
             yield return new WaitForSeconds(KorLengeFeil);
 
             inputaKode = "";
+            riktigViserTekst.text = "";
         }
     }
 }

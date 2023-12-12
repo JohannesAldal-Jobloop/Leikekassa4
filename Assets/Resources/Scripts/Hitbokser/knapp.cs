@@ -112,6 +112,7 @@ public class knapp : MonoBehaviour
         if (!kodelåsSkript.erRiktig || kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
         {
             kodelåsSkript.inputaKode += knappVerdi;
+            kodelåsSkript.riktigViserTekst.text += knappVerdi;
         }
 
         EndreFarge();

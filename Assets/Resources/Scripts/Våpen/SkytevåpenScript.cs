@@ -28,6 +28,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public VåpenVariabler aktivVåpenVariabler;
     private SpelerDødSkript spelerDødSkript;
+    private SkytevåpenRekylSkript rekylSkript;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class SkytevåpenScript : MonoBehaviour
         FinnAlleAktiveGameobjectForScript();
         aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
         spelerDødSkript = GameObject.Find("SpelerFPS").GetComponent<SpelerDødSkript>();
+        rekylSkript = GameObject.Find("Main Camera").GetComponent<SkytevåpenRekylSkript>();
     }
 
     // Update is called once per frame
@@ -141,6 +143,8 @@ public class SkytevåpenScript : MonoBehaviour
     void RaycastShooting()
     {
         rayIgnorerLayer = ~rayIgnorerLayer;
+
+        rekylSkript.Rekyl();
 
         RaycastHit rayTreff;
         if(Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, aktivVåpenVariabler.maksRekkevidde, rayIgnorerLayer))
