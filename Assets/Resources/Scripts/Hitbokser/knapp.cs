@@ -1,6 +1,7 @@
 using OpenCover.Framework.Model;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,6 +12,12 @@ public class knapp : MonoBehaviour
     public float funksjonVentetid = 0;
 
     private bool erPå = false;
+
+    public string knappTekst;
+
+    private TextMeshPro knappText;
+
+    private Transform knappTextTransform;
 
     // Må ha alle IEnumeratorene sine navn inni {} til funksjoner
     // for at dei skal kunne velges i inspektoren.
@@ -34,7 +41,7 @@ public class knapp : MonoBehaviour
     //------------------------------------------------
 
     //---------- Varabler til Kodelås() ----------
-    public string knappVerdi;
+    
 
     public GameObject kodelåsGO;
 
@@ -51,10 +58,17 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
+        knappTextTransform = gameObject.transform.Find("fargeKnapp").transform.Find("Text (TMP)");
+        knappText = knappTextTransform.GetComponent<TextMeshPro>();
 
         if(kodelåsGO != null)
         {
             kodelåsSkript = kodelåsGO.GetComponent<KodelåsSkript>();
+        }
+
+        if(knappTekst != null)
+        {
+            knappText.text = knappTekst;
         }
     }
 
@@ -111,8 +125,8 @@ public class knapp : MonoBehaviour
     {
         if (kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
         {
-            kodelåsSkript.inputaKode += knappVerdi;
-            kodelåsSkript.riktigViserTekst.text += knappVerdi;
+            kodelåsSkript.inputaKode += knappTekst;
+            kodelåsSkript.riktigViserTekst.text += knappTekst;
             
         }
 
