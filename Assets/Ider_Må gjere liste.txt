@@ -27,4 +27,5 @@ BUGS:
 1. kulo LaserKula kjem feil veg ut når skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
 18. Fiende bevegelse Patrulering virker ikkje.
-22. 
+22. Kodelåsen lar spelar skrive inn fleire tall nor den er blit foll.
+23. 

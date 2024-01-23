@@ -109,10 +109,11 @@ public class knapp : MonoBehaviour
 
     public IEnumerator Kodelås()
     {
-        if (!kodelåsSkript.erRiktig || kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
+        if (kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
         {
             kodelåsSkript.inputaKode += knappVerdi;
             kodelåsSkript.riktigViserTekst.text += knappVerdi;
+            
         }
 
         EndreFarge();

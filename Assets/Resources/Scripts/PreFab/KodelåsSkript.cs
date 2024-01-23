@@ -34,7 +34,7 @@ public class KodelåsSkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(riktigViserTekst.text.Length = riktigKode.Length)
+        if(riktigViserTekst.text.Length == riktigKode.Length)
         {
 
         }
