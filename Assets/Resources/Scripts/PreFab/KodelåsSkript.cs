@@ -56,7 +56,11 @@ public class KodelåsSkript : MonoBehaviour
         {
             erRiktig = true;
             riktigViserRenderer.material.color = riktigFarge;
-            tingSomSkalÅpnesGO.SetActive(!erRiktig);
+
+            if(tingSomSkalÅpnesGO != null)
+            {
+                tingSomSkalÅpnesGO.SetActive(!erRiktig);
+            }
 
             yield return new WaitForSeconds(korLengeRiktig);
 
@@ -71,7 +75,10 @@ public class KodelåsSkript : MonoBehaviour
             erRiktig = false;
             riktigViserRenderer.material.color = feilFarge;
 
-            tingSomSkalÅpnesGO.SetActive(!erRiktig);
+            if(tingSomSkalÅpnesGO != null)
+            {
+                tingSomSkalÅpnesGO.SetActive(!erRiktig);
+            }
 
             yield return new WaitForSeconds(KorLengeFeil);
 

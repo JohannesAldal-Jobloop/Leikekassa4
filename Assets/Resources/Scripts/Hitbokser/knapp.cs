@@ -15,9 +15,10 @@ public class knapp : MonoBehaviour
 
     public string knappTekst;
 
-    private TextMeshPro knappText;
-
+    private TextMeshPro knappTMP;
     private Transform knappTextTransform;
+
+    public Font font;
 
     // Må ha alle IEnumeratorene sine navn inni {} til funksjoner
     // for at dei skal kunne velges i inspektoren.
@@ -59,7 +60,7 @@ public class knapp : MonoBehaviour
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
         handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
         knappTextTransform = gameObject.transform.Find("fargeKnapp").transform.Find("Text (TMP)");
-        knappText = knappTextTransform.GetComponent<TextMeshPro>();
+        knappTMP = knappTextTransform.GetComponent<TextMeshPro>();
 
         if(kodelåsGO != null)
         {
@@ -68,8 +69,10 @@ public class knapp : MonoBehaviour
 
         if(knappTekst != null)
         {
-            knappText.text = knappTekst;
+            knappTMP.text = knappTekst;
         }
+
+        //knappTMP.font = 
     }
 
     // Update is called once per frame
