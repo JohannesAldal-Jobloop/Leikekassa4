@@ -21,7 +21,8 @@ TING Å GJERE:
 		o	Rekyl
 		o	
 40. Lag ei hinderløypa for å teste bevegelse og hitbokser.
-41. 
+41. Lage ein hittboks som sende speler tilbake til forje checkpoint/spawnpoint.
+42. 
 
 
 BUGS:
