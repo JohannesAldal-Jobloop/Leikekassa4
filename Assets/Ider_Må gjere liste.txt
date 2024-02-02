@@ -1,34 +1,34 @@
 
-TING Å GJERE:
-2. Lage animasjon til våpen: reload,  osv
+TING ï¿½ GJERE:
+2. Lage animasjon til vï¿½pen: reload,  osv
 5. Lage fleire skadetyper.
 6. laga finder.
-10. Huking kan bli gjort på ein Mykje bedre måte.
-14. lage skript so finner alle x GameObjects å putter dei under x GameObject som child. 
-	For å lage hierarchy meir ryddeg på play.
-17. Lage om BulletRestriksjoner() til å bruke Physics.CheckSphere.
+10. Huking kan bli gjort pï¿½ ein Mykje bedre mï¿½te.
+14. lage skript so finner alle x GameObjects ï¿½ putter dei under x GameObject som child. 
+	For ï¿½ lage hierarchy meir ryddeg pï¿½ play.
+17. Lage om BulletRestriksjoner() til ï¿½ bruke Physics.CheckSphere.
 18. Lage eit generelt skyteskript til speler og fiender.
-19. Omjer speler springing so speler går gradvis opp i fart.
+19. Omjer speler springing so speler gï¿½r gradvis opp i fart.
 24. Lage tereng med terengtools.
-34. Få kodelås til å vise kva kvar knapp er verdt.
-	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodelås den fonten.
+34. Fï¿½ kodelï¿½s til ï¿½ vise kva kvar knapp er verdt.
+	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodelï¿½s den fonten.
 35. Lage Hovedmeny:
-		o	Tilbake knapp som går tilbake til forje kjerm.
+		o	Tilbake knapp som gï¿½r tilbake til forje kjerm.
 36. Gjere at instillingane virker.
-37. Endre alle æøå.
-39. Endre skyting til å føles bra ut:
+37. Endre alle ï¿½ï¿½ï¿½.
+39. Endre skyting til ï¿½ fï¿½les bra ut:
 		o	Animasjon
 		o	Rekyl
 		o	
-40. Lag ei hinderløypa for å teste bevegelse og hitbokser.
+40. Lag ei hinderlï¿½ypa for ï¿½ teste bevegelse og hitbokser.
 41. Laga resett hitboks som setter deg til siste spawnpunkt.
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 43. 
 
 
 BUGS:
-1. kulo LaserKula kjem feil veg ut når skytt.
-6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frå speler etterpå.
+1. kulo LaserKula kjem feil veg ut nï¿½r skytt.
+6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input frï¿½ speler etterpï¿½.
 18. Fiende bevegelse Patrulering virker ikkje.
-23. Kodelås resetter ikkje etter feil kode.
+23. Kodelï¿½s resetter ikkje etter feil kode.
 24. 
