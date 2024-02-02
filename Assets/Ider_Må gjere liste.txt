@@ -21,7 +21,9 @@ TING Å GJERE:
 		o	Rekyl
 		o	
 40. Lag ei hinderløypa for å teste bevegelse og hitbokser.
-41. 
+41. Laga resett hitboks som setter deg til siste spawnpunkt.
+42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
+43. 
 
 
 BUGS:
