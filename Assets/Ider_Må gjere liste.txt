@@ -9,8 +9,6 @@ TING � GJERE:
 17. Lage om BulletRestriksjoner() til � bruke Physics.CheckSphere.
 18. Lage eit generelt skyteskript til speler og fiender.
 19. Omjer speler springing so speler g�r gradvis opp i fart.
-24. Lage tereng med terengtools.
-34. F� kodel�s til � vise kva kvar knapp er verdt.
 	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodel�s den fonten.
 35. Lage Hovedmeny:
 		o	Tilbake knapp som g�r tilbake til forje kjerm.
@@ -21,7 +19,6 @@ TING � GJERE:
 		o	Rekyl
 		o	
 40. Lag ei hinderl�ypa for � teste bevegelse og hitbokser.
-41. Laga resett hitboks som setter deg til siste spawnpunkt.
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 43. 
 

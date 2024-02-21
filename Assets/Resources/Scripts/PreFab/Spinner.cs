@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spinner : MonoBehaviour
 {
+    public bool isActive = true;
+
     [SerializeField] private float rotationSpeed = 1.0f;
 
     [SerializeField] private Vector3 spinnVector3;
