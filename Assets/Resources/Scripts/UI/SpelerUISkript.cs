@@ -7,7 +7,8 @@ public class SpelerUISkript : MonoBehaviour
 {
     public GameObject er_død_UI;
     public GameObject i_Live_UI;
-    public GameObject pauseKjermUI;
+    public GameObject pauseKjerm_UI;
+    public GameObject inventory_UI;
 
     public Slider livBarGO;
     public GameObject overSkjoldBarGO;
@@ -20,6 +21,7 @@ public class SpelerUISkript : MonoBehaviour
     public TarSkade tarSkadeSpeler;
     public LivFunksjoner livFunksjonerSpeler;
     public PausSpel pausSpel;
+    public InventoryScript inventoryScript;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class SpelerUISkript : MonoBehaviour
         livFunksjonerSpeler = spelarGO.GetComponent <LivFunksjoner>();
         overSkjoldBarSlider = overSkjoldBarGO.GetComponent<Slider>();
         pausSpel = GetComponent<PausSpel>();
+        inventoryScript = GetComponent<InventoryScript>();
     }
 
     // Update is called once per frame
@@ -41,9 +44,9 @@ public class SpelerUISkript : MonoBehaviour
     {
         LivBarUpdate();
         OverSkjoldUpdate();
-        GiftBarUptdate();
+        GiftBarUpdate();
 
-        if (!tarSkadeSpeler.erDød) 
+        if (!tarSkadeSpeler.erDød && !inventoryScript.inventortOpen) 
         { 
             er_død_UI.SetActive(false);
             i_Live_UI.SetActive(true);
@@ -62,11 +65,25 @@ public class SpelerUISkript : MonoBehaviour
 
         if (pausSpel.erPausa)
         {
-            pauseKjermUI.SetActive(true);
+            pauseKjerm_UI.SetActive(true);
+
         }
         else
         {
-            pauseKjermUI.SetActive(false);
+            pauseKjerm_UI.SetActive(false);
+        }
+
+        if(inventoryScript.inventortOpen && !pausSpel.erPausa)
+        {
+            i_Live_UI.SetActive(false);
+            inventory_UI.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }else
+        {
+            i_Live_UI.SetActive(true);
+            inventory_UI.SetActive(false);
         }
     }
 
@@ -96,7 +113,7 @@ public class SpelerUISkript : MonoBehaviour
         }
     }
 
-    void GiftBarUptdate()
+    void GiftBarUpdate()
     {
         if(livFunksjonerSpeler.giftOppbygging > 0)
         {
