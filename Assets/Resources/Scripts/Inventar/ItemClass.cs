@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemClass : MonoBehaviour
 {
     public string[] itemTags = { };
     public string itemName;
     public string itemDescription;
-    public int itemSellValue;
+    public Sprite itemImage;
+    public int itemValue;
 
     private InventoryScript inventoryScript;
 
