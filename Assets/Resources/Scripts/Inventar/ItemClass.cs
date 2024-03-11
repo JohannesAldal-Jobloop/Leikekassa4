@@ -8,8 +8,13 @@ public class ItemClass : MonoBehaviour
     public string[] itemTags = { };
     public string itemName;
     public string itemDescription;
-    public Sprite itemImage;
+    public Sprite itemPreviewImage;
+    public Sprite itemDescriptionImage;
     public int itemValue;
+    public int damagePhysical   = 0;
+    public int damageMagic      = 0;
+    public int damageFire       = 0;
+    public int damageSpectral   = 0;
 
     private InventoryScript inventoryScript;
 

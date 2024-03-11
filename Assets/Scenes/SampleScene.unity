@@ -662,8 +662,14 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &23224810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -789,8 +795,14 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 20000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &39665021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -916,8 +928,14 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 20000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &51371166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2810,8 +2828,14 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 999
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &164481214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3427,8 +3451,14 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &205208804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3554,8 +3584,14 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 20000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &206577799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5206,8 +5242,13 @@ MonoBehaviour:
   itemTags: []
   itemName: 
   itemDescription: 
-  itemImage: {fileID: 0}
+  itemPreviewImage: {fileID: 0}
+  itemDescriptionImage: {fileID: 0}
   itemValue: 0
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!1 &373724926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,6 +6026,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 399559062}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &428442758 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 833024548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431277889
 GameObject:
   m_ObjectHideFlags: 0
@@ -6448,8 +6495,14 @@ MonoBehaviour:
   - standard
   itemName: Macineguns of the giants
   itemDescription: Machinegun thats huge that giants use.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 90000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &464684805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6574,8 +6627,14 @@ MonoBehaviour:
   - standard
   itemName: Destroyer off bugs
   itemDescription: This is a flyswatter.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &464686166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9349,8 +9408,14 @@ MonoBehaviour:
   - standard
   itemName: Macineguns of the giants
   itemDescription: Machinegun thats huge that giants use.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 90000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &622083532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12140,6 +12205,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829510153}
   m_Mesh: {fileID: 4493585093827132993, guid: c81708ce9f0461a4a800ab7929a9c03b, type: 3}
+--- !u!1001 &833024548
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1660563846}
+    m_Modifications:
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
+        type: 3}
+      propertyPath: m_Name
+      value: InvItemPreFab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 225865d1c495c8847b6e8227cec0ddee, type: 3}
 --- !u!1 &836312668
 GameObject:
   m_ObjectHideFlags: 0
@@ -15290,7 +15473,7 @@ GameObject:
   - component: {fileID: 997756022}
   - component: {fileID: 997756021}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: ItemImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15313,7 +15496,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -125.4299}
-  m_SizeDelta: {x: 300, y: 168.8598}
+  m_SizeDelta: {x: 300, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997756021
 MonoBehaviour:
@@ -17270,8 +17453,14 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 999
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1146789056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19722,8 +19911,14 @@ MonoBehaviour:
   - standard
   itemName: Macineguns of the giants
   itemDescription: Machinegun thats huge that giants use.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 90000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1320906268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20023,8 +20218,14 @@ MonoBehaviour:
   - standard
   itemName: Macineguns of the giants
   itemDescription: Machinegun thats huge that giants use.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 90000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1344515894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20501,8 +20702,14 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 999
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1367667091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20989,8 +21196,14 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1399766772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24336,7 +24549,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 428442758}
   m_Father: {fileID: 1324744027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -24655,8 +24869,14 @@ MonoBehaviour:
   - standard
   itemName: Destroyer off bugs
   itemDescription: This is a flyswatter.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1710368385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25642,8 +25862,14 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 999
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!1 &1783450265
 GameObject:
   m_ObjectHideFlags: 0
@@ -28070,8 +28296,14 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1907221881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28862,8 +29094,14 @@ MonoBehaviour:
   - standard
   itemName: Destroyer off bugs
   itemDescription: This is a flyswatter.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1970247122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28988,8 +29226,14 @@ MonoBehaviour:
   - standard
   itemName: Destroyer off bugs
   itemDescription: This is a flyswatter.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 9
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &1972064629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29836,8 +30080,14 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
+    type: 3}
   itemValue: 20000
+  damagePhysical: 0
+  damageMagic: 0
+  damageFire: 0
+  damageSpectral: 0
 --- !u!65 &2028285616
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -29,5 +29,6 @@ BUGS:
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input fr� speler etterp�.
 18. Fiende bevegelse Patrulering virker ikkje.
 23. Kodel�s resetter ikkje etter feil kode.
-24. Nor inventaret blir opna so kjem dø kjermen opp.
-25. 
+25. Berre 5 item bilder viser i inventaret.
+26. itemDescrImg er på feil plass i InventoryScript.
+27. 

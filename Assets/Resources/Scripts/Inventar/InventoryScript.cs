@@ -12,11 +12,21 @@ public class InventoryScript : MonoBehaviour
     public bool armorShown = false;
     public bool itemsShown = false;
 
+    private int indexInList = 0;
+
+    private GameObject buttonClicked;
+
     public GameObject itemPrefab;
 
     private GameObject weaponInventory;
     private GameObject armorInventory;
     private GameObject itemsInventory;
+
+    private TextMeshProUGUI itemDescrName;
+    private Image           itemDescrImg;
+    private TextMeshProUGUI itemDescrDescription;
+    private TextMeshProUGUI itemDescrStats;
+    private TextMeshProUGUI itemIndex;
 
     public List<ItemClass> weaponsInInvetoryList = new List<ItemClass>();
     public List<ItemClass> armorInInvetoryList = new List<ItemClass>();
@@ -28,6 +38,11 @@ public class InventoryScript : MonoBehaviour
         weaponInventory = GameObject.Find("ContentWeapons");
         armorInventory = GameObject.Find("ArmorPanel");
         itemsInventory = GameObject.Find("ItemsPanel");
+
+        itemDescrName = GameObject.Find("ItemName").GetComponent<TextMeshProUGUI>();
+        itemDescrImg = GameObject.Find("ItemImg").GetComponent<Image>();
+        itemDescrDescription = GameObject.Find("ItemDescription").GetComponent<TextMeshProUGUI>();
+        itemDescrStats = GameObject.Find("ItemStats").GetComponent<TextMeshProUGUI>();
 
         weaponInventory.SetActive(false);
         armorInventory.SetActive(false);
@@ -74,23 +89,42 @@ public class InventoryScript : MonoBehaviour
 
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
+        indexInList = 0;
         foreach (ItemClass item in itemList)
         {
-            TextMeshProUGUI newItemNamePreFabText = null;
-            Image newItemImagePreFab = null;
-            TextMeshProUGUI newItemValuePreFabText = null;
+            itemDescrImg = null;
 
             GameObject newItem = Instantiate(itemPrefab, inventoryParent.transform);
             newItem.name = item.itemName;
 
-            //newItemNamePreFabText = GameObject.Find(newItem.name + "/ItemNameTextBox").GetComponent<TextMeshProUGUI>();
-            newItemImagePreFab = GameObject.Find(newItem.name + "/ItemImage").GetComponent<Image>();
-            //newItemValuePreFabText = GameObject.Find(newItem.name + "/ItemValueTextBox").GetComponent<TextMeshProUGUI>();
+            itemDescrImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
+            itemIndex = newItem.transform.Find("ItemIndexText").GetComponent<TextMeshProUGUI>();
 
-            //newItemNamePreFabText.text = item.itemName;
-            newItemImagePreFab.sprite = item.itemImage;
-            //newItemValuePreFabText.text = item.itemValue.ToString();
+            itemDescrImg.sprite = item.itemPreviewImage;
+            itemIndex.text = indexInList.ToString();
+
+
+            Button newItemButton = newItem.GetComponent<Button>();
+
+
+            newItemButton.onClick.AddListener(ShowItemDescription);
+            indexInList++;
         }
     }
 
+    public void ShowItemDescription()
+    {
+        string indexString = itemIndex.text.ToString();
+
+        ItemClass itemClass = weaponsInInvetoryList[int.Parse(indexString)];
+
+        itemDescrName.text = itemClass.itemName;
+        itemDescrImg.sprite = itemClass.itemDescriptionImage;
+        itemDescrDescription.text = itemClass.itemDescription;
+        itemDescrStats.text = 
+            "Damage: " + itemClass.damagePhysical + "<br>" +
+            "Damage: " + itemClass.damageMagic + "<br>" +
+            "Damage: " + itemClass.damageFire + "<br>" +
+            "Damage: " + itemClass.damageSpectral ;
+    }
 }
