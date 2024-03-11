@@ -46,7 +46,7 @@ public class SpelerUISkript : MonoBehaviour
         OverSkjoldUpdate();
         GiftBarUpdate();
 
-        if (!tarSkadeSpeler.erDød && !inventoryScript.inventortOpen) 
+        if (!tarSkadeSpeler.erDød && !inventoryScript.inventoryOpen) 
         { 
             er_død_UI.SetActive(false);
             i_Live_UI.SetActive(true);
@@ -73,7 +73,7 @@ public class SpelerUISkript : MonoBehaviour
             pauseKjerm_UI.SetActive(false);
         }
 
-        if(inventoryScript.inventortOpen && !pausSpel.erPausa)
+        if(inventoryScript.inventoryOpen && !pausSpel.erPausa)
         {
             i_Live_UI.SetActive(false);
             inventory_UI.SetActive(true);
