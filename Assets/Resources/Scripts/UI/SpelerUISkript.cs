@@ -46,7 +46,7 @@ public class SpelerUISkript : MonoBehaviour
         OverSkjoldUpdate();
         GiftBarUpdate();
 
-        if (!tarSkadeSpeler.erDød && !inventoryScript.inventoryOpen) 
+        if (!tarSkadeSpeler.erDød) 
         { 
             er_død_UI.SetActive(false);
             i_Live_UI.SetActive(true);

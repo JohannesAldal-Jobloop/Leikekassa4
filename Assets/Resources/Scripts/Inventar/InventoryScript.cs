@@ -83,15 +83,13 @@ public class InventoryScript : MonoBehaviour
             GameObject newItem = Instantiate(itemPrefab, inventoryParent.transform);
             newItem.name = item.itemName;
 
-            newItemNamePreFabText = GameObject.Find(newItem.name + "/ItemNameTextBox").GetComponent<TextMeshProUGUI>();
+            //newItemNamePreFabText = GameObject.Find(newItem.name + "/ItemNameTextBox").GetComponent<TextMeshProUGUI>();
             newItemImagePreFab = GameObject.Find(newItem.name + "/ItemImage").GetComponent<Image>();
-            newItemValuePreFabText = GameObject.Find(newItem.name + "/ItemValueTextBox").GetComponent<TextMeshProUGUI>();
+            //newItemValuePreFabText = GameObject.Find(newItem.name + "/ItemValueTextBox").GetComponent<TextMeshProUGUI>();
 
-            newItemNamePreFabText.text = item.itemName;
+            //newItemNamePreFabText.text = item.itemName;
             newItemImagePreFab.sprite = item.itemImage;
-            newItemValuePreFabText.text = item.itemValue.ToString();
-
-            // Flytte alle items i eit rutenett enten etter kvar er instaniata eller etter alle er.
+            //newItemValuePreFabText.text = item.itemValue.ToString();
         }
     }
 
