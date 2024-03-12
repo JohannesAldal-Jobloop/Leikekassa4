@@ -32,4 +32,5 @@ BUGS:
 23. Kodel�s resetter ikkje etter feil kode.
 25. Berre 5 item bilder viser i inventaret.
 26. itemDescrImg er på feil plass i InventoryScript.
-27. 
+27. Nor eg plukker opp ein ting, so blir alt i hierarchyen putta inn i weaponsShownInInventory.
+28. 

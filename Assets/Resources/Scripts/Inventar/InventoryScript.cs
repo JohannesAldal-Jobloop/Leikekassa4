@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,8 +30,8 @@ public class InventoryScript : MonoBehaviour
     private  Image           itemDescrImg;
     private TextMeshProUGUI itemDescrDescription;
     private TextMeshProUGUI itemDescrStats;
-    
 
+    public List<GameObject> weaponsShownInInventory = new List<GameObject>();
     public List<ItemClass> weaponsInInvetoryList = new List<ItemClass>();
     public List<ItemClass> armorInInvetoryList = new List<ItemClass>();
     public List<ItemClass> itemsInInvetoryList = new List<ItemClass>();
@@ -55,6 +56,12 @@ public class InventoryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if(weaponsInInvetoryList.Count > 0 && GameObject.FindGameObjectsWithTag(weaponsShownInInventoryTag) != null)
+        //{
+        //    weaponsShownInInventory = GameObject.FindGameObjectsWithTag(weaponsShownInInventoryTag);
+        //    //weaponsShownInInventory = FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        //}
+
         if(Input.GetKeyDown(KeyCode.I) && inventoryOpen == false)
         {
             inventoryOpen = true;
@@ -71,7 +78,7 @@ public class InventoryScript : MonoBehaviour
         armorInventory.SetActive(false);
         itemsInventory.SetActive(false);
 
-        if (!weaponsShown)
+        if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
         {
             ShowItems(weaponsInInvetoryList, weaponInventory);
             weaponsShown = true;
@@ -92,6 +99,17 @@ public class InventoryScript : MonoBehaviour
 
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
+        if(weaponsShownInInventory.Count > 0)
+        {
+            int listCount = weaponsShownInInventory.Count;
+
+            for(int i = 0; i < listCount; i++)
+            {
+                weaponsShownInInventory.Remove(gameObject);
+                Destroy(gameObject);
+            }
+        }
+
         indexInList = 0;
         foreach (ItemClass item in itemList)
         {
@@ -99,6 +117,8 @@ public class InventoryScript : MonoBehaviour
 
             GameObject newItem = Instantiate(itemPrefab, inventoryParent.transform);
             newItem.name = item.itemName;
+
+            weaponsShownInInventory.Add(newItem);
 
             itemPreviewImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
             itemIndex = newItem.transform.Find("ItemIndexText").GetComponent<TextMeshProUGUI>();
