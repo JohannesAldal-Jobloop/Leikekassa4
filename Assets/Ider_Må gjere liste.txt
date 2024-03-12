@@ -21,7 +21,8 @@ TING � GJERE:
 40. Lag ei hinderl�ypa for � teste bevegelse og hitbokser.
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 43. Lage ein ny UI som viser infoen til items i inventaret når du trykker på itemet.
-44. 
+44. endre på korleis items blir plukka opp.
+45. 
 
 
 BUGS:

@@ -22,11 +22,14 @@ public class InventoryScript : MonoBehaviour
     private GameObject armorInventory;
     private GameObject itemsInventory;
 
+    private Image itemPreviewImg;
+    private TextMeshProUGUI itemIndex;
+
     private TextMeshProUGUI itemDescrName;
-    private Image           itemDescrImg;
+    private  Image           itemDescrImg;
     private TextMeshProUGUI itemDescrDescription;
     private TextMeshProUGUI itemDescrStats;
-    private TextMeshProUGUI itemIndex;
+    
 
     public List<ItemClass> weaponsInInvetoryList = new List<ItemClass>();
     public List<ItemClass> armorInInvetoryList = new List<ItemClass>();
@@ -39,10 +42,10 @@ public class InventoryScript : MonoBehaviour
         armorInventory = GameObject.Find("ArmorPanel");
         itemsInventory = GameObject.Find("ItemsPanel");
 
-        itemDescrName = GameObject.Find("ItemName").GetComponent<TextMeshProUGUI>();
-        itemDescrImg = GameObject.Find("ItemImg").GetComponent<Image>();
-        itemDescrDescription = GameObject.Find("ItemDescription").GetComponent<TextMeshProUGUI>();
-        itemDescrStats = GameObject.Find("ItemStats").GetComponent<TextMeshProUGUI>();
+        itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
+        itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
+        itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
+        itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
 
         weaponInventory.SetActive(false);
         armorInventory.SetActive(false);
@@ -92,15 +95,15 @@ public class InventoryScript : MonoBehaviour
         indexInList = 0;
         foreach (ItemClass item in itemList)
         {
-            itemDescrImg = null;
+            itemPreviewImg = null;
 
             GameObject newItem = Instantiate(itemPrefab, inventoryParent.transform);
             newItem.name = item.itemName;
 
-            itemDescrImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
+            itemPreviewImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
             itemIndex = newItem.transform.Find("ItemIndexText").GetComponent<TextMeshProUGUI>();
 
-            itemDescrImg.sprite = item.itemPreviewImage;
+            itemPreviewImg.sprite = item.itemPreviewImage;
             itemIndex.text = indexInList.ToString();
 
 
