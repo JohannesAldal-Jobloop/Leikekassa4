@@ -33,7 +33,8 @@ public class InventoryScript : MonoBehaviour
     private TextMeshProUGUI itemDescrDescription;
     private TextMeshProUGUI itemDescrStats;
 
-    public List<GameObject> weaponsShownInInventory = new List<GameObject>();
+    public List<GameObject> itemsShownInInventory = new List<GameObject>();
+
     public List<ItemClass> weaponsInInvetoryList = new List<ItemClass>();
     public List<ItemClass> armorInInvetoryList = new List<ItemClass>();
     public List<ItemClass> itemsInInvetoryList = new List<ItemClass>();
@@ -58,28 +59,29 @@ public class InventoryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(weaponsInInvetoryList.Count > 0 && GameObject.FindGameObjectsWithTag(weaponsShownInInventoryTag) != null)
-        //{
-        //    weaponsShownInInventory = GameObject.FindGameObjectsWithTag(weaponsShownInInventoryTag);
-        //    //weaponsShownInInventory = FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        //}
-
+        // Checks if the player presses I and opens the inventory
+        // and shows all items in their respective places.
         if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == false)
         {
+            // Sets the bool inventoryOpen to make SpelerUISkript show the inventory
             inventoryOpen = true;
-            //if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
-            //{
+
+            // Shows all the items the player has.
             ShowItems(weaponsInInvetoryList, weaponInventory);
-            //}
             
         }
         else if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == true)
         {
+            // Sets the bool inventoryOpen to make SpelerUISkript hide the inventory
             inventoryOpen = false;
-            DestroyItemPrefabs(weaponsShownInInventory);
+
+            // Deletes all the inventory preFabs for the items the player has.
+            DestroyItemPrefabs(itemsShownInInventory);
         }
     }
 
+    // Functions for the buttons in the inventory UI.
+    // Changes between the difrent item types.
     public void ShowWeaponsInInventory()
     {
         weaponInventory.SetActive(true);
@@ -99,48 +101,65 @@ public class InventoryScript : MonoBehaviour
         itemsInventory.SetActive(true);
     }
 
+    /// <summary>
+    /// Function that shows the items from a ItemClass list 
+    /// as children off the inventoryParent
+    /// </summary>
+    /// <param name="itemList"> The liste off items for showing. </param>
+    /// <param name="inventoryParent"> The parent GameObject for the items </param>
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
-        Debug.Log("ShowItems Ran.");
-
-        if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
-        {
-            DestroyItemPrefabs(weaponsShownInInventory);
-        }
-
+        // A forech loop that goes thru all teh items in itemList
+        // and Instantiates a itemPrefab with all the correct item info
+        // as a child of inventoryParent.
         indexInList = 0;
         foreach (ItemClass item in itemList)
         {
             itemPreviewImg = null;
 
+            // Instantiates the prefab and sets its name to the name of the item
             GameObject newItem = Instantiate(itemPrefab, inventoryParent.transform);
             newItem.name = item.itemName;
 
-            weaponsShownInInventory.Add(newItem);
+            // Ads the newItem to the list weaponsShownInInventory
+            // for all the prefabs that shows items.
+            itemsShownInInventory.Add(newItem);
 
+            // Finds the imgae and index text from the newly instantiated prefab.
             itemPreviewImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
             itemIndex = newItem.transform.Find("ItemIndexText").GetComponent<TextMeshProUGUI>();
 
+            // Sets the preview image for the newItem
+            // and the index off the itemclass the info comes from.
             itemPreviewImg.sprite = item.itemPreviewImage;
             itemIndex.text = indexInList.ToString();
 
-
+            // Gets the button component of newItem
             Button newItemButton = newItem.GetComponent<Button>();
 
-
+            // Sets the newItemButton to execute the function
+            // ShowItemDescription when clicked.
             newItemButton.onClick.AddListener(ShowItemDescription);
+
+            // Ups the index of what ItemClass in itemList the infor comes from.
             indexInList++;
         }
 
+        
         weaponsShown = true;
     }
 
+    // Function that shows the description of the item clicked.
     private void ShowItemDescription()
     {
+        // Finds the text of the itemindex text.
         string indexString = itemIndex.text.ToString();
 
+        // Finds the correct itemclass the info came from
+        // by parsing the indexString into an int.
         ItemClass itemClass = weaponsInInvetoryList[int.Parse(indexString)];
 
+        // Sets all the info needed into their respective UI elements.
         itemDescrName.text = itemClass.itemName;
         itemDescrImg.sprite = itemClass.itemDescriptionImage;
         itemDescrDescription.text = itemClass.itemDescription;
@@ -151,19 +170,29 @@ public class InventoryScript : MonoBehaviour
             "Damage: " + itemClass.damageSpectral ;
     }
 
+    /// <summary>
+    /// Destroyes all the GameObjects in itemsToDestroyList.
+    /// Then removes everything from itemsToDestroyList to have an empty list.
+    /// </summary>
+    /// <param name="itemsToDestroyList"> List off the GameObjects that will be destroyed </param>
     private void DestroyItemPrefabs(List<GameObject> itemsToDestroyList)
     {
+        // gets the number of items in the itemsToDestroyList list
         listCount = itemsToDestroyList.Count;
 
+        // Destroyes all GameObjects in itemsToDestroyList
         for (int i = 0; i < listCount; i++)
         {
             Destroy(itemsToDestroyList[i]);
         }
 
+        // Removes everything from itemsToDestroyList to have an empty list.
         for (int i = 0; i < listCount; i++)
         {
             itemsToDestroyList.Remove(itemsToDestroyList[0]);
         }
+
+        
         weaponsShown = false;
     }
 }
