@@ -30,7 +30,6 @@ BUGS:
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input fr� speler etterp�.
 18. Fiende bevegelse Patrulering virker ikkje.
 23. Kodel�s resetter ikkje etter feil kode.
-25. Berre 5 item bilder viser i inventaret.
-26. itemDescrImg er på feil plass i InventoryScript.
-28. Nåe eg har ting i invantaret og plukker opp meir og opptaterer inventaret so blir alt stuck på den inventaret som blir opptatert.
-29. 
+29. Knapp for å sjå description av item i inevntared virker berre ein gong for eit item.
+30. Knapp for vopeninventar er for stor.
+31. 

@@ -7568,7 +7568,7 @@ MonoBehaviour:
   listCount: 0
   itemPrefab: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
     type: 3}
-  weaponsShownInInventory: []
+  itemsShownInInventory: []
   weaponsInInvetoryList: []
   armorInInvetoryList: []
   itemsInInvetoryList: []
