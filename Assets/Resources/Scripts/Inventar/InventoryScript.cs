@@ -15,6 +15,8 @@ public class InventoryScript : MonoBehaviour
 
     private int indexInList = 0;
 
+    public int listCount;
+
     private GameObject buttonClicked;
 
     public GameObject itemPrefab;
@@ -62,13 +64,19 @@ public class InventoryScript : MonoBehaviour
         //    //weaponsShownInInventory = FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         //}
 
-        if(Input.GetKeyDown(KeyCode.I) && inventoryOpen == false)
+        if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == false)
         {
             inventoryOpen = true;
+            //if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
+            //{
+            ShowItems(weaponsInInvetoryList, weaponInventory);
+            //}
+            
         }
-        else if(Input.GetKeyDown(KeyCode.I) && inventoryOpen == true)
+        else if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == true)
         {
             inventoryOpen = false;
+            DestroyItemPrefabs(weaponsShownInInventory);
         }
     }
 
@@ -77,12 +85,6 @@ public class InventoryScript : MonoBehaviour
         weaponInventory.SetActive(true);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(false);
-
-        if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
-        {
-            ShowItems(weaponsInInvetoryList, weaponInventory);
-            weaponsShown = true;
-        }
     }
     public void ShowArmorInInventory()
     {
@@ -99,15 +101,11 @@ public class InventoryScript : MonoBehaviour
 
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
-        if(weaponsShownInInventory.Count > 0)
-        {
-            int listCount = weaponsShownInInventory.Count;
+        Debug.Log("ShowItems Ran.");
 
-            for(int i = 0; i < listCount; i++)
-            {
-                weaponsShownInInventory.Remove(gameObject);
-                Destroy(gameObject);
-            }
+        if (!weaponsShown || weaponsShownInInventory.Count < weaponsInInvetoryList.Count)
+        {
+            DestroyItemPrefabs(weaponsShownInInventory);
         }
 
         indexInList = 0;
@@ -133,9 +131,11 @@ public class InventoryScript : MonoBehaviour
             newItemButton.onClick.AddListener(ShowItemDescription);
             indexInList++;
         }
+
+        weaponsShown = true;
     }
 
-    public void ShowItemDescription()
+    private void ShowItemDescription()
     {
         string indexString = itemIndex.text.ToString();
 
@@ -149,5 +149,21 @@ public class InventoryScript : MonoBehaviour
             "Damage: " + itemClass.damageMagic + "<br>" +
             "Damage: " + itemClass.damageFire + "<br>" +
             "Damage: " + itemClass.damageSpectral ;
+    }
+
+    private void DestroyItemPrefabs(List<GameObject> itemsToDestroyList)
+    {
+        listCount = itemsToDestroyList.Count;
+
+        for (int i = 0; i < listCount; i++)
+        {
+            Destroy(itemsToDestroyList[i]);
+        }
+
+        for (int i = 0; i < listCount; i++)
+        {
+            itemsToDestroyList.Remove(itemsToDestroyList[0]);
+        }
+        weaponsShown = false;
     }
 }
