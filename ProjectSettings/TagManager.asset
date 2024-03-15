@@ -12,6 +12,7 @@ TagManager:
   - KulaSpelar
   - Kula
   - ItemShownWeapons
+  - PickupItem
   layers:
   - Default
   - TransparentFX

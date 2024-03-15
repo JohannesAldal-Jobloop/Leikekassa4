@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 23224809}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - item
   - short_Sword
   - magic
   itemName: Broken sword
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 39665020}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - item
   - great_Hammer
   - BlackCore
   itemName: Blackcore Hammer
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 51371165}
   m_Layer: 0
   m_Name: Cube (17)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3039,7 +3039,7 @@ GameObject:
   - component: {fileID: 164481213}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3057,7 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - armor
   - dagger
   - standard
   itemName: Weapon
@@ -3663,7 +3663,7 @@ GameObject:
   - component: {fileID: 205208803}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3681,7 +3681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - item
   - short_Sword
   - magic
   itemName: Broken sword
@@ -3795,7 +3795,7 @@ GameObject:
   - component: {fileID: 206577798}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6329,12 +6329,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 399559062}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &428442758 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-    type: 3}
-  m_PrefabInstance: {fileID: 833024548}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428553754
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,7 +6843,7 @@ GameObject:
   - component: {fileID: 464684804}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6981,7 +6975,7 @@ GameObject:
   - component: {fileID: 464686165}
   m_Layer: 0
   m_Name: Cube (19)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7934,11 +7928,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b257164476332c248b679c33f17a5138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listCount: 0
+  scrollViewContentActive: 0
+  inventoryCategoryTags:
+  - 
+  - 
+  - 
   inventoryOpen: 0
   weaponsShown: 0
   armorShown: 0
   itemsShown: 0
-  listCount: 0
   itemPrefab: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
     type: 3}
   itemsShownInInventory: []
@@ -9872,7 +9871,7 @@ GameObject:
   - component: {fileID: 622083531}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9890,7 +9889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - armor
   - machinegun
   - standard
   itemName: Macineguns of the giants
@@ -12692,124 +12691,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829510153}
   m_Mesh: {fileID: 4493585093827132993, guid: c81708ce9f0461a4a800ab7929a9c03b, type: 3}
---- !u!1001 &833024548
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1660563846}
-    m_Modifications:
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 733638252054795991, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
-        type: 3}
-      propertyPath: m_Name
-      value: InvItemPreFab
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 225865d1c495c8847b6e8227cec0ddee, type: 3}
 --- !u!1 &836312668
 GameObject:
   m_ObjectHideFlags: 0
@@ -17437,6 +17318,7 @@ GameObject:
   - component: {fileID: 1137935876}
   - component: {fileID: 1137935877}
   - component: {fileID: 1137935878}
+  - component: {fileID: 1137935880}
   m_Layer: 3
   m_Name: SpelerFPS
   m_TagString: Player
@@ -17688,6 +17570,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: -0.0054475707, y: -0.67889404, z: 0.09602308}
+--- !u!114 &1137935880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137935866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821fb5f94cfb5cb4caaf5a858f506eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
@@ -17809,7 +17703,7 @@ GameObject:
   - component: {fileID: 1146789055}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17827,7 +17721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - armor
   - dagger
   - standard
   itemName: Weapon
@@ -20192,7 +20086,7 @@ GameObject:
   - component: {fileID: 1320906267}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20499,7 +20393,7 @@ GameObject:
   - component: {fileID: 1344515893}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20983,7 +20877,7 @@ GameObject:
   - component: {fileID: 1367667090}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21001,7 +20895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - armor
   - dagger
   - standard
   itemName: Weapon
@@ -21259,8 +21153,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376919744}
+  - component: {fileID: 1376919745}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ContentItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21285,6 +21180,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1376919745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376919743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 65, y: 65}
+  m_Spacing: {x: 5, y: 5}
+  m_Constraint: 1
+  m_ConstraintCount: 6
 --- !u!1 &1379607325
 GameObject:
   m_ObjectHideFlags: 0
@@ -21512,7 +21431,7 @@ GameObject:
   - component: {fileID: 1399766771}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23190,8 +23109,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1517754494}
+  - component: {fileID: 1517754495}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ContentArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23216,6 +23136,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1517754495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517754493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 65, y: 65}
+  m_Spacing: {x: 5, y: 5}
+  m_Constraint: 1
+  m_ConstraintCount: 6
 --- !u!1 &1520368910
 GameObject:
   m_ObjectHideFlags: 0
@@ -25120,8 +25064,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 428442758}
+  m_Children: []
   m_Father: {fileID: 1324744027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -25454,7 +25397,7 @@ GameObject:
   - component: {fileID: 1710368384}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26361,7 +26304,7 @@ GameObject:
   - component: {fileID: 1780880270}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26465,7 +26408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - armor
   - dagger
   - standard
   itemName: Weapon
@@ -28881,7 +28824,7 @@ GameObject:
   - component: {fileID: 1907221880}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28899,7 +28842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - item
   - short_Sword
   - magic
   itemName: Broken sword
@@ -29654,7 +29597,7 @@ GameObject:
   - component: {fileID: 1970247121}
   m_Layer: 0
   m_Name: Cube (18)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29786,7 +29729,7 @@ GameObject:
   - component: {fileID: 1972064628}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30765,7 +30708,7 @@ GameObject:
   - component: {fileID: 2028285615}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: PickupItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30783,7 +30726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTags:
-  - weapon
+  - item
   - great_Hammer
   - BlackCore
   itemName: Blackcore Hammer

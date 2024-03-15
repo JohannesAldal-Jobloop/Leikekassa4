@@ -8,18 +8,22 @@ using UnityEngine.UI;
 
 public class InventoryScript : MonoBehaviour
 {
+    private int indexInList = 0;
+    public int listCount;
+    public int scrollViewContentActive;
+
+    [HideInInspector] public string[] inventoryCategoryTags = new string[3];
+
     public bool inventoryOpen = false;
     public bool weaponsShown = false;
     public bool armorShown = false;
     public bool itemsShown = false;
 
-    private int indexInList = 0;
-
-    public int listCount;
-
-    private GameObject buttonClicked;
+    //private GameObject buttonClicked;
 
     public GameObject itemPrefab;
+
+    private GameObject[] scrollViewContent = new GameObject[3];
 
     private GameObject weaponInventory;
     private GameObject armorInventory;
@@ -29,7 +33,7 @@ public class InventoryScript : MonoBehaviour
     private TextMeshProUGUI itemIndex;
 
     private TextMeshProUGUI itemDescrName;
-    private  Image           itemDescrImg;
+    private  Image          itemDescrImg;
     private TextMeshProUGUI itemDescrDescription;
     private TextMeshProUGUI itemDescrStats;
 
@@ -42,15 +46,21 @@ public class InventoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        weaponInventory = GameObject.Find("ScrollViewWeapons");
-        armorInventory = GameObject.Find("ScrollViewArmor");
-        itemsInventory = GameObject.Find("ScrollViewItems");
+        // Finds all the requerd GameObjects and components.
+        FindGameObjects_Components();
 
-        itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
-        itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
-        itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
-        itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
+        inventoryCategoryTags[0] = "weapon";
+        inventoryCategoryTags[1] = "armor";
+        inventoryCategoryTags[2] = "item";
 
+        Debug.Log("inventoty tag index 0: " + inventoryCategoryTags[0]);
+
+        
+
+        
+
+        // Opens the weapon inventory by default.
+        scrollViewContentActive = 0;
         weaponInventory.SetActive(true);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(false);
@@ -67,7 +77,9 @@ public class InventoryScript : MonoBehaviour
             inventoryOpen = true;
 
             // Shows all the items the player has.
-            ShowItems(weaponsInInvetoryList, weaponInventory);
+            ShowItems(weaponsInInvetoryList, scrollViewContent[0]);
+            ShowItems(armorInInvetoryList, scrollViewContent[1]);
+            ShowItems(itemsInInvetoryList, scrollViewContent[2]);
             
         }
         else if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == true)
@@ -80,22 +92,42 @@ public class InventoryScript : MonoBehaviour
         }
     }
 
+    // Function that defines all the variables that needs stuff from the hierarchy.
+    private void FindGameObjects_Components()
+    {
+        scrollViewContent[0] = GameObject.Find("ContentWeapons");
+        scrollViewContent[1] = GameObject.Find("ContentArmor");
+        scrollViewContent[2] = GameObject.Find("ContentItems");
+
+        weaponInventory = GameObject.Find("ScrollViewWeapons");
+        armorInventory = GameObject.Find("ScrollViewArmor");
+        itemsInventory = GameObject.Find("ScrollViewItems");
+
+        itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
+        itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
+        itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
+        itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
+    }
+
     // Functions for the buttons in the inventory UI.
-    // Changes between the difrent item types.
+    // Changes between the difrent item type inventories.
     public void ShowWeaponsInInventory()
     {
+        scrollViewContentActive = 0;
         weaponInventory.SetActive(true);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(false);
     }
     public void ShowArmorInInventory()
     {
+        scrollViewContentActive = 1;
         weaponInventory.SetActive(false);
         armorInventory.SetActive(true);
         itemsInventory.SetActive(false);
     }
     public void ShowItemsInInventory()
     {
+        scrollViewContentActive = 2;
         weaponInventory.SetActive(false);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(true);

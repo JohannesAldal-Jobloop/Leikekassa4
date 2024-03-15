@@ -30,21 +30,21 @@ public class ItemClass : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.name == "SpelerFPS")
-        {
-            inventoryScript.weaponsInInvetoryList.Add(this);
-            gameObject.SetActive(false);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.name == "SpelerFPS")
+    //    {
+    //        inventoryScript.weaponsInInvetoryList.Add(this);
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "SpelerFPS")
-        {
-            inventoryScript.weaponsInInvetoryList.Add(this);
-            gameObject.SetActive(false);
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.name == "SpelerFPS")
+    //    {
+    //        inventoryScript.weaponsInInvetoryList.Add(this);
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 }
