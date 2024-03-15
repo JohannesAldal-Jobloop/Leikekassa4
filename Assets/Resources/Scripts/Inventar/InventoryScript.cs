@@ -42,16 +42,16 @@ public class InventoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        weaponInventory = GameObject.Find("ContentWeapons");
-        armorInventory = GameObject.Find("ArmorPanel");
-        itemsInventory = GameObject.Find("ItemsPanel");
+        weaponInventory = GameObject.Find("ScrollViewWeapons");
+        armorInventory = GameObject.Find("ScrollViewArmor");
+        itemsInventory = GameObject.Find("ScrollViewItems");
 
         itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
         itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
         itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
         itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
 
-        weaponInventory.SetActive(false);
+        weaponInventory.SetActive(true);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(false);
     }
