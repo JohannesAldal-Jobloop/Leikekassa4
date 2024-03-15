@@ -11,6 +11,7 @@ public class InventoryScript : MonoBehaviour
     private int indexInList = 0;
     public int listCount;
     public int scrollViewContentActive;
+    private int itemPrefabIndex;
 
     [HideInInspector] public string[] inventoryCategoryTags = new string[3];
 
@@ -52,11 +53,6 @@ public class InventoryScript : MonoBehaviour
         inventoryCategoryTags[0] = "weapon";
         inventoryCategoryTags[1] = "armor";
         inventoryCategoryTags[2] = "item";
-
-        Debug.Log("inventoty tag index 0: " + inventoryCategoryTags[0]);
-
-        
-
         
 
         // Opens the weapon inventory by default.
@@ -171,8 +167,17 @@ public class InventoryScript : MonoBehaviour
 
             // Sets the newItemButton to execute the function
             // ShowItemDescription when clicked.
-            newItemButton.onClick.AddListener(ShowItemDescription);
-
+            if (item.itemTags[0] == "weapon")
+            {
+                newItemButton.onClick.AddListener(ShowItemDescription);
+            }else if(item.itemTags[0] == "armor")
+            {
+                newItemButton.onClick.AddListener(ShowItemDescription);
+            }else if(item.itemTags[0] == "item")
+            {
+                newItemButton.onClick.AddListener(ShowItemDescription);
+            }
+           
             // Ups the index of what ItemClass in itemList the infor comes from.
             indexInList++;
         }
@@ -195,6 +200,7 @@ public class InventoryScript : MonoBehaviour
         itemDescrName.text = itemClass.itemName;
         itemDescrImg.sprite = itemClass.itemDescriptionImage;
         itemDescrDescription.text = itemClass.itemDescription;
+
         itemDescrStats.text = 
             "Damage: " + itemClass.damagePhysical + "<br>" +
             "Damage: " + itemClass.damageMagic + "<br>" +

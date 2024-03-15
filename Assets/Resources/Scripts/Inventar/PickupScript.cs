@@ -25,8 +25,6 @@ public class PickupScript : MonoBehaviour
 
         if(collision.transform.tag == "PickupItem")
         {
-            Debug.Log("Collision item");
-
             itemToPickUp = collision.transform.GetComponent<ItemClass>();
 
             if(itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[0])

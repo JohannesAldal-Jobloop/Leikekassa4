@@ -662,7 +662,7 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 974a7d22a0ec0c34db59fc0e1d054990, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 9000
@@ -795,7 +795,7 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 974a7d22a0ec0c34db59fc0e1d054990, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 20000
@@ -3062,7 +3062,7 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 0b83cebb16dd40443ae2d9b7cfaa6028, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 999
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 974a7d22a0ec0c34db59fc0e1d054990, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 9000
@@ -9894,7 +9894,7 @@ MonoBehaviour:
   - standard
   itemName: Macineguns of the giants
   itemDescription: Machinegun thats huge that giants use.
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 0b83cebb16dd40443ae2d9b7cfaa6028, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 90000
@@ -17726,7 +17726,7 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 0b83cebb16dd40443ae2d9b7cfaa6028, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 999
@@ -20900,7 +20900,7 @@ MonoBehaviour:
   - standard
   itemName: Weapon
   itemDescription: This is a weapon
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 0b83cebb16dd40443ae2d9b7cfaa6028, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 999
@@ -26411,9 +26411,9 @@ MonoBehaviour:
   - armor
   - dagger
   - standard
-  itemName: Weapon
-  itemDescription: This is a weapon
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemName: Old iron helmet
+  itemDescription: This is a medival helmet in iron.
+  itemPreviewImage: {fileID: 21300000, guid: 0b83cebb16dd40443ae2d9b7cfaa6028, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 999
@@ -28847,7 +28847,7 @@ MonoBehaviour:
   - magic
   itemName: Broken sword
   itemDescription: This is a shortsword
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 974a7d22a0ec0c34db59fc0e1d054990, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 9000
@@ -30732,7 +30732,7 @@ MonoBehaviour:
   itemName: Blackcore Hammer
   itemDescription: This is a weapon that has a black core that gives it a powerfull
     slam.
-  itemPreviewImage: {fileID: 21300000, guid: dcfcf5e0686a90349880c339d42b8428, type: 3}
+  itemPreviewImage: {fileID: 21300000, guid: 974a7d22a0ec0c34db59fc0e1d054990, type: 3}
   itemDescriptionImage: {fileID: 21300000, guid: 4c2bb2c57d19ad14fbcca3e8a60b4fb7,
     type: 3}
   itemValue: 20000
