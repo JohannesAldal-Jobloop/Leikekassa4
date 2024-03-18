@@ -73,17 +73,19 @@ public class SpelerUISkript : MonoBehaviour
             pauseKjerm_UI.SetActive(false);
         }
 
-        if(inventoryScript.inventoryOpen && !pausSpel.erPausa)
+        if(inventoryScript.inventoryOpen)
         {
             i_Live_UI.SetActive(false);
             inventory_UI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }else
+        }
+        else
         {
             i_Live_UI.SetActive(true);
             inventory_UI.SetActive(false);
+
         }
     }
 

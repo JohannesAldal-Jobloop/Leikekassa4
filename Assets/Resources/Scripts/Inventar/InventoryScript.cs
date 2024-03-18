@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,8 +20,6 @@ public class InventoryScript : MonoBehaviour
     public bool weaponsShown = false;
     public bool armorShown = false;
     public bool itemsShown = false;
-
-    //private GameObject buttonClicked;
 
     public GameObject itemPrefab;
 
@@ -43,6 +42,8 @@ public class InventoryScript : MonoBehaviour
     public List<ItemClass> weaponsInInvetoryList = new List<ItemClass>();
     public List<ItemClass> armorInInvetoryList = new List<ItemClass>();
     public List<ItemClass> itemsInInvetoryList = new List<ItemClass>();
+
+    PausSpel pausSpel;
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +68,7 @@ public class InventoryScript : MonoBehaviour
     {
         // Checks if the player presses I and opens the inventory
         // and shows all items in their respective places.
-        if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == false)
+        if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == false && !pausSpel.erPausa)
         {
             // Sets the bool inventoryOpen to make SpelerUISkript show the inventory
             inventoryOpen = true;
@@ -76,15 +77,22 @@ public class InventoryScript : MonoBehaviour
             ShowItems(weaponsInInvetoryList, scrollViewContent[0]);
             ShowItems(armorInInvetoryList, scrollViewContent[1]);
             ShowItems(itemsInInvetoryList, scrollViewContent[2]);
-            
-        }
-        else if(Input.GetKeyUp(KeyCode.I) && inventoryOpen == true)
-        {
-            // Sets the bool inventoryOpen to make SpelerUISkript hide the inventory
-            inventoryOpen = false;
 
-            // Deletes all the inventory preFabs for the items the player has.
-            DestroyItemPrefabs(itemsShownInInventory);
+            Time.timeScale = 0;
+        }
+        else if(inventoryOpen == true)
+        {
+            if(Input.GetKeyUp(KeyCode.I) || Input.GetKeyUp(KeyCode.Escape))
+            {
+                Time.timeScale = 1.0f;
+
+                // Sets the bool inventoryOpen to make SpelerUISkript hide the inventory
+                inventoryOpen = false;
+
+                // Deletes all the inventory preFabs for the items the player has.
+                DestroyItemPrefabs(itemsShownInInventory);
+            }
+            
         }
     }
 
@@ -103,6 +111,8 @@ public class InventoryScript : MonoBehaviour
         itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
         itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
         itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
+
+        pausSpel = GameObject.Find("SpelSjef").GetComponent<PausSpel>();
     }
 
     // Functions for the buttons in the inventory UI.
@@ -157,11 +167,6 @@ public class InventoryScript : MonoBehaviour
             itemPreviewImg = newItem.transform.Find("ItemImage").GetComponent<Image>();
             itemIndex = newItem.transform.Find("ItemIndexText").GetComponent<TextMeshProUGUI>();
 
-            // Sets the preview image for the newItem
-            // and the index off the itemclass the info comes from.
-            itemPreviewImg.sprite = item.itemPreviewImage;
-            itemIndex.text = indexInList.ToString();
-
             // Gets the button component of newItem
             Button newItemButton = newItem.GetComponent<Button>();
 
@@ -169,15 +174,22 @@ public class InventoryScript : MonoBehaviour
             // ShowItemDescription when clicked.
             if (item.itemTags[0] == "weapon")
             {
-                newItemButton.onClick.AddListener(ShowItemDescription);
-            }else if(item.itemTags[0] == "armor")
-            {
-                newItemButton.onClick.AddListener(ShowItemDescription);
-            }else if(item.itemTags[0] == "item")
-            {
-                newItemButton.onClick.AddListener(ShowItemDescription);
+                newItemButton.onClick.AddListener(delegate { ShowItemDescription(weaponsInInvetoryList, newItem.transform.Find("ItemIndexText")); });
             }
-           
+            else if (item.itemTags[0] == "armor")
+            {
+                newItemButton.onClick.AddListener(delegate { ShowItemDescription(armorInInvetoryList, newItem.transform.Find("ItemIndexText")); });
+            }
+            else if (item.itemTags[0] == "item")
+            {
+                newItemButton.onClick.AddListener(delegate { ShowItemDescription(itemsInInvetoryList, newItem.transform.Find("ItemIndexText")); });
+            }
+
+            // Sets the preview image for the newItem
+            // and the index off the itemclass the info comes from.
+            itemPreviewImg.sprite = item.itemPreviewImage;
+            itemIndex.text = indexInList.ToString();
+
             // Ups the index of what ItemClass in itemList the infor comes from.
             indexInList++;
         }
@@ -187,14 +199,21 @@ public class InventoryScript : MonoBehaviour
     }
 
     // Function that shows the description of the item clicked.
-    private void ShowItemDescription()
+    /// <summary>
+    /// Function that showes the description of the item you cliked in the innentory.
+    /// </summary>
+    /// <param name="itemClassList"> The list of itemclasses the item is part off </param>
+    /// <param name="indexText"> the transform of the GameObject that contains the
+    ///                          index of the item in the itemClassList </param>
+    private void ShowItemDescription(List<ItemClass> itemClassList, Transform indexText)
     {
-        // Finds the text of the itemindex text.
-        string indexString = itemIndex.text.ToString();
+        // Finds the TexMeshProUGUI from the transform indexText.
+        TextMeshProUGUI indexTextMeshPro = indexText.GetComponent<TextMeshProUGUI>();
+        string indexString = indexTextMeshPro.text.ToString();
 
         // Finds the correct itemclass the info came from
         // by parsing the indexString into an int.
-        ItemClass itemClass = weaponsInInvetoryList[int.Parse(indexString)];
+        ItemClass itemClass = itemClassList[int.Parse(indexString)];
 
         // Sets all the info needed into their respective UI elements.
         itemDescrName.text = itemClass.itemName;

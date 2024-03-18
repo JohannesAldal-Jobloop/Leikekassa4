@@ -60,11 +60,8 @@ public class PickupScript : MonoBehaviour
 
         if (other.transform.tag == "PickupItem")
         {
-            Debug.Log("trigger item"); 
 
             itemToPickUp = other.transform.GetComponent<ItemClass>();
-
-            Debug.Log(itemToPickUp);
 
             if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[0])
             {

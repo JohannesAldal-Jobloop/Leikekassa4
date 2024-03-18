@@ -29,4 +29,4 @@ BUGS:
 18. Fiende bevegelse Patrulering virker ikkje.
 23. Kodel�s resetter ikkje etter feil kode.
 29. Knapp for å sjå description av item i inevntared virker berre ein gong for eit item.
-31. 
+32. 
