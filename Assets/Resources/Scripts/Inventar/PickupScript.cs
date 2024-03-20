@@ -71,6 +71,8 @@ public class PickupScript : MonoBehaviour
             {
                 //--------- Interact pickup ----------
 
+
+
                 //------------------------------------
             }
             else
