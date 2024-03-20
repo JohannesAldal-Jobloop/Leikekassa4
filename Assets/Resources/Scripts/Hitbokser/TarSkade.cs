@@ -123,7 +123,9 @@ public class TarSkade : MonoBehaviour
             }
             else
             {
-                //yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.01f);
+                gameObject.SetActive(false);
+                
                 //SlettSegSjølv();
             }
 
