@@ -29,6 +29,7 @@ public class SkytevåpenScript : MonoBehaviour
     public VåpenVariabler aktivVåpenVariabler;
     private SpelerDødSkript spelerDødSkript;
     private SkytevåpenRekylSkript rekylSkript;
+    private SpelerUISkript spelerUISkript;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class SkytevåpenScript : MonoBehaviour
         aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
         spelerDødSkript = GameObject.Find("SpelerFPS").GetComponent<SpelerDødSkript>();
         rekylSkript = GameObject.Find("Main Camera").GetComponent<SkytevåpenRekylSkript>();
+        spelerUISkript = GameObject.Find("SpelSjef").GetComponentInParent<SpelerUISkript>();
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class SkytevåpenScript : MonoBehaviour
     {
         FinnAlleAktiveGameobjectForScript();
 
-        if (!spelerDødSkript.respawner)
+        if (!spelerDødSkript.respawner || !spelerUISkript.inventory_UI.activeInHierarchy)
         {
             if (aktivVåpenVariabler.skyteModus == 1 && aktivVåpenVariabler.magasinMengdeNo != 0 && !reloader)
             {

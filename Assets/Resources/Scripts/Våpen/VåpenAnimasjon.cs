@@ -12,7 +12,7 @@ public class VåpenAnimasjon : MonoBehaviour
     void Start()
     {
         skytevåpenScript = GameObject.Find("VåpenHand").GetComponent<SkytevåpenScript>();
-        animator = skytevåpenScript.aktivtVåpen.GetComponent<Animator>();
+        FinnAnimator();
     }
 
     // Update is called once per frame
@@ -37,5 +37,11 @@ public class VåpenAnimasjon : MonoBehaviour
             skytevåpenScript.aktivtSiktepunkt.SetActive(true);
         }
     }
-   
+
+    IEnumerator FinnAnimator()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator = skytevåpenScript.aktivtVåpen.GetComponent<Animator>();
+    }
+
 }

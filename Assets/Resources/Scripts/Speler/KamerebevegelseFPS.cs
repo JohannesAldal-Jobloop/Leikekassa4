@@ -36,7 +36,7 @@ public class KamerebevegelseFPS : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (spelerDødSkript.respawner == false)
+        if (spelerDødSkript.respawner == false && Cursor.lockState == CursorLockMode.Locked)
         {
             BevegKameraMedMus();
         }
