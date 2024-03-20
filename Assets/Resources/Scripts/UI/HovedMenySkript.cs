@@ -37,9 +37,10 @@ public class HovedMenySkript : MonoBehaviour
         innstillinger.SetActive(true);
     }
 
-    public void Tilbake()
+    public void Tilbake(GameObject pastScreen)
     {
         innstillinger.SetActive(false);
         hovedSkjerm.SetActive(true);
     }
+
 }
