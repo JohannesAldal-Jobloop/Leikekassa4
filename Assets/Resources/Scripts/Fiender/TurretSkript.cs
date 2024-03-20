@@ -32,16 +32,16 @@ public class TurretSkript : MonoBehaviour
     void Update()
     {
 
-        //if (rekkevidder.serLayerTarget)
-        //{
-        //    SjÂPÂSpelar();
-        //}
-        
+        if (rekkevidder.serLayerTarget)
+        {
+            SjÂPÂSpelar();
+        }
 
-        //if (rekkevidder.angripLayerTarget)
-        //{
-        //    TurretSkyting();
-        //}
+
+        if (rekkevidder.angripLayerTarget)
+        {
+            TurretSkyting();
+        }
     }
 
     void SjÂPÂSpelar()

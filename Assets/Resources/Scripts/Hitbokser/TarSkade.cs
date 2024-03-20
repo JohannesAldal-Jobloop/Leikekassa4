@@ -45,7 +45,7 @@ public class TarSkade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SkjekkOmHarLiv();
+        StartCoroutine(SkjekkOmHarLiv());
     }
 
     public void TaSkade(float skade)
@@ -111,7 +111,7 @@ public class TarSkade : MonoBehaviour
         }
     }
 
-    void SkjekkOmHarLiv()
+    IEnumerator SkjekkOmHarLiv()
     {
         if (liv <= 0)
         {
@@ -123,7 +123,8 @@ public class TarSkade : MonoBehaviour
             }
             else
             {
-                SlettSegSjølv();
+                //yield return new WaitForSeconds(1);
+                //SlettSegSjølv();
             }
 
         }
