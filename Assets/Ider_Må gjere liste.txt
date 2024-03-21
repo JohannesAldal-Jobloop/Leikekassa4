@@ -21,7 +21,8 @@ TING � GJERE:
 40. Lag ei hinderl�ypa for � teste bevegelse og hitbokser.
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 45. Lage ei kista.
-46. 
+46. Laga ein klasse med alle keybinds.
+47. 
 
 
 BUGS:
