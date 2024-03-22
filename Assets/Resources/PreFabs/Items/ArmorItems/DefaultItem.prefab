@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 1
   itemTags:
   - armor
   - dagger
@@ -200,7 +201,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6677939072751090193}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 654b720dc209d904da74a62adda52132, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

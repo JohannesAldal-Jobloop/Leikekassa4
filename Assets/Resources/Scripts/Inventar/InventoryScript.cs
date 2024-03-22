@@ -48,8 +48,10 @@ public class InventoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Finds all the requerd GameObjects and components.
-        FindGameObjects_Components();
+        //// Finds all the requerd GameObjects and components.
+        //FindGameObjects_Components();
+
+        pausSpel = GameObject.Find("SpelSjef").GetComponent<PausSpel>();
 
         inventoryCategoryTags[0] = "weapon";
         inventoryCategoryTags[1] = "armor";
@@ -58,9 +60,9 @@ public class InventoryScript : MonoBehaviour
 
         // Opens the weapon inventory by default.
         scrollViewContentActive = 0;
-        weaponInventory.SetActive(true);
-        armorInventory.SetActive(false);
-        itemsInventory.SetActive(false);
+        //weaponInventory.SetActive(true);
+        //armorInventory.SetActive(false);
+        //itemsInventory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -119,6 +121,7 @@ public class InventoryScript : MonoBehaviour
     // Changes between the difrent item type inventories.
     public void ShowWeaponsInInventory()
     {
+
         scrollViewContentActive = 0;
         weaponInventory.SetActive(true);
         armorInventory.SetActive(false);
@@ -147,6 +150,8 @@ public class InventoryScript : MonoBehaviour
     /// <param name="inventoryParent"> The parent GameObject for the items </param>
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
+        
+
         // A forech loop that goes thru all teh items in itemList
         // and Instantiates a itemPrefab with all the correct item info
         // as a child of inventoryParent.

@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - item
   - short_Sword
@@ -788,6 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - item
   - great_Hammer
@@ -921,6 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - great_Hammer
@@ -3056,6 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - armor
   - dagger
@@ -3756,6 +3760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - item
   - short_Sword
@@ -3888,6 +3893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - great_Hammer
@@ -6936,6 +6942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - machinegun
@@ -7068,6 +7075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -9964,6 +9972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - armor
   - machinegun
@@ -16219,12 +16228,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultItem
       objectReference: {fileID: 0}
-    - target: {fileID: 4332244069156834215, guid: 95392d4c580672c4aad9a2491ba3714c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 654b720dc209d904da74a62adda52132,
-        type: 2}
     - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16273,6 +16276,11 @@ PrefabInstance:
     - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: interactPickup
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17716,7 +17724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRotasjonY: 0
-  aktivtSpelarSpawnpointIndex: 0
+  aktivtSpelarSpawnpointIndex: 6
   respawner: 0
   aktivSpelarSpawnpointTransform: {fileID: 1759065273}
   spelarSpawnpointer:
@@ -17827,7 +17835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opacity: 0
   interactWaitForSeconds: 0
-  interactPickup: 0
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
@@ -17966,6 +17973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - armor
   - dagger
@@ -20483,6 +20491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - machinegun
@@ -20790,6 +20799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - machinegun
@@ -21274,6 +21284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - armor
   - dagger
@@ -21828,6 +21839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - short_Sword
@@ -26077,6 +26089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -29492,6 +29505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - item
   - short_Sword
@@ -30341,6 +30355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -30473,6 +30488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -31452,6 +31468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
   itemTags:
   - item
   - great_Hammer
