@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ItemClass : MonoBehaviour
 {
-    public bool interactPickup = false;
     public string[] itemTags = { };
     public string itemName;
     public string itemDescription;
