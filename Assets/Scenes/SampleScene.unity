@@ -16219,12 +16219,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultItem
       objectReference: {fileID: 0}
-    - target: {fileID: 4332244069156834215, guid: 95392d4c580672c4aad9a2491ba3714c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 654b720dc209d904da74a62adda52132,
-        type: 2}
     - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17828,6 +17822,8 @@ MonoBehaviour:
   opacity: 0
   interactWaitForSeconds: 0
   interactPickup: 0
+  interactKey: 101
+  interactProgressImg: {fileID: 0}
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
@@ -25698,7 +25694,7 @@ GameObject:
   - component: {fileID: 1665611230}
   - component: {fileID: 1665611229}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: InteractProgressImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

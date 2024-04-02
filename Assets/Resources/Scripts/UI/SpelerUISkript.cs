@@ -23,6 +23,10 @@ public class SpelerUISkript : MonoBehaviour
     public PausSpel pausSpel;
     public InventoryScript inventoryScript;
 
+    private GameObject weaponInventory;
+    private GameObject armorInventory;
+    private GameObject itemsInventory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,16 @@ public class SpelerUISkript : MonoBehaviour
         overSkjoldBarSlider = overSkjoldBarGO.GetComponent<Slider>();
         pausSpel = GetComponent<PausSpel>();
         inventoryScript = GetComponent<InventoryScript>();
+
+        // Opens the weapon inventory by default.
+
+        weaponInventory = GameObject.Find("ScrollViewWeapons");
+        armorInventory = GameObject.Find("ScrollViewArmor");
+        itemsInventory = GameObject.Find("ScrollViewItems");
+        inventoryScript.scrollViewContentActive = 0;
+        weaponInventory.SetActive(true);
+        armorInventory.SetActive(false);
+        itemsInventory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -129,5 +143,29 @@ public class SpelerUISkript : MonoBehaviour
         giftBar.maxValue = livFunksjonerSpeler.giftResistanse;
         giftBar.value = livFunksjonerSpeler.giftOppbygging;
 
+    }
+
+    // Functions for the buttons in the inventory UI.
+    // Changes between the difrent item type inventories.
+    public void ShowWeaponsInInventory()
+    {
+        inventoryScript.scrollViewContentActive = 0;
+        weaponInventory.SetActive(true);
+        armorInventory.SetActive(false);
+        itemsInventory.SetActive(false);
+    }
+    public void ShowArmorInInventory()
+    {
+        inventoryScript.scrollViewContentActive = 1;
+        weaponInventory.SetActive(false);
+        armorInventory.SetActive(true);
+        itemsInventory.SetActive(false);
+    }
+    public void ShowItemsInInventory()
+    {
+        inventoryScript.scrollViewContentActive = 2;
+        weaponInventory.SetActive(false);
+        armorInventory.SetActive(false);
+        itemsInventory.SetActive(true);
     }
 }

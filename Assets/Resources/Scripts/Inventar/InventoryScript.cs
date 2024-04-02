@@ -25,10 +25,6 @@ public class InventoryScript : MonoBehaviour
 
     private GameObject[] scrollViewContent = new GameObject[3];
 
-    private GameObject weaponInventory;
-    private GameObject armorInventory;
-    private GameObject itemsInventory;
-
     private Image itemPreviewImg;
     private TextMeshProUGUI itemIndex;
 
@@ -54,13 +50,6 @@ public class InventoryScript : MonoBehaviour
         inventoryCategoryTags[0] = "weapon";
         inventoryCategoryTags[1] = "armor";
         inventoryCategoryTags[2] = "item";
-        
-
-        // Opens the weapon inventory by default.
-        scrollViewContentActive = 0;
-        weaponInventory.SetActive(true);
-        armorInventory.SetActive(false);
-        itemsInventory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -103,10 +92,6 @@ public class InventoryScript : MonoBehaviour
         scrollViewContent[1] = GameObject.Find("ContentArmor");
         scrollViewContent[2] = GameObject.Find("ContentItems");
 
-        weaponInventory = GameObject.Find("ScrollViewWeapons");
-        armorInventory = GameObject.Find("ScrollViewArmor");
-        itemsInventory = GameObject.Find("ScrollViewItems");
-
         itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
         itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
         itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
@@ -115,29 +100,7 @@ public class InventoryScript : MonoBehaviour
         pausSpel = GameObject.Find("SpelSjef").GetComponent<PausSpel>();
     }
 
-    // Functions for the buttons in the inventory UI.
-    // Changes between the difrent item type inventories.
-    public void ShowWeaponsInInventory()
-    {
-        scrollViewContentActive = 0;
-        weaponInventory.SetActive(true);
-        armorInventory.SetActive(false);
-        itemsInventory.SetActive(false);
-    }
-    public void ShowArmorInInventory()
-    {
-        scrollViewContentActive = 1;
-        weaponInventory.SetActive(false);
-        armorInventory.SetActive(true);
-        itemsInventory.SetActive(false);
-    }
-    public void ShowItemsInInventory()
-    {
-        scrollViewContentActive = 2;
-        weaponInventory.SetActive(false);
-        armorInventory.SetActive(false);
-        itemsInventory.SetActive(true);
-    }
+    
 
     /// <summary>
     /// Function that shows the items from a ItemClass list 
