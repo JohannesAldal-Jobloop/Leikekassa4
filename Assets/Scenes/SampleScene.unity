@@ -2974,8 +2974,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510307997}
-        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+      - m_Target: {fileID: 510307993}
+        m_TargetAssemblyTypeName: SpelerUISkript, Assembly-CSharp
         m_MethodName: ShowArmorInInventory
         m_Mode: 1
         m_Arguments:
@@ -6563,8 +6563,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510307997}
-        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+      - m_Target: {fileID: 510307993}
+        m_TargetAssemblyTypeName: SpelerUISkript, Assembly-CSharp
         m_MethodName: ShowWeaponsInInventory
         m_Mode: 1
         m_Arguments:
@@ -7952,6 +7952,9 @@ MonoBehaviour:
   livFunksjonerSpeler: {fileID: 0}
   pausSpel: {fileID: 0}
   inventoryScript: {fileID: 0}
+  weaponInventory: {fileID: 2020924635}
+  armorInventory: {fileID: 511998340}
+  itemsInventory: {fileID: 148155087}
 --- !u!114 &510307994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8016,6 +8019,14 @@ MonoBehaviour:
   itemsShown: 0
   itemPrefab: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
     type: 3}
+  scrollViewContent:
+  - {fileID: 1660563845}
+  - {fileID: 1517754493}
+  - {fileID: 1376919743}
+  itemDescrName: {fileID: 1355157049}
+  itemDescrImg: {fileID: 997756023}
+  itemDescrDescription: {fileID: 389029828}
+  itemDescrStats: {fileID: 1235920159}
   itemsShownInInventory: []
   weaponsInInvetoryList: []
   armorInInvetoryList: []
@@ -13281,8 +13292,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510307997}
-        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+      - m_Target: {fileID: 510307993}
+        m_TargetAssemblyTypeName: SpelerUISkript, Assembly-CSharp
         m_MethodName: ShowItemsInInventory
         m_Mode: 1
         m_Arguments:
@@ -17821,9 +17832,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opacity: 0
   interactWaitForSeconds: 0
-  interactPickup: 0
+  interactPickup: 1
   interactKey: 101
-  interactProgressImg: {fileID: 0}
+  interactProgressImg: {fileID: 1665611229}
 --- !u!1 &1139453778
 GameObject:
   m_ObjectHideFlags: 0
@@ -25927,8 +25938,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2020924636}
   - {fileID: 431277890}
+  - {fileID: 2020924636}
   m_Father: {fileID: 1170031333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

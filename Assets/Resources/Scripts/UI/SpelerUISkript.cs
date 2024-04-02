@@ -23,9 +23,9 @@ public class SpelerUISkript : MonoBehaviour
     public PausSpel pausSpel;
     public InventoryScript inventoryScript;
 
-    private GameObject weaponInventory;
-    private GameObject armorInventory;
-    private GameObject itemsInventory;
+    [SerializeField] private GameObject weaponInventory;
+    [SerializeField] private GameObject armorInventory;
+    [SerializeField] private GameObject itemsInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,6 @@ public class SpelerUISkript : MonoBehaviour
         inventoryScript = GetComponent<InventoryScript>();
 
         // Opens the weapon inventory by default.
-
-        weaponInventory = GameObject.Find("ScrollViewWeapons");
-        armorInventory = GameObject.Find("ScrollViewArmor");
-        itemsInventory = GameObject.Find("ScrollViewItems");
         inventoryScript.scrollViewContentActive = 0;
         weaponInventory.SetActive(true);
         armorInventory.SetActive(false);

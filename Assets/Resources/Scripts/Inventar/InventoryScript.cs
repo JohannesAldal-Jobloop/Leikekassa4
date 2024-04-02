@@ -23,15 +23,15 @@ public class InventoryScript : MonoBehaviour
 
     public GameObject itemPrefab;
 
-    private GameObject[] scrollViewContent = new GameObject[3];
+    [SerializeField] private GameObject[] scrollViewContent = new GameObject[3];
 
     private Image itemPreviewImg;
     private TextMeshProUGUI itemIndex;
 
-    private TextMeshProUGUI itemDescrName;
-    private  Image          itemDescrImg;
-    private TextMeshProUGUI itemDescrDescription;
-    private TextMeshProUGUI itemDescrStats;
+    [SerializeField] private TextMeshProUGUI itemDescrName;
+    [SerializeField] private  Image          itemDescrImg;
+    [SerializeField] private TextMeshProUGUI itemDescrDescription;
+    [SerializeField] private TextMeshProUGUI itemDescrStats;
 
     public List<GameObject> itemsShownInInventory = new List<GameObject>();
 
@@ -88,15 +88,6 @@ public class InventoryScript : MonoBehaviour
     // Function that defines all the variables that needs stuff from the hierarchy.
     private void FindGameObjects_Components()
     {
-        scrollViewContent[0] = GameObject.Find("ContentWeapons");
-        scrollViewContent[1] = GameObject.Find("ContentArmor");
-        scrollViewContent[2] = GameObject.Find("ContentItems");
-
-        itemDescrName = GameObject.Find("ItemName_Description").GetComponent<TextMeshProUGUI>();
-        itemDescrImg = GameObject.Find("ItemImg_Description").GetComponent<Image>();
-        itemDescrDescription = GameObject.Find("ItemDescriptionText_Description").GetComponent<TextMeshProUGUI>();
-        itemDescrStats = GameObject.Find("ItemStats_Description").GetComponent<TextMeshProUGUI>();
-
         pausSpel = GameObject.Find("SpelSjef").GetComponent<PausSpel>();
     }
 

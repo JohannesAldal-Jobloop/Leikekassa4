@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PickupScript : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PickupScript : MonoBehaviour
 
     private GameObject interactPromptGO;
     private TextMeshProUGUI interactPromptText;
-    [SerializeField] private Image interactProgressImg;
+    [SerializeField] private RawImage interactProgressImg;
 
     private InventoryScript inventoryScript;
 
@@ -24,7 +25,6 @@ public class PickupScript : MonoBehaviour
     void Start()
     {
         interactPromptGO = GameObject.Find("SingleKey");
-        interactProgressImg = GameObject.Find("InteractProgressImg").GetComponent<Image>();
         interactPromptText = interactPromptGO.GetComponentInChildren<TextMeshProUGUI>();
         interactPromptText.text = interactKey.ToString();
         inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
@@ -128,15 +128,18 @@ public class PickupScript : MonoBehaviour
 
             if (other.transform.tag == "PickupItem")
             {
+                interactPromptGO.SetActive(true);
+
                 itemToPickUp = other.transform.GetComponent<ItemClass>();
 
-                interactPromptGO.SetActive(true);
+
                 if (Input.GetKey(interactKey) && opacity <= 255)
                 {
-                    Color newOpacity = interactProgressImg.GetComponent<Color>();
+                    Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
 
                     opacity++;
                     newOpacity.a = opacity;
+                    Debug.Log(newOpacity);
 
                     if (opacity <= 255)
                         interactProgressImg.color = newOpacity;
@@ -182,7 +185,7 @@ public class PickupScript : MonoBehaviour
     {
         if (other.transform.tag == "PickupItem")
         {
-            interactPromptGO.SetActive(false);
+            //interactPromptGO.SetActive(false);
         }
     }
 
