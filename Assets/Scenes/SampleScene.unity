@@ -17833,6 +17833,7 @@ MonoBehaviour:
   opacity: 0
   interactWaitForSeconds: 0
   interactPickup: 1
+  holdInteract: 0
   interactKey: 101
   interactProgressImg: {fileID: 1665611229}
 --- !u!1 &1139453778

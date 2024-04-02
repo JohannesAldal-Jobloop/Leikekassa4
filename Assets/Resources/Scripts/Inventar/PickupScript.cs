@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,7 @@ public class PickupScript : MonoBehaviour
     [SerializeField] private float interactWaitForSeconds;
 
     public bool interactPickup = false;
+    public bool holdInteract = false;
 
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
@@ -86,32 +88,7 @@ public class PickupScript : MonoBehaviour
                 itemToPickUp = other.transform.GetComponent<ItemClass>();
 
                 //--------- On collision pickup ----------
-
-                // Checks what type of item itemToPickUp and
-                // adds the item to the correct inventory list.
-                if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[0])
-                {
-                    // weapons
-                    inventoryScript.weaponsInInvetoryList.Add(itemToPickUp);
-
-                    other.gameObject.SetActive(false);
-
-                }
-                else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[1])
-                {
-
-                    // armor
-                    inventoryScript.armorInInvetoryList.Add(itemToPickUp);
-
-                    other.gameObject.SetActive(false);
-                }
-                else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[2])
-                {
-                    // items
-                    inventoryScript.itemsInInvetoryList.Add(itemToPickUp);
-
-                    other.gameObject.SetActive(false);
-                }
+                AddItemToInventoryList(itemToPickUp, other);
                 //----------------------------------------
             }
         }
@@ -124,61 +101,51 @@ public class PickupScript : MonoBehaviour
 
         if (interactPickup)
         {
-            //--------- Interact pickup ----------
+            //---------- Interact pickup ----------
 
             if (other.transform.tag == "PickupItem")
             {
                 interactPromptGO.SetActive(true);
-
                 itemToPickUp = other.transform.GetComponent<ItemClass>();
 
-
-                if (Input.GetKey(interactKey) && opacity <= 255)
+                
+                if (holdInteract)
                 {
-                    Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
+                    //---------- Hold interact ----------
+                    if (Input.GetKey(interactKey) && opacity <= 255)
+                    {
+                        Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
 
-                    opacity++;
-                    newOpacity.a = opacity;
-                    Debug.Log(newOpacity);
+                        opacity++;
+                        newOpacity.a = opacity;
+                        Debug.Log(newOpacity);
 
-                    if (opacity <= 255)
-                        interactProgressImg.color = newOpacity;
+                        if (opacity <= 255)
+                            interactProgressImg.color = newOpacity;
+                    }
+
+                    if (opacity >= 255)
+                    {
+                        AddItemToInventoryList(itemToPickUp, other);
+                        interactPromptGO.SetActive(false);
+                    }
+                    //-----------------------------------
+                }
+                else
+                {
+                    //---------- Instant interact ----------
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        AddItemToInventoryList(itemToPickUp, other);
+                        interactPromptGO.SetActive(false);
+                    }
+                    //--------------------------------------
                 }
 
-                if (opacity >= 255)
-                {
-                    // Checks what type of item itemToPickUp and
-                    // adds the item to the correct inventory list.
-                    if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[0])
-                    {
-                        // weapons
-                        inventoryScript.weaponsInInvetoryList.Add(itemToPickUp);
-
-                        other.gameObject.SetActive(false);
-
-                    }
-                    else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[1])
-                    {
-
-                        // armor
-                        inventoryScript.armorInInvetoryList.Add(itemToPickUp);
-
-                        other.gameObject.SetActive(false);
-                    }
-                    else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[2])
-                    {
-                        // items
-                        inventoryScript.itemsInInvetoryList.Add(itemToPickUp);
-
-                        other.gameObject.SetActive(false);
-                    }
-                }
-
-                //------------------------------------
             }
-            
+            //------------------------------------
         }
-        
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -189,10 +156,40 @@ public class PickupScript : MonoBehaviour
         }
     }
 
-    IEnumerator InteractProgress()
+    IEnumerator InteractProgress(int waitSec)
     {
         opacity++;
-        yield return new WaitForSeconds(interactWaitForSeconds);
+        yield return new WaitForSeconds(waitSec);
     }
 
+    private void AddItemToInventoryList(ItemClass itemToPickUp, Collider other)
+    {
+        // Checks what type of item itemToPickUp and
+        // adds the item to the correct inventory list.
+        if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[0])
+        {
+            // weapons
+            inventoryScript.weaponsInInvetoryList.Add(itemToPickUp);
+
+            other.gameObject.SetActive(false);
+
+        }
+        else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[1])
+        {
+
+            // armor
+            inventoryScript.armorInInvetoryList.Add(itemToPickUp);
+
+            other.gameObject.SetActive(false);
+        }
+        else if (itemToPickUp.itemTags[0] == inventoryScript.inventoryCategoryTags[2])
+        {
+            // items
+            inventoryScript.itemsInInvetoryList.Add(itemToPickUp);
+
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    
 }
