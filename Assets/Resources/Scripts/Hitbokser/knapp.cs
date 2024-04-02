@@ -1,6 +1,7 @@
 using OpenCover.Framework.Model;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -126,17 +127,25 @@ public class knapp : MonoBehaviour
 
     public IEnumerator Kodelås()
     {
-        if (kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
+        // Sjekker om knappen er backspace eller ein med tall.
+        if(gameObject.name == "KodelåsKnappBackspace")
+        {
+            // Removes the last Char of the inputaKode from the KodelåsSkript script.
+            kodelåsSkript.inputaKode = kodelåsSkript.inputaKode.Remove(kodelåsSkript.inputaKode.Length-1);
+        }
+        else if (kodelåsSkript.inputaKode.Length != kodelåsSkript.riktigKode.Length)
         {
             kodelåsSkript.inputaKode += knappTekst;
             kodelåsSkript.riktigViserTekst.text += knappTekst;
             
         }
 
+        // Changes the color temporarly
         EndreFarge();
         yield return new WaitForSeconds(lengdePåTrykk);
         EndreFarge();
 
     }
+    
     //-------------------------------------------------------------------------
 }
