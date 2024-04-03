@@ -105,21 +105,15 @@ public class PickupScript : MonoBehaviour
                 //---------- Interact pickup ----------
 
                 interactPromptGO.SetActive(true);
-               
+
                 if (itemToPickUp.holdInteract)
                 {
                     //---------- Hold interact ----------
-                    if (Input.GetKey(interactKey) && !holdingteract)
+                    if (Input.GetKey(interactKey))
                     {
                         holdingteract = true;
-                        StartCoroutine ( HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other) );
-                    }else if(Input.GetKey(interactKey) && holdingteract)
-                    {
-                        holdingteract = true;
-                    }else if (Input.GetKeyUp(interactKey))
-                    {
-                        holdingteract = false;
-                        StopCoroutine("HoldPickup");
+                        HoldPickup2( itemToPickUp.holdInteractLenghtSec, itemToPickUp, other);
+                        //StartCoroutine(HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other));
                     }
 
                     //-----------------------------------
@@ -191,7 +185,7 @@ public class PickupScript : MonoBehaviour
             newOpacity.a = opacity;
             Debug.Log(newOpacity);
 
-            if (opacity <= 255)
+            if (opacity <= 1)
                 interactProgressImg.color = newOpacity;
 
             Debug.Log(i);
@@ -203,9 +197,34 @@ public class PickupScript : MonoBehaviour
 
     }
     
-    private void HoldPickup2()
+    private void HoldPickup2(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
+        // Bruka time.Time
 
+        float opacityEichSec = 1 / holdTimeSeconds;
+        float repetitionRate = 1f;
+        float nextRepetition = 0f;
+
+        if(Time.time >= nextRepetition)
+        {
+            nextRepetition = Time.time + 1 / repetitionRate;
+            Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
+
+            Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
+            opacity += opacityEichSec;
+            newOpacity.a = opacity;
+            Debug.Log(newOpacity);
+
+            if (opacity <= 1)
+                interactProgressImg.color = newOpacity;
+
+            if (opacity >= 1)
+            {
+                AddItemToInventoryList(itemToPickUp, other);
+                interactPromptGO.SetActive(false);
+            }
+        }
+        
     }
 
 
