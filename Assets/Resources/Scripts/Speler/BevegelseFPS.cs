@@ -10,7 +10,7 @@ public class BevegelseFPS : MonoBehaviour
 
     public Rigidbody playerFpsRB;
 
-    public CapsuleCollider bodyHitbox;
+    public CharacterController bodyHitbox;
 
     //---------- Variabler til WASD bevegelse ----------
     private CharacterController spelerKontroller;
@@ -68,7 +68,7 @@ public class BevegelseFPS : MonoBehaviour
         
         playerFpsGO = GameObject.Find("SpelerFPS");
         bakkeSjekkGO = GameObject.Find("BakkeSjekk");
-        bodyHitbox = playerFpsGO.GetComponent<CapsuleCollider>();
+        bodyHitbox = playerFpsGO.GetComponent<CharacterController>();
         spelerKontroller = GetComponent<CharacterController>();
         
         bakkeSjekk = bakkeSjekkGO.GetComponent<BakkeSjekk>();
