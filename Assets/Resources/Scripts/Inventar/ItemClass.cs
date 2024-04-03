@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ItemClass : MonoBehaviour
 {
+    public bool interactPickup = false;
+    public bool holdInteract = false;
+    public float holdInteractLenghtSec = 5;
     public string[] itemTags = { };
     public string itemName;
     public string itemDescription;
@@ -16,12 +19,10 @@ public class ItemClass : MonoBehaviour
     public int damageFire       = 0;
     public int damageSpectral   = 0;
 
-    private InventoryScript inventoryScript;
-
     // Start is called before the first frame update
     void Start()
     {
-        inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+
     }
 
     // Update is called once per frame
@@ -29,22 +30,4 @@ public class ItemClass : MonoBehaviour
     {
         
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.name == "SpelerFPS")
-    //    {
-    //        inventoryScript.weaponsInInvetoryList.Add(this);
-    //        gameObject.SetActive(false);
-    //    }
-    //}
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.name == "SpelerFPS")
-    //    {
-    //        inventoryScript.weaponsInInvetoryList.Add(this);
-    //        gameObject.SetActive(false);
-    //    }
-    //}
 }

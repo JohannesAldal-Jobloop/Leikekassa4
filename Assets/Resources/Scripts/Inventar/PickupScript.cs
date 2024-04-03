@@ -9,11 +9,10 @@ using UnityEngine.UIElements;
 
 public class PickupScript : MonoBehaviour
 {
-    [SerializeField] private int opacity = 0;
+    [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
 
-    public bool interactPickup = false;
-    public bool holdInteract = false;
+    private bool startedHoldInteractTEMP = false;
 
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
@@ -81,53 +80,39 @@ public class PickupScript : MonoBehaviour
     {
         ItemClass itemToPickUp;
 
-        if (!interactPickup)
+        if (other.transform.tag == "PickupItem")
         {
-            if (other.transform.tag == "PickupItem")
-            {
-                itemToPickUp = other.transform.GetComponent<ItemClass>();
+            itemToPickUp = other.transform.GetComponent<ItemClass>();
 
+            if (!itemToPickUp.interactPickup)
+            {
                 //--------- On collision pickup ----------
                 AddItemToInventoryList(itemToPickUp, other);
                 //----------------------------------------
             }
         }
-        
     }
 
     private void OnTriggerStay(Collider other)
     {
         ItemClass itemToPickUp;
-
-        if (interactPickup)
+        if (other.transform.tag == "PickupItem")
         {
-            //---------- Interact pickup ----------
+            itemToPickUp = other.transform.GetComponent<ItemClass>();
 
-            if (other.transform.tag == "PickupItem")
+            if (itemToPickUp.interactPickup)
             {
-                interactPromptGO.SetActive(true);
-                itemToPickUp = other.transform.GetComponent<ItemClass>();
+                //---------- Interact pickup ----------
 
-                
-                if (holdInteract)
+                interactPromptGO.SetActive(true);
+               
+                if (itemToPickUp.holdInteract)
                 {
                     //---------- Hold interact ----------
-                    if (Input.GetKey(interactKey) && opacity <= 255)
+                    if (Input.GetKeyDown(interactKey) && !startedHoldInteractTEMP)
                     {
-                        Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
-
-                        opacity++;
-                        newOpacity.a = opacity;
-                        Debug.Log(newOpacity);
-
-                        if (opacity <= 255)
-                            interactProgressImg.color = newOpacity;
-                    }
-
-                    if (opacity >= 255)
-                    {
-                        AddItemToInventoryList(itemToPickUp, other);
-                        interactPromptGO.SetActive(false);
+                        startedHoldInteractTEMP = true;
+                        StartCoroutine ( HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other) );
                     }
                     //-----------------------------------
                 }
@@ -138,12 +123,13 @@ public class PickupScript : MonoBehaviour
                     {
                         AddItemToInventoryList(itemToPickUp, other);
                         interactPromptGO.SetActive(false);
+                        interactPromptGO.SetActive(false);
                     }
                     //--------------------------------------
                 }
 
+                //------------------------------------
             }
-            //------------------------------------
         }
 
     }
@@ -152,14 +138,8 @@ public class PickupScript : MonoBehaviour
     {
         if (other.transform.tag == "PickupItem")
         {
-            //interactPromptGO.SetActive(false);
+            interactPromptGO.SetActive(false);
         }
-    }
-
-    IEnumerator InteractProgress(int waitSec)
-    {
-        opacity++;
-        yield return new WaitForSeconds(waitSec);
     }
 
     private void AddItemToInventoryList(ItemClass itemToPickUp, Collider other)
@@ -189,6 +169,30 @@ public class PickupScript : MonoBehaviour
 
             other.gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator HoldPickup(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
+    {
+        float opacityEichSec = 1 / holdTimeSeconds;
+
+        for(int i = 0; i < holdTimeSeconds; i++)
+        {
+            Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
+
+            opacity += 0.2f;
+            newOpacity.a = opacity;
+            Debug.Log(newOpacity);
+
+            if (opacity <= 255)
+                interactProgressImg.color = newOpacity;
+
+            Debug.Log(i);
+            yield return new WaitForSeconds(1);
+        }
+
+        AddItemToInventoryList(itemToPickUp, other);
+        interactPromptGO.SetActive(false);
+
     }
 
     

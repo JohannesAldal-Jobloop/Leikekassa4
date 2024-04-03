@@ -23,8 +23,9 @@ TING � GJERE:
 45. Lage ei kista.
 46. Laga ein klasse med alle keybinds.
 47. Lage ein fuksjon som eg kan sette inn ein float som vill to so mange sekunder å fylføra og teller oppover i ein int.
-48. Lage knapp på kodelås some sletter siste intasta tall.
-49. 
+49. Endra interact pickup til at itemet bestemmer kva type interact det er.
+50. Lage det so viss pselar koliderer med eit spaenpunkt so blir det det aktive spawnpunktet.
+51. 
 
 
 BUGS:

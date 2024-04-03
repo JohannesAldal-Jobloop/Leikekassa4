@@ -656,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - item
   - short_Sword
@@ -788,6 +790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - item
   - great_Hammer
@@ -921,6 +925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - great_Hammer
@@ -1755,6 +1761,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarSkadeParent: {fileID: 969156899}
+--- !u!1001 &86682238
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 529341897324547139, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_Name
+      value: DefaultItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1046.1387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: holdInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: interactPickup
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95392d4c580672c4aad9a2491ba3714c, type: 3}
 --- !u!1 &98569901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - armor
   - dagger
@@ -3336,7 +3422,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.4776, y: -93.19}
-  m_SizeDelta: {x: -830.8419, y: -321.6751}
+  m_SizeDelta: {x: -960.543, y: -321.6751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171365626
 MonoBehaviour:
@@ -3756,6 +3842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - item
   - short_Sword
@@ -3888,6 +3976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - great_Hammer
@@ -6936,6 +7026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - machinegun
@@ -7068,6 +7160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -9975,6 +10069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - armor
   - machinegun
@@ -12960,6 +13056,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836312668}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &840728974
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 529341897324547139, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_Name
+      value: DefaultItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1040.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1283145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965162822863635862, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: interactPickup
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95392d4c580672c4aad9a2491ba3714c, type: 3}
 --- !u!1 &849783312
 GameObject:
   m_ObjectHideFlags: 0
@@ -17727,7 +17896,7 @@ MonoBehaviour:
   spawnRotasjonY: 0
   aktivtSpelarSpawnpointIndex: 0
   respawner: 0
-  aktivSpelarSpawnpointTransform: {fileID: 1759065273}
+  aktivSpelarSpawnpointTransform: {fileID: 1611716301}
   spelarSpawnpointer:
   - {fileID: 1759065273}
   - {fileID: 1365343549}
@@ -17836,8 +18005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opacity: 0
   interactWaitForSeconds: 0
-  interactPickup: 1
-  holdInteract: 0
   interactKey: 101
   interactProgressImg: {fileID: 1665611229}
 --- !u!1 &1139453778
@@ -17978,6 +18145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - armor
   - dagger
@@ -20495,6 +20664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - machinegun
@@ -20802,6 +20973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - machinegun
@@ -21286,6 +21459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - armor
   - dagger
@@ -21840,6 +22015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - short_Sword
@@ -26089,6 +26266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -29508,6 +29687,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - item
   - short_Sword
@@ -30357,6 +30538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -30489,6 +30672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - weapon
   - Flyswatter
@@ -31468,6 +31653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
   itemTags:
   - item
   - great_Hammer
@@ -36571,3 +36758,5 @@ SceneRoots:
   - {fileID: 1368196087}
   - {fileID: 1938616757}
   - {fileID: 1033514175}
+  - {fileID: 840728974}
+  - {fileID: 86682238}
