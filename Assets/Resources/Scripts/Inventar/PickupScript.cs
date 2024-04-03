@@ -12,7 +12,7 @@ public class PickupScript : MonoBehaviour
     [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
 
-    private bool startedHoldInteractTEMP = false;
+    private bool holdingteract = false;
 
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
@@ -109,11 +109,19 @@ public class PickupScript : MonoBehaviour
                 if (itemToPickUp.holdInteract)
                 {
                     //---------- Hold interact ----------
-                    if (Input.GetKeyDown(interactKey) && !startedHoldInteractTEMP)
+                    if (Input.GetKey(interactKey) && !holdingteract)
                     {
-                        startedHoldInteractTEMP = true;
+                        holdingteract = true;
                         StartCoroutine ( HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other) );
+                    }else if(Input.GetKey(interactKey) && holdingteract)
+                    {
+                        holdingteract = true;
+                    }else if (Input.GetKeyUp(interactKey))
+                    {
+                        holdingteract = false;
+                        StopCoroutine("HoldPickup");
                     }
+
                     //-----------------------------------
                 }
                 else
@@ -194,6 +202,11 @@ public class PickupScript : MonoBehaviour
         interactPromptGO.SetActive(false);
 
     }
-
     
+    private void HoldPickup2()
+    {
+
+    }
+
+
 }
