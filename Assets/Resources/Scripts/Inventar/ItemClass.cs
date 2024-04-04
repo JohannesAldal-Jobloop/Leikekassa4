@@ -7,7 +7,10 @@ public class ItemClass : MonoBehaviour
 {
     public bool interactPickup = false;
     public bool holdInteract = false;
+
+    // 1000 = 20 sec
     public float holdInteractLenghtSec = 5;
+    
     public string[] itemTags = { };
     public string itemName;
     public string itemDescription;
