@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class PickupScript : MonoBehaviour
 {
@@ -18,14 +19,14 @@ public class PickupScript : MonoBehaviour
 
     private GameObject interactPromptGO;
     private TextMeshProUGUI interactPromptText;
-    [SerializeField] private RawImage interactProgressImg;
+    [SerializeField] private Image interactProgressImg;
 
     private InventoryScript inventoryScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        interactPromptGO = GameObject.Find("SingleKey");
+        interactPromptGO = GameObject.Find("SingleKey2");
         interactPromptText = interactPromptGO.GetComponentInChildren<TextMeshProUGUI>();
         interactPromptText.text = interactKey.ToString();
         inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
@@ -179,7 +180,7 @@ public class PickupScript : MonoBehaviour
 
         for(int i = 0; i < holdTimeSeconds; i++)
         {
-            Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
+            Color newOpacity = interactProgressImg.GetComponent<Image>().color;
 
             opacity += 0.2f;
             newOpacity.a = opacity;
@@ -210,7 +211,7 @@ public class PickupScript : MonoBehaviour
             nextRepetition = Time.time + 1 / repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
 
-            Color newOpacity = interactProgressImg.GetComponent<RawImage>().color;
+            Color newOpacity = interactProgressImg.GetComponent<Image>().color;
             opacity += opacityEichSec;
             newOpacity.a = opacity;
             Debug.Log(newOpacity);
