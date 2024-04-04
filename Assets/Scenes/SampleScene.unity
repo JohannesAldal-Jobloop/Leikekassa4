@@ -1837,6 +1837,11 @@ PrefabInstance:
       propertyPath: interactPickup
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: holdInteractLenghtSec
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16672,6 +16677,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
+        type: 3}
+      propertyPath: holdInteractLenghtSec
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17015,7 +17025,7 @@ MonoBehaviour:
   maksRekkeviddeOrginal: 30
   "sikteRekkevidde\xD8kning": 1.5
   angrepHastigheit: 15
-  skade: 10
+  skade: 999999
   tilbakeslagKraft: 30
   reloadFart: 1
   skyteModus: 1
@@ -18518,7 +18528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.92156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

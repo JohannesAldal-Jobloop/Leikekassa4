@@ -113,8 +113,17 @@ public class PickupScript : MonoBehaviour
                     if (Input.GetKey(interactKey))
                     {
                         holdingteract = true;
-                        HoldPickup2( itemToPickUp.holdInteractLenghtSec, itemToPickUp, other);
+                        HoldPickupHeld( itemToPickUp.holdInteractLenghtSec, itemToPickUp, other);
                         //StartCoroutine(HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other));
+                    }
+                    else 
+                    {
+                       holdingteract = false;
+                    }
+
+                    if (!holdingteract && opacity <= 1 && opacity > 0)
+                    {
+                        HoldPickupReleased(itemToPickUp.holdInteractLenghtSec, itemToPickUp);
                     }
 
                     //-----------------------------------
@@ -198,9 +207,9 @@ public class PickupScript : MonoBehaviour
 
     }
     
-    private void HoldPickup2(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
+    private void HoldPickupHeld(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
-        // Bruka time.Time
+        // Bruker time.Time
 
         float opacityEichSec = 1 / holdTimeSeconds;
         float repetitionRate = 1f;
@@ -208,7 +217,7 @@ public class PickupScript : MonoBehaviour
 
         if(Time.time >= nextRepetition)
         {
-            nextRepetition = Time.time + 1 / repetitionRate;
+            nextRepetition = Time.time + 10 / repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
 
             Color newOpacity = interactProgressImg.GetComponent<Image>().color;
@@ -226,6 +235,28 @@ public class PickupScript : MonoBehaviour
             }
         }
         
+    }
+
+    private void HoldPickupReleased(float holdTimeSeconds, ItemClass itemToPickUp)
+    {
+        float opacityEichSec = 1 / holdTimeSeconds;
+        float repetitionRate = 1f;
+        float nextRepetition = 0f;
+
+        if (Time.time >= nextRepetition)
+        {
+            nextRepetition = Time.time + 10 / repetitionRate;
+            Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition - Time.time}");
+
+            Color newOpacity = interactProgressImg.GetComponent<Image>().color;
+            opacity -= opacityEichSec;
+            newOpacity.a = opacity;
+            Debug.Log(newOpacity);
+
+            if (opacity <= 1)
+                interactProgressImg.color = newOpacity;
+
+        }
     }
 
 
