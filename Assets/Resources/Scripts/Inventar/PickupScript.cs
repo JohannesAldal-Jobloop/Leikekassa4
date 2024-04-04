@@ -16,6 +16,7 @@ public class PickupScript : MonoBehaviour
     private bool holdingteract = false;
 
     [SerializeField] private KeyCode interactKey = KeyCode.E;
+    private Color newOpacity;
 
     private GameObject interactPromptGO;
     private TextMeshProUGUI interactPromptText;
@@ -30,6 +31,7 @@ public class PickupScript : MonoBehaviour
         interactPromptText = interactPromptGO.GetComponentInChildren<TextMeshProUGUI>();
         interactPromptText.text = interactKey.ToString();
         inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+        newOpacity = interactProgressImg.GetComponent<Image>().color;
 
         interactPromptGO.SetActive(false);
     }
@@ -85,12 +87,25 @@ public class PickupScript : MonoBehaviour
         {
             itemToPickUp = other.transform.GetComponent<ItemClass>();
 
+            opacity = 0;
+            newOpacity = interactProgressImg.GetComponent<Image>().color;
+            newOpacity.a = opacity;
+            interactProgressImg.color = newOpacity;
+
             if (!itemToPickUp.interactPickup)
             {
                 //--------- On collision pickup ----------
                 AddItemToInventoryList(itemToPickUp, other);
                 //----------------------------------------
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "PickupItem")
+        {
+            interactPromptGO.SetActive(false);
         }
     }
 
@@ -146,13 +161,7 @@ public class PickupScript : MonoBehaviour
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "PickupItem")
-        {
-            interactPromptGO.SetActive(false);
-        }
-    }
+    
 
     private void AddItemToInventoryList(ItemClass itemToPickUp, Collider other)
     {
@@ -185,11 +194,11 @@ public class PickupScript : MonoBehaviour
 
     private IEnumerator HoldPickup(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
-        float opacityEichSec = 1 / holdTimeSeconds;
+        float opacityEichSec = 10 / holdTimeSeconds;
 
         for(int i = 0; i < holdTimeSeconds; i++)
         {
-            Color newOpacity = interactProgressImg.GetComponent<Image>().color;
+            newOpacity = interactProgressImg.GetComponent<Image>().color;
 
             opacity += 0.2f;
             newOpacity.a = opacity;
@@ -209,9 +218,9 @@ public class PickupScript : MonoBehaviour
     
     private void HoldPickupHeld(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
-        // Bruker time.Time
+        
 
-        float opacityEichSec = 1 / holdTimeSeconds;
+        float opacityEichSec = 10 / holdTimeSeconds;
         float repetitionRate = 1f;
         float nextRepetition = 0f;
 
@@ -220,7 +229,8 @@ public class PickupScript : MonoBehaviour
             nextRepetition = Time.time + 10 / repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
 
-            Color newOpacity = interactProgressImg.GetComponent<Image>().color;
+            newOpacity = interactProgressImg.GetComponent<Image>().color;
+
             opacity += opacityEichSec;
             newOpacity.a = opacity;
             Debug.Log(newOpacity);
