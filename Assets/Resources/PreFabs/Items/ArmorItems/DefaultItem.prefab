@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db0d9da60cbcde4eb71aa318538b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPickup: 0
+  holdInteract: 0
+  holdInteractLenghtSec: 1
   itemTags:
   - armor
   - dagger

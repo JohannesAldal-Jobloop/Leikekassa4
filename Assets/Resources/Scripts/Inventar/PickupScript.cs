@@ -238,9 +238,7 @@ public class PickupScript : MonoBehaviour
 
         if (Time.time >= nextRepetition)
         {
-            // mål = 5 sec
-            // 0.0099997f = 4.5 -> 5.2!
-            nextRepetition = Time.time + repetitionRate/* - 0.0099997f*/;
+            nextRepetition = Time.time + repetitionRate - 0.01f;
 
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition - Time.time}");
 
