@@ -220,13 +220,13 @@ public class PickupScript : MonoBehaviour
     {
         
 
-        float opacityEichSec = 10 / holdTimeSeconds;
+        float opacityEichSec = holdTimeSeconds / 1000;
         float repetitionRate = 1f;
         float nextRepetition = 0f;
 
         if(Time.time >= nextRepetition)
         {
-            nextRepetition = Time.time + 10 / repetitionRate;
+            nextRepetition = Time.time + 1 / repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
 
             newOpacity = interactProgressImg.GetComponent<Image>().color;
@@ -249,13 +249,13 @@ public class PickupScript : MonoBehaviour
 
     private void HoldPickupReleased(float holdTimeSeconds, ItemClass itemToPickUp)
     {
-        float opacityEichSec = 1 / holdTimeSeconds;
+        float opacityEichSec = holdTimeSeconds / 1000;
         float repetitionRate = 1f;
         float nextRepetition = 0f;
 
         if (Time.time >= nextRepetition)
         {
-            nextRepetition = Time.time + 10 / repetitionRate;
+            nextRepetition = Time.time + 1 / repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition - Time.time}");
 
             Color newOpacity = interactProgressImg.GetComponent<Image>().color;

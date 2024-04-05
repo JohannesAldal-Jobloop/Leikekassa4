@@ -34,4 +34,5 @@ BUGS:
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input fr� speler etterp�.
 18. Fiende bevegelse Patrulering virker ikkje.
 23. Kodel�s resetter ikkje etter feil kode.
-33. 
+33. Få livbaren til å bli usynleg når livet er null eller dekek opp enden på den.
+34. 
