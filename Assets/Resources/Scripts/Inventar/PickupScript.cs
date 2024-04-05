@@ -12,6 +12,9 @@ public class PickupScript : MonoBehaviour
 {
     [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
+    private float repetitionRate = 0.05f;
+    private float nextRepetition = 0f;
+    private float holdActualTimeTesting = 0f;
 
     private bool holdingteract = false;
 
@@ -124,6 +127,11 @@ public class PickupScript : MonoBehaviour
 
                 if (itemToPickUp.holdInteract)
                 {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        holdActualTimeTesting = Time.time;
+                    }
+
                     //---------- Hold interact ----------
                     if (Input.GetKey(interactKey))
                     {
@@ -138,7 +146,7 @@ public class PickupScript : MonoBehaviour
 
                     if (!holdingteract && opacity <= 1 && opacity > 0)
                     {
-                        HoldPickupReleased(itemToPickUp.holdInteractLenghtSec, itemToPickUp);
+                        //HoldPickupReleased(itemToPickUp.holdInteractLenghtSec, itemToPickUp);
                     }
 
                     //-----------------------------------
@@ -218,28 +226,26 @@ public class PickupScript : MonoBehaviour
     
     private void HoldPickupHeld(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
-        
-
-        float opacityEichSec = holdTimeSeconds / 1000;
-        float repetitionRate = 1f;
-        float nextRepetition = 0f;
-
-        if(Time.time >= nextRepetition)
+        float opacityEichSec = (1 / holdTimeSeconds) * repetitionRate;
+        if (Time.time > nextRepetition)
         {
-            nextRepetition = Time.time + 1 / repetitionRate;
+            nextRepetition = Time.time + repetitionRate;
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
 
             newOpacity = interactProgressImg.GetComponent<Image>().color;
 
             opacity += opacityEichSec;
             newOpacity.a = opacity;
-            Debug.Log(newOpacity);
+            //Debug.Log(newOpacity);
 
             if (opacity <= 1)
                 interactProgressImg.color = newOpacity;
 
+
             if (opacity >= 1)
             {
+                holdActualTimeTesting -= Time.time;
+                Debug.Log($"Hold time: {holdActualTimeTesting}");
                 AddItemToInventoryList(itemToPickUp, other);
                 interactPromptGO.SetActive(false);
             }
@@ -249,7 +255,7 @@ public class PickupScript : MonoBehaviour
 
     private void HoldPickupReleased(float holdTimeSeconds, ItemClass itemToPickUp)
     {
-        float opacityEichSec = holdTimeSeconds / 1000;
+        float opacityEichSec = holdTimeSeconds / 100;
         float repetitionRate = 1f;
         float nextRepetition = 0f;
 

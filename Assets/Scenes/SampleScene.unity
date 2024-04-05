@@ -1840,7 +1840,7 @@ PrefabInstance:
     - target: {fileID: 5924180971484805433, guid: 95392d4c580672c4aad9a2491ba3714c,
         type: 3}
       propertyPath: holdInteractLenghtSec
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
