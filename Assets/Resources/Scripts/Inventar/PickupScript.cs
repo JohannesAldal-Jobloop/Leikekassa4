@@ -12,12 +12,13 @@ public class PickupScript : MonoBehaviour
 {
     [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
-    private float repetitionRate = 0.05f;
+    private float repetitionRate = 0.1f;
     private float nextRepetition = 0f;
     float opacityEichSec;
     private float holdActualTimeTesting = 0f;
 
     private bool holdingteract = false;
+    private bool timeTest = false;
 
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     private Color newOpacity;
@@ -130,13 +131,19 @@ public class PickupScript : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        holdActualTimeTesting = Time.time;
+                        
                     }
 
                     //---------- Hold interact ----------
                     if (Input.GetKey(interactKey))
                     {
                         holdingteract = true;
+                        if (!timeTest)
+                        {
+                            holdActualTimeTesting = Time.time;
+                            timeTest = true;
+                        }
+
                         opacityEichSec = (1 / itemToPickUp.holdInteractLenghtSec) * repetitionRate;
                         HoldPickupHeld( itemToPickUp.holdInteractLenghtSec, itemToPickUp, other);
                         //StartCoroutine(HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other));
@@ -231,7 +238,10 @@ public class PickupScript : MonoBehaviour
 
         if (Time.time >= nextRepetition)
         {
-            nextRepetition = Time.time + repetitionRate - 0.0099999999999999999999f;
+            // mål = 5 sec
+            // 0.0099997f = 4.5 -> 5.2!
+            nextRepetition = Time.time + repetitionRate/* - 0.0099997f*/;
+
             Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition - Time.time}");
 
             newOpacity = interactProgressImg.GetComponent<Image>().color;
