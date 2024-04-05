@@ -14,6 +14,7 @@ public class PickupScript : MonoBehaviour
     [SerializeField] private float interactWaitForSeconds;
     private float repetitionRate = 0.05f;
     private float nextRepetition = 0f;
+    float opacityEichSec;
     private float holdActualTimeTesting = 0f;
 
     private bool holdingteract = false;
@@ -136,6 +137,7 @@ public class PickupScript : MonoBehaviour
                     if (Input.GetKey(interactKey))
                     {
                         holdingteract = true;
+                        opacityEichSec = (1 / itemToPickUp.holdInteractLenghtSec) * repetitionRate;
                         HoldPickupHeld( itemToPickUp.holdInteractLenghtSec, itemToPickUp, other);
                         //StartCoroutine(HoldPickup(itemToPickUp.holdInteractLenghtSec, itemToPickUp, other));
                     }
@@ -226,17 +228,16 @@ public class PickupScript : MonoBehaviour
     
     private void HoldPickupHeld(float holdTimeSeconds, ItemClass itemToPickUp, Collider other)
     {
-        float opacityEichSec = (1 / holdTimeSeconds) * repetitionRate;
-        if (Time.time > nextRepetition)
+
+        if (Time.time >= nextRepetition)
         {
-            nextRepetition = Time.time + repetitionRate;
-            Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition-Time.time}");
+            nextRepetition = Time.time + repetitionRate - 0.0099999999999999999999f;
+            Debug.Log($"Time.time: {Time.time}.         nextRepetition: {nextRepetition}.       Difrence: {nextRepetition - Time.time}");
 
             newOpacity = interactProgressImg.GetComponent<Image>().color;
 
             opacity += opacityEichSec;
             newOpacity.a = opacity;
-            //Debug.Log(newOpacity);
 
             if (opacity <= 1)
                 interactProgressImg.color = newOpacity;
@@ -244,7 +245,7 @@ public class PickupScript : MonoBehaviour
 
             if (opacity >= 1)
             {
-                holdActualTimeTesting -= Time.time;
+                holdActualTimeTesting = Time.time - holdActualTimeTesting;
                 Debug.Log($"Hold time: {holdActualTimeTesting}");
                 AddItemToInventoryList(itemToPickUp, other);
                 interactPromptGO.SetActive(false);
