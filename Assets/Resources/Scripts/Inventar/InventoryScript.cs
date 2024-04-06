@@ -97,8 +97,8 @@ public class InventoryScript : MonoBehaviour
     /// Function that shows the items from a ItemClass list 
     /// as children off the inventoryParent
     /// </summary>
-    /// <param name="itemList"> The liste off items for showing. </param>
-    /// <param name="inventoryParent"> The parent GameObject for the items </param>
+    /// <param name="itemList">         The liste off items for showing.    </param>
+    /// <param name="inventoryParent">  The parent GameObject for the items </param>
     public void ShowItems(List<ItemClass> itemList, GameObject inventoryParent)
     {
         // A forech loop that goes thru all teh items in itemList
@@ -156,9 +156,9 @@ public class InventoryScript : MonoBehaviour
     /// <summary>
     /// Function that showes the description of the item you cliked in the innentory.
     /// </summary>
-    /// <param name="itemClassList"> The list of itemclasses the item is part off </param>
-    /// <param name="indexText"> the transform of the GameObject that contains the
-    ///                          index of the item in the itemClassList </param>
+    /// <param name="itemClassList"> The list of itemclasses the item is part off        </param>
+    /// <param name="indexText">     The transform of the GameObject that contains the
+    ///                              index of the item in the itemClassList              </param>
     private void ShowItemDescription(List<ItemClass> itemClassList, Transform indexText)
     {
         // Finds the TexMeshProUGUI from the transform indexText.

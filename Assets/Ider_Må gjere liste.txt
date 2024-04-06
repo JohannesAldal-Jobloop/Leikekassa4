@@ -1,6 +1,6 @@
 
 TING � GJERE:
-2. Lage animasjon til v�pen: reload,  osv
+2. Lage animasjon til vopen: reload,  osv
 5. Lage fleire skadetyper.
 6. laga finder.
 10. Huking kan bli gjort p� ein Mykje bedre m�te.
@@ -22,8 +22,7 @@ TING � GJERE:
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 45. Lage ei kista.
 46. Laga ein klasse med alle keybinds.
-47. Lage ein fuksjon som eg kan sette inn ein float som vill to so mange sekunder å fylføra og teller oppover i ein int.
-49. Endra interact pickup til at itemet bestemmer kva type interact det er.
+47. Lage ein fuksjon som eg kan sette inn ein float som vill to so mange sekunder å fylføra og teller oppover i ein heil float.
 50. Lage det so viss spelar koliderer med eit spaenpunkt so blir det det aktive spawnpunktet.
 52. 
 
