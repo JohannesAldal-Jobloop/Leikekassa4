@@ -1,24 +1,24 @@
 
-TING � GJERE:
+TING O GJERE:
 2. Lage animasjon til vopen: reload,  osv
 5. Lage fleire skadetyper.
 6. laga finder.
-10. Huking kan bli gjort p� ein Mykje bedre m�te.
-14. lage skript so finner alle x GameObjects � putter dei under x GameObject som child. 
-	For � lage hierarchy meir ryddeg p� play.
-17. Lage om BulletRestriksjoner() til � bruke Physics.CheckSphere.
+10. Huking kan bli gjort po ein Mykje bedre mote.
+14. lage skript so finner alle x GameObjects o putter dei under x GameObject som child. 
+	For o lage hierarchy meir ryddeg po play.
+17. Lage om BulletRestriksjoner() til o bruke Physics.CheckSphere.
 18. Lage eit generelt skyteskript til speler og fiender.
-19. Omjer speler springing so speler g�r gradvis opp i fart.
-	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodel�s den fonten.
+19. Omjer speler springing so speler gor gradvis opp i fart.
+	Vill ha ein variable som tar ein skrift font. So bruker tekst elemementene til kodelos den fonten.
 35. Lage Hovedmeny:
-		o	Tilbake knapp som g�r tilbake til forje kjerm.
+		o	Tilbake knapp som gor tilbake til forje kjerm.
 36. Gjere at instillingane virker.
-37. Endre alle ���.
-39. Endre skyting til � f�les bra ut:
+37. Endre alle norske bokstaver.
+39. Endre skyting til o foles bra ut:
 		o	Animasjon
 		o	Rekyl
 		o	
-40. Lag ei hinderl�ypa for � teste bevegelse og hitbokser.
+40. Lag ei hinderloypa for o teste bevegelse og hitbokser.
 42. Lage fake healing som fyller livbaren men som ikkje er ein del av livet til speler.
 45. Lage ei kista.
 46. Laga ein klasse med alle keybinds.
@@ -31,6 +31,6 @@ BUGS:
 1. kulo LaserKula kjem feil veg ut n�r skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input fr� speler etterp�.
 18. Fiende bevegelse Patrulering virker ikkje.
-23. Kodel�s resetter ikkje etter feil kode.
+23. Kodelos resetter ikkje etter feil kode.
 33. Få livbaren til å bli usynleg når livet er null eller dekek opp enden på den.
 34. 
