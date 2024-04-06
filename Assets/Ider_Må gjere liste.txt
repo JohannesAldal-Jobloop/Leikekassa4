@@ -24,8 +24,7 @@ TING � GJERE:
 46. Laga ein klasse med alle keybinds.
 47. Lage ein fuksjon som eg kan sette inn ein float som vill to so mange sekunder å fylføra og teller oppover i ein int.
 49. Endra interact pickup til at itemet bestemmer kva type interact det er.
-50. Lage det so viss pselar koliderer med eit spaenpunkt so blir det det aktive spawnpunktet.
-51. Finne ut korleis eg skal rekne holdInteractLenghtSec frå itemclasss til å bli like sekunder some må bli holt inne for å plukke opp eit item med PickupScript.
+50. Lage det so viss spelar koliderer med eit spaenpunkt so blir det det aktive spawnpunktet.
 52. 
 
 
