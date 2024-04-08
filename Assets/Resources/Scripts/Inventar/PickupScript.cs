@@ -16,35 +16,33 @@ public class PickupScript : MonoBehaviour
     private float nextRepetitionMinus = 0.01f;
     private float TestTime;
     private float TestValueEichRepetition;
-    private bool  TestComplete;
+    private bool TestComplete;
 
     [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
     private float repetitionRate = 0.1f;
     private float nextRepetition = 0f;
     private float opacityEichRepetition;
-
-    [SerializeField] private KeyCode interactKey = KeyCode.E;
     private Color newOpacity;
 
-    private GameObject interactPromptGO;
-    private TextMeshProUGUI interactPromptText;
+    [SerializeField] private GameObject interactPromptGO;
+    [SerializeField] private TextMeshProUGUI interactPromptText;
     [SerializeField] private Image interactProgressImg;
 
     private InventoryScript inventoryScript;
+    private KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
     {
         // Gets all the recuired components.
-        interactPromptGO = GameObject.Find("SingleKey2");
-        interactPromptText = interactPromptGO.GetComponentInChildren<TextMeshProUGUI>();
-        interactPromptText.text = interactKey.ToString();
         inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
+        interactPromptText.text = keyBindsClass.interactKeyCode.ToString();
         newOpacity = interactProgressImg.GetComponent<Image>().color;
 
         // Disables the interact prompt.
-        //interactPromptGO.SetActive(false);
+        interactPromptGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -86,7 +84,7 @@ public class PickupScript : MonoBehaviour
         // If the trigger thats exited is an item, disable the interact prompt.
         if (other.transform.tag == "PickupItem")
         {
-            //interactPromptGO.SetActive(false);
+            interactPromptGO.SetActive(false);
         }
     }
 
@@ -111,7 +109,7 @@ public class PickupScript : MonoBehaviour
                 if (itemToPickUp.holdInteract)
                 {
                     //---------- Hold interact ----------
-                    if (Input.GetKey(interactKey))
+                    if (Input.GetKey(keyBindsClass.interactKeyCode))
                     {
                         // Calculates how much the opacity needs to be changed eich repetition.
                         opacityEichRepetition = (1 / itemToPickUp.holdInteractLenghtSec) * repetitionRate;
@@ -131,7 +129,7 @@ public class PickupScript : MonoBehaviour
                 else
                 {
                     //---------- Instant interact ----------
-                    if (Input.GetKeyDown(interactKey))
+                    if (Input.GetKeyDown(keyBindsClass.interactKeyCode))
                     {
                         // Adds itemToPickUp to inventory and makes the interact prompt inviseble.
                         AddItemToInventoryList(itemToPickUp, other);
