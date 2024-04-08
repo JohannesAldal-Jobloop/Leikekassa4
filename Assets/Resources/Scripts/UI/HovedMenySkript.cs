@@ -11,7 +11,12 @@ public class HovedMenySkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(SceneManager.GetActiveScene().name == "HovedMeny")
+        {
+            hovedSkjerm = GameObject.Find("HovedSkjerm");
+            innstillinger = GameObject.Find("Innstillinger");
+            innstillinger.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -22,7 +27,7 @@ public class HovedMenySkript : MonoBehaviour
 
     public void StartSpel()
     {
-        SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Leikekassa", LoadSceneMode.Single);
     }
 
     public void AvsluttSpel()

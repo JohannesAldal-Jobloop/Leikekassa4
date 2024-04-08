@@ -10,6 +10,14 @@ using Image = UnityEngine.UI.Image;
 
 public class PickupScript : MonoBehaviour
 {
+    private float TestSeconds = 5;
+    private float TestAmountGoal = 1;
+    private float TestAmountCounter = 0;
+    private float nextRepetitionMinus = 0.01f;
+    private float TestTime;
+    private float TestValueEichRepetition;
+    private bool  TestComplete;
+
     [SerializeField] private float opacity = 0;
     [SerializeField] private float interactWaitForSeconds;
     private float repetitionRate = 0.1f;
@@ -36,7 +44,7 @@ public class PickupScript : MonoBehaviour
         newOpacity = interactProgressImg.GetComponent<Image>().color;
 
         // Disables the interact prompt.
-        interactPromptGO.SetActive(false);
+        //interactPromptGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -78,7 +86,7 @@ public class PickupScript : MonoBehaviour
         // If the trigger thats exited is an item, disable the interact prompt.
         if (other.transform.tag == "PickupItem")
         {
-            interactPromptGO.SetActive(false);
+            //interactPromptGO.SetActive(false);
         }
     }
 
@@ -187,7 +195,7 @@ public class PickupScript : MonoBehaviour
         if (Time.time >= nextRepetition)
         {
             // Calculates the time of the next repetition.
-            nextRepetition = Time.time + repetitionRate - 0.01f;
+            nextRepetition = Time.time + repetitionRate - nextRepetitionMinus;
 
             // Increases the opacity of the color got from the progress image.
             opacity += opacityEichRepetition;
@@ -232,5 +240,36 @@ public class PickupScript : MonoBehaviour
         }
     }
 
+
+
+    /// <summary>
+    /// Counts up to a certan float in a certain time
+    /// </summary>
+    private void HoldPickupHeldTest(float TestAmountGoal, float TestSeconds, float repetitionRate)
+    {
+        float TestValueEichRepetition;
+
+        TestValueEichRepetition = (TestAmountGoal / TestSeconds) * repetitionRate;
+
+        // Checks if enouch time has passed for the nest repetition.
+        if (Time.time >= nextRepetition)
+        {
+            // Calculates the time of the next repetition.
+            nextRepetition = Time.time + repetitionRate - nextRepetitionMinus;
+
+            TestAmountCounter += TestValueEichRepetition;
+
+            Debug.Log($"Target: {TestAmountGoal}. Current: {TestAmountCounter}");
+
+            if(TestAmountCounter >= TestAmountGoal)
+            {
+                TestAmountCounter = TestAmountGoal;
+                Debug.Log($"Target: {TestAmountGoal}. Current{TestAmountCounter}. Total time: {TestTime = Time.time - TestTime}");
+                TestComplete = true;
+            }
+
+        }
+
+    }
 
 }

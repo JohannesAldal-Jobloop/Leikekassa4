@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SpelerUISkript : MonoBehaviour
@@ -30,24 +31,32 @@ public class SpelerUISkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spelarGO = GameObject.Find("SpelerFPS");
-        tarSkadeSpeler = spelarGO.GetComponent<TarSkade>();
-        livFunksjonerSpeler = spelarGO.GetComponent <LivFunksjoner>();
-        overSkjoldBarSlider = overSkjoldBarGO.GetComponent<Slider>();
-        pausSpel = GetComponent<PausSpel>();
-        inventoryScript = GetComponent<InventoryScript>();
+        if (SceneManager.GetActiveScene().name == "Leikekassa")
+        {
+            spelarGO = GameObject.Find("SpelerFPS");
+            tarSkadeSpeler = spelarGO.GetComponent<TarSkade>();
+            livFunksjonerSpeler = spelarGO.GetComponent<LivFunksjoner>();
+            overSkjoldBarSlider = overSkjoldBarGO.GetComponent<Slider>();
+            pausSpel = GetComponent<PausSpel>();
+            inventoryScript = GetComponent<InventoryScript>();
 
-        // Opens the weapon inventory by default.
-        inventoryScript.scrollViewContentActive = 0;
-        weaponInventory.SetActive(true);
-        armorInventory.SetActive(false);
-        itemsInventory.SetActive(false);
+            // Opens the weapon inventory by default.
+            inventoryScript.scrollViewContentActive = 0;
+            weaponInventory.SetActive(true);
+            armorInventory.SetActive(false);
+            itemsInventory.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        OpptaterSpelerUI();
+        if (SceneManager.GetActiveScene().name == "Leikekassa")
+        {
+            OpptaterSpelerUI();
+        }
+        
     }
 
     void OpptaterSpelerUI()

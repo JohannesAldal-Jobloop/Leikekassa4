@@ -6640,6 +6640,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 399559062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &417965163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417965165}
+  - component: {fileID: 417965164}
+  m_Layer: 0
+  m_Name: SpelsjefSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &417965164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417965163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb22a74ef03370d4a9aad69e490dd780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spelSjef: {fileID: 2833668210090037917, guid: 56f423305168f0a42962ed847ad8cf39,
+    type: 3}
+--- !u!4 &417965165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417965163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 369.45746, y: 192.65237, z: -1.1473083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428553754
 GameObject:
   m_ObjectHideFlags: 0
@@ -8116,162 +8162,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509972273}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &510307990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 510307991}
-  - component: {fileID: 510307992}
-  - component: {fileID: 510307993}
-  - component: {fileID: 510307994}
-  - component: {fileID: 510307995}
-  - component: {fileID: 510307996}
-  - component: {fileID: 510307997}
-  m_Layer: 0
-  m_Name: SpelSjef
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &510307991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.300186, y: 7.4423075, z: 22.840649}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &510307992
+--- !u!114 &510307993 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+    type: 3}
+  m_PrefabInstance: {fileID: 3769211357373882918}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd9430f56b0d134caa2efc58ac8ce8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoViser: {fileID: 21789627}
-  "skytev\xE5penScript": {fileID: 2111371547}
---- !u!114 &510307993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 080347cbbd631d541805fefa93e48444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "er_d\xF8d_UI": {fileID: 1167207050}
-  i_Live_UI: {fileID: 1721013297}
-  pauseKjerm_UI: {fileID: 63021031}
-  inventory_UI: {fileID: 483484195}
-  livBarGO: {fileID: 391305872}
-  overSkjoldBarGO: {fileID: 1234805725}
-  overSkjoldBarSlider: {fileID: 0}
-  giftBarGO: {fileID: 1742646564}
-  giftBar: {fileID: 1742646566}
-  spelarGO: {fileID: 0}
-  tarSkadeSpeler: {fileID: 1137935873}
-  livFunksjonerSpeler: {fileID: 0}
-  pausSpel: {fileID: 0}
-  inventoryScript: {fileID: 0}
-  weaponInventory: {fileID: 2020924635}
-  armorInventory: {fileID: 511998340}
-  itemsInventory: {fileID: 148155087}
---- !u!114 &510307994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aeddc2a822db694eb1a2f7b058fb4c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flipGO: {fileID: 2111371544}
---- !u!114 &510307995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f136690305fbff0499b781a6c1aca62a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRekkevidde: 10
-  fpsKamera: {fileID: 0}
---- !u!114 &510307996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef051f1e08d282245ba6823258d9e178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  erPausa: 0
---- !u!114 &510307997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510307990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b257164476332c248b679c33f17a5138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listCount: 0
-  scrollViewContentActive: 0
-  inventoryCategoryTags:
-  - 
-  - 
-  - 
-  inventoryOpen: 0
-  weaponsShown: 0
-  armorShown: 0
-  itemsShown: 0
-  itemPrefab: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
-    type: 3}
-  scrollViewContent:
-  - {fileID: 1660563845}
-  - {fileID: 1517754493}
-  - {fileID: 1376919743}
-  itemDescrName: {fileID: 1355157049}
-  itemDescrImg: {fileID: 997756023}
-  itemDescrDescription: {fileID: 389029828}
-  itemDescrStats: {fileID: 1235920159}
-  itemsShownInInventory: []
-  weaponsInInvetoryList: []
-  armorInInvetoryList: []
-  itemsInInvetoryList: []
 --- !u!1 &511822791
 GameObject:
   m_ObjectHideFlags: 0
@@ -20636,7 +20538,7 @@ PrefabInstance:
         type: 3}
       propertyPath: handlingSkript
       value: 
-      objectReference: {fileID: 510307995}
+      objectReference: {fileID: 0}
     - target: {fileID: 1938692365172622900, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: "lengdeP\xE5Trykk"
@@ -33675,6 +33577,189 @@ Transform:
   - {fileID: 4620246845222833190}
   m_Father: {fileID: 2375623310123534458}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1001 &3769211357373882918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.300186
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.4423075
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.840649
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204922121692309434, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: giftBar
+      value: 
+      objectReference: {fileID: 1742646566}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: livBarGO
+      value: 
+      objectReference: {fileID: 391305872}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: giftBarGO
+      value: 
+      objectReference: {fileID: 1742646564}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: i_Live_UI
+      value: 
+      objectReference: {fileID: 1721013297}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: "er_d\xF8d_UI"
+      value: 
+      objectReference: {fileID: 1167207050}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: inventory_UI
+      value: 
+      objectReference: {fileID: 483484195}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: pauseKjerm_UI
+      value: 
+      objectReference: {fileID: 63021031}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: armorInventory
+      value: 
+      objectReference: {fileID: 511998340}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: itemsInventory
+      value: 
+      objectReference: {fileID: 148155087}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: tarSkadeSpeler
+      value: 
+      objectReference: {fileID: 1137935873}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: overSkjoldBarGO
+      value: 
+      objectReference: {fileID: 1234805725}
+    - target: {fileID: 2115770248710760178, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: weaponInventory
+      value: 
+      objectReference: {fileID: 2020924635}
+    - target: {fileID: 2833668210090037917, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_Name
+      value: SpelSjef
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833668210090037917, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668813068648245505, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: ammoViser
+      value: 
+      objectReference: {fileID: 21789627}
+    - target: {fileID: 4668813068648245505, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: "skytev\xE5penScript"
+      value: 
+      objectReference: {fileID: 2111371547}
+    - target: {fileID: 4883836959568172110, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: flipGO
+      value: 
+      objectReference: {fileID: 2111371544}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: itemDescrImg
+      value: 
+      objectReference: {fileID: 997756023}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: itemDescrName
+      value: 
+      objectReference: {fileID: 1355157049}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: itemDescrStats
+      value: 
+      objectReference: {fileID: 1235920159}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: itemDescrDescription
+      value: 
+      objectReference: {fileID: 389029828}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: scrollViewContent.Array.data[0]
+      value: 
+      objectReference: {fileID: 1660563845}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: scrollViewContent.Array.data[1]
+      value: 
+      objectReference: {fileID: 1517754493}
+    - target: {fileID: 5449516535909920827, guid: 56f423305168f0a42962ed847ad8cf39,
+        type: 3}
+      propertyPath: scrollViewContent.Array.data[2]
+      value: 
+      objectReference: {fileID: 1376919743}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56f423305168f0a42962ed847ad8cf39, type: 3}
 --- !u!1 &3846460773101572936
 GameObject:
   m_ObjectHideFlags: 0
@@ -35377,7 +35462,7 @@ PrefabInstance:
         type: 3}
       propertyPath: handlingSkript
       value: 
-      objectReference: {fileID: 510307995}
+      objectReference: {fileID: 0}
     - target: {fileID: 5141693704779505826, guid: 5b2cd5c1d1f5e8b47bfab1f99102aefb,
         type: 3}
       propertyPath: m_Name
@@ -36411,7 +36496,8 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 510307991}
+  - {fileID: 417965165}
+  - {fileID: 3769211357373882918}
   - {fileID: 1799100812}
   - {fileID: 705507995}
   - {fileID: 1115867531}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkytevåpenUI : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class SkytevåpenUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OpptaterSkytevåpenUI();
+        if(SceneManager.GetActiveScene().name == "Leikekassa")
+        {
+            OpptaterSkytevåpenUI();
+        }
+        
     }
 
     void OpptaterSkytevåpenUI()

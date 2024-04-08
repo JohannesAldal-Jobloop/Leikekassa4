@@ -61,6 +61,7 @@ public class BevegelseFPS : MonoBehaviour
 
     private BakkeSjekk bakkeSjekk;
     private SpelerDødSkript spelerDødSkript;
+    private KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +85,7 @@ public class BevegelseFPS : MonoBehaviour
     void Update()
     {
         //Physics.gravity = new Vector3(0, -tyngdekraft, 0);
-        
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
 
         if (spelerDødSkript.respawner == false)
         {
@@ -92,13 +93,13 @@ public class BevegelseFPS : MonoBehaviour
             Hopping();
             Huking();
             Springing();
-            BevegWASD();
+            BevegGetAxis();
 
             
         }
     }
 
-    void BevegWASD()
+    private void BevegGetAxis()
     {
         horisontalInput = Input.GetAxis("Horizontal");
         vertikalInput = Input.GetAxis("Vertical");
@@ -116,7 +117,16 @@ public class BevegelseFPS : MonoBehaviour
 
     }
 
-    void ReduserSidelengsFart()
+    // Begynt på å laga bevegelse med å bruke keycodene frå KeyBindsClass
+    private void BevegWASD()
+    {
+        if(Input.GetKey(keyBindsClass.moveForwardKeyCode))
+        {
+
+        }
+    }
+
+    private void ReduserSidelengsFart()
     {
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
@@ -144,10 +154,10 @@ public class BevegelseFPS : MonoBehaviour
         }
     }
 
-    void Hopping()
+    private void Hopping()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space) && bakkeSjekk.paBakken)
+        if (Input.GetKeyDown(keyBindsClass.jumpKeyCode) && bakkeSjekk.paBakken)
         {
             Debug.Log("hopper");
             hoppeKraftFaktisk = hoppeKraftOrginal;
@@ -155,7 +165,7 @@ public class BevegelseFPS : MonoBehaviour
             velocity.y = hoppeKraftFaktisk * Time.deltaTime;
             //playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
         } 
-        else if(Input.GetKeyDown(KeyCode.Space) && !bakkeSjekk.paBakken && hoppILufta != 0)
+        else if(Input.GetKeyDown(keyBindsClass.jumpKeyCode) && !bakkeSjekk.paBakken && hoppILufta != 0)
         {
             Debug.Log("hopper i lofta");
             hoppeKraftFaktisk *= hoppIluftaKraftReduksjon;
@@ -166,11 +176,11 @@ public class BevegelseFPS : MonoBehaviour
         }
     }
 
-    void Huking()
+    private void Huking()
     {
         if (!holdHuker)
         {
-            if(Input.GetKeyDown(KeyCode.C) && !huker)
+            if(Input.GetKeyDown(keyBindsClass.crouchKeyCode) && !huker)
             {
                 Debug.Log("Huker");
                 spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
@@ -179,7 +189,7 @@ public class BevegelseFPS : MonoBehaviour
                 bodyHitbox.height = 2.854548f;
 
                 huker = true;
-            }else if (Input.GetKeyDown(KeyCode.C) && huker)
+            }else if (Input.GetKeyDown(keyBindsClass.crouchKeyCode) && huker)
             {
                 spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
@@ -192,7 +202,7 @@ public class BevegelseFPS : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.C) && !huker)
+            if (Input.GetKey(keyBindsClass.crouchKeyCode) && !huker)
             {
                 spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, -hukingDistanse, 0);
@@ -203,7 +213,7 @@ public class BevegelseFPS : MonoBehaviour
                 huker = true;
             }
 
-            if (Input.GetKeyUp(KeyCode.C) && huker)
+            if (Input.GetKeyUp(keyBindsClass.crouchKeyCode) && huker)
             {
                 spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
@@ -218,17 +228,17 @@ public class BevegelseFPS : MonoBehaviour
         
     }
 
-    void Springing()
+    private void Springing()
     {
         if(!holdSpringer)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
+            if (Input.GetKeyDown(keyBindsClass.sprintKeyCode) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
+            else if (Input.GetKeyDown(keyBindsClass.sprintKeyCode) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
@@ -238,13 +248,13 @@ public class BevegelseFPS : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.LeftShift) && springer == false && vertikalInput > 0)
+            if (Input.GetKey(keyBindsClass.sprintKeyCode) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyUp(KeyCode.LeftShift) && springer == true || vertikalInput <= 0)
+            else if (Input.GetKeyUp(keyBindsClass.sprintKeyCode) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
@@ -253,7 +263,7 @@ public class BevegelseFPS : MonoBehaviour
         
     }
 
-    void FinnVelocityTilSpeler()
+    private void FinnVelocityTilSpeler()
     {
         velocityAll = playerFpsRB.velocity;
         velocityX = playerFpsRB.velocity.x;

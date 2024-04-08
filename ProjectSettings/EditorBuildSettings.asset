@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HovedMeny.unity
     guid: 44f86a2dcd4f5544593c98ef6edc4cb1
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Leikekassa.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

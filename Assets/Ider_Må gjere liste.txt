@@ -28,7 +28,7 @@ TING O GJERE:
 
 
 BUGS:
-1. kulo LaserKula kjem feil veg ut n�r skytt.
+1. kulo LaserKula kjem feil veg ut nor skytt.
 6. Viss speler koliderer med noko so kand det hende at speler beveger seg pittelit utan input fr� speler etterp�.
 18. Fiende bevegelse Patrulering virker ikkje.
 23. Kodelos resetter ikkje etter feil kode.

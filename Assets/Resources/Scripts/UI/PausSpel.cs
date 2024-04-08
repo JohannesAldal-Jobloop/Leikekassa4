@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausSpel : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class PausSpel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        erPausa = false;
-        Time.timeScale = 0.5f;
-        inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+        if (SceneManager.GetActiveScene().name == "Leikekassa")
+        {
+            erPausa = false;
+            Time.timeScale = 0.5f;
+            inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+        }
+        
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
@@ -11,11 +12,17 @@ public class Settings : MonoBehaviour
     private Slider soundSlider;
     private Slider mouseSensetivitySlider;
 
+    private KeyBindsClass keyBindsClass;
+
     // Start is called before the first frame update
     void Start()
     {
-        soundSlider = GameObject.Find("Lyd").GetComponent<Slider>();
-        mouseSensetivitySlider = GameObject.Find("Sensetivitet").GetComponent<Slider>();
+        if(SceneManager.GetActiveScene().name == "HovedMeny")
+        {
+            //soundSlider = GameObject.Find("Lyd").GetComponent<Slider>();
+            //mouseSensetivitySlider = GameObject.Find("Sensetivitet").GetComponent<Slider>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -32,5 +39,13 @@ public class Settings : MonoBehaviour
     public void UpdateMouseSensetivityVolume()
     {
         mouseSensetivity = mouseSensetivitySlider.value;
+    }
+
+    private void SettKeyBindsUI()
+    {
+        /* Sette all teksen til riktig keybind.
+         * eksample: moveForwardText.Text = keyBindsClass.moveForwardKeyCode.ToString()
+         * 
+         */
     }
 }

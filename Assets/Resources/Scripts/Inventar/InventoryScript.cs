@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InventoryScript : MonoBehaviour
@@ -44,12 +45,16 @@ public class InventoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Finds all the requerd GameObjects and components.
-        FindGameObjects_Components();
+        if (SceneManager.GetActiveScene().name == "Leikekassa")
+        {
+            // Finds all the requerd GameObjects and components.
+            FindGameObjects_Components();
 
-        inventoryCategoryTags[0] = "weapon";
-        inventoryCategoryTags[1] = "armor";
-        inventoryCategoryTags[2] = "item";
+            inventoryCategoryTags[0] = "weapon";
+            inventoryCategoryTags[1] = "armor";
+            inventoryCategoryTags[2] = "item";
+        }
+        
     }
 
     // Update is called once per frame

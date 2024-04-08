@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2833668210090037917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204922121692309434}
+  - component: {fileID: 4668813068648245505}
+  - component: {fileID: 2115770248710760178}
+  - component: {fileID: 4883836959568172110}
+  - component: {fileID: 7490447930005277792}
+  - component: {fileID: 5449516535909920827}
+  - component: {fileID: 6079095702150380274}
+  - component: {fileID: 7294158021057178726}
+  - component: {fileID: 5369421362329347727}
+  m_Layer: 0
+  m_Name: SpelSjef
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204922121692309434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.300186, y: 7.4423075, z: 22.840649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4668813068648245505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd9430f56b0d134caa2efc58ac8ce8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoViser: {fileID: 0}
+  "skytev\xE5penScript": {fileID: 0}
+--- !u!114 &2115770248710760178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080347cbbd631d541805fefa93e48444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "er_d\xF8d_UI": {fileID: 0}
+  i_Live_UI: {fileID: 0}
+  pauseKjerm_UI: {fileID: 0}
+  inventory_UI: {fileID: 0}
+  livBarGO: {fileID: 0}
+  overSkjoldBarGO: {fileID: 0}
+  overSkjoldBarSlider: {fileID: 0}
+  giftBarGO: {fileID: 0}
+  giftBar: {fileID: 0}
+  spelarGO: {fileID: 0}
+  tarSkadeSpeler: {fileID: 0}
+  livFunksjonerSpeler: {fileID: 0}
+  pausSpel: {fileID: 0}
+  inventoryScript: {fileID: 0}
+  weaponInventory: {fileID: 0}
+  armorInventory: {fileID: 0}
+  itemsInventory: {fileID: 0}
+--- !u!114 &4883836959568172110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aeddc2a822db694eb1a2f7b058fb4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipGO: {fileID: 0}
+--- !u!114 &7490447930005277792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef051f1e08d282245ba6823258d9e178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  erPausa: 0
+--- !u!114 &5449516535909920827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b257164476332c248b679c33f17a5138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listCount: 0
+  scrollViewContentActive: 0
+  inventoryCategoryTags:
+  - 
+  - 
+  - 
+  inventoryOpen: 0
+  weaponsShown: 0
+  armorShown: 0
+  itemsShown: 0
+  itemPrefab: {fileID: 8454570236017922455, guid: 225865d1c495c8847b6e8227cec0ddee,
+    type: 3}
+  scrollViewContent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itemDescrName: {fileID: 0}
+  itemDescrImg: {fileID: 0}
+  itemDescrDescription: {fileID: 0}
+  itemDescrStats: {fileID: 0}
+  itemsShownInInventory: []
+  weaponsInInvetoryList: []
+  armorInInvetoryList: []
+  itemsInInvetoryList: []
+--- !u!114 &6079095702150380274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf7c965e630c8a448a4f34fc57d168f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveForwardKeyCode: 119
+  moveLeftKeyCode: 97
+  moveBackKeyCode: 115
+  moveRightKeyCode: 100
+  jumpKeyCode: 32
+  crouchKeyCode: 99
+  sprintKeyCode: 304
+  interactKeyCode: 101
+  attackKeyCode: 323
+  aimKeyCode: 324
+  reloadWeaponKeyCode: 114
+  KeyCode: 0
+--- !u!114 &7294158021057178726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106b10b2a411f4444b0158380ceb69c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundVolume: 0
+  mouseSensetivity: 0
+--- !u!114 &5369421362329347727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833668210090037917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1672a5854f1a40e4dbe2e000d566804f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hovedSkjerm: {fileID: 0}
+  innstillinger: {fileID: 0}
