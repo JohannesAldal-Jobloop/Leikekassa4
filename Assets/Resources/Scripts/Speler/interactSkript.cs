@@ -11,17 +11,19 @@ public class interactSkript : MonoBehaviour
     [SerializeField] private Camera fpsKamera;
 
     private knapp knappSkript; 
+    private KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
     {
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         fpsKamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(keyBindsClass.interactKeyCode))
         {
             RaycastHit rayTreff;
             if (Physics.Raycast(fpsKamera.transform.position, fpsKamera.transform.forward, out rayTreff, interactRekkevidde))

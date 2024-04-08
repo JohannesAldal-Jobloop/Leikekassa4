@@ -30,12 +30,14 @@ public class SkytevåpenScript : MonoBehaviour
     private SpelerDødSkript spelerDødSkript;
     private SkytevåpenRekylSkript rekylSkript;
     private SpelerUISkript spelerUISkript;
+    private KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
     {
         FinnAlleAktiveGameobjectForScript();
         aktivVåpenVariabler.magasinMengdeNo = aktivVåpenVariabler.magasinKapasitet;
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         spelerDødSkript = GameObject.Find("SpelerFPS").GetComponent<SpelerDødSkript>();
         rekylSkript = GameObject.Find("Main Camera").GetComponent<SkytevåpenRekylSkript>();
         spelerUISkript = GameObject.Find("SpelSjef").GetComponentInParent<SpelerUISkript>();
@@ -61,7 +63,7 @@ public class SkytevåpenScript : MonoBehaviour
                 laserSkyting();
             }
 
-            if (Input.GetKey(KeyCode.R))
+            if (Input.GetKey(keyBindsClass.reloadWeaponKeyCode))
             {
                 StartCoroutine(Reload());
             }
@@ -175,7 +177,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void FullAutoSkyting()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
+        if (Input.GetKey(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)
@@ -192,7 +194,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void SemiAutoSkyting()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
+        if (Input.GetKeyDown(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)
@@ -209,7 +211,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void laserSkyting()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nesteTidSkyte)
+        if (Input.GetKey(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)

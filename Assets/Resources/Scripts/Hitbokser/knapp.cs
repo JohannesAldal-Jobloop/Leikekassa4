@@ -25,8 +25,6 @@ public class knapp : MonoBehaviour
     // for at dei skal kunne velges i inspektoren.
     enum funksjoner { ApnDor, EndreFarge, Kodelås }
     [SerializeField] funksjoner funksjonSomBrukes;
-
-    private InteractFunksjoner handlingSkript;
     //--------------------------------------
 
     //---------- Variabler til ApnDor() ----------
@@ -59,7 +57,6 @@ public class knapp : MonoBehaviour
     {
         fargeKnappRendrerer = fargeKnapp.GetComponent<Renderer>();
         fargeKnappRendrerer.material.SetColor("_Color", avFarge);
-        handlingSkript = GameObject.Find("SpelSjef").GetComponent<InteractFunksjoner>();
         knappTextTransform = gameObject.transform.Find("fargeKnapp").transform.Find("Text (TMP)");
         knappTMP = knappTextTransform.GetComponent<TextMeshPro>();
 

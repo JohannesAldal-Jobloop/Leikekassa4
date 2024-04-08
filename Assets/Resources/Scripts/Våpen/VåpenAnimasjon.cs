@@ -7,10 +7,12 @@ public class VåpenAnimasjon : MonoBehaviour
     public Animator animator;
 
     private SkytevåpenScript skytevåpenScript;
+    private KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
     {
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         skytevåpenScript = GameObject.Find("VåpenHand").GetComponent<SkytevåpenScript>();
         FinnAnimator();
     }
@@ -24,7 +26,7 @@ public class VåpenAnimasjon : MonoBehaviour
 
     void SjekkOmSikter()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(keyBindsClass.aimKeyCode))
         {
             skytevåpenScript.sikter = true;
             animator.SetBool("Sikter", true);
