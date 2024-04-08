@@ -9,7 +9,7 @@ public class SpelSjefSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(spelSjef);
+        Instantiate(spelSjef, gameObject.transform);
     }
 
     // Update is called once per frame
