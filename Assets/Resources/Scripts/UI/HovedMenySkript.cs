@@ -25,9 +25,9 @@ public class HovedMenySkript : MonoBehaviour
         
     }
 
-    public void StartSpel()
+    public void ChangeScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync("Leikekassa", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
     }
 
     public void AvsluttSpel()
@@ -42,10 +42,10 @@ public class HovedMenySkript : MonoBehaviour
         innstillinger.SetActive(true);
     }
 
-    public void Tilbake(GameObject pastScreen)
+    public void Tilbake(GameObject currentScreen, GameObject pastScreen)
     {
-        innstillinger.SetActive(false);
-        hovedSkjerm.SetActive(true);
+        currentScreen.SetActive(false);
+        pastScreen.SetActive(true);
     }
 
 }

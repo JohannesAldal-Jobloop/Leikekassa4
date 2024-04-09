@@ -16,6 +16,7 @@ public class KeyBindsClass : MonoBehaviour
     public KeyCode attackKeyCode            = KeyCode.Mouse0;
     public KeyCode aimKeyCode               = KeyCode.Mouse1;
     public KeyCode reloadWeaponKeyCode      = KeyCode.R;
+    public KeyCode pauseGameKeyCode         = KeyCode.Escape;
     public KeyCode KeyCode;
 
     // Start is called before the first frame update

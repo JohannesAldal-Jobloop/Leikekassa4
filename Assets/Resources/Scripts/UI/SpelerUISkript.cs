@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class SpelerUISkript : MonoBehaviour
 {
-    public GameObject er_død_UI;
-    public GameObject i_Live_UI;
-    public GameObject pauseKjerm_UI;
+    [SerializeField] private GameObject er_død_UI;
+    [SerializeField] private GameObject i_Live_UI;
+    [SerializeField] private GameObject pauseKjerm_UI;
+    [SerializeField] private GameObject pauseKjermKnapper_UI;
+    [SerializeField] private GameObject settings_UI;
     public GameObject inventory_UI;
 
     public Slider livBarGO;
@@ -85,7 +87,8 @@ public class SpelerUISkript : MonoBehaviour
         if (pausSpel.erPausa)
         {
             pauseKjerm_UI.SetActive(true);
-
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {
@@ -172,5 +175,11 @@ public class SpelerUISkript : MonoBehaviour
         weaponInventory.SetActive(false);
         armorInventory.SetActive(false);
         itemsInventory.SetActive(true);
+    }
+
+    public void ShowSettings()
+    {
+        pauseKjermKnapper_UI.SetActive(false);
+        settings_UI.SetActive(true);
     }
 }

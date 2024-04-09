@@ -8,6 +8,7 @@ public class PausSpel : MonoBehaviour
     public bool erPausa = false;
 
     InventoryScript inventoryScript;
+    KeyBindsClass keyBindClass;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PausSpel : MonoBehaviour
             erPausa = false;
             Time.timeScale = 0.5f;
             inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
+            keyBindClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         }
         
     }
@@ -24,13 +26,13 @@ public class PausSpel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape) && !inventoryScript.inventoryOpen)
+        if(Input.GetKeyUp(keyBindClass.pauseGameKeyCode) && !inventoryScript.inventoryOpen)
         {
             PauseFunksjon();
         }
     }
 
-    void PauseFunksjon()
+    public void PauseFunksjon()
     {
         if(!erPausa)
         { 
