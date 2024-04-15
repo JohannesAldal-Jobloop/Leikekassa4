@@ -16,7 +16,7 @@ public class PausSpel : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Leikekassa")
         {
             erPausa = false;
-            Time.timeScale = 0.5f;
+            //Time.timeScale = 0.5f;
             inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
             keyBindClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         }
