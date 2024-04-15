@@ -4521,7 +4521,7 @@ GameObject:
   - component: {fileID: 212766253}
   - component: {fileID: 212766252}
   m_Layer: 5
-  m_Name: _SettingInput (6)
+  m_Name: interactSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6198,7 +6198,7 @@ GameObject:
   - component: {fileID: 299097852}
   - component: {fileID: 299097851}
   m_Layer: 5
-  m_Name: _SettingInput (2)
+  m_Name: moveBackSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9227,7 +9227,7 @@ GameObject:
   - component: {fileID: 472943553}
   - component: {fileID: 472943552}
   m_Layer: 5
-  m_Name: _SettingInput (10)
+  m_Name: reloadSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10366,7 +10366,7 @@ GameObject:
   - component: {fileID: 524532050}
   - component: {fileID: 524532049}
   m_Layer: 5
-  m_Name: _SettingInput (11)
+  m_Name: pauseSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10520,7 +10520,7 @@ GameObject:
   - component: {fileID: 543399125}
   - component: {fileID: 543399124}
   m_Layer: 5
-  m_Name: reloadWeaponSettingText
+  m_Name: reloadSettingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14351,7 +14351,7 @@ GameObject:
   - component: {fileID: 739551121}
   - component: {fileID: 739551120}
   m_Layer: 5
-  m_Name: _SettingInput (4)
+  m_Name: jumpSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23480,7 +23480,7 @@ GameObject:
   - component: {fileID: 1241291034}
   - component: {fileID: 1241291033}
   m_Layer: 5
-  m_Name: _SettingInput (8)
+  m_Name: attackSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24460,7 +24460,7 @@ GameObject:
   - component: {fileID: 1288745458}
   - component: {fileID: 1288745457}
   m_Layer: 5
-  m_Name: _SettingInput (7)
+  m_Name: sprintSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26496,7 +26496,7 @@ GameObject:
   - component: {fileID: 1374658742}
   - component: {fileID: 1374658741}
   m_Layer: 5
-  m_Name: _SettingInput (3)
+  m_Name: moveRightSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28263,7 +28263,7 @@ GameObject:
   - component: {fileID: 1484839871}
   - component: {fileID: 1484839870}
   m_Layer: 5
-  m_Name: _SettingInput (1)
+  m_Name: moveLeftSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30176,7 +30176,7 @@ GameObject:
   - component: {fileID: 1589988613}
   - component: {fileID: 1589988612}
   m_Layer: 5
-  m_Name: _SettingInput
+  m_Name: moveForwardSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32805,7 +32805,7 @@ GameObject:
   - component: {fileID: 1755388044}
   - component: {fileID: 1755388043}
   m_Layer: 5
-  m_Name: _SettingInput (5)
+  m_Name: crouchSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39104,7 +39104,7 @@ GameObject:
   - component: {fileID: 2082748311}
   - component: {fileID: 2082748310}
   m_Layer: 5
-  m_Name: _SettingInput (9)
+  m_Name: aimSettingInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
