@@ -22,6 +22,8 @@ public class Settings : MonoBehaviour
             //soundSlider = GameObject.Find("Lyd").GetComponent<Slider>();
             //mouseSensetivitySlider = GameObject.Find("Sensetivitet").GetComponent<Slider>();
         }
+
+        keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         
     }
 
@@ -47,5 +49,17 @@ public class Settings : MonoBehaviour
          * eksample: moveForwardText.Text = keyBindsClass.moveForwardKeyCode.ToString()
          * 
          */
+
+
+    }
+
+    public void SettKeyCode()
+    {
+        KeyCode newKeyCode;
+
+        if (Input.anyKey)
+        {
+            //newKeyCode = Input.
+        }
     }
 }
