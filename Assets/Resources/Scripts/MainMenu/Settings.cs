@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +9,13 @@ public class Settings : MonoBehaviour
 {
     public float soundVolume = 0;
     public float mouseSensetivity = 0;
+
+    private bool settKeycode;
+
+    private KeyCode newKeycode;
+
+    [SerializeField] private TextMeshProUGUI inputFieldText;
+    [SerializeField] private InputField inputField;
 
     private Slider soundSlider;
     private Slider mouseSensetivitySlider;
@@ -55,11 +63,27 @@ public class Settings : MonoBehaviour
 
     public void SettKeyCode()
     {
-        KeyCode newKeyCode;
+        settKeycode = true;
+        inputFieldText.text = "";
+        inputFieldText.text = newKeycode.ToString();
+        keyBindsClass.moveForwardKeyCode = newKeycode;
+        settKeycode = false;
+        
 
-        if (Input.anyKey)
+    }
+
+    void OnGUI()
+    {
+        Event e = Event.current;
+        
+
+        if (e.isKey && settKeycode)
         {
-            //newKeyCode = Input.
+            newKeycode = e.keyCode;
+            Debug.Log(newKeycode.ToString());
+            
         }
     }
+
+
 }
