@@ -64,10 +64,8 @@ public class Settings : MonoBehaviour
     public void SettKeyCode()
     {
         settKeycode = true;
-        inputFieldText.text = "";
-        inputFieldText.text = newKeycode.ToString();
-        keyBindsClass.moveForwardKeyCode = newKeycode;
-        settKeycode = false;
+        //inputFieldText.text = "";
+        //inputFieldText.text = newKeycode.ToString();
         
 
     }
@@ -75,13 +73,14 @@ public class Settings : MonoBehaviour
     void OnGUI()
     {
         Event e = Event.current;
-        
 
         if (e.isKey && settKeycode)
         {
             newKeycode = e.keyCode;
-            Debug.Log(newKeycode.ToString());
-            
+            Debug.Log($"KeyCode pressed: {newKeycode}");
+            keyBindsClass.jumpKeyCode = newKeycode;
+            settKeycode = false;
+
         }
     }
 
