@@ -19288,7 +19288,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1742112093}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27407196
+  m_Size: 0.274072
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23168,7 +23168,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5869566699330506304}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: SettKeyCode
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: moveForwardKeyCode
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls: []
@@ -23180,19 +23192,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5869566699330506304}
-        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: SettKeyCode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31537,7 +31537,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1978173805}
   m_HandleRect: {fileID: 1978173804}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -39545,6 +39545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundVolume: 0
   mouseSensetivity: 0
+  keyBindVariables: 0
   inputFieldText: {fileID: 0}
   inputField: {fileID: 0}
 --- !u!1 &2079953924
@@ -42355,6 +42356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundVolume: 0
   mouseSensetivity: 0
+  keyBindVariables: 0
   inputFieldText: {fileID: 93664830}
   inputField: {fileID: 0}
 --- !u!33 &5903850369231127361
@@ -43087,6 +43089,7 @@ MonoBehaviour:
   reloadWeaponKeyCode: 114
   pauseGameKeyCode: 27
   KeyCode: 0
+  keyBindNames: []
 --- !u!23 &6954598204683408527
 MeshRenderer:
   m_ObjectHideFlags: 0
