@@ -4,13 +4,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Settings : MonoBehaviour
 {
     public float soundVolume = 0;
     public float mouseSensetivity = 0;
 
+    private string keyBindVariable;
+
     private bool settKeycode;
+
+    enum keyBindVars { }
+    [SerializeField] private keyBindVars keyBindVariables;
 
     private KeyCode newKeycode;
 
@@ -33,6 +39,9 @@ public class Settings : MonoBehaviour
 
         keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
         
+
+        
+
     }
 
     // Update is called once per frame
@@ -61,13 +70,10 @@ public class Settings : MonoBehaviour
 
     }
 
-    public void SettKeyCode()
+    public void SettKeyCode(string keybindToChange)
     {
         settKeycode = true;
-        //inputFieldText.text = "";
-        //inputFieldText.text = newKeycode.ToString();
-        
-
+        keyBindVariable = keybindToChange;
     }
 
     void OnGUI()
@@ -77,8 +83,17 @@ public class Settings : MonoBehaviour
         if (e.isKey && settKeycode)
         {
             newKeycode = e.keyCode;
-            Debug.Log($"KeyCode pressed: {newKeycode}");
-            keyBindsClass.jumpKeyCode = newKeycode;
+            //Debug.Log($"KeyCode pressed: {newKeycode}");
+
+            if(keyBindsClass.keyBindNames.Contains(keyBindVariable))
+            {
+                Debug.Log("KeyBind sett.");
+            }
+            else
+            {
+                Debug.Log("keyBindVariable is written wrong or it does not exsist.");
+            }
+            
             settKeycode = false;
 
         }
