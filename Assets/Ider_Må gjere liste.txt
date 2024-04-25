@@ -25,7 +25,8 @@ TING O GJERE:
 47. Lage ein fuksjon som eg kan sette inn ein float som vill to so mange sekunder å fylføra og teller oppover i ein heil float.
 50. Lage det so viss spelar koliderer med eit spaenpunkt so blir det det aktive spawnpunktet.
 52. Lage om SettKeyCode funksjonen til å ta inn kva kontrol den skal endra.
-53. 
+53. Endre keybinds settings ui til å bruka buttons.
+54. 
 
 
 BUGS:

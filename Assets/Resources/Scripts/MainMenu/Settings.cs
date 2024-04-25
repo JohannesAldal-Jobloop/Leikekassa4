@@ -13,7 +13,7 @@ public class Settings : MonoBehaviour
 
     private string keyBindVariable;
 
-    private bool settKeycode;
+    public bool settKeycode;
 
     enum keyBindVars { }
     [SerializeField] private keyBindVars keyBindVariables;
@@ -88,6 +88,7 @@ public class Settings : MonoBehaviour
             if(keyBindsClass.keyBindNames.Contains(keyBindVariable))
             {
                 Debug.Log("KeyBind sett.");
+                inputField.text = e.keyCode.ToString();
             }
             else
             {
