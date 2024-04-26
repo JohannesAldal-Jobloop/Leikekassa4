@@ -20,23 +20,24 @@ public class KeyBindsClass : MonoBehaviour
     public KeyCode KeyCode;
 
 
-    public string[] keyBindNames;
+    [HideInInspector] public List<string> keyBindNames = new List<string>();
+        
 
     // Start is called before the first frame update
     void Start()
     {
-        keyBindNames.Append(moveForwardKeyCode.ToString());
-        keyBindNames.Append(moveLeftKeyCode.ToString());
-        keyBindNames.Append(moveBackKeyCode.ToString());
-        keyBindNames.Append(moveRightKeyCode.ToString());
-        keyBindNames.Append(jumpKeyCode.ToString());
-        keyBindNames.Append(crouchKeyCode.ToString());
-        keyBindNames.Append(sprintKeyCode.ToString());
-        keyBindNames.Append(interactKeyCode.ToString());
-        keyBindNames.Append(attackKeyCode.ToString());
-        keyBindNames.Append(aimKeyCode.ToString());
-        keyBindNames.Append(reloadWeaponKeyCode.ToString());
-        keyBindNames.Append(pauseGameKeyCode.ToString());
+        keyBindNames.Add("moveForwardKeyCode");
+        keyBindNames.Add("moveLeftKeyCode");
+        keyBindNames.Add("moveBackKeyCode");
+        keyBindNames.Add("moveRightKeyCode");
+        keyBindNames.Add("jumpKeyCode");
+        keyBindNames.Add("crouchKeyCode");
+        keyBindNames.Add("sprintKeyCode");
+        keyBindNames.Add("interactKeyCode");
+        keyBindNames.Add("attackKeyCode");
+        keyBindNames.Add("aimKeyCode");
+        keyBindNames.Add("reloadWeaponKeyCode");
+        keyBindNames.Add("pauseGameKeyCode");
         
     }
 

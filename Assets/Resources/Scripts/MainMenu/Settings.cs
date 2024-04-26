@@ -83,12 +83,13 @@ public class Settings : MonoBehaviour
         if (e.isKey && settKeycode)
         {
             newKeycode = e.keyCode;
-            //Debug.Log($"KeyCode pressed: {newKeycode}");
+            Debug.Log($"KeyCode pressed: {newKeycode}");
 
             if(keyBindsClass.keyBindNames.Contains(keyBindVariable))
             {
                 Debug.Log("KeyBind sett.");
-                inputField.text = e.keyCode.ToString();
+                keyBindsClass.jumpKeyCode = newKeycode;
+                inputFieldText.text = e.keyCode.ToString();
             }
             else
             {

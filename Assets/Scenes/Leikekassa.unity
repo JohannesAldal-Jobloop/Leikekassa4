@@ -39620,7 +39620,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: moveForwardKeyCode
+          m_StringArgument: jumpKeyCode
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2125090174
@@ -42098,7 +42098,7 @@ MonoBehaviour:
   mouseSensetivity: 0
   settKeycode: 0
   keyBindVariables: 0
-  inputFieldText: {fileID: 0}
+  inputFieldText: {fileID: 125690963}
   inputField: {fileID: 0}
 --- !u!33 &5903850369231127361
 MeshFilter:
