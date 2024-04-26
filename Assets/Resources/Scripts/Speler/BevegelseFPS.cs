@@ -120,7 +120,7 @@ public class BevegelseFPS : MonoBehaviour
     // Begynt på å laga bevegelse med å bruke keycodene frå KeyBindsClass
     private void BevegWASD()
     {
-        if(Input.GetKey(keyBindsClass.moveForwardKeyCode))
+        if(Input.GetKey(keyBindsClass.keyBindsDictionary["moveForwardKeyCode"]))
         {
 
         }
@@ -157,7 +157,7 @@ public class BevegelseFPS : MonoBehaviour
     private void Hopping()
     {
         
-        if (Input.GetKeyDown(keyBindsClass.jumpKeyCode) && bakkeSjekk.paBakken)
+        if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["jumpKeyCode"]) && bakkeSjekk.paBakken)
         {
             Debug.Log("hopper");
             hoppeKraftFaktisk = hoppeKraftOrginal;
@@ -165,7 +165,7 @@ public class BevegelseFPS : MonoBehaviour
             velocity.y = hoppeKraftFaktisk * Time.deltaTime;
             //playerFpsRB.AddRelativeForce(0, hoppeKraftFaktisk, 0, ForceMode.Impulse);
         } 
-        else if(Input.GetKeyDown(keyBindsClass.jumpKeyCode) && !bakkeSjekk.paBakken && hoppILufta != 0)
+        else if(Input.GetKeyDown(keyBindsClass.keyBindsDictionary["jumpKeyCode"]) && !bakkeSjekk.paBakken && hoppILufta != 0)
         {
             Debug.Log("hopper i lofta");
             hoppeKraftFaktisk *= hoppIluftaKraftReduksjon;
@@ -180,7 +180,7 @@ public class BevegelseFPS : MonoBehaviour
     {
         if (!holdHuker)
         {
-            if(Input.GetKeyDown(keyBindsClass.crouchKeyCode) && !huker)
+            if(Input.GetKeyDown(keyBindsClass.keyBindsDictionary["crouchKeyCode"]) && !huker)
             {
                 Debug.Log("Huker");
                 spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
@@ -189,7 +189,7 @@ public class BevegelseFPS : MonoBehaviour
                 bodyHitbox.height = 2.854548f;
 
                 huker = true;
-            }else if (Input.GetKeyDown(keyBindsClass.crouchKeyCode) && huker)
+            }else if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["crouchKeyCode"]) && huker)
             {
                 spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
@@ -202,7 +202,7 @@ public class BevegelseFPS : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(keyBindsClass.crouchKeyCode) && !huker)
+            if (Input.GetKey(keyBindsClass.keyBindsDictionary["crouchKeyCode"]) && !huker)
             {
                 spelarKroppGO.transform.Translate(0, -hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, -hukingDistanse, 0);
@@ -213,7 +213,7 @@ public class BevegelseFPS : MonoBehaviour
                 huker = true;
             }
 
-            if (Input.GetKeyUp(keyBindsClass.crouchKeyCode) && huker)
+            if (Input.GetKeyUp(keyBindsClass.keyBindsDictionary["attackKeyCode"]) && huker)
             {
                 spelarKroppGO.transform.Translate(0, hukingDistanse, 0);
                 bakkeSjekkGO.transform.Translate(0, hukingDistanse, 0);
@@ -232,13 +232,13 @@ public class BevegelseFPS : MonoBehaviour
     {
         if(!holdSpringer)
         {
-            if (Input.GetKeyDown(keyBindsClass.sprintKeyCode) && springer == false && vertikalInput > 0)
+            if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["sprintKeyCode"]) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyDown(keyBindsClass.sprintKeyCode) && springer == true || vertikalInput <= 0)
+            else if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["sprintKeyCode"]) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;
@@ -248,13 +248,13 @@ public class BevegelseFPS : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(keyBindsClass.sprintKeyCode) && springer == false && vertikalInput > 0)
+            if (Input.GetKey(keyBindsClass.keyBindsDictionary["sprintKeyCode"]) && springer == false && vertikalInput > 0)
             {
                 gåFartMaks *= springeFartModifier;
                 gåFartFaktisk = gåFartMaks;
                 springer = true;
             }
-            else if (Input.GetKeyUp(keyBindsClass.sprintKeyCode) && springer == true || vertikalInput <= 0)
+            else if (Input.GetKeyUp(keyBindsClass.keyBindsDictionary["sprintKeyCode"]) && springer == true || vertikalInput <= 0)
             {
                 gåFartMaks = gåFartOrginal;
                 springer = false;

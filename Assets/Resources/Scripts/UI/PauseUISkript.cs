@@ -6,7 +6,22 @@ using UnityEngine;
 public class PauseUISkript : MonoBehaviour
 {
     //---------- Settings ----------
-    TextMeshProUGUI inputButtonText;
+    [SerializeField] private List<TextMeshProUGUI> inputButtonTexts = new List<TextMeshProUGUI>();
+
+    private string[] keyBindsNames = new string[] { 
+            "moveForwardKeyCode",
+            "moveLeftKeyCode",
+            "moveBackKeyCode",
+            "moveRightKeyCode",
+            "jumpKeyCode",
+            "crouchKeyCode",
+            "sprintKeyCode",
+            "interactKeyCode",
+            "attackKeyCode",
+            "aimKeyCode",
+            "reloadWeaponKeyCode", 
+            "pauseGameKeyCode",
+            };
     //------------------------------
 
     PauseUISkript pauseUIScript;
@@ -38,7 +53,10 @@ public class PauseUISkript : MonoBehaviour
     {
         if (settings.settKeycode)
         {
-            
+            for (int i = 0; i < inputButtonTexts.Count; i++)
+            {
+                inputButtonTexts[i].text = settings.keyBindsClass.keyBindsDictionary[keyBindsNames[i]].ToString();
+            }
         }
         else
         {

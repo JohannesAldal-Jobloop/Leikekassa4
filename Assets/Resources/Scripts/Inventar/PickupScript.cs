@@ -38,7 +38,7 @@ public class PickupScript : MonoBehaviour
         // Gets all the recuired components.
         inventoryScript = GameObject.Find("SpelSjef").GetComponent<InventoryScript>();
         keyBindsClass = GameObject.Find("SpelSjef").GetComponent<KeyBindsClass>();
-        interactPromptText.text = keyBindsClass.interactKeyCode.ToString();
+        
         newOpacity = interactProgressImg.GetComponent<Image>().color;
 
         // Disables the interact prompt.
@@ -84,6 +84,7 @@ public class PickupScript : MonoBehaviour
         // If the trigger thats exited is an item, disable the interact prompt.
         if (other.transform.tag == "PickupItem")
         {
+            interactPromptText.text = keyBindsClass.keyBindsDictionary["interactKeyCode"].ToString();
             interactPromptGO.SetActive(false);
         }
     }
@@ -109,7 +110,7 @@ public class PickupScript : MonoBehaviour
                 if (itemToPickUp.holdInteract)
                 {
                     //---------- Hold interact ----------
-                    if (Input.GetKey(keyBindsClass.interactKeyCode))
+                    if (Input.GetKey(keyBindsClass.keyBindsDictionary["interactKeyCode"]))
                     {
                         // Calculates how much the opacity needs to be changed eich repetition.
                         opacityEichRepetition = (1 / itemToPickUp.holdInteractLenghtSec) * repetitionRate;
@@ -129,7 +130,7 @@ public class PickupScript : MonoBehaviour
                 else
                 {
                     //---------- Instant interact ----------
-                    if (Input.GetKeyDown(keyBindsClass.interactKeyCode))
+                    if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["interactKeyCode"]))
                     {
                         // Adds itemToPickUp to inventory and makes the interact prompt inviseble.
                         AddItemToInventoryList(itemToPickUp, other);

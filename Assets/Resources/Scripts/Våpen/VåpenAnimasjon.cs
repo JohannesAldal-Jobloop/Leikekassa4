@@ -26,7 +26,7 @@ public class VåpenAnimasjon : MonoBehaviour
 
     void SjekkOmSikter()
     {
-        if (Input.GetKey(keyBindsClass.aimKeyCode))
+        if (Input.GetKey(keyBindsClass.keyBindsDictionary["aimKeyCode"]))
         {
             skytevåpenScript.sikter = true;
             animator.SetBool("Sikter", true);

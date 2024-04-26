@@ -20,13 +20,13 @@ public class Settings : MonoBehaviour
 
     private KeyCode newKeycode;
 
-    [SerializeField] private TextMeshProUGUI inputFieldText;
+    [SerializeField] private TextMeshProUGUI keyBindsButtonText;
     [SerializeField] private InputField inputField;
 
     private Slider soundSlider;
     private Slider mouseSensetivitySlider;
 
-    private KeyBindsClass keyBindsClass;
+    [HideInInspector] public KeyBindsClass keyBindsClass;
 
     // Start is called before the first frame update
     void Start()
@@ -85,11 +85,10 @@ public class Settings : MonoBehaviour
             newKeycode = e.keyCode;
             Debug.Log($"KeyCode pressed: {newKeycode}");
 
-            if(keyBindsClass.keyBindNames.Contains(keyBindVariable))
+            if(keyBindsClass.keyBindsDictionary.ContainsKey(keyBindVariable))
             {
                 Debug.Log("KeyBind sett.");
-                keyBindsClass.jumpKeyCode = newKeycode;
-                inputFieldText.text = e.keyCode.ToString();
+                keyBindsClass.keyBindsDictionary[keyBindVariable] = newKeycode;
             }
             else
             {

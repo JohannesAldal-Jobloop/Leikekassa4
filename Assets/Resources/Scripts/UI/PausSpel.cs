@@ -26,7 +26,7 @@ public class PausSpel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(keyBindClass.pauseGameKeyCode) && !inventoryScript.inventoryOpen)
+        if(Input.GetKeyUp(keyBindClass.keyBindsDictionary["pauseGameKeyCode"]) && !inventoryScript.inventoryOpen)
         {
             PauseFunksjon();
         }

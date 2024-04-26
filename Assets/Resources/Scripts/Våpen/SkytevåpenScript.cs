@@ -63,7 +63,7 @@ public class SkytevåpenScript : MonoBehaviour
                 laserSkyting();
             }
 
-            if (Input.GetKey(keyBindsClass.reloadWeaponKeyCode))
+            if (Input.GetKey(keyBindsClass.keyBindsDictionary["reloadWeaponKeyCode"]))
             {
                 StartCoroutine(Reload());
             }
@@ -177,7 +177,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void FullAutoSkyting()
     {
-        if (Input.GetKey(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
+        if (Input.GetKey(keyBindsClass.keyBindsDictionary["attackKeyCode"]) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)
@@ -194,7 +194,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void SemiAutoSkyting()
     {
-        if (Input.GetKeyDown(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
+        if (Input.GetKeyDown(keyBindsClass.keyBindsDictionary["attackKeyCode"]) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)
@@ -211,7 +211,7 @@ public class SkytevåpenScript : MonoBehaviour
 
     public void laserSkyting()
     {
-        if (Input.GetKey(keyBindsClass.attackKeyCode) && Time.time >= nesteTidSkyte)
+        if (Input.GetKey(keyBindsClass.keyBindsDictionary["attackKeyCode"]) && Time.time >= nesteTidSkyte)
         {
             nesteTidSkyte = Time.time + 1f / aktivVåpenVariabler.angrepHastigheit;
             if (prosjektilSkyting)
